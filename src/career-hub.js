@@ -1,6 +1,6 @@
 /* ============================================================
    FuturePath — West Africa Career Explorer
-   Phase 2 — career explorer + interactive simulations
+   Phase 3 — career explorer + simulations + PWA
    ============================================================ */
 
 import {
@@ -8,6 +8,13 @@ import {
   closeSimulation,
   isCompleted
 } from "./sim-engine.js";
+
+import {
+  registerServiceWorker,
+  setupInstallPrompt,
+  setupOfflineDetection,
+  isStandalone
+} from "./pwa.js";
 
 // ---------- ECOWAS member states ----------
 const ECOWAS = [
@@ -481,7 +488,6 @@ function openCard(career) {
   $("cardPathway").textContent = career.pathway;
   $("cardCert").textContent = career.certification;
 
-  // Add-to-plan button
   const addBtn = $("addBtn");
   if (state.plan.includes(career.id)) {
     addBtn.textContent = "In your plan ✓";
@@ -491,7 +497,6 @@ function openCard(career) {
     addBtn.disabled = false;
   }
 
-  // Simulation button + completion badge
   const simBtn = $("simBtn");
   const simDone = $("simDone");
   const hasSim = !!state.simulations[career.id];
@@ -545,7 +550,6 @@ function launchSim(career) {
       isInPlan: (id) => state.plan.includes(id),
       addToPlan: (c) => addToPlan(c),
       onClose: (id) => {
-        // Refresh card's completion badge if the card is still open
         if (state.openCareer && state.openCareer.id === id && isCompleted(id)) {
           $("simDone").classList.remove("hidden");
         }
@@ -554,7 +558,6 @@ function launchSim(career) {
   });
 }
 
-// Close buttons
 $("simClose").addEventListener("click", () => {
   closeSimulation();
   resumeAutoRotation();
@@ -794,6 +797,11 @@ window.addEventListener("orientationchange", () => setTimeout(() => engine.resiz
 (async function boot() {
   const loader = createLoader();
   try {
+    // PWA setup first — runs in parallel with data loading
+    registerServiceWorker();
+    setupInstallPrompt();
+    setupOfflineDetection();
+
     buildCountrySelector();
     await Promise.all([loadCareers(), loadSimulations()]);
     updatePlanCount();
@@ -801,9 +809,11 @@ window.addEventListener("orientationchange", () => setTimeout(() => engine.resiz
     showSectors();
     initXR();
     hideLoader(loader);
+
     console.log(
       `FuturePath loaded — ${state.careers.length} careers, ${Object.keys(state.simulations).length} simulations.`
     );
+    console.log("[PWA] Standalone mode:", isStandalone());
   } catch (err) {
     console.error(err);
     hideLoader(loader);
