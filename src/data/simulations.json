@@ -1,0 +1,1614 @@
+{
+  "lawyer": {
+    "intro": "A new client walks into your office. Handle the consultation like a real lawyer.",
+    "rounds": [
+      {
+        "t": "CHOICE",
+        "q": "The client says they were dismissed without notice. What is your first step?",
+        "o": [
+          "Ask for the employment contract and termination letter",
+          "Immediately file a lawsuit in court",
+          "Tell them there is nothing you can do",
+          "Recommend they confront their former boss"
+        ],
+        "c": 0,
+        "f": "Always build the documentary record first. The contract and termination letter define what rights were breached."
+      },
+      {
+        "t": "ORDER",
+        "q": "Order the legal workflow from start to finish.",
+        "items": [
+          "Client intake",
+          "Legal research",
+          "Draft demand letter",
+          "Negotiate settlement",
+          "File in court if needed"
+        ],
+        "f": "Escalation follows documentation and negotiation — going straight to court is a last resort."
+      }
+    ]
+  },
+  "accountant": {
+    "intro": "You're closing the books for a small trading business. Get the entries right.",
+    "rounds": [
+      {
+        "t": "CHOICE",
+        "q": "A customer paid 500,000 in cash for goods delivered today. Which entry records this?",
+        "o": [
+          "Debit Cash 500,000 / Credit Sales 500,000",
+          "Debit Sales 500,000 / Credit Cash 500,000",
+          "Debit Accounts Receivable 500,000 / Credit Cash 500,000",
+          "Debit Expense 500,000 / Credit Sales 500,000"
+        ],
+        "c": 0,
+        "f": "Assets (Cash) increase on the debit side, revenue (Sales) increases on the credit side. Double-entry keeps the books balanced."
+      },
+      {
+        "t": "MULTI",
+        "q": "Which of these are current assets? Select all that apply.",
+        "o": ["Cash at bank", "Inventory", "Accounts receivable", "Delivery van", "Building"],
+        "c": [0, 1, 2],
+        "f": "Current assets convert to cash within a year. Vehicles and buildings are fixed assets."
+      }
+    ]
+  },
+  "medical-doctor": {
+    "intro": "A patient arrives at the clinic with fever, headache, and body aches.",
+    "rounds": [
+      {
+        "t": "CHOICE",
+        "q": "What is the FIRST thing you do?",
+        "o": [
+          "Take a full history and vital signs",
+          "Prescribe antimalarials immediately",
+          "Order a full body scan",
+          "Refer to a specialist straight away"
+        ],
+        "c": 0,
+        "f": "History and vitals are the foundation of every diagnosis. Treatment without assessment is dangerous."
+      },
+      {
+        "t": "TAP",
+        "q": "Tap the tests you would order first for suspected malaria.",
+        "cols": 3,
+        "tiles": [
+          { "label": "Rapid diagnostic test", "glyph": "🩸" },
+          { "label": "Blood film microscopy", "glyph": "🔬" },
+          { "label": "Full blood count", "glyph": "📊" },
+          { "label": "MRI brain", "glyph": "🧠" },
+          { "label": "Chest X-ray", "glyph": "🩻" },
+          { "label": "Bone density scan", "glyph": "🦴" }
+        ],
+        "c": [0, 1, 2],
+        "f": "RDT, blood film, and FBC confirm malaria and assess severity. Imaging is not routine for uncomplicated cases."
+      }
+    ]
+  },
+  "pharmacist": {
+    "intro": "A mother brings a prescription for her 4-year-old child.",
+    "rounds": [
+      {
+        "t": "CHOICE",
+        "q": "The prescription says 'Amoxicillin 250mg TID'. What does TID mean?",
+        "o": ["Three times a day", "Twice a day", "Once daily", "Every other day"],
+        "c": 0,
+        "f": "TID = ter in die = three times a day. BD = twice, OD = once daily."
+      },
+      {
+        "t": "MATCH",
+        "q": "Match each medicine to its primary use.",
+        "leftLabel": "Medicine",
+        "rightLabel": "Primary use",
+        "left": ["Paracetamol", "Amoxicillin", "ORS", "Salbutamol"],
+        "right": ["Fever and pain", "Bacterial infection", "Dehydration from diarrhoea", "Asthma relief"],
+        "f": "Knowing the use class is what protects patients from dangerous mix-ups."
+      }
+    ]
+  },
+  "civil-engineer": {
+    "intro": "You're surveying a site for a two-storey building.",
+    "rounds": [
+      {
+        "t": "CHOICE",
+        "q": "What must you confirm BEFORE any design work?",
+        "o": [
+          "Soil bearing capacity and site boundaries",
+          "Paint colour preferences",
+          "Furniture layout",
+          "Window brand"
+        ],
+        "c": 0,
+        "f": "The ground determines the foundation. Every other decision follows from that."
+      },
+      {
+        "t": "SLIDER",
+        "q": "Set a safe concrete mix ratio for a residential foundation. Target a 1:2:4 cement:sand:aggregate mix.",
+        "sliders": [
+          { "label": "Cement parts", "min": 1, "max": 6, "target": [1, 1] },
+          { "label": "Sand parts", "min": 1, "max": 6, "target": [2, 2] },
+          { "label": "Aggregate parts", "min": 1, "max": 8, "target": [4, 4] }
+        ],
+        "f": "1:2:4 is the standard mix for foundations and general structural concrete. Stronger mixes cost more and are only needed for specialised pours."
+      }
+    ]
+  },
+  "architect": {
+    "intro": "A client wants a family home on a narrow urban plot.",
+    "rounds": [
+      {
+        "t": "CHOICE",
+        "q": "What is your first design move?",
+        "o": [
+          "Listen to the client's brief and study the site",
+          "Sketch an exterior facade",
+          "Pick furniture",
+          "Order construction materials"
+        ],
+        "c": 0,
+        "f": "Design begins with understanding — the brief and the site constrain everything else."
+      },
+      {
+        "t": "TAP",
+        "q": "Tap the factors that MOST affect natural ventilation in a tropical climate.",
+        "cols": 3,
+        "tiles": [
+          { "label": "Window orientation", "glyph": "🧭" },
+          { "label": "Cross-ventilation", "glyph": "💨" },
+          { "label": "Roof overhang", "glyph": "🏠" },
+          { "label": "Wall paint colour", "glyph": "🎨" },
+          { "label": "Floor tile brand", "glyph": "🧱" },
+          { "label": "Ceiling fan logo", "glyph": "🌀" }
+        ],
+        "c": [0, 1, 2],
+        "f": "Passive cooling in hot humid climates depends on orientation, cross-breezes, and shading — not finishes."
+      }
+    ]
+  },
+  "banker": {
+    "intro": "A trader applies for a small business loan.",
+    "rounds": [
+      {
+        "t": "CHOICE",
+        "q": "What do you check FIRST in the credit assessment?",
+        "o": [
+          "Repayment capacity and existing obligations",
+          "Their favourite football team",
+          "Their accent",
+          "The brand of their shoes"
+        ],
+        "c": 0,
+        "f": "Credit is repaid from cash flow. Capacity to repay is the first question in every credit file."
+      },
+      {
+        "t": "MULTI",
+        "q": "Which of these are part of the '5 Cs of Credit'? Select all that apply.",
+        "o": ["Character", "Capacity", "Collateral", "Creativity", "Capital", "Colour"],
+        "c": [0, 1, 2, 4],
+        "f": "The 5 Cs: Character, Capacity, Capital, Collateral, Conditions. Creativity and colour are not credit metrics."
+      }
+    ]
+  },
+  "teacher": {
+    "intro": "You're preparing a lesson on fractions for a Primary 5 class.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the lesson plan from start to finish.",
+        "items": [
+          "State the learning objective",
+          "Activate prior knowledge",
+          "Introduce the concept with examples",
+          "Guided practice with the class",
+          "Independent practice",
+          "Assess understanding"
+        ],
+        "f": "Every strong lesson moves from known to new, from guided to independent, and closes with assessment."
+      },
+      {
+        "t": "CHOICE",
+        "q": "A student keeps getting the answer wrong. What's the best response?",
+        "o": [
+          "Ask them to explain their thinking, then re-teach from there",
+          "Tell them they're wrong and move on",
+          "Give them the answer",
+          "Send them out of the classroom"
+        ],
+        "c": 0,
+        "f": "Misconceptions are teaching gold. Diagnose the thinking, don't just correct the answer."
+      }
+    ]
+  },
+  "nurse": {
+    "intro": "You're on the ward and starting your shift.",
+    "rounds": [
+      {
+        "t": "TAP",
+        "q": "Tap the vital signs you must record on every patient.",
+        "cols": 3,
+        "tiles": [
+          { "label": "Temperature", "glyph": "🌡️" },
+          { "label": "Blood pressure", "glyph": "🩺" },
+          { "label": "Pulse", "glyph": "💓" },
+          { "label": "Shoe size", "glyph": "👟" },
+          { "label": "Respiratory rate", "glyph": "🫁" },
+          { "label": "Hair colour", "glyph": "💇" }
+        ],
+        "c": [0, 1, 2, 4],
+        "f": "Temperature, BP, pulse and respiratory rate are the core vitals. Any change tells you the patient is deteriorating."
+      },
+      {
+        "t": "CHOICE",
+        "q": "You notice a patient's breathing is fast and shallow. What do you do?",
+        "o": [
+          "Assess airway and oxygen saturation, call for help if deteriorating",
+          "Note it and continue with other patients",
+          "Wait until the doctor's round",
+          "Tell the patient to breathe slowly and walk away"
+        ],
+        "c": 0,
+        "f": "Fast shallow breathing is an early warning sign. Escalate early — the cost of being wrong is a life."
+      }
+    ]
+  },
+  "midwife": {
+    "intro": "A mother arrives in active labour at the health centre.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the stages of normal labour from start to finish.",
+        "items": [
+          "First stage — cervical dilation",
+          "Second stage — baby is born",
+          "Third stage — placenta delivered",
+          "Fourth stage — first hour observation"
+        ],
+        "f": "Memorising the stages lets you spot when labour is NOT normal and act."
+      },
+      {
+        "t": "CHOICE",
+        "q": "After delivery, the mother is bleeding heavily. What is your FIRST action?",
+        "o": [
+          "Massage the uterus and give oxytocin",
+          "Wait and see if it stops on its own",
+          "Call for transport without intervening",
+          "Document the blood loss first"
+        ],
+        "c": 0,
+        "f": "Postpartum haemorrhage is the leading cause of maternal death. Uterine massage and uterotonics save lives — start immediately."
+      }
+    ]
+  },
+  "community-health-worker": {
+    "intro": "You're doing household visits in a rural village.",
+    "rounds": [
+      {
+        "t": "CHOICE",
+        "q": "A mother tells you her child has had diarrhoea for two days. What do you advise first?",
+        "o": [
+          "Start oral rehydration salts immediately and continue feeding",
+          "Stop all food and water for a day",
+          "Give antibiotics from the local shop",
+          "Wait for the child to get worse before referring"
+        ],
+        "c": 0,
+        "f": "ORS and continued feeding are the WHO-recommended first response. Dehydration kills faster than the infection itself."
+      },
+      {
+        "t": "MULTI",
+        "q": "Which of these are signs a child must be referred to a health facility IMMEDIATELY?",
+        "o": ["Unable to drink or breastfeed", "Vomiting everything", "Convulsions", "Mild hunger", "Lethargy or unconsciousness"],
+        "c": [0, 1, 2, 4],
+        "f": "These are the WHO 'general danger signs' for children. Any one means urgent referral."
+      }
+    ]
+  },
+  "lab-technician": {
+    "intro": "You're processing samples in the district hospital lab.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the steps for safely processing a blood sample.",
+        "items": [
+          "Verify patient identity and label the tube at bedside",
+          "Put on gloves and prepare the workspace",
+          "Collect the sample",
+          "Transport in the correct container",
+          "Centrifuge and run the test",
+          "Report results"
+        ],
+        "f": "Identity verification at bedside prevents the most common and dangerous lab error: mismatched results."
+      },
+      {
+        "t": "CHOICE",
+        "q": "You find a clot in an EDTA tube for a full blood count. What do you do?",
+        "o": [
+          "Reject the sample and request a fresh draw",
+          "Run it anyway and note it",
+          "Pick out the clot with a pipette",
+          "Report the count with a warning"
+        ],
+        "c": 0,
+        "f": "Clotted EDTA samples give false results. Reject and redraw — never report data you know is invalid."
+      }
+    ]
+  },
+  "software-developer": {
+    "intro": "You've inherited a buggy function that crashes when the user submits a form.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the debugging workflow.",
+        "items": [
+          "Reproduce the bug locally",
+          "Read the error and inspect the code",
+          "Form a hypothesis about the cause",
+          "Add logging or breakpoints",
+          "Fix and test the change",
+          "Commit and deploy"
+        ],
+        "f": "Never fix a bug you can't reproduce. Debugging is a scientific process — not guessing."
+      },
+      {
+        "t": "CHOICE",
+        "q": "A user types their name as \"O'Brien\" and it crashes the app. What's the likely cause?",
+        "o": [
+          "Unescaped quote breaking an SQL or HTML string",
+          "Unicode character not handled",
+          "The apostrophe key is broken",
+          "Too many letters"
+        ],
+        "c": 0,
+        "f": "Apostrophes in names are a classic injection/escaping bug. Always parameterise queries and escape output."
+      }
+    ]
+  },
+  "data-analyst": {
+    "intro": "You're analysing monthly sales data for a retail chain.",
+    "rounds": [
+      {
+        "t": "CHOICE",
+        "q": "The dataset has 1,200 rows but 800 are missing the 'quantity' field. What do you do FIRST?",
+        "o": [
+          "Investigate why the data is missing before deciding how to handle it",
+          "Delete all rows with missing data",
+          "Fill them all with zero",
+          "Use the average and move on"
+        ],
+        "c": 0,
+        "f": "Understanding why data is missing tells you whether to drop, impute, or flag it. Never silently fill or delete."
+      },
+      {
+        "t": "MATCH",
+        "q": "Match each chart type to what it's best for.",
+        "leftLabel": "Chart",
+        "rightLabel": "Best for",
+        "left": ["Bar chart", "Line chart", "Pie chart", "Scatter plot"],
+        "right": ["Comparing categories", "Trend over time", "Parts of a whole", "Relationship between two variables"],
+        "f": "Chart choice is a communication decision. The right chart makes the insight obvious."
+      }
+    ]
+  },
+  "digital-marketer": {
+    "intro": "You're planning a launch campaign for a new mobile wallet app.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the campaign workflow.",
+        "items": [
+          "Define the target audience and objective",
+          "Choose channels and budget",
+          "Create the creative assets",
+          "Launch and monitor",
+          "Analyse results and optimise"
+        ],
+        "f": "Campaigns that skip audience definition burn budget on the wrong people."
+      },
+      {
+        "t": "SLIDER",
+        "q": "Set a realistic monthly budget split for a small launch. Aim: 60% paid ads, 30% content, 10% tools.",
+        "sliders": [
+          { "label": "Paid ads (%)", "min": 0, "max": 100, "target": [60, 60], "unit": "%" },
+          { "label": "Content (%)", "min": 0, "max": 100, "target": [30, 30], "unit": "%" },
+          { "label": "Tools (%)", "min": 0, "max": 100, "target": [10, 10], "unit": "%" }
+        ],
+        "f": "Small launches need paid reach, but content builds the long-term audience. Tools are a small but essential overhead."
+      }
+    ]
+  },
+  "cybersecurity-analyst": {
+    "intro": "An alert fires: an unusual login on a senior manager's account at 2 AM from another country.",
+    "rounds": [
+      {
+        "t": "CHOICE",
+        "q": "What is your FIRST action?",
+        "o": [
+          "Isolate the account and preserve logs for forensics",
+          "Email the user to ask if it was them",
+          "Ignore it — could be a VPN",
+          "Delete the session and say nothing"
+        ],
+        "c": 0,
+        "f": "Contain first, investigate second. Deleting evidence before preserving it kills the investigation."
+      },
+      {
+        "t": "MULTI",
+        "q": "Which of these are indicators of a phishing email? Select all that apply.",
+        "o": ["Urgency and threats", "Mismatched sender address", "Unexpected attachment", "Personalised greeting from your bank", "Known sender's normal signature"],
+        "c": [0, 1, 2, 3],
+        "f": "Urgency, mismatched senders, unexpected attachments, and unusual personalisation are the classic phishing markers."
+      }
+    ]
+  },
+  "ui-ux-designer": {
+    "intro": "You're redesigning the sign-up flow for a mobile money app.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the UX design process.",
+        "items": [
+          "User research and interviews",
+          "Define the problem",
+          "Sketch and wireframe",
+          "Prototype",
+          "Usability test",
+          "Hand off to developers"
+        ],
+        "f": "Design without research is guesswork. Test with real users before you build."
+      },
+      {
+        "t": "CHOICE",
+        "q": "Your sign-up form has 12 fields. Users keep abandoning it. What's the best fix?",
+        "o": [
+          "Cut fields to the minimum needed and defer the rest to later",
+          "Make the form prettier",
+          "Add a progress bar",
+          "Tell users to be patient"
+        ],
+        "c": 0,
+        "f": "Every field costs a percentage of users. Only ask for what you need right now."
+      }
+    ]
+  },
+  "ai-engineer": {
+    "intro": "You're building a model to predict crop yields from weather and soil data.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the ML workflow.",
+        "items": [
+          "Define the problem and success metric",
+          "Collect and clean data",
+          "Split into train / validation / test",
+          "Train the model",
+          "Evaluate against the test set",
+          "Deploy and monitor"
+        ],
+        "f": "Data quality dominates model quality. Every step after cleaning is easier when the data is right."
+      },
+      {
+        "t": "CHOICE",
+        "q": "Your model gets 98% accuracy on training data but only 60% on new data. What's happening?",
+        "o": [
+          "Overfitting — it memorised the training set instead of learning the pattern",
+          "Underfitting — the model is too simple",
+          "The test data is broken",
+          "The model needs more layers"
+        ],
+        "c": 0,
+        "f": "Overfitting is the classic ML trap. Regularisation, more data, or a simpler model fixes it."
+      }
+    ]
+  },
+  "welder": {
+    "intro": "You're welding a structural steel joint for a small bridge.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the welding procedure.",
+        "items": [
+          "Read the drawing and identify the joint",
+          "Clean and prepare the metal",
+          "Set up equipment and select settings",
+          "Tack weld to hold position",
+          "Weld the joint",
+          "Inspect and finish"
+        ],
+        "f": "Preparation is 70% of a strong weld. Dirty metal produces weak joints every time."
+      },
+      {
+        "t": "TAP",
+        "q": "Tap the PPE you must wear when welding.",
+        "cols": 3,
+        "tiles": [
+          { "label": "Welding helmet", "glyph": "⛑️" },
+          { "label": "Leather gloves", "glyph": "🧤" },
+          { "label": "Fire-resistant apron", "glyph": "🥼" },
+          { "label": "Open sandals", "glyph": "🩴" },
+          { "label": "Safety boots", "glyph": "🥾" },
+          { "label": "Sunglasses", "glyph": "🕶️" }
+        ],
+        "c": [0, 1, 2, 4],
+        "f": "Welding PPE is non-negotiable. Spatter burns through normal clothing and open footwear is a serious injury waiting to happen."
+      }
+    ]
+  },
+  "electrician": {
+    "intro": "You're wiring a new socket in a residential house.",
+    "rounds": [
+      {
+        "t": "CHOICE",
+        "q": "Before touching any wires, what MUST you do?",
+        "o": [
+          "Isolate the circuit and verify it's dead with a tester",
+          "Turn off the light switch",
+          "Wear rubber gloves only",
+          "Ask the homeowner if it's off"
+        ],
+        "c": 0,
+        "f": "Lock-off and prove dead. Never trust a switch — verify with a tester at the point of work."
+      },
+      {
+        "t": "SLIDER",
+        "q": "Set the correct wire gauge for a 13A ring main circuit. Aim for 2.5 mm².",
+        "sliders": [
+          { "label": "Live conductor (mm²)", "min": 1, "max": 6, "step": 0.5, "target": [2.5, 2.5] },
+          { "label": "Neutral conductor (mm²)", "min": 1, "max": 6, "step": 0.5, "target": [2.5, 2.5] },
+          { "label": "Earth conductor (mm²)", "min": 1, "max": 6, "step": 0.5, "target": [2.5, 2.5] }
+        ],
+        "f": "2.5 mm² is standard for ring mains up to 32A. Undersized cable overheats and causes fires."
+      }
+    ]
+  },
+  "plumber": {
+    "intro": "You're installing a water supply line to a new kitchen.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the installation steps.",
+        "items": [
+          "Plan the route and measure runs",
+          "Isolate the water supply",
+          "Cut and fit pipe runs",
+          "Join pipes and fittings",
+          "Pressure test the system",
+          "Restore supply and check for leaks"
+        ],
+        "f": "Pressure testing before restoring supply catches leaks while you can still fix them cheaply."
+      },
+      {
+        "t": "CHOICE",
+        "q": "Water is flowing slowly from a new tap. What do you check first?",
+        "o": [
+          "The isolation valve — it may be partly closed",
+          "The water company",
+          "Replace the entire pipe",
+          "Call the customer's neighbour"
+        ],
+        "c": 0,
+        "f": "The simplest explanation is usually right. Isolation valves are commonly left half-closed after installation."
+      }
+    ]
+  },
+  "carpenter": {
+    "intro": "You're building a wooden door frame for a client.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the carpentry steps.",
+        "items": [
+          "Measure the opening precisely",
+          "Select and cut timber to size",
+          "Plane and square the edges",
+          "Cut joints",
+          "Assemble and fix the frame",
+          "Hang the door and check alignment"
+        ],
+        "f": "Measure twice, cut once. Precise measuring saves material and time."
+      },
+      {
+        "t": "CHOICE",
+        "q": "The door is rubbing at the bottom. What's the correct fix?",
+        "o": [
+          "Plane the bottom edge and re-hang",
+          "Cut 3 cm off the top",
+          "Force it shut",
+          "Replace the entire door"
+        ],
+        "c": 0,
+        "f": "Planing the rubbing edge is the minimal correct fix. Never cut from the wrong side — you can't add wood back."
+      }
+    ]
+  },
+  "auto-mechanic": {
+    "intro": "A car is brought in for a rough idle and stalling.",
+    "rounds": [
+      {
+        "t": "CHOICE",
+        "q": "What's your first step?",
+        "o": [
+          "Listen to the engine and ask the owner when it started",
+          "Start replacing spark plugs",
+          "Replace the fuel pump",
+          "Drain the oil"
+        ],
+        "c": 0,
+        "f": "Symptoms and history narrow the fault. Random parts replacement wastes the customer's money."
+      },
+      {
+        "t": "MATCH",
+        "q": "Match each symptom to its likely cause.",
+        "leftLabel": "Symptom",
+        "rightLabel": "Likely cause",
+        "left": ["Rough idle", "Blue exhaust smoke", "Squealing on braking", "Car pulls to one side"],
+        "right": ["Dirty injectors or spark issues", "Oil burning in the engine", "Worn brake pads", "Wheel misalignment"]
+      }
+    ]
+  },
+  "ac-technician": {
+    "intro": "You're installing a split AC unit in a small office.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the installation steps.",
+        "items": [
+          "Site survey and load calculation",
+          "Mount the indoor unit",
+          "Mount the outdoor condenser",
+          "Run and connect pipework",
+          "Vacuum the lines and release refrigerant",
+          "Test cooling and hand over"
+        ],
+        "f": "Skipping the vacuum leaves moisture in the system, which destroys the compressor over time."
+      },
+      {
+        "t": "CHOICE",
+        "q": "The unit cools but leaks water inside the room. What's the likely cause?",
+        "o": [
+          "Blocked or misrouted condensate drain line",
+          "Not enough refrigerant",
+          "Compressor failure",
+          "Wrong thermostat setting"
+        ],
+        "c": 0,
+        "f": "Water dripping inside almost always means the condensate drain is blocked or running uphill."
+      }
+    ]
+  },
+  "solar-technician": {
+    "intro": "You're sizing and installing an off-grid solar system for a small home.",
+    "rounds": [
+      {
+        "t": "SLIDER",
+        "q": "Set a safe system. Aim for 24V battery bank with a 200Ah capacity and a 400W array.",
+        "sliders": [
+          { "label": "Battery voltage (V)", "min": 12, "max": 48, "step": 12, "target": [24, 24] },
+          { "label": "Battery capacity (Ah)", "min": 100, "max": 400, "step": 50, "target": [200, 200] },
+          { "label": "Solar array (W)", "min": 200, "max": 800, "step": 100, "target": [400, 400] }
+        ],
+        "f": "Voltage determines wire sizing and inverter choice. Undersized batteries drain too fast; oversized arrays waste money if charge control is limited."
+      },
+      {
+        "t": "ORDER",
+        "q": "Order the installation steps.",
+        "items": [
+          "Site survey and load calculation",
+          "Mount panels on the roof",
+          "Install charge controller and inverter",
+          "Install and connect battery bank",
+          "Wire panels to controller",
+          "Test the system under load"
+        ],
+        "f": "Always test under realistic load — a system that works with nothing plugged in tells you nothing."
+      }
+    ]
+  },
+  "mini-grid-operator": {
+    "intro": "You're running a small solar-diesel hybrid mini-grid serving 80 households.",
+    "rounds": [
+      {
+        "t": "CHOICE",
+        "q": "A household reports power cuts every evening from 7–9 PM. What's the likely cause?",
+        "o": [
+          "Demand exceeds capacity at peak hours",
+          "The solar panels are dirty",
+          "The customer's wiring is faulty",
+          "The diesel is contaminated"
+        ],
+        "c": 0,
+        "f": "Evening peak coincides with cooking and lighting. Either increase generation or manage demand through tariffs or load limiting."
+      },
+      {
+        "t": "MULTI",
+        "q": "Which are legitimate demand management strategies? Select all that apply.",
+        "o": ["Time-of-use tariffs", "Load limiters per household", "Appliance efficiency programs", "Turning off the whole grid", "Prepaid metering"],
+        "c": [0, 1, 2, 4],
+        "f": "Demand management balances load without cutting service. Blanket blackouts damage trust and revenue."
+      }
+    ]
+  },
+  "agri-tech-advisor": {
+    "intro": "A maize farmer's crop is yellowing in patches.",
+    "rounds": [
+      {
+        "t": "CHOICE",
+        "q": "What do you do first?",
+        "o": [
+          "Walk the field and inspect the pattern and leaves closely",
+          "Spray general pesticide",
+          "Apply nitrogen fertiliser everywhere",
+          "Recommend the farmer start over"
+        ],
+        "c": 0,
+        "f": "The pattern (patches vs uniform) and leaf symptoms distinguish nutrient deficiency, disease, and pests."
+      },
+      {
+        "t": "MATCH",
+        "q": "Match each symptom pattern to its likely cause.",
+        "leftLabel": "Pattern",
+        "rightLabel": "Likely cause",
+        "left": ["Uniform yellowing on old leaves", "Yellow between veins on new leaves", "Patches of wilted plants", "Holes in leaves"],
+        "right": ["Nitrogen deficiency", "Iron or zinc deficiency", "Root disease or waterlogging", "Insect damage"]
+      }
+    ]
+  },
+  "livestock-farmer": {
+    "intro": "You're managing a herd of 20 goats.",
+    "rounds": [
+      {
+        "t": "CHOICE",
+        "q": "One goat is off feed and standing apart. What do you do?",
+        "o": [
+          "Isolate it and check temperature, eyes, and hooves",
+          "Ignore it — goats are independent",
+          "Slaughter it immediately",
+          "Move the whole herd to new pasture"
+        ],
+        "c": 0,
+        "f": "Isolate to protect the herd, then diagnose. Off-feed and isolation are the earliest signs of illness."
+      },
+      {
+        "t": "MULTI",
+        "q": "Which of these are signs of a healthy goat? Select all that apply.",
+        "o": ["Bright, clear eyes", "Chewing cud", "Firm droppings", "Dull coat", "Good appetite"],
+        "c": [0, 1, 2, 4],
+        "f": "Bright eyes, cud chewing, good droppings and appetite are the daily health checklist. Dull coat means something is wrong."
+      }
+    ]
+  },
+  "aquaculture-farmer": {
+    "intro": "You manage a tilapia pond with 2,000 fingerlings.",
+    "rounds": [
+      {
+        "t": "CHOICE",
+        "q": "You find fish gasping at the surface in the early morning. What's happening?",
+        "o": [
+          "Low dissolved oxygen — likely from overnight plant respiration and waste buildup",
+          "Fish are hungry",
+          "Water is too clean",
+          "Fish are spawning"
+        ],
+        "c": 0,
+        "f": "Early-morning surface gasping means low dissolved oxygen. Aerate, exchange water, and reduce feed until levels recover."
+      },
+      {
+        "t": "SLIDER",
+        "q": "Set water quality targets for healthy tilapia. Aim: pH 7, temperature 28°C, DO 6 mg/L.",
+        "sliders": [
+          { "label": "pH", "min": 4, "max": 10, "step": 0.5, "target": [6.5, 7.5] },
+          { "label": "Temperature (°C)", "min": 20, "max": 36, "target": [27, 30] },
+          { "label": "Dissolved oxygen (mg/L)", "min": 1, "max": 10, "target": [5, 8] }
+        ],
+        "f": "Tilapia tolerate a range but thrive in specific windows. Monitoring prevents mass mortality."
+      }
+    ]
+  },
+  "cocoa-processor": {
+    "intro": "You're processing freshly harvested cocoa pods.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the cocoa processing steps.",
+        "items": [
+          "Harvest and split pods",
+          "Scoop beans and remove pulp",
+          "Ferment beans for 5-7 days",
+          "Sun-dry to 7-8% moisture",
+          "Bag and grade for market"
+        ],
+        "f": "Fermentation develops the chocolate flavour. Skipping or shortening it produces flat, low-grade beans."
+      },
+      {
+        "t": "CHOICE",
+        "q": "Your beans taste bitter and lack chocolate flavour. What most likely went wrong?",
+        "o": [
+          "Fermentation was too short or uneven",
+          "Too much sun during drying",
+          "Wrong storage bag",
+          "The trees are too old"
+        ],
+        "c": 0,
+        "f": "Fermentation is where flavour develops. Skimping on time or not turning the beans gives bitter, unsellable produce."
+      }
+    ]
+  },
+  "extension-officer": {
+    "intro": "You're running a farmer field school on integrated pest management.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the steps for running a farmer field school session.",
+        "items": [
+          "Introduce today's topic and the problem",
+          "Visit the field and observe together",
+          "Discuss findings as a group",
+          "Agree on an action and experiment",
+          "Follow up at the next session"
+        ],
+        "f": "Farmer field schools work through discovery — not lecturing. Let farmers see it, then act on it."
+      },
+      {
+        "t": "CHOICE",
+        "q": "A farmer insists on spraying a broad pesticide for every insect. What do you do?",
+        "o": [
+          "Set up a small experiment comparing sprayed and unsprayed plots",
+          "Tell them they're wrong",
+          "Report them to authorities",
+          "Ignore it"
+        ],
+        "c": 0,
+        "f": "Farmers trust evidence they see. A small side-by-side experiment beats argument every time."
+      }
+    ]
+  },
+  "pastry-chef": {
+    "intro": "You're baking a three-tier cake for a wedding.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the cake-making workflow.",
+        "items": [
+          "Weigh ingredients accurately",
+          "Cream butter and sugar",
+          "Add eggs and flour alternately",
+          "Bake at even temperature",
+          "Cool completely before stacking",
+          "Ice and decorate"
+        ],
+        "f": "Cooling before stacking prevents melting and collapse. A wedding cake fails if any step is rushed."
+      },
+      {
+        "t": "CHOICE",
+        "q": "The sponge is dry and crumbly. What most likely happened?",
+        "o": [
+          "Baked too long or too much flour added",
+          "Too much butter",
+          "Oven too low",
+          "Added too many eggs"
+        ],
+        "c": 0,
+        "f": "Dry cake means too much flour or over-baking. Both are easy to test by weighing ingredients and setting a timer."
+      }
+    ]
+  },
+  "caterer": {
+    "intro": "You're catering a 100-person corporate event tomorrow.",
+    "rounds": [
+      {
+        "t": "SLIDER",
+        "q": "Set portions for the menu. Aim: 250g jollof rice, 200g chicken, 150g salad per plate.",
+        "sliders": [
+          { "label": "Jollof rice per plate (g)", "min": 100, "max": 400, "step": 25, "target": [250, 250] },
+          { "label": "Chicken per plate (g)", "min": 100, "max": 300, "step": 25, "target": [200, 200] },
+          { "label": "Salad per plate (g)", "min": 50, "max": 250, "step": 25, "target": [150, 150] }
+        ],
+        "f": "Over-portioning wastes money, under-portioning loses clients. Consistent measurements protect both."
+      },
+      {
+        "t": "MULTI",
+        "q": "Which food safety rules apply to catering for 100 people? Select all that apply.",
+        "o": ["Keep hot food above 60°C", "Keep cold food below 5°C", "Label everything with prep time", "Reheat leftovers repeatedly", "Use gloves for plating"],
+        "c": [0, 1, 2, 4],
+        "f": "Temperature control and labelling are non-negotiable. Reheating the same dish more than once is dangerous."
+      }
+    ]
+  },
+  "chef": {
+    "intro": "You're running the line on a busy Friday night.",
+    "rounds": [
+      {
+        "t": "CHOICE",
+        "q": "A dish comes back to the kitchen — the steak is undercooked for a pregnant customer. What do you do?",
+        "o": [
+          "Cook a fresh steak to well-done and apologise to the customer",
+          "Reheat the same steak in the microwave",
+          "Ask the waiter to convince the customer",
+          "Send it back out as it is"
+        ],
+        "c": 0,
+        "f": "Pregnant customers cannot eat undercooked meat. Recook a fresh portion — never re-serve reheated food to an unhappy guest."
+      },
+      {
+        "t": "ORDER",
+        "q": "Order the service workflow for a dish.",
+        "items": [
+          "Receive the order",
+          "Fire the dish in the correct sequence",
+          "Plate the components",
+          "Quality check before leaving the pass",
+          "Send to the table"
+        ],
+        "f": "The pass is your last chance to catch mistakes. Nothing leaves without a check."
+      }
+    ]
+  },
+  "food-processor": {
+    "intro": "You're processing tomato paste for retail.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the steps for safe food processing.",
+        "items": [
+          "Source and inspect raw produce",
+          "Wash and sort",
+          "Process and cook",
+          "Package in sterile containers",
+          "Label with batch and date",
+          "Store and distribute"
+        ],
+        "f": "Batch labelling lets you trace any problem back to its source. Without it, one bad batch contaminates your whole reputation."
+      },
+      {
+        "t": "CHOICE",
+        "q": "You notice the paste tastes slightly sour. What do you do?",
+        "o": [
+          "Discard the batch and investigate pH and hygiene",
+          "Add sugar to mask the taste",
+          "Sell it at a discount",
+          "Mix it with the previous batch"
+        ],
+        "c": 0,
+        "f": "Sour taste means bacterial growth. Selling spoiled food is a health hazard and a legal liability."
+      }
+    ]
+  },
+  "gara-tie-dye": {
+    "intro": "You're preparing a batch of Gara fabric for market.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the Gara tie-dye process.",
+        "items": [
+          "Wash and soak the fabric",
+          "Tie or stitch the resist patterns",
+          "Prepare the indigo dye bath",
+          "Dip the fabric in stages to build colour",
+          "Rinse in cold water",
+          "Dry and press for market"
+        ],
+        "f": "Building colour in stages gives depth. A single dip produces a flat, cheaper-looking fabric."
+      },
+      {
+        "t": "SLIDER",
+        "q": "Price your work fairly. Aim for a price that covers 5,000 in materials and 8,000 in labour, with 40% margin.",
+        "sliders": [
+          { "label": "Final selling price (Le)", "min": 8000, "max": 40000, "step": 500, "target": [18000, 22000] }
+        ],
+        "f": "Pricing must cover materials AND your time. Undercharging drives skilled makers out of the craft."
+      }
+    ]
+  },
+  "kente-weaver": {
+    "intro": "You're weaving a Kente strip cloth for a ceremonial order.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the Kente weaving process.",
+        "items": [
+          "Set up the loom and warp threads",
+          "Wind bobbins with weft thread",
+          "Weave the first pattern band",
+          "Change colours for the next pattern",
+          "Weave the repeat bands",
+          "Cut off the loom and finish edges"
+        ],
+        "f": "Kente patterns are named and coded. Knowing the order of patterns is the difference between a commission and a mistake."
+      },
+      {
+        "t": "CHOICE",
+        "q": "A customer requests a cloth with a symbol of unity for a wedding. Which pattern family fits?",
+        "o": [
+          "Adweneasa — 'my skill is exhausted' full-coverage pattern",
+          "Sika futuro — gold dust pattern",
+          "Emaa da — 'it has not happened before' novelty pattern",
+          "Any pattern, since customers don't know"
+        ],
+        "c": 0,
+        "f": "Kente is a language. Matching the pattern to the occasion is what makes a master weaver."
+      }
+    ]
+  },
+  "adire-maker": {
+    "intro": "You're making Adire Eleko cloth using cassava starch resist.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the Adire making process.",
+        "items": [
+          "Prepare the cassava-starch resist",
+          "Sketch or stencil the design",
+          "Apply the resist to the cloth",
+          "Immerse in indigo dye bath",
+          "Remove the resist in cold water",
+          "Dry and press"
+        ],
+        "f": "The resist is the pattern. Painting it precisely is what produces clean, crisp lines after the dye."
+      },
+      {
+        "t": "CHOICE",
+        "q": "The dye did not take evenly. What is the most likely cause?",
+        "o": [
+          "Cloth was not properly wetted before dipping",
+          "The dye bath was too cold",
+          "The cloth was too thick",
+          "Too much starch was applied"
+        ],
+        "c": 0,
+        "f": "Indigo needs wet cloth to penetrate evenly. A dry cloth absorbs irregularly and produces patchy colour."
+      }
+    ]
+  },
+  "bogolan-artisan": {
+    "intro": "You're making bogolan (mud cloth) using fermented mud.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the bogolan process.",
+        "items": [
+          "Weave or source cotton strip cloth",
+          "Wash and dry the cloth",
+          "Paint the design in fermented mud",
+          "Sun-bleach the cloth",
+          "Re-apply mud for deeper colour",
+          "Wash and finish"
+        ],
+        "f": "Sun-bleaching and re-mudding build the deep chocolate colour. Rushing this step gives pale cloth."
+      },
+      {
+        "t": "CHOICE",
+        "q": "A collector asks about the symbols on your cloth. Why does this matter?",
+        "o": [
+          "Bogolan symbols carry meaning — they encode proverbs, history and status",
+          "It doesn't matter, only the look matters",
+          "Symbols are random",
+          "Foreign buyers want plain cloth"
+        ],
+        "c": 0,
+        "f": "Bogolan is a written language in cloth. Knowing the symbols is what makes it authentic, not decorative."
+      }
+    ]
+  },
+  "tailor": {
+    "intro": "A customer brings in fabric for a traditional outfit.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the tailoring process.",
+        "items": [
+          "Take accurate measurements",
+          "Draft or adapt the pattern",
+          "Cut the fabric",
+          "Sew the main seams",
+          "Fit on the customer and adjust",
+          "Finish edges and press"
+        ],
+        "f": "Fitting on the customer before finishing is what turns a sewn garment into a wearable one."
+      },
+      {
+        "t": "SLIDER",
+        "q": "Set a fair price. Materials cost 15,000. Aim for 10 hours of labour at 2,000/hour with 20% margin.",
+        "sliders": [
+          { "label": "Final price (Le)", "min": 20000, "max": 80000, "step": 1000, "target": [42000, 46000] }
+        ],
+        "f": "Materials plus labour, plus margin. Tailors who skip the labour cost work for free and burn out."
+      }
+    ]
+  },
+  "fashion-designer": {
+    "intro": "You're designing a capsule collection for a fashion week show.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the design process.",
+        "items": [
+          "Research the theme and mood",
+          "Sketch concepts and select the strong ones",
+          "Source fabrics and materials",
+          "Drape or pattern the pieces",
+          "Sample and fit",
+          "Produce final garments and style the show"
+        ],
+        "f": "Designers who skip research produce unoriginal work. Concept always precedes cutting."
+      },
+      {
+        "t": "CHOICE",
+        "q": "A buyer asks what makes your collection distinct. What's the strongest answer?",
+        "o": [
+          "A clear point of view tied to a story, material or technique you own",
+          "It's affordable",
+          "It follows international trends",
+          "It's available in many colours"
+        ],
+        "c": 0,
+        "f": "Price and trends are commodities. A clear point of view is the only thing a buyer can't find elsewhere."
+      }
+    ]
+  },
+  "leather-worker": {
+    "intro": "You're crafting leather bags for a growing brand.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the leather-working process.",
+        "items": [
+          "Select and inspect the hide",
+          "Create the pattern and cut panels",
+          "Skive and prepare edges",
+          "Stitch or rivet panels",
+          "Fit hardware and finish edges",
+          "Condition and burnish"
+        ],
+        "f": "Edge finishing is what separates handmade from cheap. It's where craft shows."
+      },
+      {
+        "t": "CHOICE",
+        "q": "A customer complains their bag's strap is fraying after two months. What do you do?",
+        "o": [
+          "Repair or replace the strap and inspect your stitching and edge finish",
+          "Blame the customer",
+          "Offer a small discount on the next purchase",
+          "Ignore it"
+        ],
+        "c": 0,
+        "f": "Fraying means either the leather was poor or the edge was not sealed. Both are on the maker, not the customer."
+      }
+    ]
+  },
+  "hairdresser": {
+    "intro": "A client sits in your chair wanting box braids for a wedding.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the braiding process.",
+        "items": [
+          "Consult with the client on length and size",
+          "Wash and condition the hair",
+          "Section the hair evenly",
+          "Attach extensions and braid from the root",
+          "Continue to the ends and seal",
+          "Finish the hairline and style"
+        ],
+        "f": "Sectioning properly at the start prevents pulling and makes the finished style look intentional."
+      },
+      {
+        "t": "SLIDER",
+        "q": "Set a fair price. Aim: 8,000 for extensions, 6 hours of work at 3,000/hour.",
+        "sliders": [
+          { "label": "Final price (Le)", "min": 20000, "max": 60000, "step": 1000, "target": [26000, 28000] }
+        ],
+        "f": "Braiding is skilled work. Charging less than the value of your time exhausts you and devalues the craft."
+      }
+    ]
+  },
+  "cosmetologist": {
+    "intro": "A client comes in for a facial before a big event.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the facial treatment.",
+        "items": [
+          "Consult on skin type and concerns",
+          "Cleanse the skin",
+          "Exfoliate gently",
+          "Steam and extract if needed",
+          "Apply mask and moisturiser",
+          "Finish with SPF and advice"
+        ],
+        "f": "Skin assessment before touching the face prevents reactions. Never treat a skin you haven't read."
+      },
+      {
+        "t": "CHOICE",
+        "q": "The client's skin reacts red and hot during the treatment. What do you do?",
+        "o": [
+          "Stop, cool the skin with a cold compress, and remove the product",
+          "Continue — redness is normal",
+          "Apply more product",
+          "Leave the room"
+        ],
+        "c": 0,
+        "f": "Redness and heat mean a reaction. Stop immediately and calm the skin — the client's safety outranks the appointment."
+      }
+    ]
+  },
+  "barber": {
+    "intro": "A regular client wants a fresh fade.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the fade cut.",
+        "items": [
+          "Consult on the height and tightness",
+          "Prep and clean the hair",
+          "Set the guard and cut the base",
+          "Blend the fade with lever technique",
+          "Line up the edges",
+          "Finish with a hot towel and product"
+        ],
+        "f": "A fade is a gradient. Cutting the base first and blending upward is what makes it smooth."
+      },
+      {
+        "t": "MULTI",
+        "q": "Which tools must be sanitised between every client? Select all that apply.",
+        "o": ["Clippers", "Scissors", "Combs", "Capes and towels", "The client's own phone"],
+        "c": [0, 1, 2, 3],
+        "f": "Anything that touches the client or the chair must be cleaned. Blood-borne infections spread through shared tools."
+      }
+    ]
+  },
+  "graphic-designer": {
+    "intro": "A local restaurant needs a poster for its reopening.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the design process.",
+        "items": [
+          "Clarify the brief and audience",
+          "Research references and gather assets",
+          "Sketch layout options",
+          "Choose a direction and design",
+          "Present and gather feedback",
+          "Refine and export final files"
+        ],
+        "f": "Skipping the brief guarantees revisions. Always clarify before you design."
+      },
+      {
+        "t": "CHOICE",
+        "q": "The client says the poster 'feels off'. What's your next move?",
+        "o": [
+          "Ask specific questions about what feels wrong — hierarchy, colour, imagery",
+          "Redo it in a completely different style",
+          "Argue that it's fine",
+          "Send three more random options"
+        ],
+        "c": 0,
+        "f": "Vague feedback needs specific questions. Diagnosis before redesign saves everyone time."
+      }
+    ]
+  },
+  "animator": {
+    "intro": "You're animating a walk cycle for a 2D character.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the keyframes of a walk cycle.",
+        "items": [
+          "Contact pose — both feet on the ground",
+          "Down pose — weight shifts down",
+          "Passing pose — one leg passes the other",
+          "Up pose — body rises",
+          "Contact pose — feet reach again"
+        ],
+        "f": "Walk cycles repeat through these poses. Getting the passing and up positions right is what sells the weight."
+      },
+      {
+        "t": "CHOICE",
+        "q": "The character looks floaty and weightless. What's the most likely fix?",
+        "o": [
+          "Adjust the timing — add more frames on the up pose and accelerate through the down",
+          "Redraw the whole character",
+          "Change the background",
+          "Add more colours"
+        ],
+        "c": 0,
+        "f": "Weight comes from timing, not drawing. Animation is 90% timing and spacing."
+      }
+    ]
+  },
+  "music-producer": {
+    "intro": "You're producing a beat for an up-and-coming Afrobeat artist.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the production workflow.",
+        "items": [
+          "Choose the tempo and key",
+          "Lay down the drum pattern",
+          "Add the bass line",
+          "Layer melody and chords",
+          "Arrange the song structure",
+          "Mix and master"
+        ],
+        "f": "Rhythm first, then harmony, then arrangement. Trying to produce out of order fights the music."
+      },
+      {
+        "t": "CHOICE",
+        "q": "The mix sounds muddy on small speakers. What's your first move?",
+        "o": [
+          "Cut low-end frequencies on elements that don't need them",
+          "Turn everything up",
+          "Add more reverb",
+          "Start the whole track again"
+        ],
+        "c": 0,
+        "f": "Muddy mixes usually mean too much low-mid energy. Subtractive EQ beats boosting every time."
+      }
+    ]
+  },
+  "filmmaker": {
+    "intro": "You're shooting a short film with a limited crew.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the film production phases.",
+        "items": [
+          "Write and refine the script",
+          "Secure locations and cast",
+          "Shoot principal photography",
+          "Edit the rough cut",
+          "Add sound and colour",
+          "Final export and screening"
+        ],
+        "f": "Post-production cannot save a bad shoot, and production cannot save a bad script. Respect the order."
+      },
+      {
+        "t": "CHOICE",
+        "q": "You're losing daylight and haven't shot the closing scene. What do you do?",
+        "o": [
+          "Prioritise the coverage you absolutely need — the master and the close-up",
+          "Shoot everything on the list equally",
+          "Give up for the day",
+          "Improvise the ending"
+        ],
+        "c": 0,
+        "f": "Get the master shot and the essential close-up before anything else. You can skip the nice-to-haves."
+      }
+    ]
+  },
+  "content-creator": {
+    "intro": "You're building an audience around West African cooking.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the content workflow.",
+        "items": [
+          "Pick a clear niche",
+          "Plan the video and hook",
+          "Film with clean lighting and sound",
+          "Edit tightly with subtitles",
+          "Publish with a strong thumbnail",
+          "Engage with comments and analyse results"
+        ],
+        "f": "The hook and thumbnail decide whether anyone watches. Everything else comes after."
+      },
+      {
+        "t": "CHOICE",
+        "q": "A video goes viral with 500k views but only 100 followers. What's happening?",
+        "o": [
+          "The video is entertainment, not a reason to follow — the channel needs a clearer promise",
+          "The audience is broken",
+          "The algorithm is against you",
+          "Views don't matter"
+        ],
+        "c": 0,
+        "f": "Viral views without follows mean the video doesn't sell the channel. The channel needs a reason to come back."
+      }
+    ]
+  },
+  "entrepreneur": {
+    "intro": "You want to launch a small food delivery business in your city.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the startup steps.",
+        "items": [
+          "Talk to potential customers about the problem",
+          "Test a small offer with real money",
+          "Register the business and open a bank account",
+          "Set up a repeatable ordering and delivery process",
+          "Track costs and margins weekly",
+          "Hire your first helper and scale"
+        ],
+        "f": "Customers first, structure second. Registering before testing is the most common expensive mistake."
+      },
+      {
+        "t": "SLIDER",
+        "q": "Set a healthy pricing. Aim: 30% food cost, 40% all-in operating cost, 30% margin.",
+        "sliders": [
+          { "label": "Food cost (%)", "min": 10, "max": 60, "target": [30, 30], "unit": "%" },
+          { "label": "Operating cost (%)", "min": 10, "max": 60, "target": [40, 40], "unit": "%" },
+          { "label": "Margin (%)", "min": 5, "max": 60, "target": [30, 30], "unit": "%" }
+        ],
+        "f": "Food cost above 35% and margin below 20% means you're working for free. Numbers tell the truth."
+      }
+    ]
+  },
+  "ecommerce-operator": {
+    "intro": "You're listing African print bags on an online marketplace.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the e-commerce workflow for a new product.",
+        "items": [
+          "Source and inspect the product",
+          "Photograph and write the listing",
+          "Set the price including shipping and fees",
+          "Publish on the marketplace",
+          "Fulfil orders and manage returns",
+          "Review analytics and restock winners"
+        ],
+        "f": "Pricing before publishing avoids selling at a loss. Always include all fees in your price."
+      },
+      {
+        "t": "CHOICE",
+        "q": "A product sells well but you're losing money on every order. What do you do?",
+        "o": [
+          "Recalculate landed cost including shipping, fees and returns, then reprice or drop it",
+          "Keep selling for volume",
+          "Hope it evens out",
+          "Increase ad spend"
+        ],
+        "c": 0,
+        "f": "Volume never fixes a negative margin. Reprice honestly or drop the product."
+      }
+    ]
+  },
+  "mobile-money-agent": {
+    "intro": "You're running a mobile money kiosk.",
+    "rounds": [
+      {
+        "t": "CHOICE",
+        "q": "Your float is running low at 4 PM on a Friday. What do you do?",
+        "o": [
+          "Call your super-agent to top up before demand peaks",
+          "Refuse all withdrawals until Monday",
+          "Increase your commission silently",
+          "Borrow from the till"
+        ],
+        "c": 0,
+        "f": "Float management is the core skill of the agent. Planning ahead for peak demand is what keeps customers loyal."
+      },
+      {
+        "t": "MULTI",
+        "q": "Which of these are signs of a fraudulent transaction attempt? Select all that apply.",
+        "o": [
+          "Customer insists on completing before verification",
+          "Fake SMS claiming the money was sent",
+          "Unusually large transaction from a new customer",
+          "Regular customer topping up",
+          "Nervous behaviour and rushing"
+        ],
+        "c": [0, 1, 2, 4],
+        "f": "Mobile money fraud usually relies on rushing you. Slow down, verify on the system, and never trust an SMS alone."
+      }
+    ]
+  },
+  "logistics-coordinator": {
+    "intro": "You're moving 12 tonnes of cocoa from a farm to the port.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the logistics workflow.",
+        "items": [
+          "Confirm cargo and destination with the buyer",
+          "Book transport and confirm capacity",
+          "Prepare export documents and permits",
+          "Load and seal the truck",
+          "Track the shipment en route",
+          "Clear customs and confirm delivery"
+        ],
+        "f": "Documents before trucks. A sealed truck with bad paperwork sits at the border for weeks."
+      },
+      {
+        "t": "CHOICE",
+        "q": "The truck breaks down two days from the port. What do you do first?",
+        "o": [
+          "Arrange a replacement truck and transfer cargo while documenting condition",
+          "Wait for the driver to fix it",
+          "Cancel the shipment",
+          "Sell the cargo locally"
+        ],
+        "c": 0,
+        "f": "Transfer with documentation protects the cargo and the buyer's trust. Time is the enemy of perishable goods."
+      }
+    ]
+  },
+  "mining-technician": {
+    "intro": "You're supervising a shift at a small-scale gold mine.",
+    "rounds": [
+      {
+        "t": "CHOICE",
+        "q": "Before sending workers into the shaft, what must be checked?",
+        "o": [
+          "Ground stability, ventilation, and gas levels",
+          "Whether the workers ate breakfast",
+          "The weather forecast",
+          "The price of gold today"
+        ],
+        "c": 0,
+        "f": "Ground, air and gas are the three checks that keep miners alive. No entry without them."
+      },
+      {
+        "t": "TAP",
+        "q": "Tap the PPE required for underground mining.",
+        "cols": 4,
+        "tiles": [
+          { "label": "Helmet", "glyph": "⛑️" },
+          { "label": "Headlamp", "glyph": "🔦" },
+          { "label": "Steel-toe boots", "glyph": "🥾" },
+          { "label": "Gloves", "glyph": "🧤" },
+          { "label": "Reflective vest", "glyph": "🦺" },
+          { "label": "Open sandals", "glyph": "🩴" },
+          { "label": "Headphones", "glyph": "🎧" },
+          { "label": "Dust mask", "glyph": "😷" }
+        ],
+        "c": [0, 1, 2, 3, 4, 7],
+        "f": "Underground mining PPE is non-negotiable. One missing piece turns a small accident into a fatality."
+      }
+    ]
+  },
+  "tour-guide": {
+    "intro": "You're leading a group of six tourists through a historical site.",
+    "rounds": [
+      {
+        "t": "ORDER",
+        "q": "Order the tour experience.",
+        "items": [
+          "Welcome the group and set expectations",
+          "Share the historical context",
+          "Walk the route with stops at key features",
+          "Answer questions and engage stories",
+          "Close with a wrap-up and next-step recommendations"
+        ],
+        "f": "Context before the walk. A tour without the story is just a walk."
+      },
+      {
+        "t": "CHOICE",
+        "q": "A tourist asks a question you don't know the answer to. What's the best response?",
+        "o": [
+          "Acknowledge honestly and offer to find out before the tour ends",
+          "Make something up confidently",
+          "Ignore the question and move on",
+          "Say the information isn't available"
+        ],
+        "c": 0,
+        "f": "Honesty builds trust. A guide who admits what they don't know is more credible than one who invents."
+      }
+    ]
+  },
+  "hotel-manager": {
+    "intro": "You're the general manager of a 40-room hotel.",
+    "rounds": [
+      {
+        "t": "CHOICE",
+        "q": "A guest complains their room wasn't cleaned. What do you do?",
+        "o": [
+          "Apologise sincerely, fix the room immediately, and offer a genuine make-good",
+          "Explain that housekeeping is short-staffed",
+          "Offer a free breakfast and hope it ends there",
+          "Escalate to the housekeeping manager in front of the guest"
+        ],
+        "c": 0,
+        "f": "Fix first, explain later. The guest remembers how you responded, not the original problem."
+      },
+      {
+        "t": "SLIDER",
+        "q": "Set annual occupancy targets. Aim: 65% occupancy, 80,000 average room rate, 12% direct bookings growth.",
+        "sliders": [
+          { "label": "Occupancy (%)", "min": 30, "max": 95, "target": [60, 70], "unit": "%" },
+          { "label": "Average room rate (Le)", "min": 40000, "max": 150000, "step": 5000, "target": [75000, 85000] },
+          { "label": "Direct booking growth (%)", "min": 0, "max": 40, "target": [10, 15], "unit": "%" }
+        ],
+        "f": "Occupancy without rate destroys profit. Rate without occupancy leaves rooms empty. The balance is where hotels win."
+      }
+    ]
+  }
+}
