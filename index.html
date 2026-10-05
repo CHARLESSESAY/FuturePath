@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
   <meta name="theme-color" content="#05080f" />
-  <meta name="description" content="FuturePath — West Africa Career Explorer. Explore 57 formal, informal and traditional careers across all 15 ECOWAS countries." />
+  <meta name="description" content="FuturePath — West Africa Career Explorer. Try 57 careers across all 15 ECOWAS countries." />
   <title>FuturePath — West Africa Career Explorer</title>
   <link rel="stylesheet" href="./src/style.css" />
   <script src="https://cdn.babylonjs.com/babylon.js"></script>
@@ -58,7 +58,11 @@
     </section>
 
     <div class="card-actions">
-      <button id="addBtn" class="primary">Add to my plan</button>
+      <button id="simBtn" class="primary">Try this career</button>
+      <button id="addBtn" class="ghost">Add to my plan</button>
+    </div>
+    <div id="simDone" class="sim-done hidden">
+      <span class="tick">✓</span> You completed the simulation
     </div>
   </aside>
 
@@ -74,6 +78,84 @@
   </aside>
 
   <button id="xrBtn" title="Enter VR (requires a headset)">Enter VR</button>
+
+  <!-- ================= SIMULATION OVERLAY ================= -->
+  <div id="simLayer" class="sim-layer hidden" role="dialog" aria-modal="true" aria-labelledby="simTitle">
+    <div class="sim-shell">
+      <header class="sim-head">
+        <div class="sim-title-wrap">
+          <span class="sim-badge">Simulation</span>
+          <h2 id="simTitle">—</h2>
+        </div>
+        <button id="simClose" class="close" aria-label="Close simulation">×</button>
+      </header>
+
+      <p id="simIntro" class="sim-intro"></p>
+
+      <div class="sim-progress">
+        <div class="sim-progress-bar"><span id="simProgressFill"></span></div>
+        <span id="simProgressText">Round 1</span>
+      </div>
+
+      <div id="simStage" class="sim-stage"></div>
+
+      <div id="simFeedback" class="sim-feedback hidden" aria-live="polite">
+        <div class="fb-head">
+          <span id="simFbIcon" class="fb-icon">✓</span>
+          <strong id="simFbTitle">Correct</strong>
+        </div>
+        <p id="simFbText"></p>
+      </div>
+
+      <footer class="sim-foot">
+        <div class="sim-score">Score: <strong id="simScore">0</strong></div>
+        <button id="simNext" class="primary" disabled>Check</button>
+      </footer>
+    </div>
+  </div>
+
+  <!-- ================= SIMULATION SUMMARY ================= -->
+  <div id="sumLayer" class="sim-layer hidden" role="dialog" aria-modal="true">
+    <div class="sim-shell summary-shell">
+      <header class="sim-head">
+        <div class="sim-title-wrap">
+          <span class="sim-badge">Completed</span>
+          <h2 id="sumTitle">—</h2>
+        </div>
+        <button id="sumClose" class="close" aria-label="Close summary">×</button>
+      </header>
+
+      <div class="sum-ring-wrap">
+        <svg class="sum-ring" viewBox="0 0 120 120" aria-hidden="true">
+          <circle cx="60" cy="60" r="52" class="ring-track" />
+          <circle id="sumRingFill" cx="60" cy="60" r="52" class="ring-fill" />
+        </svg>
+        <div class="sum-pct"><span id="sumPct">0</span><small>%</small></div>
+      </div>
+
+      <p id="sumVerdict" class="sum-verdict">—</p>
+
+      <div class="sum-block">
+        <h3>What you got right</h3>
+        <ul id="sumRight"></ul>
+      </div>
+
+      <div class="sum-block">
+        <h3>What to work on</h3>
+        <ul id="sumGrow"></ul>
+      </div>
+
+      <div class="sum-block">
+        <h3>Next step</h3>
+        <p id="sumNextStep"></p>
+      </div>
+
+      <div class="card-actions">
+        <button id="sumAdd" class="primary">Add to my plan</button>
+        <button id="sumRetry" class="ghost">Try again</button>
+      </div>
+    </div>
+  </div>
 
   <div id="toast" class="hidden"></div>
 
