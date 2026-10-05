@@ -1,0 +1,661 @@
+{
+  "gara-tie-dye": {
+    "intro": "Learn Gara tie-dyeing from the ground up — from understanding cotton and indigo to running a workshop that exports. Master the craft, then build a business around it.",
+    "skillDomains": [
+      {
+        "id": "materials",
+        "name": "Materials & Fabric",
+        "description": "Know your materials. Fabric choice, thread, and tool handling determine everything downstream.",
+        "skills": [
+          {
+            "id": "fabric-fundamentals",
+            "name": "Fabric Fundamentals",
+            "description": "Identify cotton types, weaves, and how each takes dye.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-what-is-gara",
+                    "type": "lesson",
+                    "title": "What is Gara?",
+                    "content": "<p><strong>Gara</strong> is the Sierra Leonean name for wax-resist and tie-dye textiles. It shares roots with Nigerian <em>adire</em> and sits inside the wider West African resist-dye tradition.</p><p>The technique is simple to say and hard to master: you prevent dye from reaching parts of the cloth, then dye the rest. The untouched parts stay pale. The dyed parts go deep.</p><blockquote>Gara is not decoration. It is a language. Every pattern has a name, a history, and a message.</blockquote><p>By the end of this skill, you will look at any cloth and know what it is, how it was made, and what it can become.</p>"
+                  },
+                  {
+                    "id": "l-fabric-types",
+                    "type": "lesson",
+                    "title": "Cotton, rayon, silk — how they differ",
+                    "content": "<h3>Cotton</h3><p>The traditional base for Gara. Absorbs dye evenly. Durable. Locally available. <strong>Start here.</strong></p><h3>Rayon</h3><p>Takes dye brighter than cotton but fades faster and can tear under heavy handling. Use for decorative cloth, not for wearables.</p><h3>Silk</h3><p>Luxury-grade. Rare in West African workshops because of cost. Produces stunning colour depth.</p><h3>The rule</h3><p>If you can only buy one fabric for your whole learning journey: <strong>100% cotton.</strong> It forgives mistakes and rewards skill.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-fabric-id",
+                    "type": "drill",
+                    "title": "Identify the fabric",
+                    "passingScore": 80,
+                    "steps": [
+                      {
+                        "q": "Which fabric is best for a Gara cloth that must last years and be worn regularly?",
+                        "o": ["Polyester blend", "100% cotton", "Nylon", "Acrylic"],
+                        "c": 1,
+                        "f": "Cotton holds dye and lasts. Synthetics resist dye or fade unevenly."
+                      },
+                      {
+                        "q": "You feel a fabric that is cool, slightly rough, and when burned turns to soft ash with a paper smell. What is it?",
+                        "o": ["Silk", "Polyester", "Cotton", "Rayon"],
+                        "c": 2,
+                        "f": "The burn test — natural fibres turn to ash and smell like burnt paper; synthetics melt into a hard bead."
+                      },
+                      {
+                        "q": "Which fabric takes dye the brightest but fades fastest?",
+                        "o": ["Cotton", "Rayon", "Silk", "Wool"],
+                        "c": 1,
+                        "f": "Rayon absorbs dye fast and bright but loses colour quickly under sun and washing."
+                      }
+                    ]
+                  },
+                  {
+                    "id": "l-fabric-prep",
+                    "type": "lesson",
+                    "title": "Why you must wash before dyeing",
+                    "content": "<p>New fabric has <strong>sizing</strong> — a starch coating added during manufacturing to keep it crisp. Sizing blocks dye. If you dye new cloth without washing, you get uneven, pale results.</p><h3>The prep routine</h3><ol><li>Fill a basin with hot water and a spoon of detergent.</li><li>Soak the fabric for 30 minutes.</li><li>Rinse in clean water until no suds remain.</li><li>Hang to dry — do not tumble.</li><li>Iron flat before marking patterns.</li></ol><blockquote>Prep is 30% of the finished quality. Skip it and every later step fights you.</blockquote>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-prep-sequence",
+                    "type": "drill",
+                    "title": "Prep sequence practice",
+                    "passingScore": 80,
+                    "steps": [
+                      {
+                        "q": "You have just bought new cotton from the market. What is the very first step?",
+                        "o": ["Soak in indigo", "Wash in hot water with detergent", "Cut to size", "Iron flat"],
+                        "c": 1,
+                        "f": "Always wash first. Everything else comes after."
+                      },
+                      {
+                        "q": "After washing, the fabric is dry but wrinkled. What do you do before marking patterns?",
+                        "o": ["Cut it", "Iron it flat", "Dye it", "Soak it again"],
+                        "c": 1,
+                        "f": "Wrinkles distort pattern marks. Iron flat while dry."
+                      },
+                      {
+                        "q": "You wash in cold water only. What is the risk?",
+                        "o": ["None — cold water works", "Sizing remains and blocks dye", "The fabric shrinks", "The colour runs"],
+                        "c": 1,
+                        "f": "Cold water does not fully remove sizing. Hot water and detergent are required."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "s-customer-shrink",
+                    "type": "scenario",
+                    "title": "Customer wants a low-shrink cloth",
+                    "prompt": "A customer commissions a 2-metre Gara cloth and insists it must not shrink more than 2% after washing. Raw cotton shrinks 5–10% on first wash. You have the tools and time to pre-treat. How do you prepare the fabric?",
+                    "context": "This is a real commercial concern — export clients will reject orders that shrink beyond spec.",
+                    "placeholder": "Describe your preparation steps in order…",
+                    "rubric": [
+                      "Pre-wash before cutting to size",
+                      "Note the expected shrink percentage",
+                      "Describe how you dry (line vs tumble)",
+                      "Confirm final measurement check after drying",
+                      "Address any additional stabilisation step (e.g., hot wash + cold rinse)"
+                    ]
+                  }
+                ]
+              },
+              "4": {
+                "modules": [
+                  {
+                    "id": "p-fabric-prep-sop",
+                    "type": "portfolio",
+                    "title": "Write your fabric prep SOP",
+                    "prompt": "Create a one-page Standard Operating Procedure for preparing fabric before dyeing, usable by any workshop apprentice.",
+                    "context": "Real workshops run on written procedures. This becomes part of your professional portfolio.",
+                    "steps": [
+                      "List each step with clear instructions",
+                      "Note equipment needed for each step",
+                      "Include a quality checkpoint after each step",
+                      "Add a photo or sketch of the setup"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "threads-tools",
+            "name": "Threads & Tools",
+            "description": "The needles, threads, waxes, and tools you work with every day.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-threads",
+                    "type": "lesson",
+                    "title": "The thread matters",
+                    "content": "<p>In tie-dye Gara, thread is not for sewing — it is your drawing tool. The way you tie and stitch determines the pattern.</p><h3>Common threads</h3><ul><li><strong>Cotton twine</strong> — strong, forgiving, works for thick folds</li><li><strong>Nylon thread</strong> — thin, precise, for fine pattern work</li><li><strong>Rubber bands</strong> — quick and cheap, good for beginners</li></ul><p>Professional Gara makers keep a range of thicknesses on hand. Thin thread makes fine lines; thick thread makes bold ones.</p>"
+                  },
+                  {
+                    "id": "l-tools",
+                    "type": "lesson",
+                    "title": "Your workshop toolkit",
+                    "content": "<p>A serious Gara workshop needs:</p><ul><li>Sharp scissors</li><li>Needles in multiple sizes</li><li>Wooden pegs or clamps</li><li>A large dye pot (enamel or stainless steel — never aluminium)</li><li>Wooden stirring stick dedicated to dye</li><li>Rubber gloves</li><li>A drying line in shade</li></ul><p>The dye pot is the most important. Aluminium reacts with indigo and ruins the bath. Enamel or stainless steel lasts for years.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-tool-id",
+                    "type": "drill",
+                    "title": "Match the tool to its job",
+                    "steps": [
+                      {
+                        "q": "You need to make fine, precise lines in a small pattern. Which tool?",
+                        "o": ["Thick cotton twine", "Nylon thread", "Rubber bands", "Wooden pegs"],
+                        "c": 1,
+                        "f": "Nylon thread is thin and precise — perfect for fine lines."
+                      },
+                      {
+                        "q": "Which material must your dye pot NOT be made of?",
+                        "o": ["Enamel", "Stainless steel", "Aluminium", "Ceramic-lined"],
+                        "c": 2,
+                        "f": "Aluminium reacts with indigo and metallic salts, ruining the bath and producing off-colours."
+                      },
+                      {
+                        "q": "You're dying a large cloth and need to keep folds tight for a bold pattern. Best option?",
+                        "o": ["Sewing thread", "Rubber bands or heavy twine", "Fishing line", "Paper clips"],
+                        "c": 1,
+                        "f": "Rubber bands or heavy twine hold thick folds tightly under dye pressure."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "l-tie-techniques",
+                    "type": "lesson",
+                    "title": "Three foundational tie techniques",
+                    "content": "<h3>1. Spiral tie</h3><p>Lay the fabric flat, pinch the centre, and twist. Tie at intervals along the twist. Creates a radiating spiral pattern.</p><h3>2. Fold-and-tie</h3><p>Fold the fabric into a triangle or strip, then tie across the fold at regular intervals. Creates repeating geometric bands.</p><h3>3. Stitch-and-gather</h3><p>Run a needle and thread along a marked line, then gather tightly. Creates long, flowing lines that follow the stitching.</p><p>Practice each on a small square before applying to a full cloth.</p>"
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "d-tie-choice",
+                    "type": "drill",
+                    "title": "Choose the right tie",
+                    "steps": [
+                      {
+                        "q": "You want a repeating geometric band pattern across the cloth.",
+                        "o": ["Spiral tie", "Fold-and-tie", "Stitch-and-gather", "Random scrunch"],
+                        "c": 1,
+                        "f": "Fold-and-tie creates clean repeating bands."
+                      },
+                      {
+                        "q": "You want a radiating sunburst from the centre.",
+                        "o": ["Spiral tie", "Fold-and-tie", "Stitch-and-gather", "Edge-only tie"],
+                        "c": 0,
+                        "f": "Spiral tie is the only technique that produces a radiating sunburst."
+                      },
+                      {
+                        "q": "You want long, flowing lines following a curve you've drawn.",
+                        "o": ["Spiral tie", "Fold-and-tie", "Stitch-and-gather", "Rubber band wrap"],
+                        "c": 2,
+                        "f": "Stitch-and-gather follows any line you can stitch, no matter the shape."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "4": {
+                "modules": [
+                  {
+                    "id": "p-tie-sampler",
+                    "type": "portfolio",
+                    "title": "Build a tie-technique sampler",
+                    "prompt": "Create a sampler of at least 5 distinct tie techniques on small fabric squares. Photograph and label each one with the technique, thread used, and expected result.",
+                    "steps": [
+                      "Cut 5+ squares of washed cotton",
+                      "Apply a different technique to each",
+                      "Dye them all in the same bath for consistency",
+                      "Photograph the finished sampler",
+                      "Write a one-line note under each about what you learned"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "safety",
+            "name": "Workshop Safety",
+            "description": "Protect your hands, lungs, and workspace. Dye work involves chemicals and dyes that demand respect.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-safety-intro",
+                    "type": "lesson",
+                    "title": "Why safety is a skill",
+                    "content": "<p>Indigo, caustic soda, and dye fixatives are powerful chemicals. A workshop that ignores safety will eventually injure someone — usually the youngest apprentice.</p><p>Safety is not optional. It is a core professional skill. Every professional workshop you visit will have safety protocols. Learning them now is how you become employable later.</p>"
+                  },
+                  {
+                    "id": "l-safety-ppe",
+                    "type": "lesson",
+                    "title": "Personal protective equipment",
+                    "content": "<h3>Always wear</h3><ul><li><strong>Rubber gloves</strong> — caustic soda burns skin</li><li><strong>Apron or old clothes</strong> — dye stains permanently</li><li><strong>Closed shoes</strong> — spills happen</li><li><strong>Dust mask</strong> — when handling powdered dyes</li></ul><h3>Never do</h3><ul><li>Eat or drink in the dye area</li><li>Touch your face with gloved hands</li><li>Work alone with caustic soda on a first attempt</li></ul>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-safety-check",
+                    "type": "drill",
+                    "title": "Safety habits check",
+                    "steps": [
+                      {
+                        "q": "You're about to mix caustic soda into water. Which is correct?",
+                        "o": ["Add water to soda", "Add soda to water slowly while stirring", "Pour both together fast", "Mix with bare hands"],
+                        "c": 1,
+                        "f": "Always add caustic soda to water, never the reverse. Reversing causes violent heat and splatter."
+                      },
+                      {
+                        "q": "You must handle powdered dye. What PPE is essential?",
+                        "o": ["Only gloves", "Dust mask and gloves", "Sunglasses", "Just an apron"],
+                        "c": 1,
+                        "f": "Powdered dye can be inhaled. Mask and gloves are minimum."
+                      },
+                      {
+                        "q": "You finish dyeing and your gloves have dye on them. What do you do?",
+                        "o": ["Rinse them in the dye pot", "Peel them off by the cuff and dispose safely", "Touch your phone with them", "Reuse them without cleaning"],
+                        "c": 1,
+                        "f": "Peel gloves from the cuff inward without touching the outside. Dispose immediately."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "s-safety-incident",
+                    "type": "scenario",
+                    "title": "Handle a chemical splash",
+                    "prompt": "An apprentice spills caustic soda solution on their forearm. They are panicking. You are the workshop lead. Walk through exactly what you do in order.",
+                    "context": "Caustic soda burns continue until thoroughly flushed. Fast, correct action prevents scarring.",
+                    "placeholder": "Step 1: …\nStep 2: …",
+                    "rubric": [
+                      "Remove contaminated clothing/gloves first",
+                      "Flush with copious running water for at least 20 minutes",
+                      "Do NOT neutralise with acid — flushing is the correct response",
+                      "Do NOT apply creams or ointments",
+                      "Arrange medical assessment",
+                      "Record the incident for future prevention"
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "s-safety-review",
+                    "type": "scenario",
+                    "title": "Write a workshop safety code",
+                    "prompt": "You are opening a small Gara workshop with three apprentices. Write a one-page safety code that covers daily operations.",
+                    "context": "Insurance, government registration, and export contracts increasingly require documented safety procedures.",
+                    "placeholder": "Section 1: Daily safety rules…",
+                    "rubric": [
+                      "Covers PPE requirements",
+                      "Covers chemical handling and storage",
+                      "Covers emergency procedures",
+                      "Assigns responsibility (who checks what, when)",
+                      "Includes a training requirement for new apprentices"
+                    ]
+                  }
+                ]
+              },
+              "4": {
+                "modules": [
+                  {
+                    "id": "p-safety-poster",
+                    "type": "portfolio",
+                    "title": "Design a workshop safety poster",
+                    "prompt": "Design and photograph a safety poster to display in your workshop. It must be readable from 2 metres and cover the four most important safety rules.",
+                    "steps": [
+                      "Choose the 4 most important rules",
+                      "Design with clear icons and short text",
+                      "Use colours that stand out",
+                      "Print or hand-paint and display in your workspace",
+                      "Photograph the finished poster in place"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "design",
+        "name": "Design & Pattern",
+        "description": "Design is what separates a craftsperson from an artist. Learn to plan patterns with intention and cultural awareness.",
+        "skills": [
+          {
+            "id": "pattern-design",
+            "name": "Pattern Design",
+            "description": "Plan, sketch, and predict how patterns will look after dyeing.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-design-intro",
+                    "type": "lesson",
+                    "title": "Pattern is intention",
+                    "content": "<p>Every strong Gara cloth starts on paper. Not in dye.</p><p>Professional pattern design has four steps:</p><ol><li><strong>Intention</strong> — what is this cloth for? Wearable? Wall art? Commission?</li><li><strong>Sketch</strong> — draw the layout on paper.</li><li><strong>Predict</strong> — imagine what each mark will become after dye and resist.</li><li><strong>Test</strong> — cut a small sample square and dye it before committing the full cloth.</li></ol><p>Beginners skip the sketch and regret it. Professionals always sketch.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-resist-prediction",
+                    "type": "lesson",
+                    "title": "Predicting the result",
+                    "content": "<p>In dyeing, <strong>what you tie stays pale; what you don't goes dark</strong>. Beginners picture the opposite.</p><p>Before you tie a single knot, ask:</p><ul><li>Which parts will resist dye?</li><li>Which parts will absorb it fully?</li><li>What happens at the boundary — will it be sharp or feathered?</li></ul><p>Sharp boundaries come from tight wrapping. Feathered boundaries come from looser ties. Both are useful. Know which you want.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-pattern-math",
+                    "type": "drill",
+                    "title": "Predict the pattern",
+                    "steps": [
+                      {
+                        "q": "You tie tightly at 5 evenly spaced points along a folded strip, then dye. What pattern appears?",
+                        "o": ["Random splotches", "Repeating pale bands", "A single spiral", "No visible pattern"],
+                        "c": 1,
+                        "f": "Evenly spaced ties produce evenly spaced pale bands. Timing and spacing determine the look."
+                      },
+                      {
+                        "q": "You tie loosely with thin thread. The dye bleeds slightly into the resisted area. What boundary do you get?",
+                        "o": ["Sharp line", "Feathered edge", "Complete resist", "No line"],
+                        "c": 1,
+                        "f": "Loose ties allow dye to creep in, producing a soft feathered edge."
+                      },
+                      {
+                        "q": "You want a full-coverage pattern with no visible pale areas. What approach?",
+                        "o": ["Tie in one spot only", "Tie many points densely across the whole cloth", "Don't tie at all", "Dye briefly"],
+                        "c": 1,
+                        "f": "Dense multi-point tying is how you build a busy, full-coverage pattern."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "s-design-brief",
+                    "type": "scenario",
+                    "title": "Design for a client brief",
+                    "prompt": "A boutique in Freetown commissions 10 Gara scarves for a spring collection. Brief: bold geometric patterns, indigo and natural white, suitable for office wear. Describe your design approach — layout, technique, colours, and how you'll test before production.",
+                    "context": "Professional design work always responds to a brief. This is what separates a commissioned project from a hobby.",
+                    "placeholder": "Design approach: …",
+                    "rubric": [
+                      "References the brief (bold geometric, indigo + white, office-appropriate)",
+                      "Chooses specific tie techniques that produce geometric patterns",
+                      "Considers consistency across a 10-piece run",
+                      "Describes a sample-test step before committing to production",
+                      "Addresses production time and material estimate"
+                    ]
+                  }
+                ]
+              },
+              "4": {
+                "modules": [
+                  {
+                    "id": "p-design-portfolio",
+                    "type": "portfolio",
+                    "title": "Build a pattern design portfolio",
+                    "prompt": "Create a portfolio of at least 4 original pattern designs, each with a sketch, a sample, and a one-paragraph note explaining the intention.",
+                    "steps": [
+                      "Sketch each pattern on paper",
+                      "Produce a physical sample",
+                      "Photograph sketch and sample together",
+                      "Write a note: what was the intention? What worked? What would you change?",
+                      "Assemble into a single portfolio document"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "cultural-symbols",
+            "name": "Cultural Symbols",
+            "description": "Understand the meaning behind West African patterns. Gara is not decoration — it is a language.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-symbols-intro",
+                    "type": "lesson",
+                    "title": "Patterns carry meaning",
+                    "content": "<p>Throughout West Africa, textile patterns carry meaning — proverbs, historical events, values, social status, and identity. A client commissioning a cloth for a wedding, funeral, or naming ceremony expects patterns that respect the occasion.</p><p>This is a professional skill. Getting it wrong can lose a client permanently.</p>"
+                  },
+                  {
+                    "id": "l-sierra-leone-patterns",
+                    "type": "lesson",
+                    "title": "Sierra Leonean pattern traditions",
+                    "content": "<p>Sierra Leone has its own resist-dye traditions alongside the wider West African vocabulary. Common motifs include:</p><ul><li><strong>Concentric circles</strong> — representing continuity and the family</li><li><strong>Zigzag lines</strong> — resilience, going around obstacles</li><li><strong>Diamonds</strong> — prosperity and good fortune</li><li><strong>Crosshatch</strong> — community and interconnection</li></ul><p>Always ask the client what the cloth is for. Then choose motifs that match.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-symbols-match",
+                    "type": "drill",
+                    "title": "Match the motif to the meaning",
+                    "steps": [
+                      {
+                        "q": "Which motif is most appropriate for a naming ceremony?",
+                        "o": ["Concentric circles", "Random splotches", "Broken lines", "Sharp angles only"],
+                        "c": 0,
+                        "f": "Concentric circles evoke continuity and family — appropriate for welcoming a new child."
+                      },
+                      {
+                        "q": "A client commissions a cloth for a business launch. Best motif?",
+                        "o": ["Concentric circles", "Diamonds", "Zigzag", "Blank"],
+                        "c": 1,
+                        "f": "Diamonds traditionally signal prosperity and good fortune — fitting for a business launch."
+                      },
+                      {
+                        "q": "Which motif represents resilience and overcoming obstacles?",
+                        "o": ["Diamonds", "Circles", "Zigzag lines", "Straight lines only"],
+                        "c": 2,
+                        "f": "Zigzags evoke going around or through obstacles — a resilience symbol."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "s-symbols-commission",
+                    "type": "scenario",
+                    "title": "Commission for a memorial cloth",
+                    "prompt": "A family commissions a Gara cloth to be draped at a memorial service. The deceased was a respected elder known for community service. Describe the pattern, colours, and any motif choices you would make — and why. Consider that colour choice carries meaning in funeral contexts across Sierra Leone.",
+                    "context": "Funeral textiles are one of the most important Gara commissions. Getting the symbols wrong is a serious offence.",
+                    "placeholder": "My design approach: …",
+                    "rubric": [
+                      "Uses colours appropriate to mourning (traditionally white and indigo, sometimes black)",
+                      "Chooses motifs that reference community service or an elder's role",
+                      "Explains the reasoning behind each choice",
+                      "Considers asking the family about specific preferences",
+                      "Avoids celebratory motifs (prosperity, fertility) inappropriate for the occasion"
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "p-symbol-library",
+                    "type": "portfolio",
+                    "title": "Build a personal symbol library",
+                    "prompt": "Compile a reference library of at least 10 traditional motifs with their meanings, drawn from elders, archives, or existing Gara work in your region. Sketch each motif and write its meaning.",
+                    "steps": [
+                      "Interview at least 3 elder practitioners or visit a museum",
+                      "Sketch each motif",
+                      "Write a short note on its meaning and origin",
+                      "Assemble into a reference document you can consult with clients"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "dye-chemistry",
+        "name": "Dye Chemistry",
+        "description": "The science behind the craft. Understand indigo, mordants, and pH — the difference between a hobbyist and a professional.",
+        "skills": [
+          {
+            "id": "indigo-basics",
+            "name": "Indigo Fundamentals",
+            "description": "Work with natural indigo: prepare a vat, control pH, and produce consistent colour.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-indigo-intro",
+                    "type": "lesson",
+                    "title": "What is indigo?",
+                    "content": "<p>Indigo is a natural dye extracted from the leaves of <em>Indigofera</em> plants — grown throughout West Africa for centuries.</p><p>Indigo is unlike other dyes. It is not water-soluble in its natural form. To dye with it, you must chemically reduce it into a soluble yellow-green state, dye the cloth in that state, then expose it to air where it oxidises back to blue.</p><p>This is why freshly dyed indigo cloth looks green when it comes out of the vat and turns blue as it dries in the air. It is one of the most magical moments in the craft.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-indigo-vat",
+                    "type": "lesson",
+                    "title": "The indigo vat",
+                    "content": "<h3>Ingredients</h3><ul><li>Indigo powder</li><li>Water</li><li>Reducing agent (traditionally wood ash lye or ripe fruit; industrially, thiourea dioxide or sodium hydrosulfite)</li><li>Alkali (caustic soda or wood ash lye)</li></ul><h3>The process</h3><ol><li>Dissolve indigo in warm water with a small amount of alkali.</li><li>Add the reducing agent slowly.</li><li>Wait. The vat will turn yellow-green with a coppery skin on top.</li><li>It is ready when it smells slightly sweet and the skin is fully formed.</li></ol><p>A healthy vat is a living thing. Feed it, warm it, and it produces colour for months.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-indigo-diagnose",
+                    "type": "drill",
+                    "title": "Diagnose vat problems",
+                    "steps": [
+                      {
+                        "q": "Your vat smells rotten and the cloth comes out grey, not blue. What's wrong?",
+                        "o": ["Too much alkali", "The vat has gone off — too much organic matter, need to rebuild", "Not enough water", "Wrong cloth"],
+                        "c": 1,
+                        "f": "A rotten smell means bacterial contamination. The vat needs to be drained and rebuilt."
+                      },
+                      {
+                        "q": "The cloth comes out blue immediately without turning green first. What's happening?",
+                        "o": ["The vat is not properly reduced", "The vat is perfect", "Too much salt", "The cloth is wet"],
+                        "c": 0,
+                        "f": "If it doesn't come out yellow-green, the vat is not reduced. Add more reducing agent."
+                      },
+                      {
+                        "q": "The colour is pale even after multiple dips. What's the most likely cause?",
+                        "o": ["Cloth is too thin", "The vat is weak — low indigo concentration", "The weather", "Not enough stirring"],
+                        "c": 1,
+                        "f": "Pale colour from a correctly-dipped cloth means the vat needs more indigo."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "s-indigo-consistency",
+                    "type": "scenario",
+                    "title": "Acheive consistent colour across a batch",
+                    "prompt": "You must dye 20 identical scarves to the same depth of indigo blue for a client order. Describe how you would ensure consistency across all 20 pieces.",
+                    "context": "Consistency is the difference between artisan and industrial production. Clients paying for 20 identical scarves expect 20 identical scarves.",
+                    "placeholder": "My approach: …",
+                    "rubric": [
+                      "Same vat for all pieces (not fresh per piece)",
+                      "Same number of dips per piece",
+                      "Same dip duration per piece",
+                      "Same drying conditions",
+                      "Batch documentation to track any variation"
+                    ]
+                  }
+                ]
+              },
+              "4": {
+                "modules": [
+                  {
+                    "id": "p-indigo-swatch",
+                    "type": "portfolio",
+                    "title": "Build an indigo depth swatch book",
+                    "prompt": "Produce a swatch book of at least 6 shades of indigo, each achieved by a different number of dips in the same vat. Photograph and label each shade with the number of dips and time per dip.",
+                    "steps": [
+                      "Cut 6+ identical small squares of prepared cotton",
+                      "Dye them in the same vat, one square per additional dip",
+                      "Record dip count and duration",
+                      "Dry all squares the same way",
+                      "Mount them in order from lightest to darkest with the data alongside"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "production",
+        "name": "Production & Finishing",
+        "description": "Move from a single experiment to a repeatable production process. Timing, consistency, quality control.",
+        "skills": [
+          {
+            "id": "batch-production",
+            "name": "Batch Production",
+            "description": "Produce multiple identical or coordinated pieces at professional quality.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-batch-intro",
+                    "type": "lesson",
+                    "title": "One is a hobby. Ten is a business.",
+                    "content": "<p>Making one beautiful cloth is a craft. Making ten identical beautiful cloths is a business.</p><p>Batch production requires:</p><ul><li>A written process</li><li>Consistent materials</li><li>Timing discipline</li><li>Quality checkpoints</li></ul><p>Every professional Gara workshop you visit will have some version of this. Learning it now is what turns skill into income.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id
