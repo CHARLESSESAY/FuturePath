@@ -658,4 +658,474 @@
               "1": {
                 "modules": [
                   {
-                    "id
+                    "id": "l-qc",
+                    "type": "lesson",
+                    "title": "Quality control checkpoints",
+                    "content": "<h3>Three checkpoints minimum</h3><ol><li><strong>Before dyeing</strong> — verify all fabric is identical, washed, and prepped. Verify the dye bath is at the target strength.</li><li><strong>During dyeing</strong> — verify each piece has been dipped the same number of times for the same duration.</li><li><strong>After drying</strong> — compare finished pieces side-by-side in daylight. Reject any that don't match.</li></ol><p>Rejects are not wasted. They become practice pieces, apprentice learning material, or discounted stock.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-qc-order",
+                    "type": "drill",
+                    "title": "Quality check sequence",
+                    "steps": [
+                      {
+                        "q": "You're producing 20 pieces. When do you check the dye bath strength?",
+                        "o": ["After all pieces are done", "Before starting and periodically during", "Never — trust the recipe", "Only if a customer complains"],
+                        "c": 1,
+                        "f": "Check bath strength before starting and again after every 5 pieces. It drifts as dye is absorbed."
+                      },
+                      {
+                        "q": "Two finished pieces look different shades. What do you do?",
+                        "o": ["Ship both", "Redip the lighter one or reject it", "Refund the client", "Blame the dye"],
+                        "c": 1,
+                        "f": "Redip the lighter piece in the same vat. If it still doesn't match, reject it. Never ship mismatched batch."
+                      },
+                      {
+                        "q": "Final colour comparison between pieces should be done:",
+                        "o": ["Under yellow bulb light", "In daylight, side by side", "In a dark room", "Individually, no reference"],
+                        "c": 1,
+                        "f": "Daylight, side by side is the only reliable comparison. Artificial light distorts colour perception."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "p-batch-record",
+                    "type": "portfolio",
+                    "title": "Document a real production batch",
+                    "prompt": "Produce a batch of at least 3 coordinated pieces (same design, same dye) and document the entire process: materials, timing, dip counts, and quality checkpoints.",
+                    "steps": [
+                      "Choose a simple design you can repeat",
+                      "Produce all 3 pieces in one session",
+                      "Record every step in a notebook as you go",
+                      "Photograph the finished batch together",
+                      "Write a reflection: what varied? What would you change for a bigger batch?"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "business",
+        "name": "Business & Market",
+        "description": "Turn skill into income. Pricing, clients, and the realities of running a craft business.",
+        "skills": [
+          {
+            "id": "pricing",
+            "name": "Pricing Your Work",
+            "description": "Price for survival, not just for the sale. Cover materials, labour, overhead, and profit.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-pricing-intro",
+                    "type": "lesson",
+                    "title": "The four-part price",
+                    "content": "<p>Every price must cover four things:</p><ol><li><strong>Materials</strong> — fabric, dye, thread, tools used up</li><li><strong>Labour</strong> — your time, at a real hourly rate</li><li><strong>Overhead</strong> — rent, water, electricity, transport</li><li><strong>Profit</strong> — the money that grows your business</li></ol><p>Most beginners set price = materials + a little. That is why most beginners burn out.</p><p>A healthy Gara cloth price covers all four. Here's the formula:</p><blockquote>Price = (Materials + Labour + Overhead) × (1 + Margin)</blockquote>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-pricing-math",
+                    "type": "drill",
+                    "title": "Pricing drills",
+                    "steps": [
+                      {
+                        "q": "Materials: 8,000 Le. Your time: 6 hours. Your hourly rate: 2,000 Le. Overhead per cloth: 1,000 Le. What is your base cost?",
+                        "o": ["9,000", "15,000", "21,000", "13,000"],
+                        "c": 2,
+                        "f": "8,000 + (6×2,000) + 1,000 = 21,000. That's the base before margin."
+                      },
+                      {
+                        "q": "Base cost is 21,000 Le. You want a 30% margin. What's the price?",
+                        "o": ["24,300", "27,300", "30,000", "6,300"],
+                        "c": 1,
+                        "f": "21,000 × 1.30 = 27,300. Margin multiplies the base — it's not just added."
+                      },
+                      {
+                        "q": "A client offers to pay you 20,000 for a cloth that costs 21,000 to make. What do you do?",
+                        "o": ["Accept to keep the client", "Decline, or renegotiate", "Accept and cut labour time", "Accept and skip the margin"],
+                        "c": 1,
+                        "f": "Accepting a loss teaches the client that your work is worth less than it costs. Decline or renegotiate."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "s-pricing-scenario",
+                    "type": "scenario",
+                    "title": "Price a commission",
+                    "prompt": "A hotel commissions 15 identical Gara table runners. Materials are 12,000 Le each. You estimate 4 hours per piece at a rate of 2,500 Le/hour. Overhead is 800 Le per piece. You want a 35% margin. What is your final per-piece price, and how do you present it to the hotel?",
+                    "context": "B2B clients expect professional pricing. A clear, itemised quote builds trust and protects your margin.",
+                    "placeholder": "Base cost calculation:\nFinal price:\nHow I'll present it:",
+                    "rubric": [
+                      "Correctly calculates base cost (materials + labour + overhead)",
+                      "Correctly applies margin (multiplication, not addition)",
+                      "Arrives at per-piece price",
+                      "Proposes a professional presentation (itemised quote, not a bare number)",
+                      "Addresses payment terms or deposit"
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "s-pricing-increase",
+                    "type": "scenario",
+                    "title": "Raise your prices",
+                    "prompt": "You've been selling Gara cloths at 30,000 Le. Your material costs have risen 20% this year. Write how you will communicate a price increase to your existing customers without losing them.",
+                    "context": "Price increases are the hardest part of running a craft business. Handled badly, they destroy relationships.",
+                    "placeholder": "My approach:",
+                    "rubric": [
+                      "Gives advance notice",
+                      "Explains the reason (costs, not greed)",
+                      "Frames the value the client receives",
+                      "Offers a window to buy at old price for loyal customers",
+                      "Holds the new price firmly once announced"
+                    ]
+                  }
+                ]
+              },
+              "4": {
+                "modules": [
+                  {
+                    "id": "p-rate-card",
+                    "type": "portfolio",
+                    "title": "Build your professional rate card",
+                    "prompt": "Create a one-page rate card listing your standard products and prices. Include sizes, materials, lead times, and payment terms.",
+                    "steps": [
+                      "List your 3-5 standard products",
+                      "Calculate the price for each using the four-part formula",
+                      "Add realistic lead times based on your actual production speed",
+                      "State deposit and payment terms",
+                      "Design it cleanly — clients judge professionalism by presentation"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "finding-clients",
+            "name": "Finding Clients",
+            "description": "Sell without begging. Build a client base that returns and refers.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-clients-intro",
+                    "type": "lesson",
+                    "title": "Where clients come from",
+                    "content": "<p>Clients come from six places, in order of reliability:</p><ol><li><strong>Repeat customers</strong> — the cheapest client is the one you already have</li><li><strong>Referrals</strong> — happy clients tell others</li><li><strong>Local markets</strong> — direct selling, low barrier</li><li><strong>Boutiques and hotels</strong> — B2B, bigger orders</li><li><strong>Online</strong> — Instagram, WhatsApp Business, marketplaces</li><li><strong>Export</strong> — the highest reward, the highest effort</li></ol><p>Beginners chase #5 and #6. Professionals build #1 and #2 first.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-whatsapp-business",
+                    "type": "lesson",
+                    "title": "WhatsApp Business as a sales tool",
+                    "content": "<p>In West Africa, WhatsApp Business is the single most valuable free tool for a craft business. Here's how to use it professionally:</p><ul><li>Set a clear business name and profile photo of your work</li><li>Write a short business description (one line, precise)</li><li>Create a catalogue with photos, descriptions, and prices</li><li>Use quick replies for common questions</li><li>Save every customer's name in your contacts with a label</li></ul><p>A well-run WhatsApp Business account is worth more than most websites for a small craft business.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "s-client-pitch",
+                    "type": "scenario",
+                    "title": "Pitch a boutique",
+                    "prompt": "You want to sell your Gara cloths to a Freetown boutique. Write the message you'll send them on WhatsApp. It should be under 150 words and include: who you are, what you make, why it fits their shop, and a clear next step.",
+                    "context": "Cold outreach is a skill. Short, specific messages get responses. Long pitches get ignored.",
+                    "placeholder": "Message:",
+                    "rubric": [
+                      "Opens with a specific reason for contacting this boutique (not generic)",
+                      "Describes what you make in one clear sentence",
+                      "Explains why your work fits their shop",
+                      "Includes a portfolio link or offer to visit",
+                      "Ends with a specific ask (not 'let me know')"
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "p-client-list",
+                    "type": "portfolio",
+                    "title": "Build your first client list",
+                    "prompt": "Create a client tracking document with at least 10 potential buyers in your area (boutiques, hotels, wedding planners, or individual customers). Include their name, contact, what they might buy, and the date you'll contact them.",
+                    "steps": [
+                      "Identify 10 real, specific potential clients",
+                      "Record their names and contacts",
+                      "For each, note one specific reason they'd want your work",
+                      "Schedule a date to contact each one",
+                      "Track responses in the same document"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "solar-technician": {
+    "intro": "Master solar installation from fundamentals to commissioning. Learn electrical safety, system sizing, and hands-on installation — the skills powering West Africa's renewable energy transition.",
+    "skillDomains": [
+      {
+        "id": "electrical-fundamentals",
+        "name": "Electrical Fundamentals",
+        "description": "The non-negotiable foundation. Voltage, current, resistance, and safety.",
+        "skills": [
+          {
+            "id": "dc-basics",
+            "name": "DC Basics",
+            "description": "Understand direct current: what it is, how it flows, and why solar systems use it.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-dc-intro",
+                    "type": "lesson",
+                    "title": "What is direct current?",
+                    "content": "<p><strong>Direct current (DC)</strong> flows in one direction, always. Solar panels produce DC. Batteries store DC. Many small devices run on DC.</p><p>The grid delivers <strong>alternating current (AC)</strong> — it reverses direction 50 times per second (or 60, depending on the country).</p><p>Your job as a solar technician begins with DC and only converts to AC at the end. Understand DC deeply. It is the half of the system that most mistakes are made in.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-volts-amps-ohms",
+                    "type": "lesson",
+                    "title": "Volts, amps, ohms",
+                    "content": "<h3>Voltage (V)</h3><p>The pressure pushing electrons. Higher voltage = more push.</p><h3>Current (A)</h3><p>The flow rate of electrons. Higher current = more electrons moving.</p><h3>Resistance (Ω)</h3><p>What slows the flow. High resistance = less current for a given voltage.</p><h3>Ohm's Law</h3><blockquote>V = I × R</blockquote><p>Where V is voltage, I is current (amps), R is resistance (ohms). Every calculation in electrical work traces back to this.</p><h3>Power</h3><blockquote>P = V × I</blockquote><p>Power in watts equals voltage times current.</p>"
+                  },
+                  {
+                    "id": "d-ohms-law",
+                    "type": "drill",
+                    "title": "Ohm's Law practice",
+                    "passingScore": 80,
+                    "steps": [
+                      {
+                        "q": "A circuit has 12V across it and 4A flowing. What is the power?",
+                        "o": ["3 W", "16 W", "48 W", "8 W"],
+                        "c": 2,
+                        "f": "P = V × I = 12 × 4 = 48 W."
+                      },
+                      {
+                        "q": "You have 24V and want to run 6A through. What resistance do you need?",
+                        "o": ["4 Ω", "24 Ω", "144 Ω", "0.25 Ω"],
+                        "c": 0,
+                        "f": "R = V ÷ I = 24 ÷ 6 = 4 Ω."
+                      },
+                      {
+                        "q": "A 12V battery powers a device that draws 2A. What's the power draw?",
+                        "o": ["24 W", "6 W", "14 W", "10 W"],
+                        "c": 0,
+                        "f": "P = V × I = 12 × 2 = 24 W."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "electrical-safety",
+            "name": "Electrical Safety",
+            "description": "Protect yourself and your clients. Safety is not optional.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-safety-first",
+                    "type": "lesson",
+                    "title": "Safety fundamentals for solar work",
+                    "content": "<h3>Golden rules</h3><ol><li>Never work alone on a live system if you can avoid it</li><li>Isolate before working. Verify dead with a tester.</li><li>Insulated tools always. Non-negotiable.</li><li>Rubber-soled boots on every installation</li><li>Eye protection when working with batteries (acid splash risk)</li></ol><h3>Battery-specific risks</h3><ul><li>Lead-acid batteries release explosive hydrogen during charging</li><li>Short circuits can melt tools in seconds</li><li>Acid splashes on skin or eyes require immediate flushing</li></ul>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "s-safety-splash",
+                    "type": "scenario",
+                    "title": "Battery acid splash response",
+                    "prompt": "While servicing a lead-acid battery bank, acid splashes onto your forearm. Describe the exact steps you take, in order.",
+                    "context": "Sulphuric acid in batteries is concentrated. Fast action prevents scarring.",
+                    "placeholder": "Step 1: …\nStep 2: …",
+                    "rubric": [
+                      "Immediately flush with copious running water for 15-20 minutes",
+                      "Do NOT neutralise with baking soda on skin — flushing is the correct action",
+                      "Remove contaminated clothing while flushing",
+                      "Seek medical assessment even for minor splashes",
+                      "Report the incident"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "system-design",
+        "name": "System Design & Sizing",
+        "description": "Design a system that meets a client's needs without over- or under-sizing.",
+        "skills": [
+          {
+            "id": "load-calculation",
+            "name": "Load Calculation",
+            "description": "Determine how much power the client actually needs.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-load-intro",
+                    "type": "lesson",
+                    "title": "Start with the load",
+                    "content": "<p>Every system design starts with a <strong>load audit</strong>. You cannot size a system until you know what it must power.</p><p>For each appliance the client wants to run, you need:</p><ul><li>Power draw in watts (W)</li><li>Hours per day it runs</li><li>Whether it runs during daylight or at night</li></ul><p>Then multiply: <strong>Watts × Hours = Watt-hours (Wh)</strong>.</p><p>Total the watt-hours per day. That's your energy target.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-load-calculation",
+                    "type": "drill",
+                    "title": "Load audit drills",
+                    "passingScore": 80,
+                    "steps": [
+                      {
+                        "q": "A client wants 4 LED bulbs (10W each) running 6 hours per night. Total Wh per day?",
+                        "o": ["40 Wh", "240 Wh", "24 Wh", "2400 Wh"],
+                        "c": 1,
+                        "f": "4 × 10W × 6h = 240 Wh."
+                      },
+                      {
+                        "q": "Add a TV (60W) running 4 hours per night. New total?",
+                        "o": ["240 Wh", "480 Wh", "300 Wh", "720 Wh"],
+                        "c": 1,
+                        "f": "240 + (60 × 4 = 240) = 480 Wh."
+                      },
+                      {
+                        "q": "Add a phone charging (5W) 3 hours per day. Total?",
+                        "o": ["480 Wh", "495 Wh", "500 Wh", "485 Wh"],
+                        "c": 1,
+                        "f": "480 + (5 × 3 = 15) = 495 Wh."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "lawyer": {
+    "intro": "Learn the discipline of legal practice — from client intake to advocacy. Build foundations in contract, ethics, and argument.",
+    "skillDomains": [
+      {
+        "id": "foundations",
+        "name": "Legal Foundations",
+        "description": "The core concepts every lawyer must master before they can practice.",
+        "skills": [
+          {
+            "id": "legal-reasoning",
+            "name": "Legal Reasoning",
+            "description": "Read a set of facts, identify the legal issues, apply the law.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-reasoning-intro",
+                    "type": "lesson",
+                    "title": "What does a lawyer actually do?",
+                    "content": "<p>Lawyers are not walking encyclopaedias of rules. They are <strong>problem solvers trained to think in a specific way</strong>.</p><p>The core skill is <em>legal reasoning</em>:</p><ol><li>Read the facts carefully</li><li>Identify the legal issues (what rule matters here?)</li><li>Find the applicable law</li><li>Apply the law to the facts</li><li>Reach a conclusion, and predict what a court would say</li></ol><p>Every brief, every contract, every argument is built on this loop.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-case-facts",
+                    "type": "lesson",
+                    "title": "Reading facts like a lawyer",
+                    "content": "<p>When a client tells you their story, you are not listening for sympathy. You are listening for <strong>facts that trigger legal rules</strong>.</p><h3>Filter every story through:</h3><ul><li>Dates — when did things happen?</li><li>Documents — what is written down?</li><li>Persons — who did what?</li><li>Amounts — what money moved?</li><li>Agreements — what was promised?</li></ul><p>Emotions go in a separate column. Facts get you paid.</p>"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "client-work",
+        "name": "Client Work",
+        "description": "Intake, consultation, and communication — the daily practice of law.",
+        "skills": [
+          {
+            "id": "client-intake",
+            "name": "Client Intake",
+            "description": "Run a first consultation that builds the file and protects you.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-intake-intro",
+                    "type": "lesson",
+                    "title": "First contact matters",
+                    "content": "<p>The first meeting is the most important hour of most cases. What you learn — and what you write down — shapes everything.</p><h3>Every intake must establish:</h3><ul><li>Who the client is (ID, address, contact)</li><li>What happened (chronologically)</li><li>What documents exist</li><li>What the client wants (their goal, not just their grievance)</li><li>Deadlines (statutes of limitation kill cases)</li><li>Conflicts of interest</li><li>Fee arrangement</li></ul>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "s-intake-scenario",
+                    "type": "scenario",
+                    "title": "Run the intake",
+                    "prompt": "A client walks in angry. They were dismissed from their job without notice after 4 years. Their supervisor fired them by text message with no reason given. Write out the questions you would ask in the first 15 minutes and, for each, why you're asking it.",
+                    "context": "You need to identify: (a) whether they have an employment contract, (b) whether the dismissal was lawful under their country's employment law, (c) what remedies are available, (d) urgent deadlines.",
+                    "placeholder": "Question 1: …\nWhy: …\n\nQuestion 2: …",
+                    "rubric": [
+                      "Asks for the employment contract or letter of appointment",
+                      "Asks for the dismissal notice and any written communication",
+                      "Asks for exact dates (hire date, dismissal date)",
+                      "Asks about salary and any unpaid benefits",
+                      "Asks whether there is a union or grievance process",
+                      "Notes urgency and any statutory limitation period"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
