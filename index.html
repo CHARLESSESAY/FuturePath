@@ -2,185 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
-  <meta name="theme-color" content="#1a6bff" />
-  <meta name="description" content="FuturePath — West Africa Career Explorer. Explore 57 careers across all 15 ECOWAS countries with interactive simulations." />
-  <title>FuturePath — West Africa Career Explorer</title>
-
-  <!-- PWA -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0e1a" />
+  <meta name="description" content="FuturePath — Learn and master real skills across West Africa. Structured curricula from orientation to professional mastery." />
+  <title>FuturePath — Skill Mastery Platform</title>
   <link rel="manifest" href="/manifest.json" />
-
-  <!-- iOS PWA meta tags -->
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="FuturePath" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png" />
   <link rel="apple-touch-icon" href="/icons/icon-192.png" />
-  <link rel="apple-touch-icon" sizes="152x152" href="/icons/icon-192.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-192.png" />
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-48.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-48.png" />
-
-  <!-- Splash screen colours for iOS -->
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-  <!-- App styles -->
   <link rel="stylesheet" href="./src/style.css" />
-
-  <!-- Babylon.js from CDN -->
-  <script src="https://cdn.babylonjs.com/babylon.js"></script>
 </head>
 <body>
-  <canvas id="renderCanvas" aria-label="3D career explorer"></canvas>
 
-  <header id="topbar">
-    <div class="brand">
-      <span class="dot"></span>
-      <span class="brand-name">FuturePath</span>
-      <span class="brand-sub">West Africa Career Explorer</span>
-    </div>
-    <div class="controls">
-      <label for="countrySelect">Country</label>
-      <select id="countrySelect" aria-label="Filter by country"></select>
-      <button id="planBtn" class="ghost">My Plan <span id="planCount">0</span></button>
-    </div>
-  </header>
+  <!-- App shell -->
+  <div id="app">
 
-  <div id="breadcrumb" class="hidden">
-    <button id="backBtn" class="ghost">← All sectors</button>
-    <span id="crumbText"></span>
+    <!-- Top navigation -->
+    <header id="topbar">
+      <div class="brand" id="brandHome">
+        <span class="brand-mark"></span>
+        <div class="brand-text">
+          <strong>FuturePath</strong>
+          <span>Skill Mastery Platform</span>
+        </div>
+      </div>
+      <div class="top-controls">
+        <button id="myLearningBtn" class="btn btn-ghost" title="My learning">
+          My Learning <span id="learningCount" class="pill">0</span>
+        </button>
+        <button id="settingsBtn" class="btn btn-ghost btn-icon" title="Settings">⚙</button>
+      </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav id="breadcrumb" class="hidden">
+      <button id="crumbBack" class="btn btn-link">← Back</button>
+      <span id="crumbPath"></span>
+    </nav>
+
+    <!-- Main view container -->
+    <main id="view" role="main"></main>
+
+    <!-- Toast -->
+    <div id="toast" class="hidden"></div>
+
+    <!-- Loading -->
+    <div id="loader">
+      <div class="loader-ring"></div>
+      <span>Loading FuturePath…</span>
+    </div>
+
   </div>
 
-  <div id="hint">Drag to look · Scroll to zoom · Click a portal</div>
-
-  <aside id="card" class="panel hidden" aria-live="polite">
-    <button id="cardClose" class="close" aria-label="Close">×</button>
-    <h2 id="cardName"></h2>
-    <div id="cardMeta" class="meta"></div>
-
-    <section>
-      <h3>Typical tasks</h3>
-      <ul id="cardTasks"></ul>
-    </section>
-
-    <section>
-      <h3>Skills to build</h3>
-      <div id="cardSkills" class="chips"></div>
-    </section>
-
-    <section>
-      <h3>Pathway</h3>
-      <p id="cardPathway"></p>
-    </section>
-
-    <section>
-      <h3>Certification</h3>
-      <p id="cardCert"></p>
-    </section>
-
-    <div class="card-actions">
-      <button id="simBtn" class="primary">Try this career</button>
-      <button id="addBtn" class="ghost">Add to my plan</button>
-    </div>
-    <div id="simDone" class="sim-done hidden">
-      <span class="tick">✓</span> You completed the simulation
-    </div>
-  </aside>
-
-  <aside id="plan" class="panel hidden" aria-live="polite">
-    <button id="planClose" class="close" aria-label="Close">×</button>
-    <h2>My Career Plan</h2>
-    <p class="muted">Your selected careers. Download to keep or share.</p>
-    <ul id="planList"></ul>
-    <div class="card-actions">
-      <button id="downloadBtn" class="primary">Download plan</button>
-      <button id="clearBtn" class="ghost">Clear all</button>
-    </div>
-  </aside>
-
-  <button id="xrBtn" title="Enter VR (requires a headset)">Enter VR</button>
-
-  <!-- ================= SIMULATION OVERLAY ================= -->
-  <div id="simLayer" class="sim-layer hidden" role="dialog" aria-modal="true" aria-labelledby="simTitle">
-    <div class="sim-shell">
-      <header class="sim-head">
-        <div class="sim-title-wrap">
-          <span class="sim-badge">Simulation</span>
-          <h2 id="simTitle">—</h2>
-        </div>
-        <button id="simClose" class="close" aria-label="Close simulation">×</button>
-      </header>
-
-      <p id="simIntro" class="sim-intro"></p>
-
-      <div class="sim-progress">
-        <div class="sim-progress-bar"><span id="simProgressFill"></span></div>
-        <span id="simProgressText">Round 1</span>
-      </div>
-
-      <div id="simStage" class="sim-stage"></div>
-
-      <div id="simFeedback" class="sim-feedback hidden" aria-live="polite">
-        <div class="fb-head">
-          <span id="simFbIcon" class="fb-icon">✓</span>
-          <strong id="simFbTitle">Correct</strong>
-        </div>
-        <p id="simFbText"></p>
-      </div>
-
-      <footer class="sim-foot">
-        <div class="sim-score">Score: <strong id="simScore">0</strong></div>
-        <button id="simNext" class="primary" disabled>Check</button>
-      </footer>
-    </div>
-  </div>
-
-  <!-- ================= SIMULATION SUMMARY ================= -->
-  <div id="sumLayer" class="sim-layer hidden" role="dialog" aria-modal="true">
-    <div class="sim-shell summary-shell">
-      <header class="sim-head">
-        <div class="sim-title-wrap">
-          <span class="sim-badge">Completed</span>
-          <h2 id="sumTitle">—</h2>
-        </div>
-        <button id="sumClose" class="close" aria-label="Close summary">×</button>
-      </header>
-
-      <div class="sum-ring-wrap">
-        <svg class="sum-ring" viewBox="0 0 120 120" aria-hidden="true">
-          <circle cx="60" cy="60" r="52" class="ring-track" />
-          <circle id="sumRingFill" cx="60" cy="60" r="52" class="ring-fill" />
-        </svg>
-        <div class="sum-pct"><span id="sumPct">0</span><small>%</small></div>
-      </div>
-
-      <p id="sumVerdict" class="sum-verdict">—</p>
-
-      <div class="sum-block">
-        <h3>What you got right</h3>
-        <ul id="sumRight"></ul>
-      </div>
-
-      <div class="sum-block">
-        <h3>What to work on</h3>
-        <ul id="sumGrow"></ul>
-      </div>
-
-      <div class="sum-block">
-        <h3>Next step</h3>
-        <p id="sumNextStep"></p>
-      </div>
-
-      <div class="card-actions">
-        <button id="sumAdd" class="primary">Add to my plan</button>
-        <button id="sumRetry" class="ghost">Try again</button>
-      </div>
-    </div>
-  </div>
-
-  <div id="toast" class="hidden"></div>
-
-  <script type="module" src="./src/career-hub.js"></script>
+  <script type="module" src="./src/main.js"></script>
 </body>
 </html>
