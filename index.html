@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="theme-color" content="#05080f" />
+  <meta name="description" content="FuturePath — West Africa Career Explorer. Explore 57 formal, informal and traditional careers across all 15 ECOWAS countries." />
+  <title>FuturePath — West Africa Career Explorer</title>
+  <link rel="stylesheet" href="./src/style.css" />
+  <script src="https://cdn.babylonjs.com/babylon.js"></script>
+</head>
+<body>
+  <canvas id="renderCanvas" aria-label="3D career explorer"></canvas>
+
+  <header id="topbar">
+    <div class="brand">
+      <span class="dot"></span>
+      <span class="brand-name">FuturePath</span>
+      <span class="brand-sub">West Africa Career Explorer</span>
+    </div>
+    <div class="controls">
+      <label for="countrySelect">Country</label>
+      <select id="countrySelect" aria-label="Filter by country"></select>
+      <button id="planBtn" class="ghost">My Plan <span id="planCount">0</span></button>
+    </div>
+  </header>
+
+  <div id="breadcrumb" class="hidden">
+    <button id="backBtn" class="ghost">← All sectors</button>
+    <span id="crumbText"></span>
+  </div>
+
+  <div id="hint">Drag to look · Scroll to zoom · Click a portal</div>
+
+  <aside id="card" class="panel hidden" aria-live="polite">
+    <button id="cardClose" class="close" aria-label="Close">×</button>
+    <h2 id="cardName"></h2>
+    <div id="cardMeta" class="meta"></div>
+
+    <section>
+      <h3>Typical tasks</h3>
+      <ul id="cardTasks"></ul>
+    </section>
+
+    <section>
+      <h3>Skills to build</h3>
+      <div id="cardSkills" class="chips"></div>
+    </section>
+
+    <section>
+      <h3>Pathway</h3>
+      <p id="cardPathway"></p>
+    </section>
+
+    <section>
+      <h3>Certification</h3>
+      <p id="cardCert"></p>
+    </section>
+
+    <div class="card-actions">
+      <button id="addBtn" class="primary">Add to my plan</button>
+    </div>
+  </aside>
+
+  <aside id="plan" class="panel hidden" aria-live="polite">
+    <button id="planClose" class="close" aria-label="Close">×</button>
+    <h2>My Career Plan</h2>
+    <p class="muted">Your selected careers. Download to keep or share.</p>
+    <ul id="planList"></ul>
+    <div class="card-actions">
+      <button id="downloadBtn" class="primary">Download plan</button>
+      <button id="clearBtn" class="ghost">Clear all</button>
+    </div>
+  </aside>
+
+  <button id="xrBtn" title="Enter VR (requires a headset)">Enter VR</button>
+
+  <div id="toast" class="hidden"></div>
+
+  <script type="module" src="./src/career-hub.js"></script>
+</body>
+</html>
