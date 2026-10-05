@@ -1,103 +1,18 @@
 {
-  "name": "FuturePath — West Africa Career Explorer",
+  "name": "FuturePath — Skill Mastery Platform",
   "short_name": "FuturePath",
-  "description": "Explore 57 careers across all 15 ECOWAS countries. Formal professions, informal trades, and traditional crafts — with interactive simulations.",
+  "description": "Learn and master real skills across West Africa. Structured curricula from orientation to professional mastery.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "orientation": "any",
-  "background_color": "#05080f",
-  "theme_color": "#1a6bff",
+  "background_color": "#0a0e1a",
+  "theme_color": "#0a0e1a",
   "lang": "en",
-  "dir": "ltr",
-  "categories": ["education", "career", "productivity"],
+  "categories": ["education", "productivity"],
   "icons": [
-    {
-      "src": "/icons/icon-48.png",
-      "sizes": "48x48",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/icons/icon-96.png",
-      "sizes": "96x96",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/icons/icon-128.png",
-      "sizes": "128x128",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/icons/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/icons/icon-256.png",
-      "sizes": "256x256",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/icons/icon-384.png",
-      "sizes": "384x384",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/icons/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/icons/icon-maskable-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "/icons/icon-maskable-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
-    }
-  ],
-  "screenshots": [
-    {
-      "src": "/screenshots/desktop.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "FuturePath career explorer on desktop"
-    },
-    {
-      "src": "/screenshots/mobile.png",
-      "sizes": "750x1334",
-      "type": "image/png",
-      "form_factor": "narrow",
-      "label": "FuturePath career explorer on mobile"
-    }
-  ],
-  "shortcuts": [
-    {
-      "name": "Explore careers",
-      "short_name": "Explore",
-      "description": "Open the career portal ring",
-      "url": "/?view=sectors",
-      "icons": [{ "src": "/icons/icon-96.png", "sizes": "96x96" }]
-    },
-    {
-      "name": "My plan",
-      "short_name": "Plan",
-      "description": "View your saved career plan",
-      "url": "/?view=plan",
-      "icons": [{ "src": "/icons/icon-96.png", "sizes": "96x96" }]
-    }
-  ],
-  "prefer_related_applications": false
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
 }
