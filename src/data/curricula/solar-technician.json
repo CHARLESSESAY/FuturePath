@@ -1,0 +1,651 @@
+{
+  "solar-technician": {
+    "intro": "Learn to design, install, and maintain off-grid and mini-grid solar systems. From electrical fundamentals to commissioning a working installation — the skills powering West Africa's renewable energy transition.",
+    "skillDomains": [
+      {
+        "id": "electrical-fundamentals",
+        "name": "Electrical Fundamentals",
+        "description": "The non-negotiable foundation. Voltage, current, resistance, and the maths behind every system.",
+        "skills": [
+          {
+            "id": "dc-basics",
+            "name": "DC Basics",
+            "description": "Understand direct current — what it is, how it flows, and why solar systems use it.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-dc-intro",
+                    "type": "lesson",
+                    "title": "What is direct current?",
+                    "content": "<p><strong>Direct current (DC)</strong> flows in one direction, always. Solar panels produce DC. Batteries store DC. Most small electronics run on DC.</p><p>The grid delivers <strong>alternating current (AC)</strong> — it reverses direction 50 times per second (50 Hz in most of West Africa, 60 Hz in Liberia and a few others).</p><p>Your job as a solar technician begins with DC and only converts to AC at the end. Understand DC deeply. It is where most mistakes happen.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-ohms-law",
+                    "type": "lesson",
+                    "title": "Volts, amps, ohms, watts",
+                    "content": "<h3>Voltage (V)</h3><p>The pressure pushing electrons. Higher voltage = more push.</p><h3>Current (A)</h3><p>The flow rate of electrons.</p><h3>Resistance (Ω)</h3><p>What slows the flow.</p><h3>Ohm's Law</h3><blockquote>V = I × R</blockquote><p>Where V is voltage, I is current (amps), R is resistance (ohms).</p><h3>Power</h3><blockquote>P = V × I</blockquote><p>Power in watts equals voltage times current. Every calculation in solar work traces back to these two formulas.</p>"
+                  },
+                  {
+                    "id": "d-ohms-drill",
+                    "type": "drill",
+                    "title": "Ohm's Law practice",
+                    "passingScore": 80,
+                    "steps": [
+                      {
+                        "q": "A 12V panel produces 5A. What is the power output?",
+                        "o": ["17 W", "60 W", "2.4 W", "12 W"],
+                        "c": 1,
+                        "f": "P = V × I = 12 × 5 = 60 W."
+                      },
+                      {
+                        "q": "A 24V battery bank runs a 6A load. What resistance does the circuit show?",
+                        "o": ["4 Ω", "144 Ω", "0.25 Ω", "24 Ω"],
+                        "c": 0,
+                        "f": "R = V ÷ I = 24 ÷ 6 = 4 Ω."
+                      },
+                      {
+                        "q": "A device draws 250W from a 12V battery. How much current?",
+                        "o": ["12 A", "20.8 A", "3000 A", "0.048 A"],
+                        "c": 1,
+                        "f": "I = P ÷ V = 250 ÷ 12 ≈ 20.8 A. This is a large load — the battery must handle it."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "l-ac-vs-dc",
+                    "type": "lesson",
+                    "title": "AC vs DC in a solar system",
+                    "content": "<p>Every solar system has both:</p><ul><li><strong>DC side</strong>: panels → charge controller → battery</li><li><strong>AC side</strong>: inverter → household sockets → appliances</li></ul><p>The <strong>inverter</strong> is the bridge. It takes DC from the battery and produces AC for the house.</p><p>This is why you can install a solar system without any AC wiring knowledge — until you reach the inverter output. Then the rules change.</p>"
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "s-size-basic",
+                    "type": "scenario",
+                    "title": "Size a small DC system",
+                    "prompt": "A customer wants to power 6 LED bulbs (5W each) running 5 hours per night from a 12V battery system. Calculate the total energy needed and describe how you'd size the battery.",
+                    "context": "Battery sizing is the first calculation in every off-grid system.",
+                    "placeholder": "Total daily energy (Wh):\nBattery capacity needed (Ah):\nReasoning:",
+                    "rubric": [
+                      "Calculates daily energy: 6 × 5W × 5h = 150 Wh",
+                      "Converts to Ah at 12V: 150 Wh ÷ 12V = 12.5 Ah",
+                      "Adds depth of discharge allowance (usually 50% for lead-acid, 80% for lithium)",
+                      "Accounts for system losses (~20%)",
+                      "Arrives at a battery size of at least 30 Ah for lead-acid"
+                    ]
+                  }
+                ]
+              },
+              "4": {
+                "modules": [
+                  {
+                    "id": "p-circuit-diagram",
+                    "type": "portfolio",
+                    "title": "Draw a basic system diagram",
+                    "prompt": "Draw a single-line diagram of an off-grid solar system showing: panels, charge controller, battery, inverter, and one load circuit. Label voltages and current ratings.",
+                    "steps": [
+                      "Sketch the layout on paper",
+                      "Include the correct symbols for each component",
+                      "Label DC and AC sections clearly",
+                      "Note typical voltages at each stage",
+                      "Photograph and add to your portfolio"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "dc-circuits",
+            "name": "DC Circuits",
+            "description": "Series, parallel, and combined wiring — how to connect panels and batteries safely.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-series-parallel",
+                    "type": "lesson",
+                    "title": "Series vs parallel",
+                    "content": "<h3>Series</h3><p>Positive of one connects to negative of the next. <strong>Voltages add, current stays the same.</strong></p><p>Two 12V panels in series = 24V, same current.</p><h3>Parallel</h3><p>All positives together, all negatives together. <strong>Currents add, voltage stays the same.</strong></p><p>Two 12V panels in parallel = 12V, double the current.</p><h3>The rule for solar</h3><p>You choose series or parallel based on the charge controller's input limits. A 24V controller needs 24V+ input, so panels go in series. A 12V controller with high current capability may want parallel.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-series-parallel",
+                    "type": "drill",
+                    "title": "Series and parallel calculations",
+                    "steps": [
+                      {
+                        "q": "Two 12V, 5A panels in series. Output?",
+                        "o": ["12V, 10A", "24V, 5A", "24V, 10A", "12V, 5A"],
+                        "c": 1,
+                        "f": "Series: voltages add, current stays the same."
+                      },
+                      {
+                        "q": "Three 12V, 5A panels in parallel. Output?",
+                        "o": ["36V, 5A", "12V, 15A", "36V, 15A", "12V, 5A"],
+                        "c": 1,
+                        "f": "Parallel: currents add, voltage stays the same."
+                      },
+                      {
+                        "q": "Four 12V, 4A panels: two in series, then those pairs in parallel. Output?",
+                        "o": ["24V, 8A", "48V, 4A", "12V, 16A", "24V, 4A"],
+                        "c": 0,
+                        "f": "Two in series = 24V, 4A. Two such pairs in parallel = 24V, 8A."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "s-wiring-decision",
+                    "type": "scenario",
+                    "title": "Choose a wiring configuration",
+                    "prompt": "A client has 4 panels (250W, 30V, 8.5A each) and a 24V MPPT charge controller rated for 100V input maximum and 40A output. Describe how you would wire the panels and why.",
+                    "context": "Wiring configuration is constrained by the controller's voltage and current limits. Getting it wrong destroys equipment.",
+                    "placeholder": "Configuration:\nReasoning:",
+                    "rubric": [
+                      "Considers series vs parallel for voltage",
+                      "Notes that 4 in series = 120V exceeds the 100V controller limit",
+                      "Proposes 2 series × 2 parallel = 60V configuration",
+                      "Verifies 60V is below the 100V limit",
+                      "Checks that current stays within the 40A output range"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "electrical-safety",
+        "name": "Electrical Safety",
+        "description": "Protect yourself and your clients. Solar work involves DC arcs, batteries, and roof work.",
+        "skills": [
+          {
+            "id": "dc-hazards",
+            "name": "DC Hazards",
+            "description": "Why DC is more dangerous than most people think.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-dc-danger",
+                    "type": "lesson",
+                    "title": "DC arcs don't let go",
+                    "content": "<p>Most people fear AC. Solar technicians learn to fear DC more.</p><p>AC current crosses zero 100 times per second, which means an AC arc self-extinguishes. DC current is constant — a DC arc will sustain itself and can reach thousands of degrees.</p><h3>What this means in practice</h3><ul><li>Never disconnect DC under load without a proper DC-rated switch</li><li>Never work on live DC circuits if you can isolate</li><li>A DC short across a battery bank can melt tools in under a second</li><li>Battery terminals must always be covered when not being worked on</li></ul>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-battery-safety",
+                    "type": "lesson",
+                    "title": "Battery safety",
+                    "content": "<h3>Lead-acid batteries</h3><ul><li>Release explosive hydrogen during charging — ventilate</li><li>Contain sulphuric acid — eye protection always</li><li>Produce high short-circuit currents — cover terminals with insulated tools only</li></ul><h3>Lithium batteries</h3><ul><li>Can enter thermal runaway if overcharged or physically damaged</li><li>Require a Battery Management System (BMS)</li><li>Never charge below 0°C</li><li>Never puncture or drop</li></ul><h3>Universal rules</h3><ul><li>Remove metal jewellery before working</li><li>Use insulated tools only</li><li>Never lay tools across battery terminals</li><li>Have a Class C fire extinguisher nearby</li></ul>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-safety-check",
+                    "type": "drill",
+                    "title": "Battery safety checks",
+                    "passingScore": 90,
+                    "steps": [
+                      {
+                        "q": "You're about to work on a lead-acid battery bank. First thing?",
+                        "o": ["Disconnect the positive terminal", "Put on eye protection and remove metal jewellery", "Wipe the terminals", "Check voltage"],
+                        "c": 1,
+                        "f": "PPE first. Always. Eye protection and no metal on your body."
+                      },
+                      {
+                        "q": "You need to disconnect a battery terminal. Which order?",
+                        "o": ["Positive first, then negative", "Negative first, then positive", "Either order", "Both at once"],
+                        "c": 1,
+                        "f": "Negative first when disconnecting. This prevents accidental short circuits through tools to the chassis."
+                      },
+                      {
+                        "q": "You smell rotten eggs near the battery bank. What does this mean?",
+                        "o": ["Normal for batteries", "Hydrogen sulphide — ventilation failure, evacuate and ventilate immediately", "The battery is fully charged", "Time to water the cells"],
+                        "c": 1,
+                        "f": "Rotten egg smell is hydrogen sulphide from overcharging or a failing cell. Ventilate immediately — it is toxic and explosive."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "s-safety-scenario",
+                    "type": "scenario",
+                    "title": "Battery acid splash response",
+                    "prompt": "While servicing a lead-acid battery bank, acid splashes onto your forearm and a small amount reaches your eye. Walk through exactly what you do, in order.",
+                    "context": "Fast, correct action prevents permanent injury.",
+                    "placeholder": "Step 1: …",
+                    "rubric": [
+                      "Flush the eye with clean running water for at least 20 minutes",
+                      "Flush the skin simultaneously or immediately after",
+                      "Do NOT neutralise with baking soda on skin — flushing is the correct response",
+                      "Remove contaminated clothing while flushing",
+                      "Arrange urgent medical assessment, especially for the eye",
+                      "Report the incident for review"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "system-design",
+        "name": "System Design & Sizing",
+        "description": "Design systems that meet real client needs without over- or under-sizing.",
+        "skills": [
+          {
+            "id": "load-audit",
+            "name": "Load Audit",
+            "description": "Determine how much energy a client actually needs.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-load-intro",
+                    "type": "lesson",
+                    "title": "Start with the load, always",
+                    "content": "<p>You cannot size a system until you know what it must power. This is the <strong>load audit</strong>.</p><p>For every appliance the client wants to run, record:</p><ul><li>Power draw in watts (from the label)</li><li>Hours per day it runs</li><li>Whether it runs during daylight or at night</li></ul><p>Multiply watts × hours to get watt-hours (Wh) per day.</p><p>Total all appliances. That number is your energy target. Everything downstream — panels, battery, inverter — is sized to meet it.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-load-calculation",
+                    "type": "drill",
+                    "title": "Load audit drills",
+                    "passingScore": 80,
+                    "steps": [
+                      {
+                        "q": "4 LED bulbs (10W each) running 6 hours per night. Energy per day?",
+                        "o": ["40 Wh", "240 Wh", "24 Wh", "2400 Wh"],
+                        "c": 1,
+                        "f": "4 × 10W × 6h = 240 Wh."
+                      },
+                      {
+                        "q": "Add a TV (60W) running 4 hours per night. New total?",
+                        "o": ["240 Wh", "480 Wh", "300 Wh", "720 Wh"],
+                        "c": 1,
+                        "f": "240 + (60 × 4 = 240) = 480 Wh."
+                      },
+                      {
+                        "q": "Add a phone charging (5W) 3 hours per day and a fan (25W) 8 hours per night. Total?",
+                        "o": ["680 Wh", "695 Wh", "720 Wh", "700 Wh"],
+                        "c": 1,
+                        "f": "480 + 15 (phone) + 200 (fan) = 695 Wh."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "s-load-audit-real",
+                    "type": "scenario",
+                    "title": "Run a real load audit",
+                    "prompt": "A small shop wants solar power for: 8 LED bulbs (7W each) for 6 hours, a fridge (150W) running 24 hours, a phone charging station (30W) for 4 hours, and a radio (15W) for 5 hours. Calculate the daily energy requirement.",
+                    "context": "This is a typical small-business solar job in West Africa.",
+                    "placeholder": "Bulbs:\nFridge:\nPhones:\nRadio:\nTotal:",
+                    "rubric": [
+                      "Bulbs: 8 × 7W × 6h = 336 Wh",
+                      "Fridge: 150W × 24h × 0.5 duty cycle = 1800 Wh (fridges cycle, so use ~50% duty)",
+                      "Phones: 30W × 4h = 120 Wh",
+                      "Radio: 15W × 5h = 75 Wh",
+                      "Total: 2331 Wh ≈ 2.3 kWh per day"
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "p-load-audit-form",
+                    "type": "portfolio",
+                    "title": "Design a load audit form",
+                    "prompt": "Create a one-page form you can use during client visits to collect load information. It must capture everything needed to design a system on return to the workshop.",
+                    "steps": [
+                      "Include columns for appliance, watts, hours, and total Wh",
+                      "Add a section for peak-load identification (what runs simultaneously)",
+                      "Add a section for future loads (what might be added later)",
+                      "Design it to be filled in a 20-minute visit",
+                      "Test it on a real or simulated client"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "battery-sizing",
+            "name": "Battery Sizing",
+            "description": "Choose the right battery capacity for autonomy and cycle life.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-battery-sizing-intro",
+                    "type": "lesson",
+                    "title": "How much storage do you need?",
+                    "content": "<p>Battery capacity is measured in amp-hours (Ah) or kilowatt-hours (kWh).</p><h3>The formula</h3><blockquote>Battery Ah = (Daily Wh × Days of autonomy) ÷ (System voltage × Depth of discharge)</blockquote><h3>Rules of thumb</h3><ul><li><strong>Days of autonomy</strong>: 1–2 days for reliable grid backup, 2–3 days for off-grid</li><li><strong>Depth of discharge (DoD)</strong>: 50% for lead-acid, 80% for lithium</li><li><strong>System losses</strong>: add 20% to cover inverter losses and wiring</li></ul><p>Undersized batteries die young. Oversized batteries waste money. Get the maths right.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-battery-sizing",
+                    "type": "drill",
+                    "title": "Battery sizing calculations",
+                    "steps": [
+                      {
+                        "q": "Daily energy is 2000 Wh. System is 24V. You want 2 days of autonomy. Lead-acid (50% DoD). Required Ah?",
+                        "o": ["83 Ah", "167 Ah", "333 Ah", "500 Ah"],
+                        "c": 2,
+                        "f": "(2000 × 2) ÷ (24 × 0.5) = 4000 ÷ 12 ≈ 333 Ah. Add 20% for losses → ~400 Ah."
+                      },
+                      {
+                        "q": "Same system but lithium (80% DoD). Required Ah?",
+                        "o": ["208 Ah", "167 Ah", "333 Ah", "150 Ah"],
+                        "c": 0,
+                        "f": "(2000 × 2) ÷ (24 × 0.8) = 4000 ÷ 19.2 ≈ 208 Ah. Lithium needs less capacity for the same energy."
+                      },
+                      {
+                        "q": "Why do lithium batteries need less Ah than lead-acid for the same job?",
+                        "o": ["They weigh less", "They allow deeper discharge", "They charge faster", "They are cheaper"],
+                        "c": 1,
+                        "f": "80% DoD vs 50% DoD means you use more of the capacity you paid for."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "s-battery-choice",
+                    "type": "scenario",
+                    "title": "Choose a battery type",
+                    "prompt": "A client has a budget of 500,000 Le for batteries, needs 5 kWh storage, and wants the system to last at least 5 years. Should they go lead-acid or lithium? Explain your reasoning with numbers.",
+                    "context": "Battery choice is the single biggest cost and lifetime decision in an off-grid system.",
+                    "placeholder": "Lead-acid option:\nLithium option:\nRecommendation:",
+                    "rubric": [
+                      "Compares upfront cost of both",
+                      "Accounts for cycle life (lead-acid ~1500 cycles, lithium ~4000+)",
+                      "Calculates cost per usable kWh over 5 years",
+                      "Considers maintenance (lead-acid needs water checks)",
+                      "Considers depth of discharge difference",
+                      "Makes a clear recommendation with reasoning"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "installation",
+        "name": "Installation",
+        "description": "Mount, wire, and connect. The hands-on work that brings the design to life.",
+        "skills": [
+          {
+            "id": "panel-mounting",
+            "name": "Panel Mounting",
+            "description": "Install panels on roofs and ground mounts safely and at the correct angle.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-mounting-intro",
+                    "type": "lesson",
+                    "title": "Where and how to mount panels",
+                    "content": "<h3>Roof mounting</h3><ul><li>South-facing in the northern hemisphere (West Africa is north of the equator, so south)</li><li>Tilt angle roughly equals the latitude of the site</li><li>Must be able to withstand wind loads</li><li>Never penetrate roofing without proper sealing</li></ul><h3>Ground mounting</h3><ul><li>Easier maintenance access</li><li>Better airflow = cooler panels = more output</li><li>Must be theft-resistant</li></ul><h3>Shading</h3><p>A single shaded cell can reduce output of an entire panel by 50%+. Avoid shade at all costs — check for trees, buildings, future construction.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-mounting-practice",
+                    "type": "lesson",
+                    "title": "Best practices for mounting",
+                    "content": "<h3>Before you drill</h3><ul><li>Confirm roof structure can bear the weight</li><li>Check for existing wiring under the roof</li><li>Plan the layout so cable runs are short and equal</li></ul><h3>During mounting</h3><ul><li>Leave 5-10cm gap between panels for airflow</li><li>Use stainless steel bolts — zinc ones rust quickly</li><li>Tighten to the manufacturer's torque spec — not eyeballed</li></ul><h3>After mounting</h3><ul><li>Confirm all bolts are tight</li><li>Confirm grounding is correct</li><li>Confirm no roof leaks</li></ul>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-mounting-drill",
+                    "type": "drill",
+                    "title": "Mounting decisions",
+                    "steps": [
+                      {
+                        "q": "Your site is at 12°N latitude. What tilt angle for the panels?",
+                        "o": ["0° (flat)", "12°", "45°", "90°"],
+                        "c": 1,
+                        "f": "In West Africa, tilt angle roughly equals latitude. 12° is ideal for a site at 12°N."
+                      },
+                      {
+                        "q": "A tree partially shades panels for 2 hours each morning. What do you do?",
+                        "o": ["Ignore it — 2 hours doesn't matter", "Move the panels or cut the tree", "Add more panels", "Accept reduced output"],
+                        "c": 1,
+                        "f": "2 hours of shade can reduce daily output by 15–30%. Fix the shade, not the system."
+                      },
+                      {
+                        "q": "Why use stainless steel bolts instead of zinc?",
+                        "o": ["They look better", "Zinc rusts in tropical climate within 1–2 years", "They're cheaper", "Stainless is stronger"],
+                        "c": 1,
+                        "f": "Tropical humidity accelerates corrosion. Stainless lasts decades; zinc fails in months."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "p-mount-plan",
+                    "type": "portfolio",
+                    "title": "Design a mounting layout",
+                    "prompt": "For a 6-panel system (250W each), design the roof layout. Draw a top-down view showing panel positions, tilt, spacing, and cable runs.",
+                    "steps": [
+                      "Choose the optimal direction based on hemisphere",
+                      "Set the tilt angle for your latitude",
+                      "Draw the panel positions with airflow gaps",
+                      "Route cables to minimise length and keep them equal",
+                      "Mark all mounting points"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "wiring-connections",
+            "name": "Wiring & Connections",
+            "description": "Wire the DC side safely and to code.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-wire-sizing",
+                    "type": "lesson",
+                    "title": "Sizing DC cables",
+                    "content": "<p>Cable size determines two things:</p><ul><li>Voltage drop (larger cables = less loss)</li><li>Current-carrying capacity (larger cables = higher safe current)</li></ul><h3>The rule</h3><ul><li>Aim for &lt;3% voltage drop on DC circuits</li><li>Use the manufacturer's ampacity table for the cable type</li><li>When in doubt, go one size larger</li></ul><h3>Common sizes in solar</h3><ul><li>Panel wiring: 4mm² typical</li><li>Battery to inverter: 25–50mm² depending on current</li><li>Controller to battery: 6–16mm²</li></ul>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "s-wire-choice",
+                    "type": "scenario",
+                    "title": "Choose a battery cable",
+                    "prompt": "A 24V system has a 3000W inverter 2 metres from the battery. Calculate the current draw, then choose a suitable cable size.",
+                    "context": "Battery cables carry the highest currents in a solar system. Undersized cables overheat and cause fires.",
+                    "placeholder": "Current calculation:\nCable size:\nReasoning:",
+                    "rubric": [
+                      "Calculates current: 3000W ÷ 24V = 125A",
+                      "Notes that peak current may be higher (surge loads)",
+                      "Sizes for at least 150A capacity",
+                      "Considers 2m round-trip = 4m of cable for voltage drop",
+                      "Chooses 35–50mm² cable",
+                      "Specifies proper fuse or breaker rating"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "commissioning",
+        "name": "Commissioning & Maintenance",
+        "description": "Test the system, hand it over to the client, and keep it running.",
+        "skills": [
+          {
+            "id": "system-testing",
+            "name": "System Testing",
+            "description": "Verify everything works before you leave.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-testing-intro",
+                    "type": "lesson",
+                    "title": "Never hand over an untested system",
+                    "content": "<p>Commissioning is the formal handover of a working system. Skip it and you'll get callback after callback.</p><h3>Test in this order</h3><ol><li><strong>Open-circuit voltage</strong> of the panel array (should match spec)</li><li><strong>Short-circuit current</strong> of the panel array (using a clamp meter)</li><li><strong>Charge controller</strong> is in correct mode and reading the right voltages</li><li><strong>Battery voltage</strong> at rest and under load</li><li><strong>Inverter output</strong> — voltage and frequency on the AC side</li><li><strong>Load test</strong> — turn on all loads and confirm the system holds</li></ol><p>Document every reading. If the client complains later, you have evidence.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-testing-values",
+                    "type": "drill",
+                    "title": "Interpret test readings",
+                    "steps": [
+                      {
+                        "q": "A 250W panel reads 37V open circuit. Manufacturer spec says 37.6V. Acceptable?",
+                        "o": ["No, it's broken", "Yes, within normal tolerance", "Only if current is right", "Only at noon"],
+                        "c": 1,
+                        "f": "Within ±5% is normal. 37V vs 37.6V is fine."
+                      },
+                      {
+                        "q": "Panel array reads 20V open circuit but spec says 74V. What's wrong?",
+                        "o": ["Panel is dead", "Likely incorrect wiring (parallel instead of series)", "Time of day", "Cloud cover"],
+                        "c": 1,
+                        "f": "20V is roughly one panel's voltage. Check the wiring — likely wired in parallel."
+                      },
+                      {
+                        "q": "Inverter output reads 195V AC. Client expects 230V. What do you check?",
+                        "o": ["Battery voltage under load", "Panel voltage", "Ambient temperature", "Both A and B"],
+                        "c": 0,
+                        "f": "Low AC output usually traces to low DC input. Check battery voltage under load."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "p-commissioning-report",
+                    "type": "portfolio",
+                    "title": "Write a commissioning report",
+                    "prompt": "Design a commissioning report template you'd fill in for every installation and give to the client at handover.",
+                    "steps": [
+                      "List every test and its expected value",
+                      "Include a place for measured values",
+                      "Add a sign-off section for client acceptance",
+                      "Include a warranty and contact section",
+                      "Add basic operating instructions"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "maintenance",
+            "name": "Maintenance",
+            "description": "Keep systems running for their full lifetime.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-maintenance-intro",
+                    "type": "lesson",
+                    "title": "Preventive vs reactive",
+                    "content": "<h3>Preventive maintenance</h3><ul><li>Clean panels monthly (dust and bird droppings cost 10–20% output)</li><li>Check battery water levels monthly (lead-acid)</li><li>Inspect all cable connections quarterly</li><li>Test system output under load quarterly</li></ul><h3>Reactive maintenance</h3><ul><li>Responding to client calls about failures</li><li>Diagnosing and repairing</li></ul><p>A well-maintained system lasts 15–25 years. A neglected one fails in 3–5.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-maintenance-drill",
+                    "type": "drill",
+                    "title": "Maintenance scheduling",
+                    "steps": [
+                      {
+                        "q": "How often should solar panels be cleaned in dusty West African conditions?",
+                        "o": ["Yearly", "Monthly", "Weekly", "Never"],
+                        "c": 1,
+                        "f": "Monthly is the baseline. During harmattan, every 2 weeks."
+                      },
+                      {
+                        "q": "A client's system output has dropped 15% over 6 months. Most likely cause?",
+                        "o": ["Panels are broken", "Dust accumulation", "Battery failure", "Inverter fault"],
+                        "c": 1,
+                        "f": "Gradual output loss almost always means dust. Clean and re-measure."
+                      },
+                      {
+                        "q": "Which maintenance task is most often neglected and most expensive to fix later?",
+                        "o": ["Panel cleaning", "Battery water top-up", "Cable inspection", "Inverter cleaning"],
+                        "c": 1,
+                        "f": "Lead-acid batteries that run dry are destroyed. Water top-up is the single most important monthly task."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
