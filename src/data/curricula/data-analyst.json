@@ -1,0 +1,373 @@
+{
+  "data-analyst": {
+    "intro": "Learn to turn raw data into decisions. From collecting and cleaning to visualising and presenting — the skills every business, government, and NGO needs.",
+    "skillDomains": [
+      {
+        "id": "data-collection",
+        "name": "Data Collection",
+        "description": "Where data comes from, how to structure it, and how to avoid bias.",
+        "skills": [
+          {
+            "id": "data-sources",
+            "name": "Data Sources",
+            "description": "Identify where data lives and how to get it.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-sources-intro",
+                    "type": "lesson",
+                    "title": "Where data comes from",
+                    "content": "<p>Data in West Africa comes from more places than most people think:</p><ul><li><strong>Surveys</strong> — the most common in NGO and government work</li><li><strong>Mobile money transaction logs</strong> — huge and continuous</li><li><strong>Mobile phone metadata</strong> — anonymised, aggregated</li><li><strong>Market records</strong> — often on paper, needing digitisation</li><li><strong>Government registries</strong> — births, businesses, land</li><li><strong>Sensors</strong> — weather, agriculture, traffic (growing fast)</li></ul><p>Your first job is always the same: find where the data is, understand its limits, and know what you can't do with it.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-structure",
+                    "type": "lesson",
+                    "title": "Structured vs unstructured",
+                    "content": "<h3>Structured data</h3><p>Organised into rows and columns. Easy to analyse. Examples: a spreadsheet of sales, a database of patients.</p><h3>Semi-structured</h3><p>Some organisation, but not tabular. Examples: JSON files, emails with metadata.</p><h3>Unstructured</h3><p>No fixed format. Examples: WhatsApp messages, voice notes, photos, handwritten receipts.</p><p>In West Africa, most real data is unstructured or semi-structured. Learning to convert it into something analysable is a critical skill.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-source-id",
+                    "type": "drill",
+                    "title": "Classify the data",
+                    "steps": [
+                      {
+                        "q": "A spreadsheet of student grades — which type?",
+                        "o": ["Structured", "Semi-structured", "Unstructured", "None"],
+                        "c": 0,
+                        "f": "Rows and columns = structured."
+                      },
+                      {
+                        "q": "A folder of photos of receipts — which type?",
+                        "o": ["Structured", "Semi-structured", "Unstructured", "Numeric"],
+                        "c": 2,
+                        "f": "Images are unstructured. They need OCR or manual digitisation to analyse."
+                      },
+                      {
+                        "q": "A JSON response from a mobile money API — which type?",
+                        "o": ["Structured", "Semi-structured", "Unstructured", "Text-only"],
+                        "c": 1,
+                        "f": "JSON has structure but isn't tabular. Semi-structured."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "s-collection-plan",
+                    "type": "scenario",
+                    "title": "Plan a data collection",
+                    "prompt": "A local government wants to understand how many small businesses exist in a district. Describe your data collection approach — sources, method, and limitations.",
+                    "context": "Government data in West Africa is often incomplete. Choosing the right sources determines whether your analysis is useful.",
+                    "placeholder": "Primary sources:\nSecondary sources:\nMethod:\nLimitations:",
+                    "rubric": [
+                      "Identifies business registries as a starting point",
+                      "Acknowledges many informal businesses aren't registered",
+                      "Suggests a physical or mobile survey",
+                      "Considers market associations as a data source",
+                      "Notes the sampling problem (how do you find unregistered businesses?)",
+                      "States clear limitations of whatever method is chosen"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "analysis",
+        "name": "Analysis",
+        "description": "Turn raw numbers into insight. Averages, trends, and comparison.",
+        "skills": [
+          {
+            "id": "descriptive-stats",
+            "name": "Descriptive Statistics",
+            "description": "Summarise a dataset with the right numbers.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-central-tendency",
+                    "type": "lesson",
+                    "title": "Mean, median, mode",
+                    "content": "<h3>Mean</h3><p>Add everything, divide by count. Good for symmetric data. Bad when outliers exist.</p><h3>Median</h3><p>The middle value when sorted. Good when outliers exist.</p><h3>Mode</h3><p>The most frequent value. Good for categories.</p><h3>Example</h3><p>Salaries: 20k, 22k, 25k, 30k, 500k. Mean = 119.4k (misleading). Median = 25k (accurate).</p><p>Always ask: is this data symmetric? If not, use the median.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-central-tendency",
+                    "type": "drill",
+                    "title": "Choose the right summary",
+                    "steps": [
+                      {
+                        "q": "Incomes of 100 households, one is a millionaire. Which measure best describes typical income?",
+                        "o": ["Mean", "Median", "Mode", "Range"],
+                        "c": 1,
+                        "f": "The millionaire skews the mean. Median reflects typical experience."
+                      },
+                      {
+                        "q": "Most common occupation in a district. Which measure?",
+                        "o": ["Mean", "Median", "Mode", "Standard deviation"],
+                        "c": 2,
+                        "f": "Categories use mode. \"Farmer\" can't be averaged."
+                      },
+                      {
+                        "q": "Scores on a test with a few very low outliers. Which measure for central tendency?",
+                        "o": ["Mean", "Median", "Mode", "Sum"],
+                        "c": 1,
+                        "f": "Median is more robust when outliers exist."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "p-dataset-summary",
+                    "type": "portfolio",
+                    "title": "Summarise a real dataset",
+                    "prompt": "Find any public West African dataset (World Bank, UN, national statistics office). Produce a one-page summary: what's in it, key descriptive statistics, and what it reveals.",
+                    "steps": [
+                      "Download the dataset",
+                      "Identify the variables",
+                      "Calculate mean, median, and range for the main numeric variables",
+                      "Identify the distribution shape",
+                      "Write a one-paragraph summary of what the data shows"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "cleaning",
+            "name": "Data Cleaning",
+            "description": "Real data is messy. Cleaning is 70% of the job.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-cleaning-intro",
+                    "type": "lesson",
+                    "title": "Why cleaning is the job",
+                    "content": "<p>Data analysts spend roughly <strong>70% of their time cleaning data</strong>, not analysing it. This surprises everyone who starts.</p><h3>Common problems</h3><ul><li>Missing values</li><li>Duplicates</li><li>Inconsistent formats (dates as text, numbers as strings)</li><li>Typos in category names (\"male\", \"Male\", \"M\", \"man\")</li><li>Outliers that may or may not be errors</li><li>Encoding issues (accents mangled)</li></ul><p>A clean dataset is worth more than a clever analysis on a dirty one.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-cleaning-drill",
+                    "type": "drill",
+                    "title": "Fix the data problem",
+                    "steps": [
+                      {
+                        "q": "A gender column has values: male, Male, M, m, man, female, F, Woman. What do you do?",
+                        "o": ["Leave them — they're all valid", "Standardise to M/F (or Male/Female)", "Delete the column", "Delete rows with typos"],
+                        "c": 1,
+                        "f": "Standardise into a consistent format. Never delete data you can fix."
+                      },
+                      {
+                        "q": "A date column has values like \"12/03/2024\", \"March 12 2024\", \"2024-03-12\". What do you do?",
+                        "o": ["Convert all to ISO format (2024-03-12)", "Pick the most common one", "Leave them", "Delete the column"],
+                        "c": 0,
+                        "f": "ISO format is unambiguous. Convert everything to it."
+                      },
+                      {
+                        "q": "A salary column has one value of 999999999 which is clearly an error. What do you do?",
+                        "o": ["Delete the row", "Replace with median", "Investigate before deciding, then handle transparently", "Leave it — could be real"],
+                        "c": 2,
+                        "f": "Investigate first. Then document what you did and why. Never silently change data."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "visualisation",
+        "name": "Visualisation",
+        "description": "Communicate insight through charts and dashboards.",
+        "skills": [
+          {
+            "id": "chart-choice",
+            "name": "Choosing the Right Chart",
+            "description": "Different questions need different visuals.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-chart-types",
+                    "type": "lesson",
+                    "title": "Chart types and their jobs",
+                    "content": "<h3>Bar chart</h3><p>Comparing categories. \"Sales by region.\"</p><h3>Line chart</h3><p>Change over time. \"Monthly revenue.\"</p><h3>Pie chart</h3><p>Parts of a whole. Use sparingly — hard to read with many slices.</p><h3>Scatter plot</h3><p>Relationship between two variables. \"Price vs quantity sold.\"</p><h3>Histogram</h3><p>Distribution of one variable. \"Distribution of ages.\"</p><p>Bad chart choice makes good data useless. Choose based on the question, not the style.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-chart-choice",
+                    "type": "drill",
+                    "title": "Pick the right chart",
+                    "steps": [
+                      {
+                        "q": "You want to show how malaria cases changed month by month over a year.",
+                        "o": ["Pie chart", "Line chart", "Bar chart", "Scatter plot"],
+                        "c": 1,
+                        "f": "Time series = line chart."
+                      },
+                      {
+                        "q": "You want to compare average income across 5 countries.",
+                        "o": ["Line chart", "Bar chart", "Pie chart", "Histogram"],
+                        "c": 1,
+                        "f": "Comparing categories = bar chart."
+                      },
+                      {
+                        "q": "You want to show the relationship between rainfall and crop yield.",
+                        "o": ["Line chart", "Bar chart", "Scatter plot", "Pie chart"],
+                        "c": 2,
+                        "f": "Two numeric variables = scatter plot."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "business-insight",
+        "name": "Business Insight",
+        "description": "Turn analysis into decisions.",
+        "skills": [
+          {
+            "id": "stakeholder-questions",
+            "name": "Answering Stakeholder Questions",
+            "description": "Understand what decision your analysis supports.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-insight-intro",
+                    "type": "lesson",
+                    "title": "Start with the decision",
+                    "content": "<p>Before you touch data, ask: <strong>what decision does this support?</strong></p><p>Examples:</p><ul><li>A shop owner deciding which product to restock → analysis of sales velocity and margins</li><li>An NGO deciding where to open a clinic → analysis of population density and travel times</li><li>A bank deciding loan criteria → analysis of default patterns</li></ul><p>Analysis without a decision is a hobby. Analysis in service of a decision is a career.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "s-insight-scenario",
+                    "type": "scenario",
+                    "title": "Frame an analysis",
+                    "prompt": "A supermarket owner wants to increase profit. They have data on sales, costs, and inventory. What questions would you ask, and what analysis would you produce?",
+                    "context": "The owner hasn't told you what they want. Your job is to convert \"increase profit\" into specific analyses.",
+                    "placeholder": "Questions to clarify:\nAnalysis 1:\nAnalysis 2:\nDeliverable:",
+                    "rubric": [
+                      "Asks what \"profit\" means (gross, net, margin per product)",
+                      "Asks what time period matters",
+                      "Proposes margin analysis by product",
+                      "Proposes slow-mover analysis (products not selling)",
+                      "Proposes peak-hour / peak-day analysis",
+                      "Delivers actionable recommendations, not just numbers"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "tools",
+        "name": "Tools",
+        "description": "The software you'll use every day.",
+        "skills": [
+          {
+            "id": "spreadsheets",
+            "name": "Spreadsheets",
+            "description": "Excel, Google Sheets — still the most-used analytics tool in the world.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-spreadsheet-intro",
+                    "type": "lesson",
+                    "title": "Why spreadsheets still matter",
+                    "content": "<p>AI and Python get the headlines. But 80% of real analysis in West African businesses, NGOs, and government happens in spreadsheets.</p><h3>What to master</h3><ul><li>Sorting and filtering</li><li>SUM, AVERAGE, COUNT, MIN, MAX</li><li>IF and IFERROR</li><li>VLOOKUP / XLOOKUP (joining datasets)</li><li>Pivot tables (summary tables in seconds)</li><li>Charts</li></ul><p>If you can do these six things well, you can get hired.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-formula-drill",
+                    "type": "drill",
+                    "title": "Spreadsheet formulas",
+                    "steps": [
+                      {
+                        "q": "You want the total of column B for rows 2-100.",
+                        "o": ["=SUM(B2:B100)", "=TOTAL(B2:B100)", "=ADD(B2:B100)", "=COUNT(B2:B100)"],
+                        "c": 0,
+                        "f": "SUM adds values. COUNT counts them."
+                      },
+                      {
+                        "q": "You want to show \"Pass\" if score ≥50 and \"Fail\" otherwise.",
+                        "o": ["=IF(A1>=50,\"Pass\",\"Fail\")", "=PASS(A1)", "=TEST(A1,50)", "=IF(A1,\"Pass\",\"Fail\")"],
+                        "c": 0,
+                        "f": "IF with a condition and two outcomes."
+                      },
+                      {
+                        "q": "You have two tables and want to pull a value from one into the other by matching an ID.",
+                        "o": ["=SUM()", "=VLOOKUP()", "=COUNTIF()", "=MAX()"],
+                        "c": 1,
+                        "f": "VLOOKUP (or XLOOKUP in newer tools) joins data by matching keys."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "sql-basics",
+            "name": "SQL Basics",
+            "description": "Query databases directly — the next step after spreadsheets.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-sql-intro",
+                    "type": "lesson",
+                    "title": "What SQL is for",
+                    "content": "<p>Spreadsheets top out at ~100,000 rows. Databases handle billions. <strong>SQL</strong> (Structured Query Language) is how you talk to them.</p><h3>The four commands you'll use most</h3><ul><li><code>SELECT</code> — pick columns</li><li><code>FROM</code> — pick the table</li><li><code>WHERE</code> — filter rows</li><li><code>GROUP BY</code> — aggregate</li></ul><p>Example: <code>SELECT region, SUM(sales) FROM transactions WHERE year = 2024 GROUP BY region</code></p><p>That single query does what 20 spreadsheet steps would.</p>"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
