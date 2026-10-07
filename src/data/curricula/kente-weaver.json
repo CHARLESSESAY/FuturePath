@@ -1,0 +1,330 @@
+{
+  "kente-weaver": {
+    "intro": "Learn Kente weaving from Ghana and the wider West African strip-cloth tradition. Master the loom, the patterns, the cultural meanings, and the business of selling one of Africa's most recognised textiles.",
+    "skillDomains": [
+      {
+        "id": "loom-work",
+        "name": "Loom Work",
+        "description": "The physical skill of the loom — warping, weaving, and maintaining the equipment.",
+        "skills": [
+          {
+            "id": "loom-setup",
+            "name": "Loom Setup",
+            "description": "Prepare the loom correctly. Bad setup ruins hours of weaving.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-loom-intro",
+                    "type": "lesson",
+                    "title": "The Kente loom",
+                    "content": "<p>Traditional Kente is woven on a <strong>horizontal narrow-strip loom</strong>. The weaver sits at one end, controlling the heddles with their feet while throwing the shuttle by hand.</p><p>The loom produces strips about 10–12cm wide. Many strips are later sewn together to make full cloths.</p><h3>Key parts</h3><ul><li><strong>Heddles</strong> — raise and lower warp threads</li><li><strong>Shuttle</strong> — carries the weft thread</li><li><strong>Beater</strong> — packs each weft thread tight</li><li><strong>Warp beam</strong> — holds tension on the warp threads</li></ul>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-warping",
+                    "type": "lesson",
+                    "title": "Warping — the foundation",
+                    "content": "<p>Warping is preparing the lengthwise threads. It takes hours, and it determines everything about the finished cloth.</p><h3>Steps</h3><ol><li>Measure the warp threads to the required length (usually 3–4 metres per strip)</li><li>Wind them onto a warping frame or posts in the correct colour order</li><li>Transfer to the loom and tie to the warp beam under even tension</li><li>Thread through the heddles in the pattern sequence</li></ol><p>Uneven tension = wavy cloth. Wrong colour order = pattern ruined. Warping is not rushed.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-loom-drill",
+                    "type": "drill",
+                    "title": "Loom decisions",
+                    "steps": [
+                      {
+                        "q": "You need to weave a strip 12cm wide and 3.5m long. What do you prepare first?",
+                        "o": ["Start weaving", "The warp — correct width and length", "Cut the weft", "Beat the cloth"],
+                        "c": 1,
+                        "f": "Every strip starts with warping. Always."
+                      },
+                      {
+                        "q": "Halfway through warping, you notice tension is uneven. What do you do?",
+                        "o": ["Continue — it'll even out", "Unwind and start over", "Tighten the loose threads", "Weave as-is"],
+                        "c": 1,
+                        "f": "Restart. Uneven warp produces a permanently wavy, unusable strip."
+                      },
+                      {
+                        "q": "Your finished cloth has a slight ripple on one side. Most likely cause?",
+                        "o": ["Colour choice", "Uneven warp tension", "Wrong weft", "Cheap thread"],
+                        "c": 1,
+                        "f": "Ripples almost always trace back to warping."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "weaving-technique",
+            "name": "Weaving Technique",
+            "description": "Pass the shuttle, pack the weft, build the cloth.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-weaving-intro",
+                    "type": "lesson",
+                    "title": "The weave itself",
+                    "content": "<p>Weaving is simple in principle:</p><ol><li>Lift the heddles to raise alternate warp threads</li><li>Throw the shuttle through the gap (called the <em>shed</em>)</li><li>Beat the weft thread tight against the previous one</li><li>Switch the heddles and repeat</li></ol><p>Every inch of cloth is hundreds of these cycles. Skilled weavers work rhythmically, almost unconsciously. The rhythm is what makes good cloth.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-weaving-drill",
+                    "type": "drill",
+                    "title": "Weaving rhythm",
+                    "steps": [
+                      {
+                        "q": "You notice your weft threads are packed unevenly. Result?",
+                        "o": ["No issue", "Visible gaps in the cloth", "Stronger cloth", "Faster weaving"],
+                        "c": 1,
+                        "f": "Uneven beating leaves gaps. The cloth looks poor and wears badly."
+                      },
+                      {
+                        "q": "The shuttle keeps catching on warp threads. What do you do?",
+                        "o": ["Push harder", "Check the shed (gap) is fully open", "Change the shuttle", "Cut the thread"],
+                        "c": 1,
+                        "f": "A properly opened shed lets the shuttle pass freely. If it's catching, the heddles aren't lifting fully."
+                      },
+                      {
+                        "q": "You want to change colour mid-strip. What do you do?",
+                        "o": ["Stop and restart", "Cut the weft and start the new colour, tucking the ends in later", "Add a knot", "Leave the colour"],
+                        "c": 1,
+                        "f": "Cut the weft, start the new colour. Tuck ends during finishing. Never knot — knots show."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "patterns",
+        "name": "Pattern Knowledge",
+        "description": "Kente is a language of named patterns. Learn the vocabulary.",
+        "skills": [
+          {
+            "id": "pattern-families",
+            "name": "Pattern Families",
+            "description": "The named patterns and their meanings.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-pattern-intro",
+                    "type": "lesson",
+                    "title": "Named patterns",
+                    "content": "<p>Kente patterns are named. Each name carries a proverb or meaning.</p><h3>Examples</h3><ul><li><strong>Adweneasa</strong> — \"my skill is exhausted\". The most complex pattern, with no plain background.</li><li><strong>Sika futuro</strong> — \"gold dust\". Wealth and prosperity.</li><li><strong>Emaa da</strong> — \"it has not happened before\". Novelty and uniqueness.</li><li><strong>Obaa ko dua</strong> — \"a woman weaves a good cloth\". Skill and craftsmanship.</li></ul><p>The pattern choice signals the occasion and the wearer's intent.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-pattern-match",
+                    "type": "drill",
+                    "title": "Match pattern to occasion",
+                    "steps": [
+                      {
+                        "q": "A wedding commission. Which pattern family?",
+                        "o": ["Adweneasa", "Sika futuro", "Emaa da", "Random"],
+                        "c": 1,
+                        "f": "Sika futuro (gold dust) is used for weddings — wealth and prosperity."
+                      },
+                      {
+                        "q": "A graduation gift for a first-in-family graduate. Best pattern?",
+                        "o": ["Emaa da", "Plain cloth", "Funeral pattern", "Any"],
+                        "c": 0,
+                        "f": "Emaa da (\"it has not happened before\") suits a first-time achievement."
+                      },
+                      {
+                        "q": "A commission showcasing your finest work. Which pattern?",
+                        "o": ["Simple plain cloth", "Adweneasa", "Cheap pattern", "Any"],
+                        "c": 1,
+                        "f": "Adweneasa (\"my skill is exhausted\") is the weaver's showcase pattern."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "s-commission-advice",
+                    "type": "scenario",
+                    "title": "Advise a client",
+                    "prompt": "A client is commissioning a Kente cloth for their mother's 70th birthday. They don't know the patterns. Write a message explaining three pattern options you would recommend and why.",
+                    "context": "Educating clients about pattern meaning is how you sell more than just cloth.",
+                    "placeholder": "Option 1:\nOption 2:\nOption 3:\nRecommendation:",
+                    "rubric": [
+                      "Offers three distinct patterns with different meanings",
+                      "Explains each meaning in plain language",
+                      "Connects at least one to ageing, wisdom, or maternal themes",
+                      "Suggests colours that suit the occasion",
+                      "Gives a clear recommendation with reasoning"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "colour",
+        "name": "Colour",
+        "description": "Colour in Kente is not decoration. It carries meaning.",
+        "skills": [
+          {
+            "id": "colour-meaning",
+            "name": "Colour Meaning",
+            "description": "The symbolic weight of each colour.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-colour-intro",
+                    "type": "lesson",
+                    "title": "Kente colour vocabulary",
+                    "content": "<ul><li><strong>Gold</strong> — royalty, wealth, spiritual purity</li><li><strong>Green</strong> — growth, harvest, renewal</li><li><strong>Blue</strong> — peacefulness, harmony, love</li><li><strong>Red</strong> — political passion, sacrifice, spiritual intensity</li><li><strong>Black</strong> — maturity, spiritual strength, ancestral connection</li><li><strong>White</strong> — purification, festive occasions, prayer</li><li><strong>Purple</strong> — femininity, healing, care</li></ul><p>A cloth's colour story matters as much as its pattern.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-colour-drill",
+                    "type": "drill",
+                    "title": "Choose the colour",
+                    "steps": [
+                      {
+                        "q": "A funeral cloth for an elder. Which colour dominant?",
+                        "o": ["Bright yellow", "Black and red", "Pink", "Rainbow"],
+                        "c": 1,
+                        "f": "Black for ancestral connection, red for the gravity of the occasion."
+                      },
+                      {
+                        "q": "A wedding cloth. Which colour palette?",
+                        "o": ["Black and grey", "Gold and blue", "White only", "Green only"],
+                        "c": 1,
+                        "f": "Gold (wealth, joy) and blue (love, harmony) suit weddings."
+                      },
+                      {
+                        "q": "A cloth for a newborn naming ceremony. Which colour?",
+                        "o": ["Black", "White and green", "Red", "Purple"],
+                        "c": 1,
+                        "f": "White (purity, new beginning) and green (growth) suit new life."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "cultural-meaning",
+        "name": "Cultural Meaning",
+        "description": "Kente is not just cloth. It is history woven into fabric.",
+        "skills": [
+          {
+            "id": "history",
+            "name": "History & Origins",
+            "description": "Where Kente comes from and what it represents.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-history-intro",
+                    "type": "lesson",
+                    "title": "The origins of Kente",
+                    "content": "<p>Kente originates with the <strong>Asante and Ewe peoples</strong> of Ghana and Togo. Asante tradition holds that the craft was inspired by a spider's web observed by two weavers, who reproduced the pattern for the Asantehene (king).</p><p>For centuries, Kente was royal — worn by kings and court officials on important occasions. Specific patterns were reserved for specific ranks.</p><p>Today Kente is worn for graduations, weddings, funerals, and celebrations around the world. It has become a global symbol of African identity.</p><p>Being a Kente weaver means carrying this history forward.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "s-culture-scenario",
+                    "type": "scenario",
+                    "title": "Explain Kente to a foreign buyer",
+                    "prompt": "A European boutique wants to stock your Kente. They ask what makes it special. Write a short explanation (under 200 words) that is culturally accurate, respectful, and commercially compelling.",
+                    "context": "Export clients pay more when they understand what they're buying. Education is a sales skill.",
+                    "placeholder": "Explanation:",
+                    "rubric": [
+                      "Mentions Asante or Ewe origins",
+                      "Explains that patterns are named and carry meaning",
+                      "Notes that colours have symbolic value",
+                      "Explains the weaving process briefly (strip loom, hand-woven)",
+                      "Positions Kente as both heritage and contemporary",
+                      "Avoids romanticising language ('tribal', 'exotic')",
+                      "Ends with what makes your cloth distinct"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "business",
+        "name": "Business",
+        "description": "Weaving is a craft. Selling is a business.",
+        "skills": [
+          {
+            "id": "pricing-kente",
+            "name": "Pricing Kente",
+            "description": "Price for the time and skill Kente requires.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-pricing-intro",
+                    "type": "lesson",
+                    "title": "Kente is slow work",
+                    "content": "<p>A full Kente cloth can take <strong>weeks to months</strong> to weave. A single strip can take hours. The price must reflect this.</p><h3>The four-part price</h3><ol><li><strong>Materials</strong> — thread, dye, and wear on the loom</li><li><strong>Labour</strong> — your hours, at a real rate</li><li><strong>Overhead</strong> — workshop, tools, electricity, transport</li><li><strong>Margin</strong> — the profit that keeps you in business</li></ol><p>Tourists often expect \"African craft\" prices. That expectation is wrong. Kente is luxury textile work. Price it accordingly.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "s-pricing-scenario",
+                    "type": "scenario",
+                    "title": "Price a full Kente cloth",
+                    "prompt": "A client orders a full Kente cloth (24 strips) for a graduation. Materials cost 180,000 Le. You estimate 60 hours of weaving time at 4,000 Le/hour. Overhead is 20,000 Le. You want a 45% margin. Calculate the price.",
+                    "context": "Kente buyers often don't understand the labour involved. Your price must reflect reality, not expectation.",
+                    "placeholder": "Materials:\nLabour:\nOverhead:\nBase cost:\nPrice with 45% margin:",
+                    "rubric": [
+                      "Materials: 180,000 Le",
+                      "Labour: 60 × 4,000 = 240,000 Le",
+                      "Overhead: 20,000 Le",
+                      "Base cost: 440,000 Le",
+                      "Price with margin: 440,000 × 1.45 = 638,000 Le",
+                      "Notes that the buyer should be shown the time breakdown"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
