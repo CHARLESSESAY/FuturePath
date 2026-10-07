@@ -33,14 +33,44 @@ const crumbPath = $("crumbPath");
   setupInstallPrompt(() => {});
 
   try {
-    const [careersRes, curriculaRes] = await Promise.all([
-      fetch("./src/data/careers.json", { cache: "no-cache" }),
-      fetch("./src/data/curricula.json", { cache: "no-cache" })
-    ]);
+    // 1. Load careers index
+    const careersRes = await fetch("./src/data/careers.json", { cache: "no-cache" });
+    if (!careersRes.ok) throw new Error("Could not load careers.json (HTTP " + careersRes.status + ")");
     state.careers = await careersRes.json();
-    state.curricula = await curriculaRes.json();
 
-    // Build sector list
+    // 2. Load curricula manifest (list of available career IDs)
+    const indexRes = await fetch("./src/data/curricula/_index.json", { cache: "no-cache" });
+    if (!indexRes.ok) throw new Error("Could not load curricula/_index.json (HTTP " + indexRes.status + ")");
+    const index = await indexRes.json();
+    const careerIds = index.careers || [];
+
+    // 3. Load each authored career file in parallel
+    const curriculaFiles = await Promise.all(
+      careerIds.map((id) =>
+        fetch(`./src/data/curricula/${id}.json`, { cache: "no-cache" })
+          .then((r) => {
+            if (!r.ok) {
+              console.warn(`[FuturePath] Curriculum missing: ${id} (HTTP ${r.status})`);
+              return null;
+            }
+            return r.json();
+          })
+          .catch((err) => {
+            console.error(`[FuturePath] Curriculum failed: ${id}`, err);
+            return null;
+          })
+      )
+    );
+
+    // 4. Merge all into state.curricula
+    state.curricula = {};
+    curriculaFiles.forEach((data) => {
+      if (data && typeof data === "object") {
+        Object.assign(state.curricula, data);
+      }
+    });
+
+    // 5. Build sector list
     const seen = new Set();
     state.careers.forEach((c) => {
       if (!seen.has(c.sector)) {
@@ -49,6 +79,12 @@ const crumbPath = $("crumbPath");
       }
     });
     state.sectors.sort();
+
+    // 6. Sanity log — check this in the browser console
+    console.log(
+      `[FuturePath] Loaded — ${state.careers.length} careers, ${Object.keys(state.curricula).length} curricula ready`
+    );
+    console.log("[FuturePath] Curricula IDs:", Object.keys(state.curricula));
 
     renderSectorsView();
     loader.classList.add("hidden");
@@ -171,7 +207,7 @@ function renderCareersView(sector) {
     `;
     card.addEventListener("click", () => {
       if (!hasCurriculum) {
-        toast("This curriculum is being authored. Try Gara Tie-Dye, Solar Technician, or Lawyer.", "error");
+        toast("This curriculum is coming soon.", "error");
         return;
       }
       renderCareerView(career);
