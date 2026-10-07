@@ -1,0 +1,394 @@
+{
+  "tailor": {
+    "intro": "Learn tailoring from measurement to finished garment. Master the machine, cut clean patterns, and build a client base that returns. This is one of the most reliable trades in West Africa — clothing always has demand.",
+    "skillDomains": [
+      {
+        "id": "measurement",
+        "name": "Measurement",
+        "description": "Every garment is only as good as its measurements.",
+        "skills": [
+          {
+            "id": "body-measurement",
+            "name": "Body Measurement",
+            "description": "Take accurate measurements that produce garments that fit.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-measurement-intro",
+                    "type": "lesson",
+                    "title": "The essential measurements",
+                    "content": "<p>For a basic garment you need:</p><h3>Upper body</h3><ul><li>Neck</li><li>Chest/bust</li><li>Shoulder width</li><li>Sleeve length</li><li>Back length</li></ul><h3>Lower body</h3><ul><li>Waist</li><li>Hip</li><li>Inseam</li><li>Outseam</li><li>Thigh and knee (for fitted trousers)</li></ul><p>Take measurements over light clothing, not thick garments. Note the client's posture — it affects fit more than numbers.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-measurement-technique",
+                    "type": "lesson",
+                    "title": "How to measure correctly",
+                    "content": "<h3>Never guess</h3><p>Write every number down immediately. Never rely on memory.</p><h3>Keep the tape level</h3><p>Chest, waist, and hip measurements must be horizontal. A tape that dips changes the fit.</p><h3>Snug, not tight</h3><p>The tape should sit against the body but not compress it. Tight measuring = garment too small.</p><h3>Record in inches AND centimetres</h3><p>Some clients use inches, some use cm. Record both to avoid confusion.</p><h3>The client's posture</h3><p>Note if they stand with one shoulder lower, or a slight stoop. Fitting adjustments depend on this.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-measurement-drill",
+                    "type": "drill",
+                    "title": "Measurement discipline",
+                    "passingScore": 90,
+                    "steps": [
+                      {
+                        "q": "A client's chest measures 40 inches. Should the finished garment chest measure 40?",
+                        "o": ["Yes, exactly", "No — add ease for movement", "Take 2 inches off", "Measure again"],
+                        "c": 1,
+                        "f": "Garments need ease — usually 2-4 inches on chest for a shirt. Exact measurement = no movement."
+                      },
+                      {
+                        "q": "You've taken measurements and are about to start cutting. What do you check?",
+                        "o": ["Colour of fabric", "That you've recorded every number and noted posture", "Price", "Thread colour"],
+                        "c": 1,
+                        "f": "Missing measurements mean a wasted cut. Verify before you cut."
+                      },
+                      {
+                        "q": "A client has one shoulder lower than the other. What do you do?",
+                        "o": ["Ignore it", "Note it and adjust the pattern accordingly", "Ask them to stand straight", "Make a symmetric garment anyway"],
+                        "c": 1,
+                        "f": "Asymmetric posture requires asymmetric pattern adjustments. This is what separates a fitter from a sewer."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "p-measurement-chart",
+                    "type": "portfolio",
+                    "title": "Create a measurement chart",
+                    "prompt": "Design a client measurement chart you can reuse for every order. It should be clear enough that any assistant can take measurements from it and produce consistent results.",
+                    "steps": [
+                      "Include every essential measurement with labels",
+                      "Add columns for inches and centimetres",
+                      "Add space for posture notes",
+                      "Add a client details section (name, date, contact)",
+                      "Test it by measuring a friend and reviewing clarity"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "pattern-cutting",
+        "name": "Pattern Cutting",
+        "description": "Turn measurements into a pattern that becomes a garment.",
+        "skills": [
+          {
+            "id": "pattern-basics",
+            "name": "Pattern Basics",
+            "description": "Draft, adapt, and modify patterns.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-pattern-intro",
+                    "type": "lesson",
+                    "title": "What a pattern is",
+                    "content": "<p>A pattern is a flat template of the garment pieces, cut to the client's measurements. It sits between measurements and fabric.</p><h3>Types of patterns</h3><ul><li><strong>Block pattern</strong> — the base shape with no style</li><li><strong>Adapted pattern</strong> — block pattern modified for a specific style</li><li><strong>Commercial pattern</strong> — pre-made, sold in standard sizes</li></ul><p>Professionals keep a set of block patterns for the client's body. Every new style is adapted from the block, not started from scratch.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-drafting",
+                    "type": "lesson",
+                    "title": "Drafting a basic block",
+                    "content": "<p>To draft a block you need:</p><ul><li>Pattern paper (brown paper works)</li><li>Ruler and curved ruler (French curve)</li><li>Pencil</li><li>Pins</li></ul><h3>Steps for a bodice block</h3><ol><li>Draw a rectangle: chest width × back length</li><li>Mark chest line, waist line, hip line</li><li>Mark shoulder, neck, and armhole points</li><li>Draw curves for armhole and neck</li><li>Add darts for bust or waist shaping</li><li>Label every piece and add a 1.5cm seam allowance</li></ol><p>The block is your foundation. Get it right and every garment fits.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-pattern-drill",
+                    "type": "drill",
+                    "title": "Pattern cutting decisions",
+                    "steps": [
+                      {
+                        "q": "You're adapting a bodice block into a loose-fitting blouse. What changes?",
+                        "o": ["Add ease to the pattern width", "Remove darts", "Both A and B", "Nothing"],
+                        "c": 2,
+                        "f": "Loose fit needs added ease AND dart removal. Both change the pattern."
+                      },
+                      {
+                        "q": "How much seam allowance do you add around a pattern piece?",
+                        "o": ["0.5cm", "1.5cm (typical)", "5cm", "None"],
+                        "c": 1,
+                        "f": "1.5cm is standard. Some edges (like hems) get more."
+                      },
+                      {
+                        "q": "You cut your fabric and notice the grain line is diagonal to the pattern's grain. What's the problem?",
+                        "o": ["No problem", "The garment will hang wrong and twist", "Fabric waste", "Better fit"],
+                        "c": 1,
+                        "f": "Grain line matters. Cutting off-grain produces garments that twist and never hang right."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "sewing",
+        "name": "Sewing",
+        "description": "The machine work that turns fabric into garment.",
+        "skills": [
+          {
+            "id": "machine-work",
+            "name": "Machine Work",
+            "description": "Control the machine — don't let it control you.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-machine-intro",
+                    "type": "lesson",
+                    "title": "Know your machine",
+                    "content": "<h3>The parts</h3><ul><li>Needle — the sharp point that carries thread through fabric</li><li>Presser foot — holds fabric down</li><li>Feed dogs — pull fabric forward</li><li>Bobbin — holds the lower thread</li><li>Tension dial — controls upper thread tension</li></ul><h3>The basic stitch</h3><p>The needle carries upper thread through the fabric, a hook catches it, and it locks with the bobbin thread underneath. The lock should happen IN the fabric, not on top or underneath.</p><h3>Common settings</h3><ul><li>Straight stitch — length 2.5mm, tension 4 (typical)</li><li>Zigzag — for knits and finishing edges</li></ul>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-tension",
+                    "type": "lesson",
+                    "title": "Tension adjustment",
+                    "content": "<h3>Symptoms of bad tension</h3><ul><li><strong>Loops on top</strong> — upper tension too loose</li><li><strong>Loops underneath</strong> — upper tension too tight OR bobbin issue</li><li><strong>Thread breaks constantly</strong> — tension too tight</li><li><strong>Puckered fabric</strong> — tension too tight or needle too large</li></ul><h3>How to fix</h3><p>Adjust the upper tension dial one number at a time and test on scrap fabric. Never adjust the bobbin tension unless you're sure — it's rarely the problem.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-sewing-drill",
+                    "type": "drill",
+                    "title": "Diagnose sewing problems",
+                    "passingScore": 80,
+                    "steps": [
+                      {
+                        "q": "Thread keeps breaking while sewing. Likely cause?",
+                        "o": ["Tension too tight, needle too small, or thread caught", "Bobbin empty", "Wrong fabric", "Wrong colour thread"],
+                        "c": 0,
+                        "f": "Breaking thread usually means tension too tight or wrong needle size."
+                      },
+                      {
+                        "q": "The stitch looks fine on top but loopy underneath. What do you adjust?",
+                        "o": ["Bobbin tension", "Upper tension — loosen it", "Upper tension — tighten it", "Change needle"],
+                        "c": 1,
+                        "f": "Loops underneath mean upper tension is too tight. Loosen it."
+                      },
+                      {
+                        "q": "Fabric puckers around the stitch. Most likely fix?",
+                        "o": ["Loosen tension, reduce stitch length, or change needle", "Cut the fabric", "Sew faster", "Use thicker thread"],
+                        "c": 0,
+                        "f": "Puckering comes from too-tight tension, too-long stitches, or wrong needle. Adjust one at a time."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "p-stitch-sampler",
+                    "type": "portfolio",
+                    "title": "Build a stitch sampler",
+                    "prompt": "Sew a sampler showing at least 8 different seam and finishing techniques: straight seam, French seam, zigzag edge finish, overlock-style finish, topstitching, blind hem, buttonhole, and a dart. Label each.",
+                    "steps": [
+                      "Cut labelled squares of scrap fabric",
+                      "Practice each technique on one square",
+                      "Mount them in a notebook or board",
+                      "Write one line explaining when to use each",
+                      "Keep the sampler as a reference for future work"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "fitting-finishing",
+        "name": "Fitting & Finishing",
+        "description": "The difference between a sewn garment and a wearable one.",
+        "skills": [
+          {
+            "id": "fitting",
+            "name": "Fitting",
+            "description": "Adjust the garment on the client before finishing.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-fitting-intro",
+                    "type": "lesson",
+                    "title": "Why fitting matters",
+                    "content": "<p>No pattern is perfect. Every garment needs adjustment after it's basted (temporarily sewn) so it can be fitted on the actual body before final stitching.</p><h3>The fitting process</h3><ol><li>Sew the garment together with long basting stitches</li><li>Have the client put it on (usually over light clothing)</li><li>Pin out excess fabric or adjust seam lines</li><li>Mark adjustments with chalk or pins</li><li>Take the garment off, unpick seams, and re-sew with adjustments</li><li>Fit again if needed</li></ol><p>Time spent fitting saves double time on rework.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-fitting-drill",
+                    "type": "drill",
+                    "title": "Fitting judgement",
+                    "steps": [
+                      {
+                        "q": "The garment pulls across the chest when the client crosses their arms. What's the fix?",
+                        "o": ["Reduce chest width", "Add ease to the chest", "Move buttons", "Change fabric"],
+                        "c": 1,
+                        "f": "Pulling during movement means not enough ease. Add to the chest."
+                      },
+                      {
+                        "q": "The shoulders droop and the sleeve hangs past the shoulder point. What's the fix?",
+                        "o": ["Reduce shoulder length", "Add to shoulder length", "Shorten sleeve", "Change collar"],
+                        "c": 0,
+                        "f": "Droopy shoulders mean the shoulder width is too wide. Reduce it."
+                      },
+                      {
+                        "q": "The waist is too tight but the hips fit. What do you do?",
+                        "o": ["Remake the whole garment", "Let out the waist seams", "Reduce the hips", "Ignore it"],
+                        "c": 1,
+                        "f": "Let out only what needs adjustment. Remaking is expensive and unnecessary."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "finishing",
+            "name": "Finishing",
+            "description": "The final touches that make a garment professional.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-finishing-intro",
+                    "type": "lesson",
+                    "title": "Finishing is what shows",
+                    "content": "<p>Two garments can be identical in construction, but one looks cheap and one looks expensive — based entirely on finishing.</p><h3>What finishing includes</h3><ul><li>Trimming loose threads</li><li>Pressing every seam as you go</li><li>Clean inside seams (French seams or overlocking)</li><li>Even hems</li><li>Secure buttons</li><li>Neat buttonholes</li><li>Final press</li></ul><p>A good tailor's work looks clean inside and out.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-pressing",
+                    "type": "lesson",
+                    "title": "Pressing — the invisible skill",
+                    "content": "<p>\"Sewing is 50% ironing.\" This is not a joke.</p><h3>Rules</h3><ul><li>Press every seam after sewing it, before the next step</li><li>Use the right temperature for the fabric</li><li>Press, don't drag — dragging stretches fabric</li><li>Use a pressing cloth to protect delicate fabrics</li><li>Press seams open with a tailor's ham for curved areas</li></ul><p>A well-pressed simple garment looks better than a poorly-pressed complex one.</p>"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "client-work",
+        "name": "Client Work",
+        "description": "Consultation, pricing, and building a business.",
+        "skills": [
+          {
+            "id": "consultation",
+            "name": "Consultation",
+            "description": "Understand what the client actually wants.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-consultation-intro",
+                    "type": "lesson",
+                    "title": "Ask before you cut",
+                    "content": "<p>A client says \"make me a dress\". That's not enough information. Ask:</p><ul><li>What's the occasion?</li><li>What style do you like? (Ask for photos)</li><li>What fabric?</li><li>When do you need it?</li><li>What's your budget?</li></ul><p>Then confirm in writing — sketch or description — before you cut anything. Misunderstandings cost fabric and reputation.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "s-consultation-scenario",
+                    "type": "scenario",
+                    "title": "Consult a wedding client",
+                    "prompt": "A bride wants a dress for her traditional wedding. She shows you a photo of a style she likes. Describe how you would run the consultation and what you would confirm before starting work.",
+                    "context": "Weddings are the highest-stakes, highest-paying orders for a tailor. Miscommunication is devastating.",
+                    "placeholder": "Questions I ask:\nWhat I confirm:\nDocumentation:",
+                    "rubric": [
+                      "Asks about the event date and any fitting deadlines",
+                      "Confirms fabric preference and source (client-supplied or you supply)",
+                      "Asks whether the photo style fits her body type — and adjusts honestly if not",
+                      "Discusses budget openly",
+                      "Takes full measurements and notes posture",
+                      "Sketch or writes a description and gets sign-off",
+                      "Sets a deposit and payment schedule"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "pricing",
+            "name": "Pricing",
+            "description": "Price for the work, not for what clients hope to pay.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-pricing-intro",
+                    "type": "lesson",
+                    "title": "Price the four parts",
+                    "content": "<p>Every price must cover:</p><ol><li><strong>Materials</strong> — fabric, thread, buttons, lining</li><li><strong>Labour</strong> — hours × real hourly rate</li><li><strong>Overhead</strong> — rent, electricity, machine wear</li><li><strong>Margin</strong> — 30-50% for tailoring work</li></ol><p>Under-pricing is the #1 cause of tailor burnout across West Africa. A tailor who charges 8,000 Le for a shirt that takes 4 hours is earning 2,000 Le per hour — less than unskilled labour.</p><p>Value your skill.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "s-pricing-scenario",
+                    "type": "scenario",
+                    "title": "Price a complete outfit",
+                    "prompt": "A client commissions a full traditional outfit (top and trousers). Materials: 25,000 Le fabric, 3,000 Le thread and trims. You estimate 12 hours at 3,000 Le/hour. Overhead: 2,000 Le. You want a 40% margin. Calculate your price.",
+                    "context": "Complete outfits are your most profitable orders. Price them correctly.",
+                    "placeholder": "Materials:\nLabour:\nOverhead:\nBase cost:\nPrice with margin:",
+                    "rubric": [
+                      "Materials: 28,000 Le",
+                      "Labour: 12 × 3,000 = 36,000 Le",
+                      "Overhead: 2,000 Le",
+                      "Base cost: 66,000 Le",
+                      "Price with 40% margin: 66,000 × 1.40 = 92,400 Le",
+                      "Notes whether fabric was supplied by client or you"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
