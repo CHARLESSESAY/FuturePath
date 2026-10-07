@@ -1,0 +1,321 @@
+{
+  "pastry-chef": {
+    "intro": "Learn pastry from the ground up — baking fundamentals, decoration, food safety, and the business side of running a bakery. From home kitchen to commercial operation.",
+    "skillDomains": [
+      {
+        "id": "baking-fundamentals",
+        "name": "Baking Fundamentals",
+        "description": "The science and technique of turning flour, sugar, and butter into pastry.",
+        "skills": [
+          {
+            "id": "ingredients",
+            "name": "Ingredients",
+            "description": "Know what each ingredient does and why it matters.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-ingredients-intro",
+                    "type": "lesson",
+                    "title": "The six core ingredients",
+                    "content": "<ol><li><strong>Flour</strong> — structure. Different proteins for different pastries.</li><li><strong>Sugar</strong> — sweetness, browning, texture.</li><li><strong>Butter or fat</strong> — flavour, flakiness, tenderness.</li><li><strong>Eggs</strong> — structure, richness, moisture.</li><li><strong>Liquid</strong> — milk, water, cream. Hydration and richness.</li><li><strong>Leavening</strong> — baking powder, soda, yeast. Makes things rise.</li></ol><p>Every pastry is a combination of these. Understand each one and you can improvise. Memorise recipes and you'll be stuck.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-ingredient-function",
+                    "type": "drill",
+                    "title": "What does this ingredient do?",
+                    "steps": [
+                      {
+                        "q": "Your cake is too dry. What likely happened?",
+                        "o": ["Too much flour or overbaking", "Too much butter", "Too much sugar", "Not enough eggs"],
+                        "c": 0,
+                        "f": "Dryness comes from too much flour or overbaking. Both are fixable next time."
+                      },
+                      {
+                        "q": "Your bread didn't rise. What's the most likely cause?",
+                        "o": ["Too much salt", "Dead yeast or water too hot", "Too much flour", "Too much sugar"],
+                        "c": 1,
+                        "f": "Yeast dies above 60°C. Salt also kills it if in direct contact."
+                      },
+                      {
+                        "q": "Your pastry is tough instead of flaky. What happened?",
+                        "o": ["Overworked the dough", "Too much butter", "Too much sugar", "Not enough water"],
+                        "c": 0,
+                        "f": "Gluten develops with handling. Overwork = tough. Handle minimally."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "l-measuring",
+                    "type": "lesson",
+                    "title": "Weigh, don't scoop",
+                    "content": "<p>Baking is chemistry. Accuracy matters.</p><p>Cups and spoons vary by brand, by how you scoop, by humidity. A cup of flour can weigh anywhere from 120g to 160g depending on how it's scooped.</p><h3>Rule</h3><p>Weigh everything. A cheap digital scale costs very little and will improve your baking more than any recipe.</p><h3>If you must use cups</h3><p>Spoon flour into the cup, then level with a knife. Never scoop directly from the bag — it compacts the flour.</p>"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "dough-techniques",
+            "name": "Dough Techniques",
+            "description": "Different pastries need different handling.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-dough-types",
+                    "type": "lesson",
+                    "title": "The five dough families",
+                    "content": "<h3>1. Shortcrust</h3><p>Flour + cold butter + water. Flaky. For pies and tarts.</p><h3>2. Puff pastry</h3><p>Layered with butter. Laminated through folding and rolling. For croissants and mille-feuille.</p><h3>3. Choux</h3><p>Cooked on the stove, then eggs beaten in. For éclairs and profiteroles.</p><h3>4. Yeast dough</h3><p>Risen with yeast. For bread and buns.</p><h3>5. Sweet pastry</h3><p>Higher sugar and eggs. For sweet tarts and desserts.</p><p>Master each one separately. They have nothing in common except flour.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-dough-choice",
+                    "type": "drill",
+                    "title": "Pick the right dough",
+                    "steps": [
+                      {
+                        "q": "You're making a meat pie. Which dough?",
+                        "o": ["Shortcrust", "Puff pastry", "Choux", "Yeast dough"],
+                        "c": 0,
+                        "f": "Shortcrust gives the flaky texture meat pies need."
+                      },
+                      {
+                        "q": "You're making éclairs. Which dough?",
+                        "o": ["Shortcrust", "Puff pastry", "Choux", "Sweet pastry"],
+                        "c": 2,
+                        "f": "Éclairs need choux — the only dough that puffs in the oven with a hollow centre."
+                      },
+                      {
+                        "q": "You're making a sweet fruit tart. Which dough?",
+                        "o": ["Yeast dough", "Puff pastry", "Choux", "Sweet pastry (pâte sucrée)"],
+                        "c": 3,
+                        "f": "Sweet pastry is more sturdy and sweeter than shortcrust — ideal for fruit tarts."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "decoration",
+        "name": "Decoration",
+        "description": "Turning pastry into something beautiful enough to sell.",
+        "skills": [
+          {
+            "id": "icing",
+            "name": "Icing",
+            "description": "Frostings, glazes, and finishes.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-icing-types",
+                    "type": "lesson",
+                    "title": "The three icings you'll use most",
+                    "content": "<h3>Buttercream</h3><p>Butter, icing sugar, flavouring. Creamy, pipeable, holds shape. Best for piping and decorating.</p><h3>Royal icing</h3><p>Icing sugar + egg white or meringue powder. Dries hard. Used for cookies and fine decoration.</p><h3>Ganache</h3><p>Chocolate + cream. Rich and smooth. Poured over cakes or whipped for filling.</p><p>Choose the icing for the job. Buttercream on a cookie slides off. Royal icing on a cake cracks.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-icing-drill",
+                    "type": "drill",
+                    "title": "Choose the icing",
+                    "steps": [
+                      {
+                        "q": "You're decorating sugar cookies with fine details. Which icing?",
+                        "o": ["Buttercream", "Royal icing", "Ganache", "Whipped cream"],
+                        "c": 1,
+                        "f": "Royal icing dries hard and holds fine detail."
+                      },
+                      {
+                        "q": "You're piping rosettes on a wedding cake. Which icing?",
+                        "o": ["Buttercream", "Royal icing", "Ganache", "Glaze"],
+                        "c": 0,
+                        "f": "Buttercream holds shape beautifully and tastes good."
+                      },
+                      {
+                        "q": "You're glazing a chocolate cake for a glossy finish. Which?",
+                        "o": ["Buttercream", "Royal icing", "Ganache", "Sugar syrup"],
+                        "c": 2,
+                        "f": "Ganache poured warm gives a professional mirror-gloss finish."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "food-safety",
+        "name": "Food Safety",
+        "description": "Protect your customers and your business.",
+        "skills": [
+          {
+            "id": "hygiene",
+            "name": "Hygiene",
+            "description": "Workshop cleanliness and personal hygiene.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-hygiene-intro",
+                    "type": "lesson",
+                    "title": "The five rules of kitchen hygiene",
+                    "content": "<ol><li><strong>Clean hands</strong> — wash for 20 seconds before handling food, after using the toilet, after touching your face or phone</li><li><strong>Clean surfaces</strong> — sanitise work surfaces before and after every session</li><li><strong>Separate raw and cooked</strong> — different boards, different knives, different storage areas</li><li><strong>Temperature control</strong> — hot food above 60°C, cold food below 5°C</li><li><strong>Cover and label</strong> — everything gets a date and a name</li></ol><p>Food-borne illness destroys a bakery's reputation overnight. A single case can end a business.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-hygiene-drill",
+                    "type": "drill",
+                    "title": "Kitchen hygiene checks",
+                    "passingScore": 90,
+                    "steps": [
+                      {
+                        "q": "You've just handled raw eggs. What do you do before touching anything else?",
+                        "o": ["Wipe hands on apron", "Wash hands for 20 seconds with soap", "Rinse quickly", "Continue working"],
+                        "c": 1,
+                        "f": "Raw eggs carry salmonella. Wash immediately."
+                      },
+                      {
+                        "q": "A cake has been sitting out at room temperature for 6 hours. What do you do?",
+                        "o": ["Sell it — cake doesn't spoil", "Check ingredients; if it contains cream or custard, discard it", "Refrigerate it and sell tomorrow", "Add icing to preserve it"],
+                        "c": 1,
+                        "f": "Cream and custard are highly perishable. Never sell dairy-based pastries left at room temperature."
+                      },
+                      {
+                        "q": "Your hands have a small cut. What do you do before working?",
+                        "o": ["Ignore it", "Cover with a waterproof bandage and wear gloves", "Wash more often", "Stop working"],
+                        "c": 1,
+                        "f": "Cuts can harbour bacteria. Waterproof plaster plus gloves."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "costing",
+        "name": "Costing",
+        "description": "Price your work so the business survives.",
+        "skills": [
+          {
+            "id": "ingredient-costing",
+            "name": "Ingredient Costing",
+            "description": "Know what every pastry actually costs to make.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-costing-intro",
+                    "type": "lesson",
+                    "title": "The cost per unit",
+                    "content": "<p>You can't price a cake until you know what it costs to make.</p><h3>Steps</h3><ol><li>List every ingredient in the recipe</li><li>Divide the package cost by the package size to get cost per gram</li><li>Multiply by the amount used</li><li>Add up all ingredients</li><li>Add labour, overhead, and margin</li></ol><h3>Example</h3><p>Flour costs 500 Le per kg = 0.5 Le per gram. Recipe uses 250g = 125 Le for flour.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-costing-math",
+                    "type": "drill",
+                    "title": "Calculate the cost",
+                    "steps": [
+                      {
+                        "q": "Butter costs 8,000 Le per 500g block. Recipe uses 200g. Cost?",
+                        "o": ["1,600 Le", "3,200 Le", "4,000 Le", "800 Le"],
+                        "c": 1,
+                        "f": "8,000 ÷ 500 = 16 Le per gram. × 200 = 3,200 Le."
+                      },
+                      {
+                        "q": "Total ingredient cost is 5,000 Le. You want 40% margin. Price?",
+                        "o": ["7,000 Le", "5,400 Le", "7,000-8,000 Le", "9,000 Le"],
+                        "c": 0,
+                        "f": "5,000 × 1.40 = 7,000 Le. But this doesn't include labour — always add labour too."
+                      },
+                      {
+                        "q": "You've calculated ingredient cost, labour, and overhead at 12,000 Le. Adding 30% margin gives:",
+                        "o": ["12,300 Le", "13,200 Le", "15,600 Le", "16,000 Le"],
+                        "c": 2,
+                        "f": "12,000 × 1.30 = 15,600 Le."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "business",
+        "name": "Business",
+        "description": "Turn pastry skill into a sustainable business.",
+        "skills": [
+          {
+            "id": "finding-customers",
+            "name": "Finding Customers",
+            "description": "Build a customer base that returns and refers.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-customers-intro",
+                    "type": "lesson",
+                    "title": "Where pastry customers come from",
+                    "content": "<ol><li><strong>Word of mouth</strong> — the strongest channel in West Africa. One happy wedding client brings ten more.</li><li><strong>WhatsApp Business</strong> — post photos, take orders, build a catalogue</li><li><strong>Instagram</strong> — visual platform, perfect for pastries</li><li><strong>Event referrals</strong> — weddings, birthdays, corporate events</li><li><strong>Corporate orders</strong> — offices ordering for meetings</li></ol><p>The best marketing is a beautiful product and a customer who talks about it.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "s-pricing-commission",
+                    "type": "scenario",
+                    "title": "Price a wedding cake",
+                    "prompt": "A bride wants a 3-tier wedding cake serving 100 guests. Ingredients cost 45,000 Le. You'll spend 8 hours on it. Your hourly rate is 3,000 Le. Overhead is 5,000 Le. You want a 40% margin. What's your price and how do you present it?",
+                    "context": "Wedding cakes are priced differently from everyday cakes. The client is emotional and time-constrained. Clear, professional quotes win.",
+                    "placeholder": "Ingredient cost:\nLabour:\nOverhead:\nBase cost:\nPrice with 40% margin:\nHow I present it:",
+                    "rubric": [
+                      "Materials: 45,000 Le",
+                      "Labour: 8 × 3,000 = 24,000 Le",
+                      "Overhead: 5,000 Le",
+                      "Base cost: 74,000 Le",
+                      "Price with margin: 74,000 × 1.40 = 103,600 Le",
+                      "Presents with a breakdown and offer of a tasting",
+                      "Asks for a deposit (typically 50%)"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
