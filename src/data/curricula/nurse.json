@@ -1,0 +1,405 @@
+{
+  "nurse": {
+    "intro": "Learn the practice of nursing — from vital signs and medication to patient communication and clinical records. Master the daily skills that keep patients safe in hospitals, clinics, and community settings.",
+    "skillDomains": [
+      {
+        "id": "clinical-care",
+        "name": "Clinical Care",
+        "description": "Direct patient care — assessment, hygiene, wound care, and monitoring.",
+        "skills": [
+          {
+            "id": "vital-signs",
+            "name": "Vital Signs",
+            "description": "Measure and interpret the five core vitals that tell you what's happening inside a patient.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-vitals-intro",
+                    "type": "lesson",
+                    "title": "The five vitals",
+                    "content": "<p>Vital signs are the fastest way to know if a patient is stable, deteriorating, or improving. There are five:</p><ol><li><strong>Temperature</strong> — normal 36.1–37.2°C</li><li><strong>Pulse</strong> — normal 60–100 beats/min at rest</li><li><strong>Respiratory rate</strong> — normal 12–20 breaths/min</li><li><strong>Blood pressure</strong> — normal 90/60 to 120/80 mmHg</li><li><strong>Oxygen saturation (SpO₂)</strong> — normal 95–100%</li></ol><p>Recorded together, they tell a story. Recorded individually, they tell you nothing.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-vitals-technique",
+                    "type": "lesson",
+                    "title": "Taking vitals correctly",
+                    "content": "<h3>Pulse</h3><p>Place two fingers (never thumb) on the radial artery at the wrist. Count for 30 seconds and multiply by 2. Note rhythm and strength, not just rate.</p><h3>Blood pressure</h3><p>Patient seated, arm supported at heart level. Cuff size must match arm size — a too-small cuff reads high.</p><h3>Respiratory rate</h3><p>Count without telling the patient — breathing changes when people are aware they're being watched.</p><h3>Temperature</h3><p>Clean the thermometer between patients. Never use an oral thermometer on a patient who has eaten or drunk in the last 15 minutes.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-vitals-interpretation",
+                    "type": "drill",
+                    "title": "Interpret the vitals",
+                    "passingScore": 80,
+                    "steps": [
+                      {
+                        "q": "Temp 38.5°C, pulse 110, RR 24. What's the picture?",
+                        "o": ["Normal", "Fever with tachycardia and tachypnoea — infection likely", "Hypothermia", "Well patient"],
+                        "c": 1,
+                        "f": "All three elevated together suggests systemic infection. Report to the doctor."
+                      },
+                      {
+                        "q": "BP 88/55, pulse 120, patient dizzy when standing. What's happening?",
+                        "o": ["Normal for elderly", "Hypotension — possible dehydration, bleeding, or sepsis", "Hypertension", "Anxiety"],
+                        "c": 1,
+                        "f": "Low BP with high pulse is a red flag for shock. Act immediately."
+                      },
+                      {
+                        "q": "SpO₂ 89% on room air. What do you do?",
+                        "o": ["Document and continue", "Apply oxygen and escalate", "Re-measure in 30 minutes", "Ask the patient to breathe deeper"],
+                        "c": 1,
+                        "f": "SpO₂ below 92% needs oxygen and immediate escalation. Do not wait."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "s-vitals-deterioration",
+                    "type": "scenario",
+                    "title": "Recognise a deteriorating patient",
+                    "prompt": "You're on a ward. A patient who was stable 2 hours ago now has: Temp 39.2°C, pulse 118, RR 26, BP 100/65, SpO₂ 93%. Describe what you do, in order.",
+                    "context": "Early recognition of deterioration saves lives. Nurses are often the first to see the change.",
+                    "placeholder": "Step 1: …",
+                    "rubric": [
+                      "Recognises this as a deterioration (multiple vitals abnormal)",
+                      "Repeats the vitals to confirm",
+                      "Notifies the doctor or senior nurse immediately",
+                      "Applies oxygen if available and indicated",
+                      "Checks for other signs (urine output, mental state, skin colour)",
+                      "Documents the vitals, time, and escalation",
+                      "Stays with the patient until help arrives"
+                    ]
+                  }
+                ]
+              },
+              "4": {
+                "modules": [
+                  {
+                    "id": "p-vitals-chart",
+                    "type": "portfolio",
+                    "title": "Build a vitals tracking chart",
+                    "prompt": "Design a chart for tracking vitals over 24 hours for a single patient. It must make deterioration obvious at a glance.",
+                    "steps": [
+                      "Include rows for each vital sign",
+                      "Include columns for each time checked",
+                      "Add normal range shading",
+                      "Add a section for escalation notes",
+                      "Make it simple enough to fill in during a busy shift"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "infection-control",
+            "name": "Infection Control",
+            "description": "Stop the spread. Hand hygiene, PPE, and sterile technique save more lives than any drug.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-hand-hygiene",
+                    "type": "lesson",
+                    "title": "The five moments of hand hygiene",
+                    "content": "<p>WHO's five moments for hand hygiene:</p><ol><li>Before touching a patient</li><li>Before a clean/aseptic procedure</li><li>After body fluid exposure risk</li><li>After touching a patient</li><li>After touching patient surroundings</li></ol><h3>How to wash</h3><p>Soap and water for 40–60 seconds. Alcohol rub for 20–30 seconds. Cover every surface: palms, backs, between fingers, thumbs, fingertips, wrists.</p><p>Skipping hand hygiene is the single biggest cause of hospital-acquired infection. There is no excuse.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-hand-hygiene",
+                    "type": "drill",
+                    "title": "When to wash, when to rub",
+                    "steps": [
+                      {
+                        "q": "You're about to insert a catheter. Hand hygiene?",
+                        "o": ["Alcohol rub 20 seconds", "Soap and water 40-60 seconds", "Both", "No need, wearing gloves"],
+                        "c": 1,
+                        "f": "Aseptic procedures require soap and water — alcohol rub doesn't kill all organisms, especially C. difficile spores."
+                      },
+                      {
+                        "q": "Hands are visibly soiled. What do you use?",
+                        "o": ["Alcohol rub", "Soap and water", "Just water", "Wipe with cloth"],
+                        "c": 1,
+                        "f": "Visibly soiled hands always require soap and water. Alcohol rub is for clean hands."
+                      },
+                      {
+                        "q": "You've just removed gloves after examining a patient. Do you need hand hygiene?",
+                        "o": ["No, gloves protected me", "Yes, always after glove removal", "Only if gloves were torn", "Only if visibly dirty"],
+                        "c": 1,
+                        "f": "Gloves are not perfect barriers. Always wash hands after removal."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "l-ppe",
+                    "type": "lesson",
+                    "title": "PPE — when and how",
+                    "content": "<h3>Gloves</h3><p>For every contact with body fluids. Not for routine patient contact.</p><h3>Aprons and gowns</h3><p>When clothing may be contaminated. Change between patients.</p><h3>Masks</h3><p>Surgical mask for droplet precautions. N95/respirator for airborne (TB, measles, COVID).</p><h3>Eye protection</h3><p>Any procedure with splash risk.</p><h3>Order of putting on (donning)</h3><p>Gown → Mask → Goggles → Gloves.</p><h3>Order of taking off (doffing)</h3><p>Gloves → Goggles → Gown → Mask. Hand hygiene after each step.</p>"
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "s-ppe-scenario",
+                    "type": "scenario",
+                    "title": "Care for a TB patient",
+                    "prompt": "You're assigned to care for a patient with active pulmonary tuberculosis in a general ward. Describe the PPE you wear, the precautions you take, and how you protect other patients.",
+                    "context": "TB is airborne. Standard surgical masks are not enough.",
+                    "placeholder": "PPE:\nRoom precautions:\nProtecting others:",
+                    "rubric": [
+                      "Wears an N95 or FFP2 respirator, not a surgical mask",
+                      "Ensures the patient is in a negative-pressure room or well-ventilated single room",
+                      "Patient wears a surgical mask when moving through the ward",
+                      "Keeps the door closed",
+                      "Limits the number of staff entering",
+                      "Uses airborne precautions signage",
+                      "Ensures visitors are screened"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "medication",
+        "name": "Medication",
+        "description": "Give the right drug, to the right patient, at the right dose, at the right time.",
+        "skills": [
+          {
+            "id": "medication-administration",
+            "name": "Medication Administration",
+            "description": "The five rights and how to get them right every time.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-five-rights",
+                    "type": "lesson",
+                    "title": "The five rights",
+                    "content": "<p>Every medication administration checks five things:</p><ol><li><strong>Right patient</strong> — confirm ID</li><li><strong>Right drug</strong> — read the label twice</li><li><strong>Right dose</strong> — calculate, don't guess</li><li><strong>Right route</strong> — oral, IV, IM, SC, topical</li><li><strong>Right time</strong> — within the prescribed window</li></ol><p>Medication errors kill. Every step has a reason. Skip one and you may kill a patient.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-five-rights",
+                    "type": "drill",
+                    "title": "Catch the error",
+                    "passingScore": 90,
+                    "steps": [
+                      {
+                        "q": "A patient's chart says Amoxicillin 500mg TID. You have 250mg capsules. How many per dose?",
+                        "o": ["1", "2", "3", "4"],
+                        "c": 1,
+                        "f": "500mg ÷ 250mg = 2 capsules per dose."
+                      },
+                      {
+                        "q": "An unconscious patient is prescribed oral tablets. What do you do?",
+                        "o": ["Give the tablets anyway", "Crush and give with water", "Check for an alternative route with the prescriber", "Skip the dose"],
+                        "c": 2,
+                        "f": "Never give oral meds to an unconscious patient — aspiration risk. Call the prescriber."
+                      },
+                      {
+                        "q": "You've prepared a dose but the patient is in the bathroom. What do you do?",
+                        "o": ["Leave the dose at the bedside", "Wait, or return later with the dose still in hand", "Give it to the next patient", "Discard and re-prepare"],
+                        "c": 1,
+                        "f": "Never leave medication unattended. Never give to the wrong patient. Return with the dose when the patient is available."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "s-medication-error",
+                    "type": "scenario",
+                    "title": "Respond to a medication error",
+                    "prompt": "You realise you've just given a patient 10mg of a drug instead of the prescribed 1mg. Walk through exactly what you do, in order.",
+                    "context": "Errors happen. What matters is what you do next. Honesty and speed save lives.",
+                    "placeholder": "Step 1: …",
+                    "rubric": [
+                      "Assess the patient immediately for adverse effects",
+                      "Call the doctor or prescriber without delay",
+                      "Tell the patient and family what happened",
+                      "Monitor the patient closely for several hours",
+                      "Document the error factually in the notes and incident system",
+                      "Do NOT try to hide it or adjust the record",
+                      "Participate in a review to prevent recurrence"
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "p-medication-chart",
+                    "type": "portfolio",
+                    "title": "Design a medication administration record",
+                    "prompt": "Create a template for recording medication administration on a ward. It must be clear, unambiguous, and easy to audit.",
+                    "steps": [
+                      "Columns for drug name, dose, route, time",
+                      "Space for the administering nurse's initials",
+                      "Space for any omitted doses and the reason",
+                      "A space for allergies at the top",
+                      "Design that discourages shortcuts"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "patient-communication",
+        "name": "Patient Communication",
+        "description": "Listen, explain, and support. Communication is a clinical skill.",
+        "skills": [
+          {
+            "id": "therapeutic-communication",
+            "name": "Therapeutic Communication",
+            "description": "Talk to patients in a way that builds trust and reduces fear.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-communication-intro",
+                    "type": "lesson",
+                    "title": "Communication is treatment",
+                    "content": "<p>Patients remember two things from a hospital stay: whether they were treated kindly, and whether they understood what was happening to them.</p><h3>The basics</h3><ul><li>Greet the patient by name</li><li>Sit down if you can — sitting says \"I have time for you\"</li><li>Make eye contact</li><li>Use plain language, not medical jargon</li><li>Ask open questions: \"How are you feeling today?\" not \"Any pain?\"</li><li>Let silence happen — patients often say the most important thing after a pause</li></ul>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-communication",
+                    "type": "drill",
+                    "title": "Say it in plain language",
+                    "steps": [
+                      {
+                        "q": "How would you say \"hypertension\" to a patient with low literacy?",
+                        "o": ["Your blood pressure is elevated", "High blood pressure", "You have HTN", "Your cardiovascular pressure is abnormal"],
+                        "c": 1,
+                        "f": "Simple, common words. Patients can understand \"high blood pressure\"."
+                      },
+                      {
+                        "q": "A patient is frightened about an upcoming operation. Best response?",
+                        "o": ["Don't worry, it's routine", "Ask what specifically worries them", "Say nothing about it", "Tell them to pray"],
+                        "c": 1,
+                        "f": "Open the conversation. Fear lives in specifics, and so does reassurance."
+                      },
+                      {
+                        "q": "A patient starts crying. What do you do?",
+                        "o": ["Change the subject", "Offer a tissue, sit quietly, let them cry", "Call for help", "Tell them not to cry"],
+                        "c": 1,
+                        "f": "Silent presence is powerful. Don't rush past emotion."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "s-breaking-news",
+                    "type": "scenario",
+                    "title": "Communicate a difficult diagnosis",
+                    "prompt": "A patient's test results show they have a serious, life-limiting illness. The doctor has asked you to prepare the patient for the news. Describe how you would approach this conversation.",
+                    "context": "The way news is delivered affects how the patient copes for the rest of their life.",
+                    "placeholder": "Preparing the patient:\nIf they ask me directly:\nAfter the doctor speaks:",
+                    "rubric": [
+                      "Ensures privacy and enough time",
+                      "Asks the patient what they already know",
+                      "Checks whether they want family present",
+                      "Does not give the diagnosis if it's the doctor's role — prepares but doesn't preempt",
+                      "Uses clear, gentle language",
+                      "Allows silence and emotion",
+                      "Offers support and a follow-up plan"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "records",
+        "name": "Clinical Records",
+        "description": "Document everything. If it isn't written, it didn't happen.",
+        "skills": [
+          {
+            "id": "documentation",
+            "name": "Documentation",
+            "description": "Write clear, accurate, timely clinical notes.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-documentation-intro",
+                    "type": "lesson",
+                    "title": "Why records matter",
+                    "content": "<p>Clinical records serve three purposes:</p><ol><li><strong>Patient care</strong> — other clinicians read your notes to continue care</li><li><strong>Legal protection</strong> — notes are evidence if something goes wrong</li><li><strong>Audit and improvement</strong> — patterns of problems become visible in the data</li></ol><h3>Rules</h3><ul><li>Write at the time of care, not hours later</li><li>Use black ink or the electronic record</li><li>Never erase — draw a single line through errors and initial them</li><li>Never write for someone else</li><li>Use objective language: \"Patient reports pain\" not \"Patient is exaggerating\"</li></ul>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-documentation-drill",
+                    "type": "drill",
+                    "title": "Write objective notes",
+                    "steps": [
+                      {
+                        "q": "A patient complains of pain. Best note?",
+                        "o": ["Patient in pain", "Patient says pain is 7/10, sharp, in lower right abdomen", "Patient exaggerating pain", "Patient seems uncomfortable"],
+                        "c": 1,
+                        "f": "Be specific: location, quality, severity. That's clinically useful."
+                      },
+                      {
+                        "q": "You gave paracetamol at 14:00. What must the note include?",
+                        "o": ["That you gave it", "Drug, dose, route, time, and effect", "Just the time", "Just the drug"],
+                        "c": 1,
+                        "f": "Full details: paracetamol 1g orally at 14:00. Plus effect noted later."
+                      },
+                      {
+                        "q": "You made an error in the previous entry. What do you do?",
+                        "o": ["Tear out the page", "Erase and rewrite", "Draw a single line through it, initial, and write the correction with date/time", "Leave it as-is"],
+                        "c": 2,
+                        "f": "Single line through, initial and date. Never erase. Never leave ambiguity about what was corrected."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
