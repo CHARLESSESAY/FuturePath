@@ -1,6 +1,6 @@
 {
   "entrepreneur": {
-    "intro": "Learn to start, run, and grow a business in West Africa. From spotting opportunities to managing cash flow to scaling — the practical skills every founder needs, taught through real numbers and real decisions.",
+    "intro": "Learn to start, run, and grow a business in West Africa. From spotting opportunities to managing cash flow to scaling.",
     "skillDomains": [
       {
         "id": "opportunity",
@@ -18,7 +18,7 @@
                     "id": "l-opportunity-intro",
                     "type": "lesson",
                     "title": "Where ideas come from",
-                    "content": "<p>Business ideas don't come from inspiration. They come from noticing problems.</p><h3>The three sources</h3><ol><li><strong>Frustration</strong> — what annoys you or people around you repeatedly? That frustration is a market.</li><li><strong>Inefficiency</strong> — what takes longer or costs more than it should? That gap is an opportunity.</li><li><strong>Change</strong> — what's new (tech, regulation, migration, weather patterns)? Every change creates winners.</li></ol><h3>West African examples</h3><ul><li>Long fuel queues → fuel delivery service</li><li>Slow mobile money floats → float top-up service</li><li>Expensive imported food → local packaging and processing</li><li>Youth unemployment → training and placement agency</li></ul>"
+                    "content": "<p>Business ideas don't come from inspiration. They come from noticing problems.</p><h3>The three sources</h3><ol><li><strong>Frustration</strong> — what annoys you or people around you repeatedly?</li><li><strong>Inefficiency</strong> — what takes longer or costs more than it should?</li><li><strong>Change</strong> — what's new (tech, regulation, migration, weather patterns)?</li></ol><h3>West African examples</h3><ul><li>Long fuel queues → fuel delivery service</li><li>Slow mobile money floats → float top-up service</li><li>Expensive imported food → local packaging and processing</li><li>Youth unemployment → training and placement agency</li></ul>"
                   }
                 ]
               },
@@ -28,7 +28,7 @@
                     "id": "l-problem-framing",
                     "type": "lesson",
                     "title": "Frame the problem, not the solution",
-                    "content": "<p>Beginners pitch solutions: \"I want to start a restaurant.\"</p><p>Entrepreneurs pitch problems: \"Office workers in my area have nowhere to eat lunch quickly and cheaply.\"</p><h3>Why it matters</h3><p>The problem stays stable. The solution can change. If your restaurant fails, you pivot to a lunch delivery service or a food truck — the problem is still there.</p><h3>Try it</h3><p>Instead of \"I want to open a shop\", say \"People in this neighbourhood can't easily buy X\". Then ask: who exactly? How many? What do they do now instead?</p>"
+                    "content": "<p>Beginners pitch solutions: \"I want to start a restaurant.\"</p><p>Entrepreneurs pitch problems: \"Office workers in my area have nowhere to eat lunch quickly and cheaply.\"</p><h3>Why it matters</h3><p>The problem stays stable. The solution can change. If your restaurant fails, you pivot to a lunch delivery service — the problem is still there.</p><h3>Try it</h3><p>Instead of \"I want to open a shop\", say \"People in this neighbourhood can't easily buy X\". Then ask: who exactly? How many? What do they do now instead?</p>"
                   }
                 ]
               },
@@ -49,7 +49,7 @@
                         "q": "A market has 3 phone repair shops already. Should you open another?",
                         "o": ["No, market is full", "Only if you can offer something they don't (speed, price, location, guarantee)", "Yes, competition is good", "Depends on the weather"],
                         "c": 1,
-                        "f": "Existing competitors prove demand. Your differentiation is the opportunity."
+                        "f": "Existing competitors prove demand."
                       },
                       {
                         "q": "You notice your neighbourhood has no laundry service. What's your first step?",
@@ -67,8 +67,8 @@
                     "id": "s-validation-plan",
                     "type": "scenario",
                     "title": "Plan a validation",
-                    "prompt": "You want to start a mobile money top-up service (helping other agents get float when they run out). Describe how you'd validate demand before spending any real money.",
-                    "context": "Validation is the cheapest form of learning. Every naira, cedi, or leone spent on validation saves ten on failure.",
+                    "prompt": "You want to start a mobile money top-up service. Describe how you'd validate demand before spending any real money.",
+                    "context": "Validation is the cheapest form of learning.",
                     "placeholder": "Step 1:\nStep 2:\nStep 3:\nWhat success looks like:",
                     "rubric": [
                       "Talks to at least 10 existing agents about float problems",
@@ -81,7 +81,7 @@
                   }
                 ]
               }
-            ]
+            }
           },
           {
             "id": "customer-discovery",
@@ -115,7 +115,7 @@
                         "q": "A customer says \"that sounds like a great idea!\" What do you do?",
                         "o": ["Celebrate", "Ask what specifically they'd use it for and how often", "Ask for money immediately", "Stop asking"],
                         "c": 1,
-                        "f": "Enthusiasm is not data. Push for specifics."
+                        "f": "Enthusiasm is not data."
                       },
                       {
                         "q": "You're getting the same complaint from 10 different people. What does it mean?",
@@ -127,7 +127,7 @@
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       },
@@ -172,7 +172,7 @@
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       },
@@ -192,7 +192,7 @@
                     "id": "l-cash-flow-intro",
                     "type": "lesson",
                     "title": "Profit is not cash",
-                    "content": "<p>A business can be profitable and still fail. Here's how:</p><p>You sell 100 bags of rice on credit. Your books show 500,000 Le profit. But you haven't been paid yet, and you owe your supplier 400,000 Le today. You can't pay. The business dies.</p><h3>The golden rule</h3><p>Track cash flow weekly. Not monthly. Not yearly. Weekly.</p><h3>Three numbers</h3><ul><li>Cash on hand (money in bank and drawer)</li><li>Cash coming in next 30 days</li><li>Cash going out next 30 days</li></ul><p>If (in + on hand) &lt; out, you have a problem. Solve it before it solves you.</p>"
+                    "content": "<p>A business can be profitable and still fail. Here's how:</p><p>You sell 100 bags of rice on credit. Your books show 500,000 Le profit. But you haven't been paid yet, and you owe your supplier 400,000 Le today. You can't pay. The business dies.</p><h3>The golden rule</h3><p>Track cash flow weekly. Not monthly. Not yearly. Weekly.</p><h3>Three numbers</h3><ul><li>Cash on hand (money in bank and drawer)</li><li>Cash coming in next 30 days</li><li>Cash going out next 30 days</li></ul><p>If (in + on hand) &lt; out, you have a problem.</p>"
                   }
                 ]
               },
@@ -207,25 +207,25 @@
                         "q": "You have 100,000 Le cash. You owe supplier 80,000 Le this week and have rent 40,000 Le due next week. What do you do?",
                         "o": ["Pay supplier, hope for rent", "Pay supplier fully, negotiate rent delay, and push for customer payments", "Pay nothing", "Borrow high interest"],
                         "c": 1,
-                        "f": "Protect the supplier relationship. Negotiate rent. Get customer money in. Prioritize."
+                        "f": "Protect the supplier relationship. Negotiate rent. Get customer money in."
                       },
                       {
                         "q": "A big customer wants 60-day payment terms. Your normal is 14 days. What do you consider?",
                         "o": ["Accept immediately", "Calculate the cash cost of waiting 60 days and price accordingly", "Refuse", "Accept without adjustment"],
                         "c": 1,
-                        "f": "60-day terms tie up your cash. Either price higher or negotiate shorter terms."
+                        "f": "60-day terms tie up your cash."
                       },
                       {
                         "q": "You're profitable but can't make payroll. What's the most likely cause?",
                         "o": ["Bad accounting", "Cash tied up in inventory or receivables", "Taxes", "Supplier issues"],
                         "c": 1,
-                        "f": "Profit locked in stock or unpaid invoices can't pay salaries. Manage the cash cycle."
+                        "f": "Profit locked in stock or unpaid invoices can't pay salaries."
                       }
                     ]
                   }
                 ]
               }
-            ]
+            }
           },
           {
             "id": "pricing",
@@ -238,7 +238,7 @@
                     "id": "l-pricing-intro",
                     "type": "lesson",
                     "title": "The four-part price",
-                    "content": "<p>Every price must cover:</p><ol><li><strong>Cost of goods</strong> — what you buy or make the product for</li><li><strong>Labour</strong> — your time and your staff's time</li><li><strong>Overhead</strong> — rent, transport, electricity, marketing</li><li><strong>Margin</strong> — profit that grows the business</li></ol><h3>Common mistake</h3><p>New entrepreneurs price at \"cost + a little\". This leaves no room for anything. When a cost rises or a client delays payment, the business is in trouble.</p><h3>The formula</h3><p>Price = (COGS + Labour + Overhead) × (1 + Margin)</p><p>Standard margins: retail 30-50%, services 40-70%, food 60-70%.</p>"
+                    "content": "<p>Every price must cover:</p><ol><li><strong>Cost of goods</strong> — what you buy or make the product for</li><li><strong>Labour</strong> — your time and your staff's time</li><li><strong>Overhead</strong> — rent, transport, electricity, marketing</li><li><strong>Margin</strong> — profit that grows the business</li></ol><h3>Common mistake</h3><p>New entrepreneurs price at \"cost + a little\". This leaves no room for anything.</p><h3>The formula</h3><p>Price = (COGS + Labour + Overhead) × (1 + Margin)</p><p>Standard margins: retail 30-50%, services 40-70%, food 60-70%.</p>"
                   }
                 ]
               },
@@ -249,20 +249,20 @@
                     "type": "scenario",
                     "title": "Price a product line",
                     "prompt": "You're launching a line of packaged groundnut paste (peanut butter) for local sale. Ingredients cost 800 Le per jar. Packaging costs 300 Le. Labour is 200 Le per jar. Overhead is 150 Le per jar. What do you charge, and how do you think about it?",
-                    "context": "Food businesses are common in West Africa. Pricing well is the difference between scaling and starving.",
+                    "context": "Food businesses are common in West Africa.",
                     "placeholder": "Cost per jar:\nTarget margin:\nPrice:\nConsiderations:",
                     "rubric": [
                       "Total cost per jar: 1,450 Le",
                       "Adds margin of at least 50% for food products",
                       "Price at 2,200-2,500 Le range",
                       "Checks competitive pricing in local market",
-                      "Considers wholesale vs retail pricing (wholesale gets lower margin)",
-                      "Accounts for spoilage and returns in the calculation"
+                      "Considers wholesale vs retail pricing",
+                      "Accounts for spoilage and returns"
                     ]
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       },
@@ -303,19 +303,19 @@
                         "q": "You've given your pitch and the customer is silent. What do you do?",
                         "o": ["Keep talking", "Ask a question to understand their concern", "Leave", "Lower the price"],
                         "c": 1,
-                        "f": "Silence is a signal. Ask what's on their mind — don't fill the silence with more pitch."
+                        "f": "Silence is a signal."
                       },
                       {
                         "q": "A customer says \"let me think about it\". What's your best move?",
                         "o": ["Agree and wait forever", "Ask what specifically they're considering, and offer to follow up on a specific day", "Push hard", "Give a discount"],
                         "c": 1,
-                        "f": "\"Let me think\" is often a soft no. Uncover the real hesitation."
+                        "f": "\"Let me think\" is often a soft no."
                       }
                     ]
                   }
                 ]
               }
-            ]
+            }
           },
           {
             "id": "marketing",
@@ -339,20 +339,20 @@
                     "type": "scenario",
                     "title": "Build a marketing plan",
                     "prompt": "You've launched a small juice business selling fresh juice to offices. You have 20,000 Le per month for marketing. Describe how you'd spend it.",
-                    "context": "Small budgets require focus. Spreading thin kills effectiveness.",
+                    "context": "Small budgets require focus.",
                     "placeholder": "Channel 1:\nChannel 2:\nTotal budget:\nReasoning:",
                     "rubric": [
                       "Prioritises WhatsApp Business (free or low cost)",
                       "Uses in-person sampling at nearby offices",
                       "Uses modest paid promotion on one platform, not many",
                       "Asks for referrals from first customers",
-                      "Tracks which channel brings actual sales, not just reach",
+                      "Tracks which channel brings actual sales",
                       "Keeps the budget under 20,000 Le"
                     ]
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       },
@@ -372,7 +372,7 @@
                     "id": "l-hiring-intro",
                     "type": "lesson",
                     "title": "Your first hire",
-                    "content": "<p>The first hire is the hardest. You're handing over part of your business to someone you don't know.</p><h3>Look for</h3><ul><li><strong>Reliability over skill</strong> — you can teach skill, you can't teach reliability</li><li><strong>Attitude</strong> — how they handle frustration matters more than how they interview</li><li><strong>Proven work</strong> — ask for references and actually call them</li><li><strong>Cultural fit</strong> — will they represent your business well?</li></ul><h3>Test before you commit</h3><p>Hire for a trial period. One month. Both sides learn whether it works. Most do it well; some don't. Both are useful information.</p>"
+                    "content": "<p>The first hire is the hardest. You're handing over part of your business to someone you don't know.</p><h3>Look for</h3><ul><li><strong>Reliability over skill</strong> — you can teach skill, you can't teach reliability</li><li><strong>Attitude</strong> — how they handle frustration matters more than how they interview</li><li><strong>Proven work</strong> — ask for references and actually call them</li><li><strong>Cultural fit</strong> — will they represent your business well?</li></ul><h3>Test before you commit</h3><p>Hire for a trial period. One month. Both sides learn whether it works.</p>"
                   }
                 ]
               },
@@ -382,21 +382,21 @@
                     "id": "s-first-hire",
                     "type": "scenario",
                     "title": "Write a job ad",
-                    "prompt": "You run a growing tailoring business. You need a full-time assistant. Write a job advertisement for WhatsApp and Facebook. It should be short, clear, and filter for the right person.",
-                    "context": "Well-written job ads attract serious applicants and filter out time-wasters.",
+                    "prompt": "You run a growing tailoring business. You need a full-time assistant. Write a job advertisement for WhatsApp and Facebook.",
+                    "context": "Well-written job ads attract serious applicants.",
                     "placeholder": "Job ad:",
                     "rubric": [
                       "States the role clearly (tailoring assistant)",
                       "States working hours and location",
-                      "States pay range (or says 'negotiable after interview')",
+                      "States pay range",
                       "Lists required skills and attitude",
-                      "Asks for a specific response (send photo of your work, call between these hours)",
+                      "Asks for a specific response (send photo of your work)",
                       "Includes a filter that weeds out non-serious applicants"
                     ]
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       }
