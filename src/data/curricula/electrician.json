@@ -28,7 +28,7 @@
                     "id": "l-ohms-law-deep",
                     "type": "lesson",
                     "title": "Ohm's Law in practice",
-                    "content": "<h3>Finding current</h3><p>240V circuit with 60Ω resistance. I = 240 ÷ 60 = 4A.</p><h3>Finding voltage drop</h3><p>A 5A current through 2Ω of cable resistance causes V = 5 × 2 = 10V drop. On a 240V circuit, that's 4% loss — unacceptable for most circuits.</p><h3>Finding power</h3><p>240V × 10A = 2400W. That's why a 13A socket tops out at roughly 3000W.</p><p>Every size decision — cable, breaker, fuse — starts with one of these calculations.</p>"
+                    "content": "<h3>Finding current</h3><p>240V circuit with 60Ω resistance. I = 240 ÷ 60 = 4A.</p><h3>Finding voltage drop</h3><p>A 5A current through 2Ω of cable resistance causes V = 5 × 2 = 10V drop. On a 240V circuit, that's 4% loss.</p><h3>Finding power</h3><p>240V × 10A = 2400W. That's why a 13A socket tops out at roughly 3000W.</p><p>Every size decision — cable, breaker, fuse — starts with one of these calculations.</p>"
                   },
                   {
                     "id": "d-ohms-practice",
@@ -89,7 +89,7 @@
                   }
                 ]
               }
-            ]
+            }
           },
           {
             "id": "circuits",
@@ -102,7 +102,7 @@
                     "id": "l-series-parallel",
                     "type": "lesson",
                     "title": "Series vs parallel",
-                    "content": "<h3>Series</h3><p>Current flows through every component in turn. One break = whole circuit dead. Voltage divides between components. Used for switches, not for power circuits.</p><h3>Parallel</h3><p>Every component connects across the same supply. One break doesn't kill the others. Voltage is the same across all. Used for all power circuits in homes.</p><h3>Rule</h3><p>Every socket, light, and appliance in a house is wired in parallel. The series is only used for control circuits.</p>"
+                    "content": "<h3>Series</h3><p>Current flows through every component in turn. One break = whole circuit dead. Voltage divides between components. Used for switches, not for power circuits.</p><h3>Parallel</h3><p>Every component connects across the same supply. One break doesn't kill the others. Voltage is the same across all. Used for all power circuits in homes.</p><h3>Rule</h3><p>Every socket, light, and appliance in a house is wired in parallel. Series is only used for control circuits.</p>"
                   }
                 ]
               },
@@ -133,19 +133,19 @@
                         "q": "A radial circuit uses 2.5mm² cable on a 20A breaker. How many sockets can it serve?",
                         "o": ["Unlimited", "It depends on total load, not socket count", "Exactly 4", "Only 1"],
                         "c": 1,
-                        "f": "Radial circuits are limited by total load, not socket count. Assess the actual current draw."
+                        "f": "Radial circuits are limited by total load, not socket count."
                       },
                       {
-                        "q": "A single light circuit runs from the switch through 5 lights in series. What happens when one bulb fails?",
+                        "q": "A light circuit runs from the switch through 5 lights in series. What happens when one bulb fails?",
                         "o": ["Others stay on", "All lights go out", "Only that light goes out", "A fuse blows"],
                         "c": 1,
-                        "f": "Series circuits break entirely when one component fails. This is why lights are always wired in parallel."
+                        "f": "Series circuits break entirely when one component fails. This is why lights are wired in parallel."
                       }
                     ]
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       },
@@ -165,7 +165,7 @@
                     "id": "l-cable-types",
                     "type": "lesson",
                     "title": "Common cable types",
-                    "content": "<h3>Twin and earth (T&E)</h3><p>The standard for fixed wiring in dry locations. Two insulated conductors (live and neutral) plus bare earth.</p><h3>Flexible cable</h3><p>Stranded copper, used for appliances and pendants. Not for fixed wiring.</p><h3>Armoured cable (SWA)</h3><p>Steel wire armour for outdoor or underground runs. Protects from damage and moisture.</p><h3>Single core</h3><p>Used inside conduit. Common in industrial and some West African domestic installations.</p><h3>Sizing</h3><p>Cable size is measured in mm² of copper cross-section. Bigger cable = more current capacity and less voltage drop.</p>"
+                    "content": "<h3>Twin and earth (T&E)</h3><p>The standard for fixed wiring in dry locations. Two insulated conductors plus bare earth.</p><h3>Flexible cable</h3><p>Stranded copper, used for appliances and pendants. Not for fixed wiring.</p><h3>Armoured cable (SWA)</h3><p>Steel wire armour for outdoor or underground runs. Protects from damage and moisture.</p><h3>Single core</h3><p>Used inside conduit. Common in industrial and some West African domestic installations.</p><h3>Sizing</h3><p>Cable size is measured in mm² of copper cross-section. Bigger cable = more current capacity and less voltage drop.</p>"
                   }
                 ]
               },
@@ -177,7 +177,7 @@
                     "title": "Choose the right cable",
                     "steps": [
                       {
-                        "q": "A 13A socket circuit (typical domestic socket) needs what cable size?",
+                        "q": "A 13A socket circuit needs what cable size?",
                         "o": ["1.0mm²", "1.5mm²", "2.5mm²", "6.0mm²"],
                         "c": 2,
                         "f": "2.5mm² is the standard for domestic socket circuits."
@@ -186,7 +186,7 @@
                         "q": "A 6kW electric shower needs what cable size?",
                         "o": ["2.5mm²", "4.0mm²", "6.0mm²", "10.0mm²"],
                         "c": 3,
-                        "f": "6kW at 240V = 25A. Requires 10mm² cable for the current and distance."
+                        "f": "6kW at 240V = 25A. Requires 10mm² cable."
                       },
                       {
                         "q": "You need to run cable 30m to a garden socket. Special consideration?",
@@ -198,7 +198,7 @@
                   }
                 ]
               }
-            ]
+            }
           },
           {
             "id": "installation",
@@ -211,7 +211,7 @@
                     "id": "l-routing",
                     "type": "lesson",
                     "title": "Cable routing rules",
-                    "content": "<h3>Safe zones</h3><p>Cables must run in defined safe zones so future drilling doesn't hit them:</p><ul><li>Within 150mm of ceiling or floor</li><li>Within 150mm of a corner or wall</li><li>Vertically or horizontally from any accessory (socket, switch)</li></ul><h3>Never</h3><ul><li>Run diagonally across a wall</li><li>Bury in plaster without a capping</li><li>Run behind skirting without protection</li><li>Joint cables inside a wall</li></ul><p>Every cable must be traceable and protected.</p>"
+                    "content": "<h3>Safe zones</h3><p>Cables must run in defined safe zones so future drilling doesn't hit them:</p><ul><li>Within 150mm of ceiling or floor</li><li>Within 150mm of a corner or wall</li><li>Vertically or horizontally from any accessory</li></ul><h3>Never</h3><ul><li>Run diagonally across a wall</li><li>Bury in plaster without a capping</li><li>Run behind skirting without protection</li><li>Joint cables inside a wall</li></ul><p>Every cable must be traceable and protected.</p>"
                   }
                 ]
               },
@@ -221,7 +221,7 @@
                     "id": "l-terminations",
                     "type": "lesson",
                     "title": "Terminating cables",
-                    "content": "<h3>Stripping</h3><p>Strip only what you need — usually 10-15mm of insulation. Too little = poor contact. Too much = exposed copper that can short.</p><h3>Tightening</h3><p>Terminals must be tight — loose terminals overheat and cause fires. But over-tightening damages the conductor. Use the correct screwdriver and firm, not excessive, force.</p><h3>Colour codes (IEC)</h3><ul><li>Live — brown</li><li>Neutral — blue</li><li>Earth — green/yellow</li></ul><p>Older installations may use different colours. Always verify with a tester.</p>"
+                    "content": "<h3>Stripping</h3><p>Strip only what you need — usually 10-15mm of insulation. Too little = poor contact. Too much = exposed copper that can short.</p><h3>Tightening</h3><p>Terminals must be tight — loose terminals overheat and cause fires. But over-tightening damages the conductor.</p><h3>Colour codes (IEC)</h3><ul><li>Live — brown</li><li>Neutral — blue</li><li>Earth — green/yellow</li></ul><p>Older installations may use different colours. Always verify with a tester.</p>"
                   }
                 ]
               },
@@ -272,7 +272,7 @@
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       },
@@ -314,19 +314,19 @@
                         "q": "Your voltage tester shows no voltage but you're not sure it's working. What do you do?",
                         "o": ["Trust it", "Test the tester on a known live source first", "Ask someone else", "Assume it's dead"],
                         "c": 1,
-                        "f": "Prove the tester works, then prove the circuit is dead, then prove the tester again. This is the golden rule."
+                        "f": "Prove the tester works, then prove the circuit is dead, then prove the tester again."
                       },
                       {
                         "q": "You're called away mid-job. What do you do before leaving?",
                         "o": ["Leave as-is", "Restore power", "Keep isolation in place and warn others", "Nothing"],
                         "c": 2,
-                        "f": "Isolation stays in place. Warn anyone on site. Never leave a partially-done job energised."
+                        "f": "Isolation stays in place. Warn anyone on site."
                       }
                     ]
                   }
                 ]
               }
-            ]
+            }
           },
           {
             "id": "testing",
@@ -339,7 +339,7 @@
                     "id": "l-testing-intro",
                     "type": "lesson",
                     "title": "The three essential tests",
-                    "content": "<h3>1. Continuity</h3><p>Verify conductors are continuous and correctly connected. Earth continuity is the most critical.</p><h3>2. Insulation resistance</h3><p>Verify no leakage between conductors. Test with a 500V insulation tester between live-earth, live-neutral, neutral-earth.</p><h3>3. Polarity</h3><p>Verify live is live, neutral is neutral, earth is earth. Reversed polarity kills.</p><p>In industrial work you'll add loop impedance, RCD trip times, and more. But these three are the minimum for every domestic job.</p>"
+                    "content": "<h3>1. Continuity</h3><p>Verify conductors are continuous and correctly connected. Earth continuity is the most critical.</p><h3>2. Insulation resistance</h3><p>Verify no leakage between conductors. Test with a 500V insulation tester.</p><h3>3. Polarity</h3><p>Verify live is live, neutral is neutral, earth is earth. Reversed polarity kills.</p><p>In industrial work you'll add loop impedance, RCD trip times, and more. But these three are the minimum for every domestic job.</p>"
                   }
                 ]
               },
@@ -352,7 +352,7 @@
                     "steps": [
                       {
                         "q": "Earth continuity reads 0.05Ω on a 20m circuit. Acceptable?",
-                        "o": ["Yes", "No, should be lower", "Only if resistance is under 1Ω, so yes", "Depends on ambient temperature"],
+                        "o": ["Yes", "No, should be lower", "Only if resistance is under 1Ω, so yes", "Depends on temperature"],
                         "c": 2,
                         "f": "Earth continuity must be under 1Ω per circuit. 0.05Ω is excellent."
                       },
@@ -360,19 +360,19 @@
                         "q": "Insulation resistance reads 0.5MΩ. What does this mean?",
                         "o": ["Pass — above 0.5MΩ", "Fail — minimum is typically 1MΩ", "Perfect", "Cannot tell"],
                         "c": 1,
-                        "f": "Most standards require at least 1MΩ insulation resistance. 0.5MΩ indicates leakage."
+                        "f": "Most standards require at least 1MΩ insulation resistance."
                       },
                       {
                         "q": "You test a socket and find live and neutral reversed. What does this cause?",
                         "o": ["Nothing", "Deadly risk — appliances remain live when switched off", "Slower operation", "Higher bills"],
                         "c": 1,
-                        "f": "Reversed polarity means the appliance chassis stays live even when the switch is off. This kills people."
+                        "f": "Reversed polarity means the appliance chassis stays live even when the switch is off."
                       }
                     ]
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       },
@@ -392,7 +392,7 @@
                     "id": "l-diagnosis-method",
                     "type": "lesson",
                     "title": "The diagnostic process",
-                    "content": "<ol><li><strong>Ask the client</strong> — when did it start? What were you doing? Has anything changed?</li><li><strong>Narrow the scope</strong> — is it one socket or the whole circuit? One room or the whole house?</li><li><strong>Test at boundaries</strong> — where does power stop? That's where the fault lives.</li><li><strong>Isolate the section</strong> — split the circuit and test each half.</li><li><strong>Confirm and repair</strong> — once found, repair, retest, and verify the whole circuit.</li></ol><p>Bad electricians replace parts and hope. Good ones diagnose.</p>"
+                    "content": "<ol><li><strong>Ask the client</strong> — when did it start? What were you doing?</li><li><strong>Narrow the scope</strong> — is it one socket or the whole circuit?</li><li><strong>Test at boundaries</strong> — where does power stop?</li><li><strong>Isolate the section</strong> — split the circuit and test each half.</li><li><strong>Confirm and repair</strong> — once found, repair, retest, and verify.</li></ol><p>Bad electricians replace parts and hope. Good ones diagnose.</p>"
                   }
                 ]
               },
@@ -407,19 +407,19 @@
                         "q": "One circuit trips the breaker every time it rains. Most likely cause?",
                         "o": ["Bad breaker", "Water ingress into an outdoor cable or fitting", "Wrong cable size", "Loose earth"],
                         "c": 1,
-                        "f": "Weather-dependent tripping means water is getting in. Find and seal the leak."
+                        "f": "Weather-dependent tripping means water is getting in."
                       },
                       {
                         "q": "A single socket doesn't work but everything else on the circuit is fine. First thing to check?",
                         "o": ["The main breaker", "The socket's terminations", "The consumer unit", "The meter"],
                         "c": 1,
-                        "f": "Isolated faults are usually at the accessory. Open the socket and check terminations."
+                        "f": "Isolated faults are usually at the accessory."
                       },
                       {
                         "q": "The whole house loses power. Neighbour's house is fine. What's first?",
                         "o": ["Check inside the consumer unit", "Call the utility company", "Replace all breakers", "Rewire the house"],
                         "c": 0,
-                        "f": "Isolated outage starts at your own consumer unit. Check the main switch, breakers, and RCD."
+                        "f": "Isolated outage starts at your own consumer unit."
                       }
                     ]
                   }
@@ -446,7 +446,7 @@
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       },
@@ -466,7 +466,7 @@
                     "id": "l-estimating-intro",
                     "type": "lesson",
                     "title": "What goes into a quote",
-                    "content": "<ol><li><strong>Materials</strong> — cable, accessories, consumer units, fixings</li><li><strong>Labour</strong> — hours × your rate (never guess)</li><li><strong>Overhead</strong> — transport, tools wear, insurance</li><li><strong>Contingency</strong> — 10-15% for surprises</li><li><strong>Margin</strong> — 20-40% profit for the business</li></ol><p>Most electricians under-quote by forgetting one of these. Then they work for free — or lose money.</p>"
+                    "content": "<ol><li><strong>Materials</strong> — cable, accessories, consumer units, fixings</li><li><strong>Labour</strong> — hours × your rate</li><li><strong>Overhead</strong> — transport, tools wear, insurance</li><li><strong>Contingency</strong> — 10-15% for surprises</li><li><strong>Margin</strong> — 20-40% profit</li></ol><p>Most electricians under-quote by forgetting one of these.</p>"
                   }
                 ]
               },
@@ -477,21 +477,21 @@
                     "type": "scenario",
                     "title": "Quote a small rewire",
                     "prompt": "A client wants their 3-bedroom house rewired: 12 sockets, 8 lights, 4 switches, new consumer unit, and cable. Materials: 1,200,000 Le. Labour estimate: 5 days at 30,000 Le/day. Overhead: 50,000 Le. Contingency: 15%. Margin: 25%. Calculate the quote.",
-                    "context": "Rewires are the biggest jobs most electricians quote. Getting the maths right determines whether you can run a business.",
+                    "context": "Rewires are the biggest jobs most electricians quote.",
                     "placeholder": "Materials:\nLabour:\nOverhead:\nSubtotal:\nWith contingency:\nWith margin:\nFinal quote:",
                     "rubric": [
                       "Materials: 1,200,000",
                       "Labour: 5 × 30,000 = 150,000",
                       "Overhead: 50,000",
                       "Subtotal: 1,400,000",
-                      "With 15% contingency: 1,400,000 × 1.15 = 1,610,000",
-                      "With 25% margin: 1,610,000 × 1.25 = 2,012,500 Le",
+                      "With 15% contingency: 1,610,000",
+                      "With 25% margin: 2,012,500 Le",
                       "Quote includes a breakdown and payment terms"
                     ]
                   }
                 ]
               }
-            ]
+            }
           },
           {
             "id": "service",
@@ -504,7 +504,7 @@
                     "id": "l-service-intro",
                     "type": "lesson",
                     "title": "Reputation is everything",
-                    "content": "<p>In West Africa, electricians get work through word of mouth. One bad job costs ten future jobs.</p><h3>Rules</h3><ul><li>Arrive on time, or call ahead</li><li>Explain what you're doing in plain language</li><li>Clean up after yourself</li><li>Test everything in front of the client</li><li>Give a written invoice</li><li>Offer a warranty on your work</li></ul><p>A client who trusts you calls you first next time and refers you to friends.</p>"
+                    "content": "<p>In West Africa, electricians get work through word of mouth. One bad job costs ten future jobs.</p><h3>Rules</h3><ul><li>Arrive on time, or call ahead</li><li>Explain what you're doing in plain language</li><li>Clean up after yourself</li><li>Test everything in front of the client</li><li>Give a written invoice</li><li>Offer a warranty on your work</li></ul>"
                   }
                 ]
               },
@@ -514,10 +514,10 @@
                     "id": "p-customer-pack",
                     "type": "portfolio",
                     "title": "Build a customer service pack",
-                    "prompt": "Design the materials you'll hand to every client: a written quote template, a service checklist for jobs, and an invoice. Make them professional and clear.",
+                    "prompt": "Design the materials you'll hand to every client: a written quote template, a service checklist for jobs, and an invoice.",
                     "steps": [
                       "Design a quote template with clear line items",
-                      "Design a service checklist (what you check before leaving)",
+                      "Design a service checklist",
                       "Design an invoice with payment terms",
                       "Test the pack on a real or simulated client",
                       "Refine based on feedback"
@@ -525,7 +525,7 @@
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       }
