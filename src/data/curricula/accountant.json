@@ -1,6 +1,6 @@
 {
   "accountant": {
-    "intro": "Learn accounting from bookkeeping to financial statements to tax. This is the language of business — the skill every organisation, from market stall to government, needs to survive.",
+    "intro": "Learn accounting from bookkeeping to financial statements to tax. The language of business — the skill every organisation needs to survive.",
     "skillDomains": [
       {
         "id": "financial-accounting",
@@ -18,7 +18,7 @@
                     "id": "l-double-entry",
                     "type": "lesson",
                     "title": "The double-entry system",
-                    "content": "<p>Every transaction affects two accounts. This is the foundation of all accounting.</p><h3>Debit and credit</h3><ul><li><strong>Debit</strong> — left side of the account</li><li><strong>Credit</strong> — right side of the account</li></ul><h3>The five types of accounts</h3><ul><li><strong>Assets</strong> (things you own) — increase with debit</li><li><strong>Liabilities</strong> (things you owe) — increase with credit</li><li><strong>Equity</strong> (owner's stake) — increase with credit</li><li><strong>Revenue</strong> (income) — increase with credit</li><li><strong>Expenses</strong> (costs) — increase with debit</li></ul><p>Every transaction: total debits = total credits. Always.</p>"
+                    "content": "<p>Every transaction affects two accounts. This is the foundation of all accounting.</p><h3>Debit and credit</h3><ul><li><strong>Debit</strong> — left side of the account</li><li><strong>Credit</strong> — right side of the account</li></ul><h3>The five types of accounts</h3><ul><li><strong>Assets</strong> — increase with debit</li><li><strong>Liabilities</strong> — increase with credit</li><li><strong>Equity</strong> — increase with credit</li><li><strong>Revenue</strong> — increase with credit</li><li><strong>Expenses</strong> — increase with debit</li></ul><p>Every transaction: total debits = total credits. Always.</p>"
                   }
                 ]
               },
@@ -28,7 +28,7 @@
                     "id": "l-journals-ledgers",
                     "type": "lesson",
                     "title": "Journals and ledgers",
-                    "content": "<h3>The journal</h3><p>The first place transactions are recorded. Date, accounts affected, amounts, description.</p><h3>The ledger</h3><p>Grouped by account — all Cash transactions together, all Sales together, all Rent together.</p><h3>Trial balance</h3><p>A summary list of all ledger balances. Total debits must equal total credits. If not, there's an error.</p><h3>The flow</h3><p>Transaction → Journal → Ledger → Trial balance → Financial statements.</p>"
+                    "content": "<h3>The journal</h3><p>The first place transactions are recorded. Date, accounts affected, amounts, description.</p><h3>The ledger</h3><p>Grouped by account — all Cash transactions together, all Sales together, all Rent together.</p><h3>Trial balance</h3><p>A summary list of all ledger balances. Total debits must equal total credits.</p><h3>The flow</h3><p>Transaction → Journal → Ledger → Trial balance → Financial statements.</p>"
                   }
                 ]
               },
@@ -44,7 +44,7 @@
                         "q": "You receive 500,000 Le in cash for services rendered. Journal entry?",
                         "o": ["Debit Cash 500,000 / Credit Service Revenue 500,000", "Debit Service Revenue 500,000 / Credit Cash 500,000", "Debit Expense 500,000 / Credit Cash 500,000", "Debit Cash 500,000 / Credit Expense 500,000"],
                         "c": 0,
-                        "f": "Cash (asset) increases — debit. Revenue increases — credit."
+                        "f": "Cash increases — debit. Revenue increases — credit."
                       },
                       {
                         "q": "You pay 100,000 Le rent for the month. Journal entry?",
@@ -53,10 +53,10 @@
                         "f": "Expense increases — debit. Cash decreases — credit."
                       },
                       {
-                        "q": "You buy equipment for 200,000 Le on credit (to pay next month). Journal entry?",
+                        "q": "You buy equipment for 200,000 Le on credit. Journal entry?",
                         "o": ["Debit Equipment 200,000 / Credit Accounts Payable 200,000", "Debit Cash 200,000 / Credit Equipment 200,000", "Debit Equipment 200,000 / Credit Cash 200,000", "Debit Expense 200,000 / Credit Cash 200,000"],
                         "c": 0,
-                        "f": "Asset (equipment) increases — debit. Liability (payable) increases — credit."
+                        "f": "Asset increases — debit. Liability increases — credit."
                       }
                     ]
                   }
@@ -68,7 +68,7 @@
                     "id": "p-ledger-practice",
                     "type": "portfolio",
                     "title": "Record a month of transactions",
-                    "prompt": "Given a small business's transactions for one month (fictional but realistic), record them in a journal, post to ledgers, and produce a trial balance.",
+                    "prompt": "Given a small business's transactions for one month, record them in a journal, post to ledgers, and produce a trial balance.",
                     "steps": [
                       "Open a journal and record every transaction",
                       "Post each entry to the correct ledgers",
@@ -80,7 +80,7 @@
                   }
                 ]
               }
-            ]
+            }
           },
           {
             "id": "financial-statements",
@@ -93,7 +93,7 @@
                     "id": "l-three-statements",
                     "type": "lesson",
                     "title": "The three core statements",
-                    "content": "<h3>1. Income Statement (Profit & Loss)</h3><p>Revenue − Expenses = Profit. Shows performance over a period.</p><h3>2. Balance Sheet</h3><p>Assets = Liabilities + Equity. Shows position at a point in time.</p><h3>3. Cash Flow Statement</h3><p>Cash in − Cash out = Change in cash. Shows liquidity over a period.</p><p>All three connect. Net income from the income statement flows to equity on the balance sheet and appears on the cash flow statement.</p>"
+                    "content": "<h3>1. Income Statement</h3><p>Revenue − Expenses = Profit. Shows performance over a period.</p><h3>2. Balance Sheet</h3><p>Assets = Liabilities + Equity. Shows position at a point in time.</p><h3>3. Cash Flow Statement</h3><p>Cash in − Cash out = Change in cash. Shows liquidity over a period.</p><p>All three connect.</p>"
                   }
                 ]
               },
@@ -103,21 +103,21 @@
                     "id": "s-interpret-statement",
                     "type": "scenario",
                     "title": "Read a real income statement",
-                    "prompt": "A small business has the following for the year: Revenue 12,000,000 Le; Cost of goods sold 7,200,000 Le; Rent 800,000 Le; Salaries 2,000,000 Le; Utilities 400,000 Le; Marketing 300,000 Le. Calculate gross profit, operating profit, and net profit. What does each number tell you?",
+                    "prompt": "A small business has the following for the year: Revenue 12,000,000 Le; Cost of goods sold 7,200,000 Le; Rent 800,000 Le; Salaries 2,000,000 Le; Utilities 400,000 Le; Marketing 300,000 Le. Calculate gross profit, operating profit, and net profit.",
                     "context": "Being able to read a statement quickly is a core professional skill.",
                     "placeholder": "Gross profit:\nOperating profit:\nNet profit:\nInterpretation:",
                     "rubric": [
-                      "Gross profit = 12,000,000 − 7,200,000 = 4,800,000 Le (40% gross margin)",
-                      "Operating expenses = 800,000 + 2,000,000 + 400,000 + 300,000 = 3,500,000",
-                      "Operating profit = 4,800,000 − 3,500,000 = 1,300,000 Le",
-                      "Net profit (assuming no tax/interest in this scenario) = 1,300,000 Le",
-                      "Notes that a 40% gross margin is healthy; net margin is ~11%",
-                      "Suggests cost reduction opportunities (rent, marketing efficiency)"
+                      "Gross profit = 4,800,000 Le (40% gross margin)",
+                      "Operating expenses = 3,500,000 Le",
+                      "Operating profit = 1,300,000 Le",
+                      "Net profit = 1,300,000 Le",
+                      "Notes that a 40% gross margin is healthy",
+                      "Suggests cost reduction opportunities"
                     ]
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       },
@@ -137,7 +137,7 @@
                     "id": "l-costing-intro",
                     "type": "lesson",
                     "title": "Direct vs indirect costs",
-                    "content": "<h3>Direct costs</h3><p>Can be traced to a specific product. Materials, direct labour.</p><h3>Indirect costs (overhead)</h3><p>Support the whole business. Rent, management salaries, utilities.</p><h3>Why it matters</h3><p>To price a product, you need its full cost — direct PLUS a share of overhead. Many small businesses forget the overhead and price too low.</p><h3>How to allocate overhead</h3><p>Simple method: divide total overhead by total units produced. Crude but works for small businesses.</p>"
+                    "content": "<h3>Direct costs</h3><p>Can be traced to a specific product. Materials, direct labour.</p><h3>Indirect costs (overhead)</h3><p>Support the whole business. Rent, management salaries, utilities.</p><h3>Why it matters</h3><p>To price a product, you need its full cost — direct PLUS a share of overhead.</p><h3>How to allocate overhead</h3><p>Simple method: divide total overhead by total units produced.</p>"
                   }
                 ]
               },
@@ -149,7 +149,7 @@
                     "title": "Calculate full cost",
                     "steps": [
                       {
-                        "q": "Direct materials: 5,000 Le. Direct labour: 2,000 Le. Total monthly overhead 3,000,000 Le ÷ 1,000 units = 3,000 Le per unit. Full cost?",
+                        "q": "Direct materials: 5,000 Le. Direct labour: 2,000 Le. Overhead per unit: 3,000 Le. Full cost?",
                         "o": ["7,000 Le", "10,000 Le", "5,000 Le", "8,000 Le"],
                         "c": 1,
                         "f": "5,000 + 2,000 + 3,000 = 10,000 Le per unit."
@@ -158,19 +158,19 @@
                         "q": "A competitor sells a similar product for 8,000 Le. Your full cost is 10,000 Le. What do you do?",
                         "o": ["Match their price and lose 2,000 per sale", "Investigate — reduce your cost or differentiate", "Exit the market", "Raise your price"],
                         "c": 1,
-                        "f": "If your cost is above their price, you must either cut costs or justify a premium. Do not sell at a loss."
+                        "f": "If your cost is above their price, you must either cut costs or justify a premium."
                       },
                       {
                         "q": "You produce 1,500 units instead of 1,000, with same overhead. What happens to overhead per unit?",
                         "o": ["Increases", "Decreases to 2,000 Le", "Stays the same", "Cannot calculate"],
                         "c": 1,
-                        "f": "3,000,000 ÷ 1,500 = 2,000 Le per unit. Higher volume spreads fixed costs."
+                        "f": "3,000,000 ÷ 1,500 = 2,000 Le per unit."
                       }
                     ]
                   }
                 ]
               }
-            ]
+            }
           },
           {
             "id": "budgeting",
@@ -183,7 +183,7 @@
                     "id": "l-budget-intro",
                     "type": "lesson",
                     "title": "Why budgets matter",
-                    "content": "<p>A budget is a plan for money. Without one, spending follows opportunity, and the business drifts.</p><h3>Types of budgets</h3><ul><li><strong>Operating budget</strong> — revenue and expenses for the year</li><li><strong>Cash budget</strong> — timing of cash in and out</li><li><strong>Capital budget</strong> — major purchases (equipment, vehicles)</li></ul><h3>How to build one</h3><ol><li>Start with realistic revenue (based on history, not hope)</li><li>List all expenses (variable and fixed)</li><li>Calculate expected profit</li><li>Compare to last year to see trends</li><li>Review monthly against actuals</li></ol>"
+                    "content": "<p>A budget is a plan for money. Without one, spending follows opportunity, and the business drifts.</p><h3>Types of budgets</h3><ul><li><strong>Operating budget</strong> — revenue and expenses for the year</li><li><strong>Cash budget</strong> — timing of cash in and out</li><li><strong>Capital budget</strong> — major purchases</li></ul><h3>How to build one</h3><ol><li>Start with realistic revenue</li><li>List all expenses</li><li>Calculate expected profit</li><li>Compare to last year</li><li>Review monthly against actuals</li></ol>"
                   }
                 ]
               },
@@ -193,11 +193,11 @@
                     "id": "p-budget-portfolio",
                     "type": "portfolio",
                     "title": "Build a simple business budget",
-                    "prompt": "For a small business of your choice (real or fictional), build a one-year operating budget with monthly breakdowns. Include revenue, variable costs, fixed costs, and profit.",
+                    "prompt": "For a small business of your choice, build a one-year operating budget with monthly breakdowns.",
                     "steps": [
-                      "Estimate monthly revenue (justify assumptions)",
-                      "List variable costs per unit or month",
-                      "List fixed costs (rent, salaries, utilities)",
+                      "Estimate monthly revenue",
+                      "List variable costs",
+                      "List fixed costs",
                       "Calculate monthly profit",
                       "Sum to annual totals",
                       "Note seasonal patterns"
@@ -205,7 +205,7 @@
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       },
@@ -225,7 +225,7 @@
                     "id": "l-tax-intro",
                     "type": "lesson",
                     "title": "The tax categories",
-                    "content": "<p>Businesses and individuals in West Africa typically deal with:</p><ul><li><strong>Income tax</strong> — on profit</li><li><strong>VAT (Value Added Tax)</strong> — on sales (15% in many ECOWAS countries, 7.5% in Nigeria, 15% in Ghana, 15% in Sierra Leone)</li><li><strong>Payroll tax / PAYE</strong> — deducted from employee salaries</li><li><strong>Withholding tax</strong> — deducted from payments to suppliers</li><li><strong>Corporate tax</strong> — on company profit (rate varies by country)</li></ul><h3>The accountant's role</h3><p>Calculate correctly, file on time, keep records. Late filing penalties can destroy small businesses.</p>"
+                    "content": "<p>Businesses and individuals in West Africa typically deal with:</p><ul><li><strong>Income tax</strong> — on profit</li><li><strong>VAT</strong> — on sales (15% in many ECOWAS countries)</li><li><strong>Payroll tax / PAYE</strong> — deducted from employee salaries</li><li><strong>Withholding tax</strong> — deducted from payments to suppliers</li><li><strong>Corporate tax</strong> — on company profit</li></ul><h3>The accountant's role</h3><p>Calculate correctly, file on time, keep records. Late filing penalties can destroy small businesses.</p>"
                   }
                 ]
               },
@@ -246,19 +246,19 @@
                         "q": "An employee earns 500,000 Le gross per month. PAYE is calculated on this. Why does the employer deduct it?",
                         "o": ["To keep the money", "Because the employer is legally responsible for collecting and remitting employee tax", "It's optional", "To reduce salaries"],
                         "c": 1,
-                        "f": "Employers are tax collection agents. Failure to remit PAYE is a serious offence."
+                        "f": "Employers are tax collection agents."
                       },
                       {
                         "q": "When is VAT typically due in most West African countries?",
                         "o": ["Annually", "Monthly, by the 15th or 21st of the following month", "Never", "When the government asks"],
                         "c": 1,
-                        "f": "VAT is usually filed monthly with a specific deadline. Missing it triggers penalties."
+                        "f": "VAT is usually filed monthly with a specific deadline."
                       }
                     ]
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       },
@@ -278,7 +278,7 @@
                     "id": "l-software-intro",
                     "type": "lesson",
                     "title": "What software can do",
-                    "content": "<p>Manual bookkeeping on paper is slow and error-prone. Accounting software:</p><ul><li>Records transactions quickly</li><li>Prevents arithmetic errors</li><li>Generates statements automatically</li><li>Tracks tax liability in real time</li><li>Produces reports on demand</li></ul><h3>Common options in West Africa</h3><ul><li><strong>Spreadsheets</strong> (Excel, Google Sheets) — free, flexible, manual</li><li><strong>QuickBooks</strong> — industry standard, paid</li><li><strong>Sage</strong> — common with larger businesses</li><li><strong>Zoho Books</strong> — cloud-based, cheaper</li><li><strong>Local options</strong> — various country-specific tools</li></ul><p>Whatever the tool, the accounting principles are the same.</p>"
+                    "content": "<p>Manual bookkeeping on paper is slow and error-prone. Accounting software:</p><ul><li>Records transactions quickly</li><li>Prevents arithmetic errors</li><li>Generates statements automatically</li><li>Tracks tax liability in real time</li><li>Produces reports on demand</li></ul><h3>Common options in West Africa</h3><ul><li><strong>Spreadsheets</strong> (Excel, Google Sheets)</li><li><strong>QuickBooks</strong></li><li><strong>Sage</strong></li><li><strong>Zoho Books</strong></li><li><strong>Local options</strong></li></ul><p>Whatever the tool, the accounting principles are the same.</p>"
                   }
                 ]
               },
@@ -293,25 +293,25 @@
                         "q": "A market stall owner needs simple bookkeeping. Best tool?",
                         "o": ["QuickBooks", "Pen and notebook, or a simple Google Sheet", "SAP", "Excel macro package"],
                         "c": 1,
-                        "f": "Match tool to complexity. Simple business, simple tool."
+                        "f": "Match tool to complexity."
                       },
                       {
                         "q": "A 50-employee business needs payroll, tax filing, and monthly financials. Best tool?",
                         "o": ["Handwritten ledger", "QuickBooks or Sage", "Notebook", "None"],
                         "c": 1,
-                        "f": "At this scale, real software pays for itself in time saved and errors avoided."
+                        "f": "At this scale, real software pays for itself."
                       },
                       {
                         "q": "What's the main advantage of cloud-based accounting software?",
                         "o": ["Cheaper hardware", "Access from anywhere; automatic backup; collaboration", "More features", "Better security only"],
                         "c": 1,
-                        "f": "Cloud means access and backup. Useful for accountants with multiple clients."
+                        "f": "Cloud means access and backup."
                       }
                     ]
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       },
@@ -331,7 +331,7 @@
                     "id": "l-ethics-intro",
                     "type": "lesson",
                     "title": "The five principles",
-                    "content": "<p>Every accounting professional body requires these:</p><ol><li><strong>Integrity</strong> — be straightforward and honest</li><li><strong>Objectivity</strong> — don't let bias, conflict of interest, or undue influence override professional judgement</li><li><strong>Professional competence</strong> — maintain the skills and knowledge required</li><li><strong>Confidentiality</strong> — do not disclose client information without authority</li><li><strong>Professional behaviour</strong> — comply with laws and avoid discrediting the profession</li></ol><p>A single ethical failure ends a career. There is no recovery from fraud.</p>"
+                    "content": "<p>Every accounting professional body requires these:</p><ol><li><strong>Integrity</strong> — be straightforward and honest</li><li><strong>Objectivity</strong> — don't let bias or conflict of interest override professional judgement</li><li><strong>Professional competence</strong> — maintain the skills and knowledge required</li><li><strong>Confidentiality</strong> — do not disclose client information without authority</li><li><strong>Professional behaviour</strong> — comply with laws and avoid discrediting the profession</li></ol><p>A single ethical failure ends a career.</p>"
                   }
                 ]
               },
@@ -341,22 +341,21 @@
                     "id": "s-ethics-scenario",
                     "type": "scenario",
                     "title": "Face an ethical pressure",
-                    "prompt": "Your client (a business owner) asks you to record a personal expense as a business expense, so they can deduct it for tax. They say 'everyone does it'. How do you respond?",
-                    "context": "Ethical pressure is constant in accounting. How you respond defines your career.",
+                    "prompt": "Your client asks you to record a personal expense as a business expense, so they can deduct it for tax. They say 'everyone does it'. How do you respond?",
+                    "context": "Ethical pressure is constant in accounting.",
                     "placeholder": "Immediate response:\nIf they insist:\nDocumentation:",
                     "rubric": [
                       "Declines clearly and explains why it's wrong",
-                      "Explains the risk to the client (penalties, audit flags, reputation)",
-                      "Does not say 'everyone does it' is acceptable",
-                      "Does not threaten to quit unless absolutely necessary",
+                      "Explains the risk to the client (penalties, audit flags)",
+                      "Does not accept 'everyone does it'",
                       "If they insist, states that you cannot continue to serve them",
-                      "Documents the conversation and decision",
-                      "Knows that falsifying records is a criminal offence in most jurisdictions"
+                      "Documents the conversation",
+                      "Knows that falsifying records is a criminal offence"
                     ]
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       }
