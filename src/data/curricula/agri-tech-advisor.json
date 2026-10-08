@@ -1,6 +1,6 @@
 {
   "agri-tech-advisor": {
-    "intro": "Learn to advise farmers with modern tools — soil science, crop management, drones, sensors, and data. Agriculture employs more West Africans than any other sector. This career makes it productive.",
+    "intro": "Learn to advise farmers with modern tools — soil science, crop management, drones, sensors, and data.",
     "skillDomains": [
       {
         "id": "agronomy",
@@ -18,7 +18,7 @@
                     "id": "l-soil-intro",
                     "type": "lesson",
                     "title": "What soil actually is",
-                    "content": "<p>Soil is not just dirt. It's a living system of:</p><ul><li><strong>Minerals</strong> — sand, silt, clay</li><li><strong>Organic matter</strong> — decomposed plants and animals</li><li><strong>Organisms</strong> — bacteria, fungi, worms, insects</li><li><strong>Air and water</strong> — in the spaces between particles</li></ul><p>Healthy soil has all four in balance. Degraded soil has too much of one and not enough of the others.</p><h3>West African soils</h3><p>Many are laterite — iron-rich, acidic, low in organic matter. Productive only with careful management of organic matter and pH.</p>"
+                    "content": "<p>Soil is not just dirt. It's a living system of:</p><ul><li><strong>Minerals</strong> — sand, silt, clay</li><li><strong>Organic matter</strong> — decomposed plants and animals</li><li><strong>Organisms</strong> — bacteria, fungi, worms, insects</li><li><strong>Air and water</strong> — in the spaces between particles</li></ul><p>Healthy soil has all four in balance.</p><h3>West African soils</h3><p>Many are laterite — iron-rich, acidic, low in organic matter. Productive only with careful management.</p>"
                   }
                 ]
               },
@@ -28,7 +28,7 @@
                     "id": "l-soil-testing",
                     "type": "lesson",
                     "title": "Reading the soil",
-                    "content": "<h3>Simple field tests</h3><ul><li><strong>pH test</strong> — test strips or a meter. Most crops want 6.0-7.0.</li><li><strong>Texture test</strong> — squeeze moist soil. Clay holds shape, sand crumbles, loam is in between.</li><li><strong>Infiltration test</strong> — dig a small hole, pour water, time how long it takes to drain. Slow = compacted.</li><li><strong>Earthworm count</strong> — dig a 30cm cube and count. Five or more = healthy biology.</li></ul><h3>What to do about it</h3><p>Acidic soil: add lime or wood ash. Compacted soil: add organic matter and avoid heavy tillage. Low organic matter: compost, mulch, cover crops.</p>"
+                    "content": "<h3>Simple field tests</h3><ul><li><strong>pH test</strong> — test strips or a meter. Most crops want 6.0-7.0.</li><li><strong>Texture test</strong> — squeeze moist soil. Clay holds shape, sand crumbles, loam is in between.</li><li><strong>Infiltration test</strong> — dig a small hole, pour water, time how long it drains.</li><li><strong>Earthworm count</strong> — dig a 30cm cube and count. Five or more = healthy.</li></ul><h3>What to do about it</h3><p>Acidic soil: add lime. Compacted soil: add organic matter. Low organic matter: compost, mulch, cover crops.</p>"
                   }
                 ]
               },
@@ -49,19 +49,19 @@
                         "q": "Water pools on the surface for hours after rain. What's the problem?",
                         "o": ["Good drainage", "Compacted soil", "Too much rain", "Wrong crop"],
                         "c": 1,
-                        "f": "Slow drainage = compaction. Break it up with deep-rooted cover crops or mechanical aeration."
+                        "f": "Slow drainage = compaction."
                       },
                       {
                         "q": "A soil test shows pH 4.5. What do you advise?",
                         "o": ["Add more fertilizer", "Add lime to raise pH toward 6.0-6.5", "Plant anyway", "Flood the field"],
                         "c": 1,
-                        "f": "At pH 4.5, most nutrients are locked up. Lime first, then fertilize."
+                        "f": "At pH 4.5, most nutrients are locked up."
                       }
                     ]
                   }
                 ]
               }
-            ]
+            }
           },
           {
             "id": "crop-management",
@@ -74,7 +74,7 @@
                     "id": "l-crop-planning",
                     "type": "lesson",
                     "title": "Choosing the right crop",
-                    "content": "<p>Every farm decision starts with three questions:</p><ol><li><strong>What grows well here?</strong> — matching crop to climate, soil, and water</li><li><strong>What does the market want?</strong> — a crop nobody buys is a loss</li><li><strong>What can the farmer manage?</strong> — labour, capital, and knowledge matter</li></ol><h3>Common West African crops</h3><ul><li>Maize, rice, sorghum, millet (staples)</li><li>Cassava, yam, sweet potato (roots)</li><li>Cowpea, groundnut, soybean (legumes — fix nitrogen)</li><li>Tomato, pepper, okra, onion (vegetables, high value)</li><li>Cocoa, oil palm, cashew (export)</li></ul>"
+                    "content": "<p>Every farm decision starts with three questions:</p><ol><li><strong>What grows well here?</strong> — matching crop to climate, soil, and water</li><li><strong>What does the market want?</strong> — a crop nobody buys is a loss</li><li><strong>What can the farmer manage?</strong> — labour, capital, and knowledge matter</li></ol><h3>Common West African crops</h3><ul><li>Maize, rice, sorghum, millet (staples)</li><li>Cassava, yam, sweet potato (roots)</li><li>Cowpea, groundnut, soybean (legumes — fix nitrogen)</li><li>Tomato, pepper, okra, onion (vegetables)</li><li>Cocoa, oil palm, cashew (export)</li></ul>"
                   }
                 ]
               },
@@ -84,7 +84,7 @@
                     "id": "l-pest-disease",
                     "type": "lesson",
                     "title": "Pests and diseases",
-                    "content": "<h3>The big four for West African staples</h3><ul><li><strong>Fall armyworm</strong> — attacks maize, devastating if untreated</li><li><strong>Striga</strong> — parasitic weed that destroys cereals</li><li><strong>Cassava mosaic virus</strong> — spreads by whitefly</li><li><strong>Tomato leaf blight</strong> — kills tomato crops in days</li></ul><h3>Integrated pest management (IPM)</h3><ol><li>Prevent — resistant varieties, crop rotation, clean seed</li><li>Monitor — walk the field weekly, look for early signs</li><li>Act early — hand-pick, spray botanical or chemical only if threshold is passed</li><li>Rotate chemicals — prevents resistance</li></ol>"
+                    "content": "<h3>The big four for West African staples</h3><ul><li><strong>Fall armyworm</strong> — attacks maize, devastating if untreated</li><li><strong>Striga</strong> — parasitic weed that destroys cereals</li><li><strong>Cassava mosaic virus</strong> — spreads by whitefly</li><li><strong>Tomato leaf blight</strong> — kills tomato crops in days</li></ul><h3>Integrated pest management (IPM)</h3><ol><li>Prevent — resistant varieties, crop rotation, clean seed</li><li>Monitor — walk the field weekly</li><li>Act early — hand-pick, spray only if threshold is passed</li><li>Rotate chemicals — prevents resistance</li></ol>"
                   }
                 ]
               },
@@ -105,19 +105,19 @@
                         "q": "Small purple-pink flowers growing among your maize, stunting it. What is it?",
                         "o": ["Wildflower", "Striga (witchweed)", "A good sign", "Fertilizer deficiency"],
                         "c": 1,
-                        "f": "Striga attaches to cereal roots and drains nutrients. Hand-pull before flowering."
+                        "f": "Striga attaches to cereal roots and drains nutrients."
                       },
                       {
                         "q": "Tomato leaves have dark spots that spread rapidly and kill the plant in a week. What is it?",
                         "o": ["Sunburn", "Late blight", "Too much water", "Insects"],
                         "c": 1,
-                        "f": "Rapid dark spots = blight. Remove affected plants immediately and apply fungicide."
+                        "f": "Rapid dark spots = blight. Remove affected plants immediately."
                       }
                     ]
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       },
@@ -137,7 +137,7 @@
                     "id": "l-drone-intro",
                     "type": "lesson",
                     "title": "What drones do for agriculture",
-                    "content": "<h3>Monitoring</h3><p>Multispectral cameras on drones reveal crop stress days before the human eye can see it. Maps show exactly which parts of a field need attention.</p><h3>Spraying</h3><p>Spray drones cover a hectare in minutes with far less chemical than manual spraying — a huge saving on inputs and health risk.</p><h3>Cost and licensing</h3><p>A basic mapping drone costs 300,000-800,000 Le. Spray drones cost much more. In most West African countries you need to register the drone and hold a licence for commercial use.</p><p>You don't need to own a drone to be an advisor. Renting or partnering with a drone operator is normal.</p>"
+                    "content": "<h3>Monitoring</h3><p>Multispectral cameras on drones reveal crop stress days before the human eye can see it.</p><h3>Spraying</h3><p>Spray drones cover a hectare in minutes with far less chemical than manual spraying — a huge saving on inputs and health risk.</p><h3>Cost and licensing</h3><p>A basic mapping drone costs 300,000-800,000 Le. In most West African countries you need to register the drone and hold a licence for commercial use.</p><p>You don't need to own a drone to be an advisor. Renting or partnering with a drone operator is normal.</p>"
                   }
                 ]
               },
@@ -148,20 +148,20 @@
                     "type": "scenario",
                     "title": "Advise on a drone service",
                     "prompt": "A cooperative of 30 farmers wants to know if drone spraying is worth it. Each farm is 1-2 hectares. Describe what you'd advise them and how you'd approach the decision.",
-                    "context": "Technology adoption depends on economics, not novelty. Real advice weighs cost against benefit.",
+                    "context": "Technology adoption depends on economics, not novelty.",
                     "placeholder": "Analysis:\nRecommendation:",
                     "rubric": [
                       "Calculates labour cost saved per hectare",
                       "Calculates chemical savings (drones use 30-50% less)",
                       "Compares to manual or backpack sprayer cost",
-                      "Considers whether one shared drone service for all 30 farms makes sense",
+                      "Considers whether one shared drone service makes sense",
                       "Checks drone regulations in the country",
                       "Recommends based on numbers, not enthusiasm"
                     ]
                   }
                 ]
               }
-            ]
+            }
           },
           {
             "id": "record-keeping",
@@ -174,7 +174,7 @@
                     "id": "l-records-intro",
                     "type": "lesson",
                     "title": "What farmers should record",
-                    "content": "<h3>Every season</h3><ul><li>Planting date and variety</li><li>Inputs: seed, fertilizer, pesticide, amounts and costs</li><li>Labour hours and wages</li><li>Weather notes</li><li>Pest and disease events</li><li>Harvest date, quantity, and price</li></ul><h3>Why it matters</h3><p>After three seasons of records a farmer knows:</p><ul><li>Which variety performs best on their land</li><li>Whether fertilizer pays for itself</li><li>Which month yields highest price</li></ul><p>Data turns experience into knowledge.</p>"
+                    "content": "<h3>Every season</h3><ul><li>Planting date and variety</li><li>Inputs: seed, fertilizer, pesticide, amounts and costs</li><li>Labour hours and wages</li><li>Weather notes</li><li>Pest and disease events</li><li>Harvest date, quantity, and price</li></ul><h3>Why it matters</h3><p>After three seasons of records a farmer knows:</p><ul><li>Which variety performs best on their land</li><li>Whether fertilizer pays for itself</li><li>Which month yields highest price</li></ul>"
                   }
                 ]
               },
@@ -189,25 +189,25 @@
                         "q": "A farmer says they can't read or write. How do they keep records?",
                         "o": ["They can't", "Voice memos on a phone, or a family member helps", "Only numbers matter", "Skip records"],
                         "c": 1,
-                        "f": "Voice notes on any phone, a literate family member, or pictorial records all work. Records aren't only for the literate."
+                        "f": "Voice notes, a literate family member, or pictorial records all work."
                       },
                       {
                         "q": "You're advising a farmer who has 3 years of records. What's the most valuable thing they can do?",
                         "o": ["Throw them out", "Compare yield and cost across seasons to find what works", "Start a new format", "Give them to the government"],
                         "c": 1,
-                        "f": "Comparing seasons reveals what works. This is the payoff of record keeping."
+                        "f": "Comparing seasons reveals what works."
                       },
                       {
                         "q": "When should a farmer record the labour cost of weeding?",
                         "o": ["At the end of the season", "Immediately after the labour happens", "Only if hired labour", "Never"],
                         "c": 1,
-                        "f": "Same-day recording. Memory fades and estimates drift."
+                        "f": "Same-day recording. Memory fades."
                       }
                     ]
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       },
@@ -242,25 +242,25 @@
                         "q": "A farmer says \"my grandfather farmed this way, it works\". What do you do?",
                         "o": ["Argue with them", "Acknowledge their knowledge and propose a small trial on part of the field", "Give up", "Report them"],
                         "c": 1,
-                        "f": "Respect tradition, test change. A small side-by-side trial does the arguing for you."
+                        "f": "Respect tradition, test change."
                       },
                       {
                         "q": "You've recommended a new variety. The farmer is hesitant about cost. What's your approach?",
                         "o": ["Insist", "Show the math: cost of seed vs expected yield", "Walk away", "Give them the seed for free"],
                         "c": 1,
-                        "f": "Numbers convince. Show yield per hectare, price per kg, and total return."
+                        "f": "Numbers convince."
                       },
                       {
                         "q": "A female farmer says men in the cooperative won't listen to her. What do you do?",
                         "o": ["Ignore it", "Ensure her trial plots are visible and her results get equal attention", "Only work with men", "Report to authorities"],
                         "c": 1,
-                        "f": "Visible results from her plots change minds. Extension is not neutral — actively amplify women's successes."
+                        "f": "Visible results from her plots change minds."
                       }
                     ]
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       },
@@ -304,7 +304,7 @@
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       },
@@ -324,7 +324,7 @@
                     "id": "l-report-intro",
                     "type": "lesson",
                     "title": "Structure of a good report",
-                    "content": "<h3>Standard structure</h3><ol><li><strong>Executive summary</strong> — the main finding in 3 sentences</li><li><strong>Background</strong> — what was assessed and why</li><li><strong>Method</strong> — how data was collected</li><li><strong>Findings</strong> — with charts and numbers</li><li><strong>Recommendations</strong> — specific, actionable</li><li><strong>Appendix</strong> — raw data, photos</li></ol><p>Most people only read the executive summary and the recommendations. Write them first, and write them well.</p>"
+                    "content": "<h3>Standard structure</h3><ol><li><strong>Executive summary</strong> — the main finding in 3 sentences</li><li><strong>Background</strong> — what was assessed and why</li><li><strong>Method</strong> — how data was collected</li><li><strong>Findings</strong> — with charts and numbers</li><li><strong>Recommendations</strong> — specific, actionable</li><li><strong>Appendix</strong> — raw data, photos</li></ol><p>Most people only read the executive summary and the recommendations.</p>"
                   }
                 ]
               },
@@ -334,7 +334,7 @@
                     "id": "p-report-portfolio",
                     "type": "portfolio",
                     "title": "Write a real field report",
-                    "prompt": "Visit a real farm or use a simulated case. Produce a one-page report: findings and recommendations. It should be something the farmer or their cooperative can actually use.",
+                    "prompt": "Visit a real farm or use a simulated case. Produce a one-page report: findings and recommendations.",
                     "steps": [
                       "Collect basic data (yield, costs, problems)",
                       "Identify the top three issues",
@@ -345,7 +345,7 @@
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       }
