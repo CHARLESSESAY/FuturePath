@@ -1,0 +1,320 @@
+{
+  "plumber": {
+    "intro": "Learn plumbing from pipework to water systems. Install, repair, and maintain the systems that bring clean water into buildings and take waste out.",
+    "skillDomains": [
+      {
+        "id": "pipework",
+        "name": "Pipework",
+        "description": "Cut, join, and route pipes for water supply and drainage.",
+        "skills": [
+          {
+            "id": "pipe-materials",
+            "name": "Pipe Materials",
+            "description": "Know which pipe for which job.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-pipe-intro",
+                    "type": "lesson",
+                    "title": "The pipes you'll work with",
+                    "content": "<h3>PVC (polyvinyl chloride)</h3><p>Rigid plastic. Cheap, easy to work with, chemical resistant. Common for drainage and cold water supply.</p><h3>PPR (polypropylene random copolymer)</h3><p>Heat-resistant plastic. Used for hot water supply. Joined by heat fusion.</p><h3>Copper</h3><p>Traditional, durable, expensive. Excellent for hot and cold water. Requires soldering or compression fittings.</p><h3>Galvanised steel</h3><p>Old installations. Rusts from inside out. Being replaced by plastics.</p><h3>PEX</h3><p>Flexible plastic. Growing in popularity. Easy to route around obstacles.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-pipe-choice",
+                    "type": "drill",
+                    "title": "Choose the right pipe",
+                    "steps": [
+                      {
+                        "q": "You're installing a hot water line from the heater to the shower. Which pipe?",
+                        "o": ["Standard PVC", "PPR or copper", "Galvanised steel", "Garden hose"],
+                        "c": 1,
+                        "f": "Hot water requires heat-resistant material. Standard PVC softens and fails."
+                      },
+                      {
+                        "q": "You're running a drain line under a house. Which pipe?",
+                        "o": ["PVC (drain grade)", "Copper", "PEX", "Galvanised steel"],
+                        "c": 0,
+                        "f": "PVC is the standard for drainage — cheap and durable for non-pressurised flow."
+                      },
+                      {
+                        "q": "A client's old house has rusty water from the taps. Likely pipe material?",
+                        "o": ["Copper", "PVC", "Galvanised steel", "PEX"],
+                        "c": 2,
+                        "f": "Galvanised steel rusts internally over decades. Replacement is usually the only fix."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "joints-fittings",
+            "name": "Joints & Fittings",
+            "description": "The connections that hold a water system together.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-joints-intro",
+                    "type": "lesson",
+                    "title": "Joining pipes",
+                    "content": "<h3>PVC joints</h3><p>Solvent cement (glue). Clean both surfaces, apply cement, push together, hold 30 seconds, cure 24 hours before pressure testing.</p><h3>PPR joints</h3><p>Heat fusion. A special tool melts both pipe and fitting, then they're pushed together and cool into a single piece. Strongest plastic joint available.</p><h3>Copper joints</h3><p>Soldered (sweated) or compression fittings. Soldering requires a torch, flux, and skill.</p><h3>Threaded joints</h3><p>Used on galvanised and some brass fittings. Wrap with Teflon tape or hemp before tightening.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-joint-drill",
+                    "type": "drill",
+                    "title": "Joint decisions",
+                    "steps": [
+                      {
+                        "q": "You're gluing two PVC pipes together. How long before pressure testing?",
+                        "o": ["Immediately", "30 minutes", "24 hours", "A week"],
+                        "c": 2,
+                        "f": "Solvent cement needs 24 hours to fully cure before pressure testing."
+                      },
+                      {
+                        "q": "A threaded joint keeps leaking after tightening. What do you do?",
+                        "o": ["Tighten harder", "Remove, re-apply Teflon tape, and re-tighten", "Add glue", "Replace the pipe"],
+                        "c": 1,
+                        "f": "Teflon tape seals the threads. If it leaked, the tape was insufficient or missing."
+                      },
+                      {
+                        "q": "Which joint is strongest for hot water?",
+                        "o": ["Compression", "Heat-fused PPR", "Threaded", "Push-fit"],
+                        "c": 1,
+                        "f": "Heat fusion creates a single piece of material. No seals to fail."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "p-joint-samples",
+                    "type": "portfolio",
+                    "title": "Build a joint sample board",
+                    "prompt": "Create physical samples of at least 5 different pipe joints (PVC glued, PPR fused, copper soldered, threaded, compression). Mount them on a board with labels.",
+                    "steps": [
+                      "Cut pipe sections for each joint type",
+                      "Make the joint correctly",
+                      "Pressure test if possible",
+                      "Mount on a board with the joint name and pipe material",
+                      "Photograph for your portfolio"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "water-systems",
+        "name": "Water Systems",
+        "description": "The bigger picture — supply, drainage, and pressure.",
+        "skills": [
+          {
+            "id": "supply-systems",
+            "name": "Supply Systems",
+            "description": "Getting water from the source to the tap.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-supply-intro",
+                    "type": "lesson",
+                    "title": "How water gets to a tap",
+                    "content": "<h3>The supply chain</h3><ol><li><strong>Source</strong> — municipal main, borehole, tank, or well</li><li><strong>Storage</strong> — tank, overhead tank, or cistern</li><li><strong>Pump</strong> — moves water if gravity isn't enough</li><li><strong>Distribution</strong> — pipes to each tap</li><li><strong>Pressure</strong> — provided by gravity (tank height) or a booster pump</li></ol><h3>Rule of thumb</h3><p>Water pressure from gravity equals 0.1 bar per metre of height. A tank 10m above a tap provides 1 bar — adequate for household use. A tank on the ground needs a pump.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-supply-drill",
+                    "type": "drill",
+                    "title": "Supply system decisions",
+                    "steps": [
+                      {
+                        "q": "A client wants water to flow from an overhead tank to a ground-floor tap. Tank is 8m above the tap. Will it work?",
+                        "o": ["No, need a pump", "Yes, adequate pressure for household use", "Maybe", "Only if the pipe is thin"],
+                        "c": 1,
+                        "f": "8m of head ≈ 0.8 bar. Enough for taps and showers."
+                      },
+                      {
+                        "q": "Water pressure is weak at the top floor of a 3-story building. What do you check?",
+                        "o": ["The tap", "Tank height and pipe sizing", "The pump filter", "Both B and C"],
+                        "c": 3,
+                        "f": "Check if the tank is high enough AND whether pipes to the top floor are adequately sized."
+                      },
+                      {
+                        "q": "Which is more reliable for a borehole system: gravity tank or pressure tank?",
+                        "o": ["Gravity tank (simpler, no power needed for delivery)", "Pressure tank (needs pump)", "Same reliability", "Neither"],
+                        "c": 0,
+                        "f": "Gravity works even when power is out. Pressure tanks depend on electricity."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "drainage",
+            "name": "Drainage",
+            "description": "Removing waste water safely.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-drainage-intro",
+                    "type": "lesson",
+                    "title": "Drainage principles",
+                    "content": "<h3>Gravity does the work</h3><p>Drainage relies on slope. Water flows downhill. Fall for standard drainpipes: 1:60 to 1:80 (1cm drop per 60-80cm of pipe).</p><h3>Ventilation</h3><p>Drains need air to flow properly. Every drainage system needs a vent pipe running up to the roof (or a one-way air admittance valve). Without it, water in the trap gets sucked out and sewer gases enter the house.</p><h3>Traps</h3><p>A U-bend (trap) under every fixture holds a small amount of water that seals against sewer gases. Never install a fixture without a trap.</p><h3>Access</h3><p>Every drainage system needs a cleanout point. If it never blocks, you don't need one. It always blocks eventually.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-drainage-drill",
+                    "type": "drill",
+                    "title": "Drainage decisions",
+                    "steps": [
+                      {
+                        "q": "You're installing a drain for a kitchen sink. What slope is correct?",
+                        "o": ["Flat", "1:60 to 1:80 (gentle slope)", "Steep 45 degrees", "Doesn't matter"],
+                        "c": 1,
+                        "f": "Gentle slope lets solids travel with water. Steep slopes leave solids behind."
+                      },
+                      {
+                        "q": "A client complains of bad sewer smell in the bathroom. What's the first thing to check?",
+                        "o": ["The toilet", "The trap under the sink — it may be dry or missing", "The wall", "The ceiling"],
+                        "c": 1,
+                        "f": "Dry or missing traps let sewer gas in. Fill the trap or install one."
+                      },
+                      {
+                        "q": "A drain line has no vent. What problem does this cause?",
+                        "o": ["No problem", "Slow drainage and sewer smell (traps get sucked dry)", "Leaks", "Higher water bill"],
+                        "c": 1,
+                        "f": "Without venting, water in the trap gets siphoned out. Install a vent or air admittance valve."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "fault-finding",
+        "name": "Fault Finding",
+        "description": "Diagnose leaks, blockages, and low pressure.",
+        "skills": [
+          {
+            "id": "leak-detection",
+            "name": "Leak Detection",
+            "description": "Find the leak without pulling the whole house apart.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-leak-intro",
+                    "type": "lesson",
+                    "title": "Types of leaks",
+                    "content": "<h3>Visible leaks</h3><p>Water dripping from a joint or fitting. Easy to find and fix.</p><h3>Hidden leaks</h3><p>Inside walls, under floors, or underground. Signs include:</p><ul><li>Water bill higher than normal</li><li>Damp patches on walls or floors</li><li>Musty smell</li><li>Sound of running water with all taps closed</li><li>Mould growth</li></ul><h3>The meter test</h3><p>Turn off all taps and appliances. Check the water meter. If it's still moving, you have a leak.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-leak-drill",
+                    "type": "drill",
+                    "title": "Leak diagnostics",
+                    "steps": [
+                      {
+                        "q": "Water bill doubles but no visible leak. What do you do?",
+                        "o": ["Nothing", "Meter test with all taps off, then check hidden areas", "Change the meter", "Wait"],
+                        "c": 1,
+                        "f": "The meter test confirms a leak exists. Then trace it."
+                      },
+                      {
+                        "q": "A damp patch grows on a ceiling below a bathroom. Where's the leak?",
+                        "o": ["The ceiling", "Above — check the bathroom floor, toilet seal, or drain", "The walls", "Outside"],
+                        "c": 1,
+                        "f": "Water travels down. The source is above the damp patch."
+                      },
+                      {
+                        "q": "You hear running water with all taps closed. What does this mean?",
+                        "o": ["Normal", "A leak somewhere in the system", "The water company", "The hot water heater"],
+                        "c": 1,
+                        "f": "Running water with no taps open is either a leak or a running toilet fill valve. Check both."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "customer-work",
+        "name": "Customer Work",
+        "description": "Turn skill into income.",
+        "skills": [
+          {
+            "id": "estimating",
+            "name": "Estimating",
+            "description": "Quote a job correctly.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-estimating-intro",
+                    "type": "lesson",
+                    "title": "What a plumbing quote covers",
+                    "content": "<ol><li><strong>Materials</strong> — pipes, fittings, seals, fixtures</li><li><strong>Labour</strong> — hours × your rate</li><li><strong>Overhead</strong> — transport, tool wear, insurance</li><li><strong>Contingency</strong> — 10-15% for surprises behind walls</li><li><strong>Margin</strong> — 25-40%</li></ol><h3>The wall problem</h3><p>You don't know what's behind a wall until you open it. Always warn the client that final cost may increase if hidden conditions are worse than expected. Get written approval before proceeding.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "s-quote-scenario",
+                    "type": "scenario",
+                    "title": "Quote a bathroom re-pipe",
+                    "prompt": "A client wants the supply pipes in a bathroom replaced. Materials: 250,000 Le. Labour: 2 days at 25,000 Le/day. Overhead: 30,000 Le. Contingency: 15%. Margin: 30%. Calculate the quote.",
+                    "context": "Bathroom re-pipes are common jobs. Getting the maths right determines whether you can run a real business.",
+                    "placeholder": "Materials:\nLabour:\nOverhead:\nSubtotal:\nWith contingency:\nWith margin:\nFinal quote:",
+                    "rubric": [
+                      "Materials: 250,000 Le",
+                      "Labour: 2 × 25,000 = 50,000 Le",
+                      "Overhead: 30,000 Le",
+                      "Subtotal: 330,000 Le",
+                      "With 15% contingency: 379,500 Le",
+                      "With 30% margin: 493,350 Le",
+                      "States that hidden conditions may change the price"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
