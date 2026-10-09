@@ -18,7 +18,7 @@
                     "id": "l-dc-intro",
                     "type": "lesson",
                     "title": "What is direct current?",
-                    "content": "<p><strong>Direct current (DC)</strong> flows in one direction, always. Solar panels produce DC. Batteries store DC.</p><p>The grid delivers <strong>alternating current (AC)</strong> — it reverses direction 50 times per second (50 Hz in most of West Africa).</p><p>Your job as a solar technician begins with DC and only converts to AC at the end. Understand DC deeply. It is where most mistakes happen.</p>"
+                    "content": "<p><strong>Direct current (DC)</strong> flows in one direction, always. Solar panels produce DC. Batteries store DC.</p><p>The grid delivers <strong>alternating current (AC)</strong> — it reverses direction 50 times per second (50 Hz in most of West Africa).</p><p>Your job as a solar technician begins with DC and only converts to AC at the end.</p>"
                   }
                 ]
               },
@@ -221,13 +221,13 @@
                         "q": "You need to disconnect a battery terminal. Which order?",
                         "o": ["Positive first, then negative", "Negative first, then positive", "Either order", "Both at once"],
                         "c": 1,
-                        "f": "Negative first when disconnecting. This prevents accidental short circuits."
+                        "f": "Negative first when disconnecting."
                       },
                       {
                         "q": "You smell rotten eggs near the battery bank. What does this mean?",
                         "o": ["Normal for batteries", "Hydrogen sulphide — ventilation failure, evacuate immediately", "The battery is fully charged", "Time to water the cells"],
                         "c": 1,
-                        "f": "Rotten egg smell is hydrogen sulphide from overcharging. Ventilate immediately."
+                        "f": "Rotten egg smell is hydrogen sulphide from overcharging."
                       }
                     ]
                   }
@@ -273,7 +273,7 @@
                     "id": "l-load-intro",
                     "type": "lesson",
                     "title": "Start with the load, always",
-                    "content": "<p>You cannot size a system until you know what it must power. This is the <strong>load audit</strong>.</p><p>For every appliance the client wants to run, record:</p><ul><li>Power draw in watts (from the label)</li><li>Hours per day it runs</li><li>Whether it runs during daylight or at night</li></ul><p>Multiply watts × hours to get watt-hours (Wh) per day.</p><p>Total all appliances. That number is your energy target.</p>"
+                    "content": "<p>You cannot size a system until you know what it must power. This is the <strong>load audit</strong>.</p><p>For every appliance the client wants to run, record:</p><ul><li>Power draw in watts (from the label)</li><li>Hours per day it runs</li><li>Whether it runs during daylight or at night</li></ul><p>Multiply watts × hours to get watt-hours (Wh) per day.</p>"
                   }
                 ]
               },
@@ -489,7 +489,7 @@
                   }
                 ]
               }
-            ]
+            }
           },
           {
             "id": "wiring-connections",
