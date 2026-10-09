@@ -18,9 +18,54 @@
                     "id": "l-hair-intro",
                     "type": "lesson",
                     "title": "What to check",
-                    "content": "<h3>Before any cut</h3><ul><li><strong>Hair type</strong> — fine, medium, coarse; straight, wavy, curly, kinky</li><li><strong>Density</strong> — how much hair on the head</li><li><strong>Growth pattern</strong> — cowlicks, whirls, direction of growth</li><li><strong>Hairline</strong> — natural shape, receding, or thinning</li><li><strong>Scalp</strong> — any cuts, infections, or conditions</li></ul><h3>Why it matters</h3><p>Two clients can ask for the same cut. On one it looks great; on the other it looks wrong. The difference is hair type and growth pattern.</p>"
+                    "content": "<h3>Before any cut</h3><ul><li><strong>Hair type</strong> — fine, medium, coarse; straight, wavy, curly, kinky</li><li><strong>Density</strong> — how much hair on the head</li><li><strong>Growth pattern</strong> — cowlicks, whirls, direction of growth</li><li><strong>Hairline</strong> — natural shape, receding, or thinning</li><li><strong>Scalp</strong> — any cuts, infections, or conditions</li></ul><h3>Why it matters</h3><p>Two clients can ask for the same cut. On one it looks great; on the other it looks wrong. The difference is hair type and growth pattern.</p>",
+                    "visuals": [
+                      {
+                        "visualId": "visual-l-hair-intro",
+                        "type": "annotatedPhoto",
+                        "title": "Client assessment visual guide",
+                        "description": "A labelled consultation board showing hair texture, density, growth direction, hairline, scalp observation, and the questions to ask before cutting.",
+                        "learningPurpose": "Make the skill or concept visible before the learner attempts it.",
+                        "altText": "A labelled consultation board showing hair texture, density, growth direction, hairline, scalp observation, and the questions to ask before cutting.",
+                        "caption": "Study the labels and compare each stage before beginning the activity.",
+                        "sourceType": "placeholderToCreate",
+                        "assetStatus": "needsCreation"
+                      }
+                    ],
+                    "teachingNotes": {
+                      "diplomaDepth": "Explain the principles, reasons for each decision, common errors, corrective actions, and professional standards—not only the steps.",
+                      "learnerTask": "Describe the visual, identify the key steps, and explain why each step matters.",
+                      "instructorCheck": "Ask the learner to explain the technique before demonstrating it."
+                    },
+                    "learningObjectives": [
+                      "Explain the key principles of what to check.",
+                      "Identify the correct sequence, tools, safety checks, and quality standards.",
+                      "Apply the learning in a realistic barbering situation."
+                    ],
+                    "practicalEvidence": {
+                      "required": true,
+                      "evidenceTypes": [
+                        "completedChecklist",
+                        "learnerExplanation",
+                        "photoOrVideoWithConsent"
+                      ],
+                      "assessmentCriteria": [
+                        "Preparation and tool selection",
+                        "Correct sequence and technique",
+                        "Hygiene and client safety",
+                        "Quality of result",
+                        "Professional communication"
+                      ]
+                    }
                   }
-                ]
+                ],
+                "levelTitle": "Foundation",
+                "competencyGate": {
+                  "passRequired": true,
+                  "knowledgePassPercent": 80,
+                  "safetyCriticalItemsMustAllPass": true,
+                  "instructorSignOffRequiredForLiveModel": true
+                }
               },
               "1": {
                 "modules": [
@@ -28,9 +73,54 @@
                     "id": "l-consult-questions",
                     "type": "lesson",
                     "title": "The consultation conversation",
-                    "content": "<h3>Five questions</h3><ol><li>What style do you want? (Ask for photos)</li><li>How do you usually wear your hair day to day?</li><li>When was your last cut?</li><li>Any areas you want to keep longer or shorter?</li><li>Any irritation, sensitivity, or allergy?</li></ol><h3>The mirror test</h3><p>Before cutting, use a mirror to show the client the current shape. Point out areas that will need adjustment. Agree on what the finished cut will look like. This prevents surprises.</p>"
+                    "content": "<h3>Five questions</h3><ol><li>What style do you want? (Ask for photos)</li><li>How do you usually wear your hair day to day?</li><li>When was your last cut?</li><li>Any areas you want to keep longer or shorter?</li><li>Any irritation, sensitivity, or allergy?</li></ol><h3>The mirror test</h3><p>Before cutting, use a mirror to show the client the current shape. Point out areas that will need adjustment. Agree on what the finished cut will look like. This prevents surprises.</p>",
+                    "visuals": [
+                      {
+                        "visualId": "visual-l-consult-questions",
+                        "type": "annotatedPhoto",
+                        "title": "Client assessment visual guide",
+                        "description": "A labelled consultation board showing hair texture, density, growth direction, hairline, scalp observation, and the questions to ask before cutting.",
+                        "learningPurpose": "Make the skill or concept visible before the learner attempts it.",
+                        "altText": "A labelled consultation board showing hair texture, density, growth direction, hairline, scalp observation, and the questions to ask before cutting.",
+                        "caption": "Study the labels and compare each stage before beginning the activity.",
+                        "sourceType": "placeholderToCreate",
+                        "assetStatus": "needsCreation"
+                      }
+                    ],
+                    "teachingNotes": {
+                      "diplomaDepth": "Explain the principles, reasons for each decision, common errors, corrective actions, and professional standards—not only the steps.",
+                      "learnerTask": "Describe the visual, identify the key steps, and explain why each step matters.",
+                      "instructorCheck": "Ask the learner to explain the technique before demonstrating it."
+                    },
+                    "learningObjectives": [
+                      "Explain the key principles of the consultation conversation.",
+                      "Identify the correct sequence, tools, safety checks, and quality standards.",
+                      "Apply the learning in a realistic barbering situation."
+                    ],
+                    "practicalEvidence": {
+                      "required": true,
+                      "evidenceTypes": [
+                        "completedChecklist",
+                        "learnerExplanation",
+                        "photoOrVideoWithConsent"
+                      ],
+                      "assessmentCriteria": [
+                        "Preparation and tool selection",
+                        "Correct sequence and technique",
+                        "Hygiene and client safety",
+                        "Quality of result",
+                        "Professional communication"
+                      ]
+                    }
                   }
-                ]
+                ],
+                "levelTitle": "Intermediate",
+                "competencyGate": {
+                  "passRequired": true,
+                  "knowledgePassPercent": 80,
+                  "safetyCriticalItemsMustAllPass": true,
+                  "instructorSignOffRequiredForLiveModel": true
+                }
               },
               "2": {
                 "modules": [
@@ -42,27 +132,165 @@
                     "steps": [
                       {
                         "q": "A client brings a photo of a hairstyle but their hair is much thinner than the model's. What do you do?",
-                        "o": ["Cut it exactly like the photo", "Explain the difference and offer an adjusted version", "Refuse service", "Cut it anyway"],
+                        "o": [
+                          "Cut it exactly like the photo",
+                          "Explain the difference and offer an adjusted version",
+                          "Refuse service",
+                          "Cut it anyway"
+                        ],
                         "c": 1,
                         "f": "Match the style to the actual hair."
                       },
                       {
                         "q": "A client has a visible scalp condition (flaking, redness). What do you do?",
-                        "o": ["Cut anyway", "Refer to a doctor before cutting", "Cut over it", "Ignore"],
+                        "o": [
+                          "Cut anyway",
+                          "Refer to a doctor before cutting",
+                          "Cut over it",
+                          "Ignore"
+                        ],
                         "c": 1,
                         "f": "Don't work on irritated or infected scalp."
                       },
                       {
                         "q": "A client isn't sure what they want. What's your approach?",
-                        "o": ["Pick something", "Show 2-3 options based on their hair and face shape, let them choose", "Ask them to come back", "Copy the last client's cut"],
+                        "o": [
+                          "Pick something",
+                          "Show 2-3 options based on their hair and face shape, let them choose",
+                          "Ask them to come back",
+                          "Copy the last client's cut"
+                        ],
                         "c": 1,
                         "f": "Guide with options."
                       }
-                    ]
+                    ],
+                    "visuals": [
+                      {
+                        "visualId": "visual-d-consult-drill",
+                        "type": "annotatedPhoto",
+                        "title": "Client assessment visual guide",
+                        "description": "A labelled consultation board showing hair texture, density, growth direction, hairline, scalp observation, and the questions to ask before cutting.",
+                        "learningPurpose": "Make the skill or concept visible before the learner attempts it.",
+                        "altText": "A labelled consultation board showing hair texture, density, growth direction, hairline, scalp observation, and the questions to ask before cutting.",
+                        "caption": "Study the labels and compare each stage before beginning the activity.",
+                        "sourceType": "placeholderToCreate",
+                        "assetStatus": "needsCreation"
+                      }
+                    ],
+                    "teachingNotes": {
+                      "diplomaDepth": "Explain the principles, reasons for each decision, common errors, corrective actions, and professional standards—not only the steps.",
+                      "learnerTask": "Describe the visual, identify the key steps, and explain why each step matters.",
+                      "instructorCheck": "Ask the learner to explain the technique before demonstrating it."
+                    },
+                    "learningObjectives": [
+                      "Explain the key principles of consultation decisions.",
+                      "Identify the correct sequence, tools, safety checks, and quality standards.",
+                      "Apply the learning in a realistic barbering situation."
+                    ],
+                    "practicalEvidence": {
+                      "required": true,
+                      "evidenceTypes": [
+                        "completedChecklist",
+                        "learnerExplanation",
+                        "photoOrVideoWithConsent"
+                      ],
+                      "assessmentCriteria": [
+                        "Preparation and tool selection",
+                        "Correct sequence and technique",
+                        "Hygiene and client safety",
+                        "Quality of result",
+                        "Professional communication"
+                      ]
+                    }
                   }
-                ]
+                ],
+                "levelTitle": "Advanced Application",
+                "competencyGate": {
+                  "passRequired": true,
+                  "knowledgePassPercent": 80,
+                  "safetyCriticalItemsMustAllPass": true,
+                  "instructorSignOffRequiredForLiveModel": true
+                }
               }
             }
+          }
+        ],
+        "diplomaPracticals": [
+          {
+            "id": "p-consultation-demonstration",
+            "type": "practical",
+            "title": "Consultation: Demonstration and supervised practice",
+            "durationMinutes": 90,
+            "prompt": "Demonstrate the core techniques from consultation using a mannequin or training head first. Progress to a live model only with instructor approval and appropriate consent.",
+            "steps": [
+              {
+                "step": 1,
+                "title": "Prepare",
+                "instruction": "Set up the station, check tools, confirm hygiene supplies, and explain the task.",
+                "visual": "Illustrated workstation setup checklist"
+              },
+              {
+                "step": 2,
+                "title": "Demonstrate",
+                "instruction": "Instructor demonstrates the technique slowly, naming each action and decision.",
+                "visual": "Numbered step-by-step demonstration"
+              },
+              {
+                "step": 3,
+                "title": "Practise",
+                "instruction": "Learner repeats the technique in sections and checks progress at each stage.",
+                "visual": "Annotated practice-zone diagram"
+              },
+              {
+                "step": 4,
+                "title": "Inspect",
+                "instruction": "Learner checks symmetry, blending, cleanliness, client comfort, and finish as relevant.",
+                "visual": "Quality-control checklist"
+              },
+              {
+                "step": 5,
+                "title": "Reflect",
+                "instruction": "Learner records what went well, what needs correction, and the next practice goal.",
+                "visual": "Reflection card"
+              }
+            ],
+            "visuals": [
+              {
+                "visualId": "visual-p-consultation",
+                "type": "stepByStepIllustration",
+                "title": "Full practical walkthrough: Consultation",
+                "description": "Five-stage visual practical walkthrough for consultation, including preparation, demonstration, practice, quality checks, and reflection.",
+                "learningPurpose": "Let the learner see the full practical workflow before performing it.",
+                "altText": "Five illustrated stages of a supervised consultation practical.",
+                "caption": "Follow the stages in order and ask the instructor to verify each safety-critical step.",
+                "sourceType": "placeholderToCreate",
+                "assetStatus": "needsCreation"
+              }
+            ],
+            "rubric": [
+              {
+                "criterion": "Preparation and professional setup",
+                "weightPercent": 15
+              },
+              {
+                "criterion": "Correct technique and sequence",
+                "weightPercent": 30
+              },
+              {
+                "criterion": "Safety and hygiene",
+                "weightPercent": 25
+              },
+              {
+                "criterion": "Quality and consistency",
+                "weightPercent": 20
+              },
+              {
+                "criterion": "Communication and reflection",
+                "weightPercent": 10
+              }
+            ],
+            "passingScore": 80,
+            "instructorSignOffRequired": true
           }
         ]
       },
@@ -82,9 +310,54 @@
                     "id": "l-clipper-intro",
                     "type": "lesson",
                     "title": "Clipper fundamentals",
-                    "content": "<h3>The clipper</h3><p>A motorised cutting tool with adjustable blades or interchangeable guards. Learn the size markings — #1 is very short (3mm), #4 is medium (13mm).</p><h3>The lever</h3><p>Adjusts blade position for half-grades (e.g., #2 with lever opened = between #2 and #3).</p><h3>The technique</h3><ol><li>Start with a longer guard than you think you need</li><li>Cut with the direction of hair growth for even length</li><li>Cut against the growth to shorten</li><li>Work in sections for consistency</li><li>Overlap passes to avoid lines</li></ol>"
+                    "content": "<h3>The clipper</h3><p>A motorised cutting tool with adjustable blades or interchangeable guards. Learn the size markings — #1 is very short (3mm), #4 is medium (13mm).</p><h3>The lever</h3><p>Adjusts blade position for half-grades (e.g., #2 with lever opened = between #2 and #3).</p><h3>The technique</h3><ol><li>Start with a longer guard than you think you need</li><li>Cut with the direction of hair growth for even length</li><li>Cut against the growth to shorten</li><li>Work in sections for consistency</li><li>Overlap passes to avoid lines</li></ol>",
+                    "visuals": [
+                      {
+                        "visualId": "visual-l-clipper-intro",
+                        "type": "stepByStepIllustration",
+                        "title": "Clipper movement and blending zones",
+                        "description": "A head diagram with numbered cutting zones, guard/lever stages, clipper angle, flick-out motion, and checkpoints for checking visible lines.",
+                        "learningPurpose": "Make the skill or concept visible before the learner attempts it.",
+                        "altText": "A head diagram with numbered cutting zones, guard/lever stages, clipper angle, flick-out motion, and checkpoints for checking visible lines.",
+                        "caption": "Study the labels and compare each stage before beginning the activity.",
+                        "sourceType": "placeholderToCreate",
+                        "assetStatus": "needsCreation"
+                      }
+                    ],
+                    "teachingNotes": {
+                      "diplomaDepth": "Explain the principles, reasons for each decision, common errors, corrective actions, and professional standards—not only the steps.",
+                      "learnerTask": "Describe the visual, identify the key steps, and explain why each step matters.",
+                      "instructorCheck": "Ask the learner to explain the technique before demonstrating it."
+                    },
+                    "learningObjectives": [
+                      "Explain the key principles of clipper fundamentals.",
+                      "Identify the correct sequence, tools, safety checks, and quality standards.",
+                      "Apply the learning in a realistic barbering situation."
+                    ],
+                    "practicalEvidence": {
+                      "required": true,
+                      "evidenceTypes": [
+                        "completedChecklist",
+                        "learnerExplanation",
+                        "photoOrVideoWithConsent"
+                      ],
+                      "assessmentCriteria": [
+                        "Preparation and tool selection",
+                        "Correct sequence and technique",
+                        "Hygiene and client safety",
+                        "Quality of result",
+                        "Professional communication"
+                      ]
+                    }
                   }
-                ]
+                ],
+                "levelTitle": "Foundation",
+                "competencyGate": {
+                  "passRequired": true,
+                  "knowledgePassPercent": 80,
+                  "safetyCriticalItemsMustAllPass": true,
+                  "instructorSignOffRequiredForLiveModel": true
+                }
               },
               "1": {
                 "modules": [
@@ -92,9 +365,54 @@
                     "id": "l-fade",
                     "type": "lesson",
                     "title": "The fade",
-                    "content": "<h3>What a fade is</h3><p>A gradual transition from very short hair (skin or near-skin) at the bottom to longer hair at the top. There are no visible lines — the transition is smooth.</p><h3>Steps</h3><ol><li>Establish the baseline — where the shortest hair ends and skin begins</li><li>Create the top length first</li><li>Work down in stages — each stage slightly shorter</li><li>Blend between stages using lever technique</li><li>Finish with a razor for the sharpest line</li></ol><h3>Common fades</h3><ul><li><strong>Low fade</strong> — starts low on the head</li><li><strong>Mid fade</strong> — starts at the temple</li><li><strong>High fade</strong> — starts above the temple</li><li><strong>Bald fade</strong> — blends to actual skin</li></ul>"
+                    "content": "<h3>What a fade is</h3><p>A gradual transition from very short hair (skin or near-skin) at the bottom to longer hair at the top. There are no visible lines — the transition is smooth.</p><h3>Steps</h3><ol><li>Establish the baseline — where the shortest hair ends and skin begins</li><li>Create the top length first</li><li>Work down in stages — each stage slightly shorter</li><li>Blend between stages using lever technique</li><li>Finish with a razor for the sharpest line</li></ol><h3>Common fades</h3><ul><li><strong>Low fade</strong> — starts low on the head</li><li><strong>Mid fade</strong> — starts at the temple</li><li><strong>High fade</strong> — starts above the temple</li><li><strong>Bald fade</strong> — blends to actual skin</li></ul>",
+                    "visuals": [
+                      {
+                        "visualId": "visual-l-fade",
+                        "type": "stepByStepIllustration",
+                        "title": "Clipper movement and blending zones",
+                        "description": "A head diagram with numbered cutting zones, guard/lever stages, clipper angle, flick-out motion, and checkpoints for checking visible lines.",
+                        "learningPurpose": "Make the skill or concept visible before the learner attempts it.",
+                        "altText": "A head diagram with numbered cutting zones, guard/lever stages, clipper angle, flick-out motion, and checkpoints for checking visible lines.",
+                        "caption": "Study the labels and compare each stage before beginning the activity.",
+                        "sourceType": "placeholderToCreate",
+                        "assetStatus": "needsCreation"
+                      }
+                    ],
+                    "teachingNotes": {
+                      "diplomaDepth": "Explain the principles, reasons for each decision, common errors, corrective actions, and professional standards—not only the steps.",
+                      "learnerTask": "Describe the visual, identify the key steps, and explain why each step matters.",
+                      "instructorCheck": "Ask the learner to explain the technique before demonstrating it."
+                    },
+                    "learningObjectives": [
+                      "Explain the key principles of the fade.",
+                      "Identify the correct sequence, tools, safety checks, and quality standards.",
+                      "Apply the learning in a realistic barbering situation."
+                    ],
+                    "practicalEvidence": {
+                      "required": true,
+                      "evidenceTypes": [
+                        "completedChecklist",
+                        "learnerExplanation",
+                        "photoOrVideoWithConsent"
+                      ],
+                      "assessmentCriteria": [
+                        "Preparation and tool selection",
+                        "Correct sequence and technique",
+                        "Hygiene and client safety",
+                        "Quality of result",
+                        "Professional communication"
+                      ]
+                    }
                   }
-                ]
+                ],
+                "levelTitle": "Intermediate",
+                "competencyGate": {
+                  "passRequired": true,
+                  "knowledgePassPercent": 80,
+                  "safetyCriticalItemsMustAllPass": true,
+                  "instructorSignOffRequiredForLiveModel": true
+                }
               },
               "2": {
                 "modules": [
@@ -105,25 +423,85 @@
                     "steps": [
                       {
                         "q": "You see lines in your fade after cutting. What went wrong?",
-                        "o": ["Wrong guard", "Not enough blending between stages", "Wrong clipper", "Bad hair"],
+                        "o": [
+                          "Wrong guard",
+                          "Not enough blending between stages",
+                          "Wrong clipper",
+                          "Bad hair"
+                        ],
                         "c": 1,
                         "f": "Lines mean the blending steps were skipped or rushed."
                       },
                       {
                         "q": "Which fade is most difficult to execute?",
-                        "o": ["Low fade", "Mid fade", "Bald fade", "High fade"],
+                        "o": [
+                          "Low fade",
+                          "Mid fade",
+                          "Bald fade",
+                          "High fade"
+                        ],
                         "c": 2,
                         "f": "Bald fade requires blending hair to actual skin."
                       },
                       {
                         "q": "A client has a cowlick (whirl) on the crown. How do you handle it?",
-                        "o": ["Cut against it", "Work with the growth pattern, cut slightly longer around it", "Ignore it", "Shave it"],
+                        "o": [
+                          "Cut against it",
+                          "Work with the growth pattern, cut slightly longer around it",
+                          "Ignore it",
+                          "Shave it"
+                        ],
                         "c": 1,
                         "f": "Cowlicks need longer hair or careful blending."
                       }
-                    ]
+                    ],
+                    "visuals": [
+                      {
+                        "visualId": "visual-d-fade-drill",
+                        "type": "stepByStepIllustration",
+                        "title": "Clipper movement and blending zones",
+                        "description": "A head diagram with numbered cutting zones, guard/lever stages, clipper angle, flick-out motion, and checkpoints for checking visible lines.",
+                        "learningPurpose": "Make the skill or concept visible before the learner attempts it.",
+                        "altText": "A head diagram with numbered cutting zones, guard/lever stages, clipper angle, flick-out motion, and checkpoints for checking visible lines.",
+                        "caption": "Study the labels and compare each stage before beginning the activity.",
+                        "sourceType": "placeholderToCreate",
+                        "assetStatus": "needsCreation"
+                      }
+                    ],
+                    "teachingNotes": {
+                      "diplomaDepth": "Explain the principles, reasons for each decision, common errors, corrective actions, and professional standards—not only the steps.",
+                      "learnerTask": "Describe the visual, identify the key steps, and explain why each step matters.",
+                      "instructorCheck": "Ask the learner to explain the technique before demonstrating it."
+                    },
+                    "learningObjectives": [
+                      "Explain the key principles of fade decisions.",
+                      "Identify the correct sequence, tools, safety checks, and quality standards.",
+                      "Apply the learning in a realistic barbering situation."
+                    ],
+                    "practicalEvidence": {
+                      "required": true,
+                      "evidenceTypes": [
+                        "completedChecklist",
+                        "learnerExplanation",
+                        "photoOrVideoWithConsent"
+                      ],
+                      "assessmentCriteria": [
+                        "Preparation and tool selection",
+                        "Correct sequence and technique",
+                        "Hygiene and client safety",
+                        "Quality of result",
+                        "Professional communication"
+                      ]
+                    }
                   }
-                ]
+                ],
+                "levelTitle": "Advanced Application",
+                "competencyGate": {
+                  "passRequired": true,
+                  "knowledgePassPercent": 80,
+                  "safetyCriticalItemsMustAllPass": true,
+                  "instructorSignOffRequiredForLiveModel": true
+                }
               }
             }
           },
@@ -138,9 +516,54 @@
                     "id": "l-line-intro",
                     "type": "lesson",
                     "title": "Lining and edging",
-                    "content": "<p>Lining is the final step of every cut. It's what separates a professional cut from a home cut.</p><h3>Tools</h3><ul><li>Trimmer or liner clipper</li><li>Straight razor</li><li>Shaving brush and cream</li></ul><h3>What to line</h3><ul><li>Forehead hairline</li><li>Temple points</li><li>Around the ears</li><li>Neckline — creates the finished shape</li></ul><h3>Technique</h3><ol><li>Cut the line with the trimmer first</li><li>Follow with the razor for the sharpest edge</li><li>Shave with the grain, then touch up against</li><li>Apply after-shave or balm to soothe</li></ol>"
+                    "content": "<p>Lining is the final step of every cut. It's what separates a professional cut from a home cut.</p><h3>Tools</h3><ul><li>Trimmer or liner clipper</li><li>Straight razor</li><li>Shaving brush and cream</li></ul><h3>What to line</h3><ul><li>Forehead hairline</li><li>Temple points</li><li>Around the ears</li><li>Neckline — creates the finished shape</li></ul><h3>Technique</h3><ol><li>Cut the line with the trimmer first</li><li>Follow with the razor for the sharpest edge</li><li>Shave with the grain, then touch up against</li><li>Apply after-shave or balm to soothe</li></ol>",
+                    "visuals": [
+                      {
+                        "visualId": "visual-l-line-intro",
+                        "type": "stepByStepIllustration",
+                        "title": "Clipper movement and blending zones",
+                        "description": "A head diagram with numbered cutting zones, guard/lever stages, clipper angle, flick-out motion, and checkpoints for checking visible lines.",
+                        "learningPurpose": "Make the skill or concept visible before the learner attempts it.",
+                        "altText": "A head diagram with numbered cutting zones, guard/lever stages, clipper angle, flick-out motion, and checkpoints for checking visible lines.",
+                        "caption": "Study the labels and compare each stage before beginning the activity.",
+                        "sourceType": "placeholderToCreate",
+                        "assetStatus": "needsCreation"
+                      }
+                    ],
+                    "teachingNotes": {
+                      "diplomaDepth": "Explain the principles, reasons for each decision, common errors, corrective actions, and professional standards—not only the steps.",
+                      "learnerTask": "Describe the visual, identify the key steps, and explain why each step matters.",
+                      "instructorCheck": "Ask the learner to explain the technique before demonstrating it."
+                    },
+                    "learningObjectives": [
+                      "Explain the key principles of lining and edging.",
+                      "Identify the correct sequence, tools, safety checks, and quality standards.",
+                      "Apply the learning in a realistic barbering situation."
+                    ],
+                    "practicalEvidence": {
+                      "required": true,
+                      "evidenceTypes": [
+                        "completedChecklist",
+                        "learnerExplanation",
+                        "photoOrVideoWithConsent"
+                      ],
+                      "assessmentCriteria": [
+                        "Preparation and tool selection",
+                        "Correct sequence and technique",
+                        "Hygiene and client safety",
+                        "Quality of result",
+                        "Professional communication"
+                      ]
+                    }
                   }
-                ]
+                ],
+                "levelTitle": "Foundation",
+                "competencyGate": {
+                  "passRequired": true,
+                  "knowledgePassPercent": 80,
+                  "safetyCriticalItemsMustAllPass": true,
+                  "instructorSignOffRequiredForLiveModel": true
+                }
               },
               "1": {
                 "modules": [
@@ -151,27 +574,165 @@
                     "steps": [
                       {
                         "q": "A client has a receding hairline. How do you line it?",
-                        "o": ["Follow the natural line exactly", "Straighten the line to make it look fuller", "Skip the line", "Shave it"],
+                        "o": [
+                          "Follow the natural line exactly",
+                          "Straighten the line to make it look fuller",
+                          "Skip the line",
+                          "Shave it"
+                        ],
                         "c": 1,
                         "f": "A slightly straightened line makes a receding hairline look fuller."
                       },
                       {
                         "q": "The client's skin is irritated after lining. What do you do?",
-                        "o": ["Apply aftershave", "Apply a soothing balm and skip further razor work", "Continue", "Wipe with alcohol"],
+                        "o": [
+                          "Apply aftershave",
+                          "Apply a soothing balm and skip further razor work",
+                          "Continue",
+                          "Wipe with alcohol"
+                        ],
                         "c": 1,
                         "f": "Irritated skin needs soothing, not more trauma."
                       },
                       {
                         "q": "Where should the neckline be?",
-                        "o": ["At the very base of the neck", "Along the natural hairline at the base of the neck", "Straight across", "Whatever the client wants"],
+                        "o": [
+                          "At the very base of the neck",
+                          "Along the natural hairline at the base of the neck",
+                          "Straight across",
+                          "Whatever the client wants"
+                        ],
                         "c": 1,
                         "f": "Follow the natural hairline."
                       }
-                    ]
+                    ],
+                    "visuals": [
+                      {
+                        "visualId": "visual-d-line-drill",
+                        "type": "stepByStepIllustration",
+                        "title": "Clipper movement and blending zones",
+                        "description": "A head diagram with numbered cutting zones, guard/lever stages, clipper angle, flick-out motion, and checkpoints for checking visible lines.",
+                        "learningPurpose": "Make the skill or concept visible before the learner attempts it.",
+                        "altText": "A head diagram with numbered cutting zones, guard/lever stages, clipper angle, flick-out motion, and checkpoints for checking visible lines.",
+                        "caption": "Study the labels and compare each stage before beginning the activity.",
+                        "sourceType": "placeholderToCreate",
+                        "assetStatus": "needsCreation"
+                      }
+                    ],
+                    "teachingNotes": {
+                      "diplomaDepth": "Explain the principles, reasons for each decision, common errors, corrective actions, and professional standards—not only the steps.",
+                      "learnerTask": "Describe the visual, identify the key steps, and explain why each step matters.",
+                      "instructorCheck": "Ask the learner to explain the technique before demonstrating it."
+                    },
+                    "learningObjectives": [
+                      "Explain the key principles of line decisions.",
+                      "Identify the correct sequence, tools, safety checks, and quality standards.",
+                      "Apply the learning in a realistic barbering situation."
+                    ],
+                    "practicalEvidence": {
+                      "required": true,
+                      "evidenceTypes": [
+                        "completedChecklist",
+                        "learnerExplanation",
+                        "photoOrVideoWithConsent"
+                      ],
+                      "assessmentCriteria": [
+                        "Preparation and tool selection",
+                        "Correct sequence and technique",
+                        "Hygiene and client safety",
+                        "Quality of result",
+                        "Professional communication"
+                      ]
+                    }
                   }
-                ]
+                ],
+                "levelTitle": "Intermediate",
+                "competencyGate": {
+                  "passRequired": true,
+                  "knowledgePassPercent": 80,
+                  "safetyCriticalItemsMustAllPass": true,
+                  "instructorSignOffRequiredForLiveModel": true
+                }
               }
             }
+          }
+        ],
+        "diplomaPracticals": [
+          {
+            "id": "p-cutting-demonstration",
+            "type": "practical",
+            "title": "Cutting: Demonstration and supervised practice",
+            "durationMinutes": 90,
+            "prompt": "Demonstrate the core techniques from cutting using a mannequin or training head first. Progress to a live model only with instructor approval and appropriate consent.",
+            "steps": [
+              {
+                "step": 1,
+                "title": "Prepare",
+                "instruction": "Set up the station, check tools, confirm hygiene supplies, and explain the task.",
+                "visual": "Illustrated workstation setup checklist"
+              },
+              {
+                "step": 2,
+                "title": "Demonstrate",
+                "instruction": "Instructor demonstrates the technique slowly, naming each action and decision.",
+                "visual": "Numbered step-by-step demonstration"
+              },
+              {
+                "step": 3,
+                "title": "Practise",
+                "instruction": "Learner repeats the technique in sections and checks progress at each stage.",
+                "visual": "Annotated practice-zone diagram"
+              },
+              {
+                "step": 4,
+                "title": "Inspect",
+                "instruction": "Learner checks symmetry, blending, cleanliness, client comfort, and finish as relevant.",
+                "visual": "Quality-control checklist"
+              },
+              {
+                "step": 5,
+                "title": "Reflect",
+                "instruction": "Learner records what went well, what needs correction, and the next practice goal.",
+                "visual": "Reflection card"
+              }
+            ],
+            "visuals": [
+              {
+                "visualId": "visual-p-cutting",
+                "type": "stepByStepIllustration",
+                "title": "Full practical walkthrough: Cutting",
+                "description": "Five-stage visual practical walkthrough for cutting, including preparation, demonstration, practice, quality checks, and reflection.",
+                "learningPurpose": "Let the learner see the full practical workflow before performing it.",
+                "altText": "Five illustrated stages of a supervised cutting practical.",
+                "caption": "Follow the stages in order and ask the instructor to verify each safety-critical step.",
+                "sourceType": "placeholderToCreate",
+                "assetStatus": "needsCreation"
+              }
+            ],
+            "rubric": [
+              {
+                "criterion": "Preparation and professional setup",
+                "weightPercent": 15
+              },
+              {
+                "criterion": "Correct technique and sequence",
+                "weightPercent": 30
+              },
+              {
+                "criterion": "Safety and hygiene",
+                "weightPercent": 25
+              },
+              {
+                "criterion": "Quality and consistency",
+                "weightPercent": 20
+              },
+              {
+                "criterion": "Communication and reflection",
+                "weightPercent": 10
+              }
+            ],
+            "passingScore": 80,
+            "instructorSignOffRequired": true
           }
         ]
       },
@@ -191,9 +752,54 @@
                     "id": "l-sanitation-intro",
                     "type": "lesson",
                     "title": "Blood-borne infections spread through tools",
-                    "content": "<p>Barbering involves sharp tools near skin. Even small nicks can transfer infections.</p><h3>What must be sanitised between every client</h3><ul><li>Clippers — brush off hair, oil, spray with disinfectant</li><li>Scissors — wipe with 70% alcohol between clients</li><li>Razors — single-use blade, dispose in sharps bin</li><li>Combs — wash and disinfect</li><li>Capes — wash or change between clients</li><li>Chairs — wipe down</li></ul><h3>Personal hygiene</h3><ul><li>Wash hands before and after every client</li><li>Wear clean clothing</li><li>Cover any cuts on your own hands</li></ul>"
+                    "content": "<p>Barbering involves sharp tools near skin. Even small nicks can transfer infections.</p><h3>What must be sanitised between every client</h3><ul><li>Clippers — brush off hair, oil, spray with disinfectant</li><li>Scissors — wipe with 70% alcohol between clients</li><li>Razors — single-use blade, dispose in sharps bin</li><li>Combs — wash and disinfect</li><li>Capes — wash or change between clients</li><li>Chairs — wipe down</li></ul><h3>Personal hygiene</h3><ul><li>Wash hands before and after every client</li><li>Wear clean clothing</li><li>Cover any cuts on your own hands</li></ul>",
+                    "visuals": [
+                      {
+                        "visualId": "visual-l-sanitation-intro",
+                        "type": "safetyInfographic",
+                        "title": "Safe setup, disinfection and disposal",
+                        "description": "A labelled sequence showing hand hygiene, tool cleaning and disinfection, single-use blade handling, sharps disposal, and clean/used tool separation.",
+                        "learningPurpose": "Make the skill or concept visible before the learner attempts it.",
+                        "altText": "A labelled sequence showing hand hygiene, tool cleaning and disinfection, single-use blade handling, sharps disposal, and clean/used tool separation.",
+                        "caption": "Study the labels and compare each stage before beginning the activity.",
+                        "sourceType": "placeholderToCreate",
+                        "assetStatus": "needsCreation"
+                      }
+                    ],
+                    "teachingNotes": {
+                      "diplomaDepth": "Explain the principles, reasons for each decision, common errors, corrective actions, and professional standards—not only the steps.",
+                      "learnerTask": "Describe the visual, identify the key steps, and explain why each step matters.",
+                      "instructorCheck": "Ask the learner to explain the technique before demonstrating it."
+                    },
+                    "learningObjectives": [
+                      "Explain the key principles of blood-borne infections spread through tools.",
+                      "Identify the correct sequence, tools, safety checks, and quality standards.",
+                      "Apply the learning in a realistic barbering situation."
+                    ],
+                    "practicalEvidence": {
+                      "required": true,
+                      "evidenceTypes": [
+                        "completedChecklist",
+                        "learnerExplanation",
+                        "photoOrVideoWithConsent"
+                      ],
+                      "assessmentCriteria": [
+                        "Preparation and tool selection",
+                        "Correct sequence and technique",
+                        "Hygiene and client safety",
+                        "Quality of result",
+                        "Professional communication"
+                      ]
+                    }
                   }
-                ]
+                ],
+                "levelTitle": "Foundation",
+                "competencyGate": {
+                  "passRequired": true,
+                  "knowledgePassPercent": 80,
+                  "safetyCriticalItemsMustAllPass": true,
+                  "instructorSignOffRequiredForLiveModel": true
+                }
               },
               "1": {
                 "modules": [
@@ -205,27 +811,165 @@
                     "steps": [
                       {
                         "q": "You just finished a client. The clippers look clean. Do you need to sanitise them?",
-                        "o": ["No, they look clean", "Yes — always between clients", "Only if visible dirt", "Only at end of day"],
+                        "o": [
+                          "No, they look clean",
+                          "Yes — always between clients",
+                          "Only if visible dirt",
+                          "Only at end of day"
+                        ],
                         "c": 1,
                         "f": "Always between clients."
                       },
                       {
                         "q": "A client nicks their neck while you're lining. What do you do?",
-                        "o": ["Continue", "Stop, clean the cut, apply pressure, disinfect tools, replace blade", "Wipe and continue", "Charge extra"],
+                        "o": [
+                          "Continue",
+                          "Stop, clean the cut, apply pressure, disinfect tools, replace blade",
+                          "Wipe and continue",
+                          "Charge extra"
+                        ],
                         "c": 1,
                         "f": "Any blood stops the service."
                       },
                       {
                         "q": "Where do used razor blades go?",
-                        "o": ["Regular bin", "Sharps container or sealed rigid box", "Pocket", "Sink"],
+                        "o": [
+                          "Regular bin",
+                          "Sharps container or sealed rigid box",
+                          "Pocket",
+                          "Sink"
+                        ],
                         "c": 1,
                         "f": "Used blades are a biohazard."
                       }
-                    ]
+                    ],
+                    "visuals": [
+                      {
+                        "visualId": "visual-d-hygiene-drill",
+                        "type": "safetyInfographic",
+                        "title": "Safe setup, disinfection and disposal",
+                        "description": "A labelled sequence showing hand hygiene, tool cleaning and disinfection, single-use blade handling, sharps disposal, and clean/used tool separation.",
+                        "learningPurpose": "Make the skill or concept visible before the learner attempts it.",
+                        "altText": "A labelled sequence showing hand hygiene, tool cleaning and disinfection, single-use blade handling, sharps disposal, and clean/used tool separation.",
+                        "caption": "Study the labels and compare each stage before beginning the activity.",
+                        "sourceType": "placeholderToCreate",
+                        "assetStatus": "needsCreation"
+                      }
+                    ],
+                    "teachingNotes": {
+                      "diplomaDepth": "Explain the principles, reasons for each decision, common errors, corrective actions, and professional standards—not only the steps.",
+                      "learnerTask": "Describe the visual, identify the key steps, and explain why each step matters.",
+                      "instructorCheck": "Ask the learner to explain the technique before demonstrating it."
+                    },
+                    "learningObjectives": [
+                      "Explain the key principles of hygiene decisions.",
+                      "Identify the correct sequence, tools, safety checks, and quality standards.",
+                      "Apply the learning in a realistic barbering situation."
+                    ],
+                    "practicalEvidence": {
+                      "required": true,
+                      "evidenceTypes": [
+                        "completedChecklist",
+                        "learnerExplanation",
+                        "photoOrVideoWithConsent"
+                      ],
+                      "assessmentCriteria": [
+                        "Preparation and tool selection",
+                        "Correct sequence and technique",
+                        "Hygiene and client safety",
+                        "Quality of result",
+                        "Professional communication"
+                      ]
+                    }
                   }
-                ]
+                ],
+                "levelTitle": "Intermediate",
+                "competencyGate": {
+                  "passRequired": true,
+                  "knowledgePassPercent": 80,
+                  "safetyCriticalItemsMustAllPass": true,
+                  "instructorSignOffRequiredForLiveModel": true
+                }
               }
             }
+          }
+        ],
+        "diplomaPracticals": [
+          {
+            "id": "p-hygiene-demonstration",
+            "type": "practical",
+            "title": "Hygiene: Demonstration and supervised practice",
+            "durationMinutes": 90,
+            "prompt": "Demonstrate the core techniques from hygiene using a mannequin or training head first. Progress to a live model only with instructor approval and appropriate consent.",
+            "steps": [
+              {
+                "step": 1,
+                "title": "Prepare",
+                "instruction": "Set up the station, check tools, confirm hygiene supplies, and explain the task.",
+                "visual": "Illustrated workstation setup checklist"
+              },
+              {
+                "step": 2,
+                "title": "Demonstrate",
+                "instruction": "Instructor demonstrates the technique slowly, naming each action and decision.",
+                "visual": "Numbered step-by-step demonstration"
+              },
+              {
+                "step": 3,
+                "title": "Practise",
+                "instruction": "Learner repeats the technique in sections and checks progress at each stage.",
+                "visual": "Annotated practice-zone diagram"
+              },
+              {
+                "step": 4,
+                "title": "Inspect",
+                "instruction": "Learner checks symmetry, blending, cleanliness, client comfort, and finish as relevant.",
+                "visual": "Quality-control checklist"
+              },
+              {
+                "step": 5,
+                "title": "Reflect",
+                "instruction": "Learner records what went well, what needs correction, and the next practice goal.",
+                "visual": "Reflection card"
+              }
+            ],
+            "visuals": [
+              {
+                "visualId": "visual-p-hygiene",
+                "type": "stepByStepIllustration",
+                "title": "Full practical walkthrough: Hygiene",
+                "description": "Five-stage visual practical walkthrough for hygiene, including preparation, demonstration, practice, quality checks, and reflection.",
+                "learningPurpose": "Let the learner see the full practical workflow before performing it.",
+                "altText": "Five illustrated stages of a supervised hygiene practical.",
+                "caption": "Follow the stages in order and ask the instructor to verify each safety-critical step.",
+                "sourceType": "placeholderToCreate",
+                "assetStatus": "needsCreation"
+              }
+            ],
+            "rubric": [
+              {
+                "criterion": "Preparation and professional setup",
+                "weightPercent": 15
+              },
+              {
+                "criterion": "Correct technique and sequence",
+                "weightPercent": 30
+              },
+              {
+                "criterion": "Safety and hygiene",
+                "weightPercent": 25
+              },
+              {
+                "criterion": "Quality and consistency",
+                "weightPercent": 20
+              },
+              {
+                "criterion": "Communication and reflection",
+                "weightPercent": 10
+              }
+            ],
+            "passingScore": 80,
+            "instructorSignOffRequired": true
           }
         ]
       },
@@ -245,9 +989,54 @@
                     "id": "l-pricing-intro",
                     "type": "lesson",
                     "title": "How barbers make money",
-                    "content": "<h3>Speed matters</h3><p>A barber who cuts in 20 minutes can serve 3x the clients of one who takes an hour. Same skill, 3x the income.</p><h3>Pricing</h3><ul><li>Basic cut — the entry price, brings them in the door</li><li>Fade — higher skill, higher price</li><li>Beard trim — quick add-on</li><li>Full service (cut + shave + line) — premium price</li></ul><h3>Retention</h3><p>A client who returns every 2 weeks for 5 years is 130 visits. That's the real value of each client.</p>"
+                    "content": "<h3>Speed matters</h3><p>A barber who cuts in 20 minutes can serve 3x the clients of one who takes an hour. Same skill, 3x the income.</p><h3>Pricing</h3><ul><li>Basic cut — the entry price, brings them in the door</li><li>Fade — higher skill, higher price</li><li>Beard trim — quick add-on</li><li>Full service (cut + shave + line) — premium price</li></ul><h3>Retention</h3><p>A client who returns every 2 weeks for 5 years is 130 visits. That's the real value of each client.</p>",
+                    "visuals": [
+                      {
+                        "visualId": "visual-l-pricing-intro",
+                        "type": "decisionFlowchart",
+                        "title": "Service selection, pricing and workflow",
+                        "description": "A visual service menu and worked example connecting service choices, price calculation, estimated time, queue order, and client communication.",
+                        "learningPurpose": "Make the skill or concept visible before the learner attempts it.",
+                        "altText": "A visual service menu and worked example connecting service choices, price calculation, estimated time, queue order, and client communication.",
+                        "caption": "Study the labels and compare each stage before beginning the activity.",
+                        "sourceType": "placeholderToCreate",
+                        "assetStatus": "needsCreation"
+                      }
+                    ],
+                    "teachingNotes": {
+                      "diplomaDepth": "Explain the principles, reasons for each decision, common errors, corrective actions, and professional standards—not only the steps.",
+                      "learnerTask": "Describe the visual, identify the key steps, and explain why each step matters.",
+                      "instructorCheck": "Ask the learner to explain the technique before demonstrating it."
+                    },
+                    "learningObjectives": [
+                      "Explain the key principles of how barbers make money.",
+                      "Identify the correct sequence, tools, safety checks, and quality standards.",
+                      "Apply the learning in a realistic barbering situation."
+                    ],
+                    "practicalEvidence": {
+                      "required": true,
+                      "evidenceTypes": [
+                        "completedChecklist",
+                        "learnerExplanation",
+                        "photoOrVideoWithConsent"
+                      ],
+                      "assessmentCriteria": [
+                        "Preparation and tool selection",
+                        "Correct sequence and technique",
+                        "Hygiene and client safety",
+                        "Quality of result",
+                        "Professional communication"
+                      ]
+                    }
                   }
-                ]
+                ],
+                "levelTitle": "Foundation",
+                "competencyGate": {
+                  "passRequired": true,
+                  "knowledgePassPercent": 80,
+                  "safetyCriticalItemsMustAllPass": true,
+                  "instructorSignOffRequiredForLiveModel": true
+                }
               },
               "1": {
                 "modules": [
@@ -265,14 +1054,309 @@
                       "Work efficiently without rushing the quality",
                       "Offer drinks or a seat while they wait",
                       "Consider appointments for regulars"
-                    ]
+                    ],
+                    "visuals": [
+                      {
+                        "visualId": "visual-s-pricing-scenario",
+                        "type": "decisionFlowchart",
+                        "title": "Service selection, pricing and workflow",
+                        "description": "A visual service menu and worked example connecting service choices, price calculation, estimated time, queue order, and client communication.",
+                        "learningPurpose": "Make the skill or concept visible before the learner attempts it.",
+                        "altText": "A visual service menu and worked example connecting service choices, price calculation, estimated time, queue order, and client communication.",
+                        "caption": "Study the labels and compare each stage before beginning the activity.",
+                        "sourceType": "placeholderToCreate",
+                        "assetStatus": "needsCreation"
+                      }
+                    ],
+                    "teachingNotes": {
+                      "diplomaDepth": "Explain the principles, reasons for each decision, common errors, corrective actions, and professional standards—not only the steps.",
+                      "learnerTask": "Describe the visual, identify the key steps, and explain why each step matters.",
+                      "instructorCheck": "Ask the learner to explain the technique before demonstrating it."
+                    },
+                    "learningObjectives": [
+                      "Explain the key principles of price a full service.",
+                      "Identify the correct sequence, tools, safety checks, and quality standards.",
+                      "Apply the learning in a realistic barbering situation."
+                    ],
+                    "practicalEvidence": {
+                      "required": true,
+                      "evidenceTypes": [
+                        "completedChecklist",
+                        "learnerExplanation",
+                        "photoOrVideoWithConsent"
+                      ],
+                      "assessmentCriteria": [
+                        "Preparation and tool selection",
+                        "Correct sequence and technique",
+                        "Hygiene and client safety",
+                        "Quality of result",
+                        "Professional communication"
+                      ]
+                    }
                   }
-                ]
+                ],
+                "levelTitle": "Intermediate",
+                "competencyGate": {
+                  "passRequired": true,
+                  "knowledgePassPercent": 80,
+                  "safetyCriticalItemsMustAllPass": true,
+                  "instructorSignOffRequiredForLiveModel": true
+                }
               }
             }
           }
+        ],
+        "diplomaPracticals": [
+          {
+            "id": "p-business-demonstration",
+            "type": "practical",
+            "title": "Business: Demonstration and supervised practice",
+            "durationMinutes": 90,
+            "prompt": "Demonstrate the core techniques from business using a mannequin or training head first. Progress to a live model only with instructor approval and appropriate consent.",
+            "steps": [
+              {
+                "step": 1,
+                "title": "Prepare",
+                "instruction": "Set up the station, check tools, confirm hygiene supplies, and explain the task.",
+                "visual": "Illustrated workstation setup checklist"
+              },
+              {
+                "step": 2,
+                "title": "Demonstrate",
+                "instruction": "Instructor demonstrates the technique slowly, naming each action and decision.",
+                "visual": "Numbered step-by-step demonstration"
+              },
+              {
+                "step": 3,
+                "title": "Practise",
+                "instruction": "Learner repeats the technique in sections and checks progress at each stage.",
+                "visual": "Annotated practice-zone diagram"
+              },
+              {
+                "step": 4,
+                "title": "Inspect",
+                "instruction": "Learner checks symmetry, blending, cleanliness, client comfort, and finish as relevant.",
+                "visual": "Quality-control checklist"
+              },
+              {
+                "step": 5,
+                "title": "Reflect",
+                "instruction": "Learner records what went well, what needs correction, and the next practice goal.",
+                "visual": "Reflection card"
+              }
+            ],
+            "visuals": [
+              {
+                "visualId": "visual-p-business",
+                "type": "stepByStepIllustration",
+                "title": "Full practical walkthrough: Business",
+                "description": "Five-stage visual practical walkthrough for business, including preparation, demonstration, practice, quality checks, and reflection.",
+                "learningPurpose": "Let the learner see the full practical workflow before performing it.",
+                "altText": "Five illustrated stages of a supervised business practical.",
+                "caption": "Follow the stages in order and ask the instructor to verify each safety-critical step.",
+                "sourceType": "placeholderToCreate",
+                "assetStatus": "needsCreation"
+              }
+            ],
+            "rubric": [
+              {
+                "criterion": "Preparation and professional setup",
+                "weightPercent": 15
+              },
+              {
+                "criterion": "Correct technique and sequence",
+                "weightPercent": 30
+              },
+              {
+                "criterion": "Safety and hygiene",
+                "weightPercent": 25
+              },
+              {
+                "criterion": "Quality and consistency",
+                "weightPercent": 20
+              },
+              {
+                "criterion": "Communication and reflection",
+                "weightPercent": 10
+              }
+            ],
+            "passingScore": 80,
+            "instructorSignOffRequired": true
+          }
         ]
       }
+    ],
+    "courseLevel": "Diploma",
+    "courseTitle": "Diploma in Professional Barbering",
+    "courseDescription": "A competency-based, visually guided barbering programme covering consultation, hair and scalp assessment, clipper and scissor techniques, fades, line work, sanitation, client care, business operations, and supervised practical performance.",
+    "qualificationNote": "This is a diploma-level course design. The JSON itself does not confer an accredited qualification; accreditation, guided learning hours, instructor requirements, and external assessment must be set by the delivering institution.",
+    "deliveryModel": {
+      "approach": "Visual-first, demonstration-led, competency-based learning",
+      "recommendedStructure": {
+        "guidedLearningHours": 240,
+        "supervisedPracticalHours": 120,
+        "independentPracticeHours": 60,
+        "totalIndicativeHours": 420,
+        "note": "Indicative planning values; confirm them against local accreditation requirements."
+      },
+      "progression": [
+        "Study the illustrated concept",
+        "Watch or inspect a step-by-step demonstration",
+        "Practise the technique on a mannequin or training head",
+        "Complete a supervised live-model task when approved by the instructor",
+        "Submit evidence and receive rubric-based feedback",
+        "Pass the knowledge check and practical competency gate"
+      ],
+      "completionRequirements": {
+        "knowledgeAssessmentMinimumPercent": 80,
+        "criticalSafetyAssessment": "Must pass every critical hygiene and safety item",
+        "practicalAssessment": "All mandatory practical competencies signed off by an instructor",
+        "portfolio": "Before-and-after photos, practical checklists, reflection notes, and client consultation records with consent"
+      }
+    },
+    "visualLearningStandard": {
+      "mandatoryForEveryLearningItem": true,
+      "rule": "Every module, lesson, drill, scenario, assessment, and practical must render at least one relevant visual. A generic decorative image does not count.",
+      "visualTypes": [
+        "annotatedPhoto",
+        "stepByStepIllustration",
+        "techniqueDiagram",
+        "toolIdentificationChart",
+        "beforeAfterComparison",
+        "videoDemonstration",
+        "interactiveHotspot",
+        "decisionFlowchart",
+        "safetyInfographic",
+        "practiceChecklist",
+        "assessmentEvidencePhoto"
+      ],
+      "visualMetadataRequired": [
+        "visualId",
+        "type",
+        "title",
+        "description",
+        "learningPurpose",
+        "altText",
+        "caption",
+        "sourceType",
+        "assetStatus"
+      ],
+      "assetRules": {
+        "sourceTypeOptions": [
+          "originalIllustration",
+          "instructorPhoto",
+          "licensedMedia",
+          "embeddedVideo",
+          "interactiveDiagram",
+          "placeholderToCreate"
+        ],
+        "assetStatusOptions": [
+          "ready",
+          "needsCreation",
+          "needsLicensedAsset",
+          "needsInstructorCapture"
+        ],
+        "doNotInventAssetUrls": true,
+        "fallback": "If the media asset is not yet available, render a clearly labelled visual placeholder or generate an SVG/CSS diagram from structured visual data; never silently omit the visual.",
+        "accessibility": "Every visual needs useful alt text, captions where needed, readable labels, and a text equivalent."
+      }
+    },
+    "diplomaFramework": {
+      "learningOutcomes": [
+        "Conduct a professional client consultation and document agreed requirements.",
+        "Assess hair texture, density, growth patterns, hairline, and visible scalp concerns.",
+        "Select, inspect, operate, clean, and maintain barbering tools safely.",
+        "Execute basic and intermediate clipper cuts, fades, blending, and line work.",
+        "Apply infection-prevention, sharps, skin-safety, and incident procedures.",
+        "Deliver professional client care, manage time, and respond to feedback.",
+        "Price services, calculate revenue and costs, manage queues, and retain clients.",
+        "Build a practical portfolio that evidences consistent service quality."
+      ],
+      "assessmentMethods": [
+        "Visual knowledge checks",
+        "Scenario-based decisions",
+        "Tool identification practical",
+        "Mannequin or training-head demonstration",
+        "Supervised live-model practical where permitted",
+        "Hygiene and safety observation",
+        "Business-pricing worksheet",
+        "Portfolio review and reflective log"
+      ],
+      "evidencePolicy": "Record only genuine student work. Obtain consent before taking or publishing client photographs."
+    },
+    "capstoneAssessment": {
+      "id": "capstone-full-client-service",
+      "type": "assessment",
+      "title": "Diploma Capstone: Complete client service",
+      "description": "Plan and deliver an end-to-end barbering service appropriate to the learner's competence, using a mannequin first and a consenting live model only after instructor approval.",
+      "requiredVisuals": [
+        {
+          "type": "consultationRecord",
+          "purpose": "Show client goals, hair assessment, and agreed service"
+        },
+        {
+          "type": "beforeAfterComparison",
+          "purpose": "Compare the starting point and finished result with consent"
+        },
+        {
+          "type": "annotatedTechniqueSequence",
+          "purpose": "Evidence key stages and blending decisions"
+        },
+        {
+          "type": "safetyChecklist",
+          "purpose": "Evidence tool hygiene, blade handling, and workstation reset"
+        }
+      ],
+      "stages": [
+        "Client consultation and expectation setting",
+        "Hair and scalp assessment; stop and refer if a concerning condition is observed",
+        "Service plan and tool selection",
+        "Safe preparation and demonstration of hygiene",
+        "Cutting, blending, and finishing appropriate to assessed skill",
+        "Client comfort check and final mirror review",
+        "Aftercare advice and service record",
+        "Station reset, tool processing, and waste disposal",
+        "Reflective review and portfolio submission"
+      ],
+      "rubric": [
+        {
+          "criterion": "Consultation and planning",
+          "weightPercent": 15
+        },
+        {
+          "criterion": "Technique and result",
+          "weightPercent": 30
+        },
+        {
+          "criterion": "Safety and hygiene",
+          "weightPercent": 25
+        },
+        {
+          "criterion": "Client care and communication",
+          "weightPercent": 10
+        },
+        {
+          "criterion": "Time management and professionalism",
+          "weightPercent": 10
+        },
+        {
+          "criterion": "Portfolio and reflection",
+          "weightPercent": 10
+        }
+      ],
+      "passingScore": 80,
+      "criticalSafetyItemsMustAllPass": true,
+      "instructorSignOffRequired": true
+    },
+    "implementationNotes": [
+      "Build a visual asset for every learning item. Do not rely on a single hero image for an entire module.",
+      "Use real, properly consented barbering demonstrations where possible; otherwise create original labelled diagrams or licensed assets.",
+      "For video assets, include a short transcript, chapter/step markers, and captions.",
+      "Keep image and video URLs in a separate asset manifest once actual media is available; do not fabricate URLs.",
+      "Render diagrams responsively for mobile screens and low-bandwidth users; offer compressed still images and text alternatives.",
+      "Use Sierra Leone-relevant business examples and local currency labels where appropriate, but verify currency denominations and current prices before publication.",
+      "Use an instructor-approved safety protocol and local public-health guidance for sanitation, skin conditions, sharps, and incident response.",
+      "A visual should teach a specific skill: labels, arrows, stages, comparison, or decision points must be meaningful and readable."
     ]
   }
 }
