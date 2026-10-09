@@ -28,7 +28,7 @@
                     "id": "l-browning",
                     "type": "lesson",
                     "title": "Browning — the flavour maker",
-                    "content": "<p>The Maillard reaction is the chemical process that browns food and creates complex flavours. It happens above 140°C.</p><h3>How to brown well</h3><ul><li><strong>Dry the surface</strong> — wet food steams instead of browning</li><li><strong>Hot pan, room-temperature food</strong> — cold food cools the pan</li><li><strong>Don't crowd the pan</strong> — crowded food steams</li><li><strong>Wait before flipping</strong> — browning takes time</li><li><strong>Season after</strong> — salt draws moisture to the surface</li></ul><p>Browning is 80% of the flavour in most meat dishes.</p>"
+                    "content": "<p>The Maillard reaction is the chemical process that browns food and creates complex flavours. It happens above 140°C.</p><h3>How to brown well</h3><ul><li><strong>Dry the surface</strong> — wet food steams instead of browning</li><li><strong>Hot pan, room-temperature food</strong></li><li><strong>Don't crowd the pan</strong> — crowded food steams</li><li><strong>Wait before flipping</strong></li><li><strong>Season after</strong> — salt draws moisture to the surface</li></ul><p>Browning is 80% of the flavour in most meat dishes.</p>"
                   }
                 ]
               },
@@ -56,13 +56,13 @@
                         "q": "The chicken in your pan is steaming, not browning. What's wrong?",
                         "o": ["Pan too hot", "Too crowded or the chicken is wet", "Wrong oil", "Bad chicken"],
                         "c": 1,
-                        "f": "Crowded or wet food steams. Dry it and give it space."
+                        "f": "Crowded or wet food steams."
                       }
                     ]
                   }
                 ]
               }
-            ]
+            }
           },
           {
             "id": "seasoning-flavour",
@@ -75,7 +75,7 @@
                     "id": "l-flavour-intro",
                     "type": "lesson",
                     "title": "The five tastes and balance",
-                    "content": "<p>Every dish is a balance of five tastes:</p><ul><li><strong>Salty</strong> — salt, soy, fish sauce</li><li><strong>Sour</strong> — lemon, vinegar, tamarind</li><li><strong>Sweet</strong> — sugar, honey, ripe vegetables</li><li><strong>Bitter</strong> — greens, coffee, char</li><li><strong>Umami</strong> — savoury, from glutamate-rich ingredients like tomatoes, mushrooms, fermented sauces</li></ul><h3>The rule</h3><p>Taste as you cook. When something is flat, it usually needs salt or acid. When it's harsh, it usually needs fat or sugar.</p>"
+                    "content": "<p>Every dish is a balance of five tastes:</p><ul><li><strong>Salty</strong> — salt, soy, fish sauce</li><li><strong>Sour</strong> — lemon, vinegar, tamarind</li><li><strong>Sweet</strong> — sugar, honey, ripe vegetables</li><li><strong>Bitter</strong> — greens, coffee, char</li><li><strong>Umami</strong> — savoury, from glutamate-rich ingredients</li></ul><h3>The rule</h3><p>Taste as you cook. When something is flat, it usually needs salt or acid. When it's harsh, it usually needs fat or sugar.</p>"
                   }
                 ]
               },
@@ -85,7 +85,7 @@
                     "id": "l-seasoning-practice",
                     "type": "lesson",
                     "title": "Seasoning in layers",
-                    "content": "<p>Great chefs season at every stage, not just at the end.</p><h3>Layers of seasoning</h3><ol><li><strong>Marinade</strong> — penetrate the protein before cooking</li><li><strong>During cooking</strong> — salt the water for pasta, season the vegetables as they sauté</li><li><strong>Finishing</strong> — flaky salt, a squeeze of lemon, fresh herbs</li></ol><h3>Why layers matter</h3><p>A dish seasoned only at the end tastes salty on the surface and bland inside. Layers distribute seasoning through the dish.</p>"
+                    "content": "<p>Great chefs season at every stage, not just at the end.</p><h3>Layers of seasoning</h3><ol><li><strong>Marinade</strong> — penetrate the protein before cooking</li><li><strong>During cooking</strong> — salt the water for pasta, season vegetables as they sauté</li><li><strong>Finishing</strong> — flaky salt, a squeeze of lemon, fresh herbs</li></ol><h3>Why layers matter</h3><p>A dish seasoned only at the end tastes salty on the surface and bland inside.</p>"
                   }
                 ]
               },
@@ -112,13 +112,13 @@
                         "q": "A sauce tastes thin. What do you do?",
                         "o": ["Add water", "Reduce it and finish with butter or starch", "Add flour and serve", "Add oil"],
                         "c": 1,
-                        "f": "Reduction concentrates flavour. Finishing with butter (monter au beurre) adds body."
+                        "f": "Reduction concentrates flavour. Finishing with butter adds body."
                       }
                     ]
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       },
@@ -138,7 +138,7 @@
                     "id": "l-menu-intro",
                     "type": "lesson",
                     "title": "What makes a good menu",
-                    "content": "<h3>The two audiences</h3><ul><li><strong>Customers</strong> — want dishes that sound appealing, priced fairly, and arrive hot</li><li><strong>The kitchen</strong> — needs a menu that can be executed consistently under pressure</li></ul><h3>Balance</h3><ul><li>Not too many dishes (12-16 mains is plenty)</li><li>Categories: starters, mains, sides, desserts</li><li>Each category has variety: light/heavy, meat/vegetarian</li><li>Seasonal — use what's fresh and cheap</li><li>Price spread — a few high, most middle, a couple low</li></ul><h3>The rule</h3><p>Every dish must earn its place. If it doesn't sell, cut it. If it's too slow to prepare, rethink it.</p>"
+                    "content": "<h3>The two audiences</h3><ul><li><strong>Customers</strong> — want dishes that sound appealing, priced fairly, and arrive hot</li><li><strong>The kitchen</strong> — needs a menu that can be executed consistently under pressure</li></ul><h3>Balance</h3><ul><li>Not too many dishes (12-16 mains is plenty)</li><li>Categories: starters, mains, sides, desserts</li><li>Variety: light/heavy, meat/vegetarian</li><li>Seasonal — use what's fresh and cheap</li><li>Price spread — a few high, most middle, a couple low</li></ul><h3>The rule</h3><p>Every dish must earn its place. If it doesn't sell, cut it.</p>"
                   }
                 ]
               },
@@ -149,7 +149,7 @@
                     "type": "scenario",
                     "title": "Design a restaurant menu",
                     "prompt": "A new restaurant wants to open in your city, serving contemporary West African food. Design a menu for lunch service. Include 3 starters, 4 mains, 2 sides, and 2 desserts. Justify your choices.",
-                    "context": "Menus are commercial documents. Every dish must work for the kitchen and the customer.",
+                    "context": "Menus are commercial documents.",
                     "placeholder": "Starters:\nMains:\nSides:\nDesserts:\nReasoning:",
                     "rubric": [
                       "Total of 11 dishes — not too many for a small kitchen",
@@ -163,7 +163,7 @@
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       },
@@ -198,25 +198,25 @@
                         "q": "During a busy dinner service, who calls the orders?",
                         "o": ["The waiter", "The head chef / expo", "The customer", "Whoever shouts loudest"],
                         "c": 1,
-                        "f": "The head chef calls orders and coordinates timing. Single point of control."
+                        "f": "The head chef calls orders and coordinates timing."
                       },
                       {
                         "q": "One station is falling behind. What do you do?",
                         "o": ["Ignore it", "Reassign staff or slow the incoming orders", "Shout at the station", "Serve anyway"],
                         "c": 1,
-                        "f": "Reassign or slow the pace. Never let one station fail the whole service."
+                        "f": "Reassign or slow the pace."
                       },
                       {
                         "q": "The quality check before a dish leaves the pass is the job of:",
                         "o": ["The waiter", "The head chef or expo", "The customer", "The plongeur"],
                         "c": 1,
-                        "f": "The pass is the last chance to catch a mistake. The head chef owns it."
+                        "f": "The pass is the last chance to catch a mistake."
                       }
                     ]
                   }
                 ]
               }
-            ]
+            }
           },
           {
             "id": "food-cost",
@@ -250,13 +250,13 @@
                         "q": "A dish costs 3,000 Le to make and sells for 5,000 Le. Food cost %?",
                         "o": ["40%", "60%", "50%", "30%"],
                         "c": 1,
-                        "f": "3,000 ÷ 5,000 × 100 = 60%. Way too high. Either raise the price or reduce the cost."
+                        "f": "3,000 ÷ 5,000 × 100 = 60%. Too high."
                       },
                       {
                         "q": "Chicken prices rise 20%. Your main dish uses chicken. What do you do?",
                         "o": ["Absorb the loss", "Adjust the price or portion to keep food cost in range", "Replace with tofu", "Ignore"],
                         "c": 1,
-                        "f": "Adjust to protect the food cost %. Silent losses add up."
+                        "f": "Adjust to protect the food cost %."
                       }
                     ]
                   }
@@ -280,7 +280,7 @@
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       },
@@ -300,7 +300,7 @@
                     "id": "l-leadership-intro",
                     "type": "lesson",
                     "title": "Kitchen leadership",
-                    "content": "<p>Professional kitchens are high-pressure, hot, and fast. Bad leadership destroys teams. Good leadership builds them.</p><h3>What works</h3><ul><li><strong>Clear expectations</strong> — everyone knows their station and standards</li><li><strong>Consistency</strong> — same standards on quiet and busy nights</li><li><strong>Calm under pressure</strong> — panic spreads; so does calm</li><li><strong>Correction in private, praise in public</strong></li><li><strong>Teach, don't just criticise</strong></li></ul><h3>What doesn't</h3><ul><li>Shouting and insults (the old-school approach — proven to fail)</li><li>Inconsistency</li><li>Blaming others when things go wrong</li><li>Ignoring problems until they explode</li></ul>"
+                    "content": "<p>Professional kitchens are high-pressure, hot, and fast. Bad leadership destroys teams.</p><h3>What works</h3><ul><li><strong>Clear expectations</strong> — everyone knows their station and standards</li><li><strong>Consistency</strong> — same standards on quiet and busy nights</li><li><strong>Calm under pressure</strong> — panic spreads; so does calm</li><li><strong>Correction in private, praise in public</strong></li><li><strong>Teach, don't just criticise</strong></li></ul><h3>What doesn't</h3><ul><li>Shouting and insults</li><li>Inconsistency</li><li>Blaming others when things go wrong</li><li>Ignoring problems until they explode</li></ul>"
                   }
                 ]
               },
@@ -315,25 +315,25 @@
                         "q": "A commis chef makes the same mistake three times. What do you do?",
                         "o": ["Shout at them", "Take them aside, show the correct technique, watch them practice", "Move them off the station", "Ignore"],
                         "c": 1,
-                        "f": "Correct the technique, not the person. Show, then watch, then correct again if needed."
+                        "f": "Correct the technique, not the person."
                       },
                       {
                         "q": "During a busy service, the sous chef is panicking. What do you do?",
                         "o": ["Panic too", "Stay calm, slow the incoming orders, reassign as needed", "Shout at them", "Leave the kitchen"],
                         "c": 1,
-                        "f": "Calm is contagious. Slow the pace, reassign stations."
+                        "f": "Calm is contagious."
                       },
                       {
                         "q": "A team member is consistently late. What do you do?",
                         "o": ["Ignore it", "Address it privately — is there a problem? Can you help?", "Fire them", "Cut their pay without discussion"],
                         "c": 1,
-                        "f": "Address it privately. Latent problems become bigger problems. Ask, then act."
+                        "f": "Address it privately."
                       }
                     ]
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       }
