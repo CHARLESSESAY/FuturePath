@@ -1,0 +1,278 @@
+{
+  "barber": {
+    "intro": "Learn barbering from consultation to finished cut. Master clipper work, razor lines, and the hygiene standards that build a reputation. A trade with constant demand and quick income.",
+    "skillDomains": [
+      {
+        "id": "consultation",
+        "name": "Consultation",
+        "description": "Understand the client's hair and what they want.",
+        "skills": [
+          {
+            "id": "hair-assessment",
+            "name": "Hair Assessment",
+            "description": "Every head is different. Read it before you cut.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-hair-intro",
+                    "type": "lesson",
+                    "title": "What to check",
+                    "content": "<h3>Before any cut</h3><ul><li><strong>Hair type</strong> — fine, medium, coarse; straight, wavy, curly, kinky</li><li><strong>Density</strong> — how much hair on the head</li><li><strong>Growth pattern</strong> — cowlicks, whirls, direction of growth</li><li><strong>Hairline</strong> — natural shape, receding, or thinning</li><li><strong>Scalp</strong> — any cuts, infections, or conditions</li></ul><h3>Why it matters</h3><p>Two clients can ask for the same cut. On one it looks great; on the other it looks wrong. The difference is hair type and growth pattern.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-consult-questions",
+                    "type": "lesson",
+                    "title": "The consultation conversation",
+                    "content": "<h3>Five questions</h3><ol><li>What style do you want? (Ask for photos)</li><li>How do you usually wear your hair day to day?</li><li>When was your last cut?</li><li>Any areas you want to keep longer or shorter?</li><li>Any irritation, sensitivity, or allergy?</li></ol><h3>The mirror test</h3><p>Before cutting, use a mirror to show the client the current shape. Point out areas that will need adjustment. Agree on what the finished cut will look like. This prevents surprises.</p><h3>The refusal rule</h3><p>If a client asks for something that won't work on their hair, say so. Suggest an alternative. Better to manage expectations than deliver a bad result.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-consult-drill",
+                    "type": "drill",
+                    "title": "Consultation decisions",
+                    "passingScore": 90,
+                    "steps": [
+                      {
+                        "q": "A client brings a photo of a hairstyle but their hair is much thinner than the model's. What do you do?",
+                        "o": ["Cut it exactly like the photo", "Explain the difference and offer an adjusted version", "Refuse service", "Cut it anyway"],
+                        "c": 1,
+                        "f": "Match the style to the actual hair. Show an alternative that will work."
+                      },
+                      {
+                        "q": "A client has a visible scalp condition (flaking, redness). What do you do?",
+                        "o": ["Cut anyway", "Refer to a doctor before cutting", "Cut over it", "Ignore"],
+                        "c": 1,
+                        "f": "Don't work on irritated or infected scalp. Refer to a doctor."
+                      },
+                      {
+                        "q": "A client isn't sure what they want. What's your approach?",
+                        "o": ["Pick something", "Show 2-3 options based on their hair and face shape, let them choose", "Ask them to come back", "Copy the last client's cut"],
+                        "c": 1,
+                        "f": "Guide with options. Don't guess and don't stall."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cutting",
+        "name": "Cutting",
+        "description": "The core skills — clippers, scissors, and razor work.",
+        "skills": [
+          {
+            "id": "clipper-technique",
+            "name": "Clipper Technique",
+            "description": "The main tool of the modern barber.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-clipper-intro",
+                    "type": "lesson",
+                    "title": "Clipper fundamentals",
+                    "content": "<h3>The clipper</h3><p>A motorised cutting tool with adjustable blades or interchangeable guards. Learn the size markings — #1 is very short (3mm), #4 is medium (13mm).</p><h3>The lever</h3><p>Adjusts blade position for half-grades (e.g., #2 with lever opened = between #2 and #3).</p><h3>The technique</h3><ol><li>Start with a longer guard than you think you need</li><li>Cut with the direction of hair growth for even length</li><li>Cut against the growth to shorten</li><li>Work in sections for consistency</li><li>Overlap passes to avoid lines</li></ol><h3>Speed</h3><p>Speed comes from confidence and clean technique. Rushing produces lines.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-fade",
+                    "type": "lesson",
+                    "title": "The fade",
+                    "content": "<h3>What a fade is</h3><p>A gradual transition from very short hair (skin or near-skin) at the bottom to longer hair at the top. There are no visible lines — the transition is smooth.</p><h3>Steps</h3><ol><li>Establish the baseline — where the shortest hair ends and skin begins</li><li>Create the top length first</li><li>Work down in stages — each stage slightly shorter</li><li>Blend between stages using lever technique</li><li>Finish with a razor for the sharpest line</li></ol><h3>Common fades</h3><ul><li><strong>Low fade</strong> — starts low on the head</li><li><strong>Mid fade</strong> — starts at the temple</li><li><strong>High fade</strong> — starts above the temple</li><li><strong>Bald fade</strong> — blends to actual skin</li></ul>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-fade-drill",
+                    "type": "drill",
+                    "title": "Fade decisions",
+                    "steps": [
+                      {
+                        "q": "You see lines in your fade after cutting. What went wrong?",
+                        "o": ["Wrong guard", "Not enough blending between stages", "Wrong clipper", "Bad hair"],
+                        "c": 1,
+                        "f": "Lines mean the blending steps were skipped or rushed."
+                      },
+                      {
+                        "q": "Which fade is most difficult to execute?",
+                        "o": ["Low fade", "Mid fade", "Bald fade", "High fade"],
+                        "c": 2,
+                        "f": "Bald fade requires blending hair to actual skin — no room for error."
+                      },
+                      {
+                        "q": "A client has a cowlick (whirl) on the crown. How do you handle it?",
+                        "o": ["Cut against it", "Work with the growth pattern, cut slightly longer around it", "Ignore it", "Shave it"],
+                        "c": 1,
+                        "f": "Cowlicks need longer hair or careful blending. Cutting against them reveals the pattern as a gap."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "line-edges",
+            "name": "Line & Edges",
+            "description": "The details that make a cut look sharp.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-line-intro",
+                    "type": "lesson",
+                    "title": "Lining and edging",
+                    "content": "<p>Lining is the final step of every cut. It's what separates a professional cut from a home cut.</p><h3>Tools</h3><ul><li>Trimmer or liner clipper</li><li>Straight razor</li><li>Shaving brush and cream</li></ul><h3>What to line</h3><ul><li>Forehead hairline</li><li>Temple points</li><li>Around the ears</li><li>Neckline — creates the finished shape</li></ul><h3>Technique</h3><ol><li>Cut the line with the trimmer first</li><li>Follow with the razor for the sharpest edge</li><li>Shave with the grain, then touch up against</li><li>Apply after-shave or balm to soothe</li></ol>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-line-drill",
+                    "type": "drill",
+                    "title": "Line decisions",
+                    "steps": [
+                      {
+                        "q": "A client has a receding hairline. How do you line it?",
+                        "o": ["Follow the natural line exactly", "Straighten the line to make it look fuller", "Skip the line", "Shave it"],
+                        "c": 1,
+                        "f": "A slightly straightened line makes a receding hairline look fuller."
+                      },
+                      {
+                        "q": "The client's skin is irritated after lining. What do you do?",
+                        "o": ["Apply aftershave", "Apply a soothing balm and skip further razor work", "Continue", "Wipe with alcohol"],
+                        "c": 1,
+                        "f": "Irritated skin needs soothing, not more trauma. Balm and stop."
+                      },
+                      {
+                        "q": "Where should the neckline be?",
+                        "o": ["At the very base of the neck", "Along the natural hairline at the base of the neck", "Straight across", "Whatever the client wants"],
+                        "c": 1,
+                        "f": "Follow the natural hairline. Cutting too low looks unnatural and grows back awkwardly."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "hygiene",
+        "name": "Hygiene",
+        "description": "Clean tools protect clients and your reputation.",
+        "skills": [
+          {
+            "id": "sanitation",
+            "name": "Sanitation",
+            "description": "Every tool, every client.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-sanitation-intro",
+                    "type": "lesson",
+                    "title": "Blood-borne infections spread through tools",
+                    "content": "<p>Barbering involves sharp tools near skin. Even small nicks can transfer infections.</p><h3>What must be sanitised between every client</h3><ul><li>Clippers — brush off hair, oil, spray with disinfectant</li><li>Scissors — wipe with 70% alcohol between clients</li><li>Razors — single-use blade, dispose in sharps bin</li><li>Combs — wash and disinfect</li><li>Capes — wash or change between clients</li><li>Chairs — wipe down</li></ul><h3>Personal hygiene</h3><ul><li>Wash hands before and after every client</li><li>Wear clean clothing</li><li>Cover any cuts on your own hands</li></ul>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-hygiene-drill",
+                    "type": "drill",
+                    "title": "Hygiene decisions",
+                    "passingScore": 100,
+                    "steps": [
+                      {
+                        "q": "You just finished a client. The clippers look clean. Do you need to sanitise them?",
+                        "o": ["No, they look clean", "Yes — always between clients", "Only if visible dirt", "Only at end of day"],
+                        "c": 1,
+                        "f": "Always between clients. 'Looks clean' is not a standard."
+                      },
+                      {
+                        "q": "A client nicks their neck while you're lining. What do you do?",
+                        "o": ["Continue", "Stop, clean the cut, apply pressure, disinfect tools, replace blade", "Wipe and continue", "Charge extra"],
+                        "c": 1,
+                        "f": "Any blood stops the service. Clean, disinfect, and replace single-use items."
+                      },
+                      {
+                        "q": "Where do used razor blades go?",
+                        "o": ["Regular bin", "Sharps container or sealed rigid box", "Pocket", "Sink"],
+                        "c": 1,
+                        "f": "Used blades are a biohazard. Sharps container or sealed rigid container."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "business",
+        "name": "Business",
+        "description": "Turn skill into income.",
+        "skills": [
+          {
+            "id": "pricing-speed",
+            "name": "Pricing & Speed",
+            "description": "Charge fairly, work efficiently.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-pricing-intro",
+                    "type": "lesson",
+                    "title": "How barbers make money",
+                    "content": "<h3>Speed matters</h3><p>A barber who cuts in 20 minutes can serve 3x the clients of one who takes an hour. Same skill, 3x the income.</p><h3>Pricing</h3><ul><li>Basic cut — the entry price, brings them in the door</li><li>Fade — higher skill, higher price</li><li>Beard trim — quick add-on</li><li>Full service (cut + shave + line) — premium price</li></ul><h3>Retention</h3><p>A client who returns every 2 weeks for 5 years is 130 visits. That's the real value of each client.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "s-pricing-scenario",
+                    "type": "scenario",
+                    "title": "Price a full service",
+                    "prompt": "A client wants a bald fade, beard trim, and hot towel shave. Your shop charges: basic cut 5,000 Le, fade premium 3,000 Le, beard trim 2,000 Le, hot towel shave 4,000 Le. Calculate the total. Then describe how you'd manage a queue of 5 waiting clients.",
+                    "context": "Efficiency is what turns barbering into a real business.",
+                    "placeholder": "Total price:\nQueue management:",
+                    "rubric": [
+                      "Total price: 5,000 + 3,000 + 2,000 + 4,000 = 14,000 Le",
+                      "Queue management: acknowledge every waiting client",
+                      "Estimate wait times honestly",
+                      "Work efficiently without rushing the quality",
+                      "Offer drinks or a seat while they wait",
+                      "Consider appointments for regulars"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
