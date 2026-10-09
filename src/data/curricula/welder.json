@@ -1,6 +1,104 @@
 {
   "welder": {
+    "courseLevel": "Diploma",
+    "courseTitle": "Diploma in Professional Welding & Fabrication",
+    "courseDescription": "A competency-based, visually guided welding programme covering safety, metal preparation, arc welding technique, joint types, quality inspection, estimating, and supervised practical performance. Learners progress from annotated visual study through demonstration, supervised practice, and evidence-based assessment.",
+    "qualificationNote": "This is a diploma-level course design. The JSON itself does not confer an accredited qualification; accreditation, guided learning hours, instructor requirements, and external assessment must be set by the delivering institution.",
     "intro": "Learn welding from the ground up — safety, metal preparation, technique, and quality. A career that pays well, travels well, and never goes out of demand in a growing economy.",
+    "deliveryModel": {
+      "approach": "Visual-first, demonstration-led, competency-based learning",
+      "recommendedStructure": {
+        "guidedLearningHours": 240,
+        "supervisedPracticalHours": 120,
+        "independentPracticeHours": 60,
+        "totalIndicativeHours": 420,
+        "note": "Indicative planning values; confirm them against local accreditation requirements."
+      },
+      "progression": [
+        "Study the illustrated concept",
+        "Watch or inspect a step-by-step demonstration",
+        "Practise the technique on scrap metal under supervision",
+        "Complete a supervised structural or fabrication task when approved",
+        "Submit evidence and receive rubric-based feedback",
+        "Pass the knowledge check and practical competency gate"
+      ],
+      "completionRequirements": {
+        "knowledgeAssessmentMinimumPercent": 80,
+        "criticalSafetyAssessment": "Must pass every critical PPE, fire, and equipment safety item",
+        "practicalAssessment": "All mandatory practical competencies signed off by an instructor",
+        "portfolio": "Weld samples, before-and-after photographs, reflection notes, and inspection records"
+      }
+    },
+    "visualLearningStandard": {
+      "mandatoryForEveryLearningItem": true,
+      "rule": "Every module, lesson, drill, scenario, assessment, and practical must render at least one relevant visual. A generic decorative image does not count.",
+      "visualTypes": [
+        "annotatedPhoto",
+        "stepByStepIllustration",
+        "techniqueDiagram",
+        "toolIdentificationChart",
+        "beforeAfterComparison",
+        "videoDemonstration",
+        "interactiveHotspot",
+        "decisionFlowchart",
+        "safetyInfographic",
+        "practiceChecklist",
+        "assessmentEvidencePhoto"
+      ],
+      "visualMetadataRequired": [
+        "visualId",
+        "type",
+        "title",
+        "description",
+        "learningPurpose",
+        "altText",
+        "caption",
+        "sourceType",
+        "assetStatus"
+      ],
+      "assetRules": {
+        "sourceTypeOptions": [
+          "originalIllustration",
+          "instructorPhoto",
+          "licensedMedia",
+          "embeddedVideo",
+          "interactiveDiagram",
+          "placeholderToCreate"
+        ],
+        "assetStatusOptions": [
+          "ready",
+          "needsCreation",
+          "needsLicensedAsset",
+          "needsInstructorCapture"
+        ],
+        "doNotInventAssetUrls": true,
+        "fallback": "If the media asset is not yet available, render a clearly labelled visual placeholder or generate an SVG/CSS diagram from structured visual data; never silently omit the visual.",
+        "accessibility": "Every visual needs useful alt text, captions where needed, readable labels, and a text equivalent."
+      }
+    },
+    "diplomaFramework": {
+      "learningOutcomes": [
+        "Apply workshop safety rules including PPE, fire prevention, ventilation, and equipment isolation.",
+        "Read and interpret technical drawings and welding symbols.",
+        "Prepare metal correctly — clean, bevel, fit-up, and tack.",
+        "Operate arc welding equipment safely and set amperage for material thickness.",
+        "Execute fillet, butt, T, lap, and corner joints at professional quality.",
+        "Diagnose common weld defects (porosity, undercut, cracks, incomplete fusion).",
+        "Inspect welds against industry standards and rework defects correctly.",
+        "Price fabrication jobs including materials, labour, overhead, and margin.",
+        "Build a practical weld sample portfolio that evidences consistent quality."
+      ],
+      "assessmentMethods": [
+        "Visual knowledge checks",
+        "Scenario-based decisions",
+        "Symbol identification practical",
+        "Supervised weld samples per joint type",
+        "Destructive or visual weld inspection",
+        "Pricing worksheet and quote simulation",
+        "Portfolio review and reflective log"
+      ],
+      "evidencePolicy": "Record only genuine student work. Photograph welds and shop conditions; do not fabricate evidence."
+    },
     "skillDomains": [
       {
         "id": "safety",
@@ -13,22 +111,123 @@
             "description": "The gear that stands between you and serious injury.",
             "levels": {
               "0": {
+                "levelTitle": "Foundation",
+                "competencyGate": {
+                  "passRequired": true,
+                  "knowledgePassPercent": 80,
+                  "safetyCriticalItemsMustAllPass": true,
+                  "instructorSignOffRequiredForLiveModel": true
+                },
                 "modules": [
                   {
                     "id": "l-ppe-intro",
                     "type": "lesson",
                     "title": "Why welders wear armour",
-                    "content": "<p>Welding produces:</p><ul><li>Ultraviolet light that burns eyes and skin (arc eye is a real injury)</li><li>Molten metal spatter at 1,500°C+</li><li>Toxic fumes from flux and coatings</li><li>Noise from grinding and cutting</li></ul><p>Every piece of PPE exists because someone got hurt without it. Wear all of it, every time.</p>"
-                  },
-                  {
-                    "id": "l-ppe-checklist",
-                    "type": "lesson",
-                    "title": "The full PPE checklist",
-                    "content": "<h3>Head and face</h3><ul><li>Welding helmet with correct shade lens</li><li>Safety glasses underneath</li><li>Cap under helmet if you have long hair</li></ul><h3>Body</h3><ul><li>Leather welding jacket or apron</li><li>Long sleeves, no cuffs</li><li>Leather gauntlet gloves</li></ul><h3>Feet</h3><ul><li>Steel-toe leather boots, high-top</li><li>No open shoes, ever</li></ul><h3>Respiratory</h3><ul><li>Respirator if welding galvanised, painted, or stainless steel</li><li>Good ventilation always</li></ul>"
+                    "content": "<p>Welding produces:</p><ul><li>Ultraviolet light that burns eyes and skin — arc eye is a real injury</li><li>Molten metal spatter at 1,500°C+</li><li>Toxic fumes from flux and coatings</li><li>Noise from grinding and cutting</li></ul><p>Every piece of PPE exists because someone got hurt without it. Wear all of it, every time — not even a 30-second tack weld is worth your eyesight.</p>",
+                    "visuals": [
+                      {
+                        "visualId": "visual-l-ppe-intro",
+                        "type": "safetyInfographic",
+                        "title": "Full PPE set for arc welding",
+                        "description": "A labelled image of a welder in complete PPE: auto-darkening helmet, safety glasses, leather gauntlets, welding jacket, high-top steel-toe boots, ear protection, and respirator where required. Callouts explain what each item protects against.",
+                        "learningPurpose": "Show the learner exactly what full protection looks like before they touch equipment.",
+                        "altText": "A welder wearing an auto-darkening helmet, safety glasses underneath, leather gauntlets, a leather jacket, high-top steel-toe boots, ear protection, and a respirator.",
+                        "caption": "Every item has a reason. Learn them before you weld.",
+                        "sourceType": "placeholderToCreate",
+                        "assetStatus": "needsCreation"
+                      }
+                    ],
+                    "teachingNotes": {
+                      "diplomaDepth": "Explain the physics of arc flash (UV radiation burns), the temperature of spatter, the composition of welding fumes, and why each PPE item targets a specific injury mechanism — not just 'wear this'.",
+                      "learnerTask": "Name every PPE item, state what it protects against, and describe the injury that occurs without it.",
+                      "instructorCheck": "Ask the learner to correctly put on and inspect their own PPE before any live arc is struck."
+                    },
+                    "learningObjectives": [
+                      "Identify each item of welding PPE and its protective function.",
+                      "Explain the specific injury each item prevents.",
+                      "Demonstrate correct donning, fit, and inspection of PPE.",
+                      "Recognise when PPE is damaged and must be replaced."
+                    ],
+                    "practicalEvidence": {
+                      "required": true,
+                      "evidenceTypes": [
+                        "completedChecklist",
+                        "learnerExplanation",
+                        "photoOrVideoWithConsent"
+                      ],
+                      "assessmentCriteria": [
+                        "Correct PPE selection for the task",
+                        "All required items worn and correctly fitted",
+                        "Damaged or non-compliant PPE identified and removed",
+                        "Verbal explanation of each item's purpose"
+                      ]
+                    }
                   }
                 ]
               },
               "1": {
+                "levelTitle": "Intermediate",
+                "competencyGate": {
+                  "passRequired": true,
+                  "knowledgePassPercent": 80,
+                  "safetyCriticalItemsMustAllPass": true,
+                  "instructorSignOffRequiredForLiveModel": true
+                },
+                "modules": [
+                  {
+                    "id": "l-ppe-checklist",
+                    "type": "lesson",
+                    "title": "The full PPE checklist",
+                    "content": "<h3>Head and face</h3><ul><li>Welding helmet with correct shade lens (auto-darkening is best)</li><li>Safety glasses underneath (for chipping slag)</li><li>Cap under helmet if you have long hair</li></ul><h3>Body</h3><ul><li>Leather welding jacket or apron</li><li>Long sleeves, no cuffs (spatter catches in cuffs)</li><li>Leather gauntlet gloves</li></ul><h3>Feet</h3><ul><li>Steel-toe leather boots, high-top</li><li>No open shoes, ever</li></ul><h3>Respiratory</h3><ul><li>Respirator if welding galvanised, painted, or stainless steel</li><li>Good ventilation always</li></ul>",
+                    "visuals": [
+                      {
+                        "visualId": "visual-l-ppe-checklist",
+                        "type": "practiceChecklist",
+                        "title": "Pre-weld PPE inspection checklist",
+                        "description": "A tick-box visual checklist with icons for each PPE item: helmet, lens shade, safety glasses, gloves, jacket, boots, respirator. Each row has a 'condition' check and an image showing a compliant vs non-compliant item.",
+                        "learningPurpose": "Turn PPE into a routine inspection so learners never start work without checking.",
+                        "altText": "A visual PPE inspection checklist with compliant and non-compliant examples for each item.",
+                        "caption": "Inspect every item before every weld. No exceptions.",
+                        "sourceType": "placeholderToCreate",
+                        "assetStatus": "needsCreation"
+                      }
+                    ],
+                    "teachingNotes": {
+                      "diplomaDepth": "Teach that PPE inspection is a discipline, not a ritual. Damaged leather, cracked lenses, and worn boots are silent failures that cause real injuries. Explain the correct helmet shade number for the amperage range being used.",
+                      "learnerTask": "Walk through the full pre-weld inspection using the checklist and reject any item that fails.",
+                      "instructorCheck": "Observe the learner's inspection sequence and confirm they can justify every accept/reject decision."
+                    },
+                    "learningObjectives": [
+                      "Perform a complete pre-weld PPE inspection.",
+                      "Select the correct helmet shade for the amperage.",
+                      "Identify when PPE is unsafe to use and must be replaced.",
+                      "Explain the correct sequence for donning PPE."
+                    ],
+                    "practicalEvidence": {
+                      "required": true,
+                      "evidenceTypes": [
+                        "completedChecklist",
+                        "learnerExplanation",
+                        "photoOrVideoWithConsent"
+                      ],
+                      "assessmentCriteria": [
+                        "Follows inspection checklist in order",
+                        "Correctly identifies compliant vs non-compliant items",
+                        "Selects correct lens shade for the task",
+                        "Documents the inspection"
+                      ]
+                    }
+                  }
+                ]
+              },
+              "2": {
+                "levelTitle": "Applied",
+                "competencyGate": {
+                  "passRequired": true,
+                  "knowledgePassPercent": 80,
+                  "safetyCriticalItemsMustAllPass": true,
+                  "instructorSignOffRequiredForLiveModel": true
+                },
                 "modules": [
                   {
                     "id": "d-ppe-drill",
@@ -38,44 +237,73 @@
                     "steps": [
                       {
                         "q": "You're about to tack weld a small joint. Can you skip the helmet?",
-                        "o": ["Yes, it's just one weld", "No, never", "Only if the weld is very small", "Only if you close your eyes"],
+                        "o": [
+                          "Yes, it's just one weld",
+                          "No, never",
+                          "Only if the weld is very small",
+                          "Only if you close your eyes"
+                        ],
                         "c": 1,
-                        "f": "Arc eye can happen from a single flash."
+                        "f": "Arc eye can happen from a single flash. Never skip the helmet."
                       },
                       {
                         "q": "You're welding galvanised steel. What extra protection is required?",
-                        "o": ["Sunglasses", "Respirator and extra ventilation", "Extra gloves", "Nothing extra"],
+                        "o": [
+                          "Sunglasses",
+                          "Respirator and extra ventilation",
+                          "Extra gloves",
+                          "Nothing extra"
+                        ],
                         "c": 1,
                         "f": "Galvanised coating releases toxic zinc fumes."
                       },
                       {
                         "q": "You notice your welding jacket sleeve has a hole. What do you do?",
-                        "o": ["Ignore it", "Patch or replace before welding", "Turn it inside out", "Stuff it with cloth"],
+                        "o": [
+                          "Ignore it",
+                          "Patch or replace before welding",
+                          "Turn it inside out",
+                          "Stuff it with cloth"
+                        ],
                         "c": 1,
                         "f": "A hole in leather lets spatter through."
                       }
-                    ]
-                  }
-                ]
-              },
-              "2": {
-                "modules": [
-                  {
-                    "id": "s-safety-assessment",
-                    "type": "scenario",
-                    "title": "Safety assessment for a new site",
-                    "prompt": "You've been hired to weld a metal gate on a client's property. Describe how you assess the site for safety before starting work.",
-                    "context": "Every new site is a new hazard.",
-                    "placeholder": "Assessment steps: …",
-                    "rubric": [
-                      "Checks for flammable materials nearby",
-                      "Checks ventilation or whether outdoor welding is possible",
-                      "Checks electrical supply and grounding",
-                      "Checks for bystanders",
-                      "Prepares a fire extinguisher or water bucket",
-                      "Notes emergency exits and phone signal",
-                      "Confirms weather conditions"
-                    ]
+                    ],
+                    "visuals": [
+                      {
+                        "visualId": "visual-d-ppe-drill",
+                        "type": "decisionFlowchart",
+                        "title": "Is this PPE acceptable? Decision flow",
+                        "description": "A visual decision tree: Is the item clean? Cracked? Burned? Correctly sized? Each branch leads to 'use' or 'replace'. Includes examples of common damage on each PPE type.",
+                        "learningPurpose": "Build the habit of judging PPE condition in real time.",
+                        "altText": "A decision flowchart for judging whether each PPE item is acceptable for use.",
+                        "caption": "The wrong answer here costs skin, eyes, or lungs.",
+                        "sourceType": "placeholderToCreate",
+                        "assetStatus": "needsCreation"
+                      }
+                    ],
+                    "teachingNotes": {
+                      "diplomaDepth": "At this level, learners must justify their PPE decisions against real-world consequences. Discuss case histories of arc eye, metal fume fever, and burn injuries — how each was caused, and what PPE would have prevented it.",
+                      "learnerTask": "Complete the drill with 90% or higher and explain why each wrong answer is dangerous.",
+                      "instructorCheck": "Have the learner walk through the drill out loud, explaining consequences for each wrong option."
+                    },
+                    "learningObjectives": [
+                      "Apply PPE rules under realistic welding scenarios.",
+                      "Justify acceptance or rejection of PPE based on condition.",
+                      "Recognise hazards that require additional protection beyond baseline PPE."
+                    ],
+                    "practicalEvidence": {
+                      "required": true,
+                      "evidenceTypes": [
+                        "drillScore",
+                        "learnerExplanation"
+                      ],
+                      "assessmentCriteria": [
+                        "Achieves 90% or above on the drill",
+                        "Explains the injury each wrong option would cause",
+                        "Correctly identifies when additional PPE is required"
+                      ]
+                    }
                   }
                 ]
               }
@@ -87,16 +315,68 @@
             "description": "Welding sparks travel far. Preventing fires is part of the job.",
             "levels": {
               "0": {
+                "levelTitle": "Foundation",
+                "competencyGate": {
+                  "passRequired": true,
+                  "knowledgePassPercent": 80,
+                  "safetyCriticalItemsMustAllPass": true,
+                  "instructorSignOffRequiredForLiveModel": true
+                },
                 "modules": [
                   {
                     "id": "l-fire-intro",
                     "type": "lesson",
                     "title": "Sparks travel farther than you think",
-                    "content": "<p>Welding spatter can travel up to <strong>10 metres</strong> and stay hot enough to ignite wood, cloth, or fuel for minutes after landing.</p><h3>Before welding anywhere</h3><ol><li>Clear a 10-metre radius of anything flammable</li><li>Cover what can't be moved with fire blankets</li><li>Have a fire extinguisher within arm's reach</li><li>Have a bucket of water or sand nearby</li><li>Never weld near fuel, gas cylinders, or paint</li></ol><p>After welding, stay on site for at least 30 minutes.</p>"
+                    "content": "<p>Welding spatter can travel up to <strong>10 metres</strong> and stay hot enough to ignite wood, cloth, or fuel for minutes after landing.</p><h3>Before welding anywhere</h3><ol><li>Clear a 10-metre radius of anything flammable</li><li>Cover what can't be moved with fire blankets</li><li>Have a fire extinguisher within arm's reach</li><li>Have a bucket of water or sand nearby</li><li>Never weld near fuel, gas cylinders, or paint</li></ol><p>After welding, stay on site for at least 30 minutes. Smouldering fires take time to show.</p>",
+                    "visuals": [
+                      {
+                        "visualId": "visual-l-fire-intro",
+                        "type": "techniqueDiagram",
+                        "title": "10-metre spatter zone diagram",
+                        "description": "A top-down diagram showing a welder at the centre, a 10-metre radius marked, and examples of ignition hazards (rags, fuel cans, wooden pallets, painted walls) placed at various distances. Hot spatter paths are visualised as arrow vectors.",
+                        "learningPurpose": "Make the invisible risk of airborne spatter physically visible.",
+                        "altText": "A top-down diagram with a 10-metre radius around a welder, showing typical ignition hazards within the zone.",
+                        "caption": "If it's inside the circle, it can burn.",
+                        "sourceType": "placeholderToCreate",
+                        "assetStatus": "needsCreation"
+                      }
+                    ],
+                    "teachingNotes": {
+                      "diplomaDepth": "Explain the physics of spatter: it cools as it travels, but even at 5 metres it can exceed the ignition temperature of common materials. Discuss fire triangle, extinguisher classes (A, B, C, D), and the specific case of welding near fuel — where vapour, not liquid, is the danger.",
+                      "learnerTask": "Survey a workspace and map every ignition hazard within 10 metres.",
+                      "instructorCheck": "Have the learner physically walk a site and point out each hazard with a reason."
+                    },
+                    "learningObjectives": [
+                      "Identify the 10-metre spatter radius and its implications.",
+                      "Survey a workspace for ignition hazards before welding.",
+                      "Select the correct fire extinguisher class for the hazard.",
+                      "Explain the post-weld 30-minute watch period."
+                    ],
+                    "practicalEvidence": {
+                      "required": true,
+                      "evidenceTypes": [
+                        "completedChecklist",
+                        "learnerExplanation",
+                        "photoOrVideoWithConsent"
+                      ],
+                      "assessmentCriteria": [
+                        "Correctly maps all hazards within 10 metres",
+                        "Selects appropriate extinguisher class",
+                        "Explains the fire triangle for each hazard",
+                        "Commits to the post-weld watch period"
+                      ]
+                    }
                   }
                 ]
               },
               "1": {
+                "levelTitle": "Intermediate",
+                "competencyGate": {
+                  "passRequired": true,
+                  "knowledgePassPercent": 80,
+                  "safetyCriticalItemsMustAllPass": true,
+                  "instructorSignOffRequiredForLiveModel": true
+                },
                 "modules": [
                   {
                     "id": "s-fire-response",
@@ -108,16 +388,131 @@
                     "rubric": [
                       "Stops welding immediately and turns off equipment",
                       "Assesses whether it's small enough to fight or needs evacuation",
-                      "Uses correct extinguisher type",
-                      "Aims at the base of the fire",
-                      "Evacuates if the fire grows",
+                      "Uses correct extinguisher type (dry powder or CO2 for electrical areas)",
+                      "Aims at the base of the fire, not the flames",
+                      "Evacuates if the fire grows or smoke becomes thick",
                       "Calls for help and clears other people away",
                       "Reports to client and documents the incident"
-                    ]
+                    ],
+                    "visuals": [
+                      {
+                        "visualId": "visual-s-fire-response",
+                        "type": "decisionFlowchart",
+                        "title": "Fire response decision tree",
+                        "description": "A visual flowchart: fire discovered → size assessment → fight or evacuate → correct extinguisher → aim at base → sweep → report. Includes visual cues for when a fire is too large to fight (chest height, spreading, smoke build-up).",
+                        "learningPurpose": "Give the learner a decision path they can recall under pressure.",
+                        "altText": "A fire response flowchart from discovery through extinguisher use or evacuation.",
+                        "caption": "Assess fast. Act faster.",
+                        "sourceType": "placeholderToCreate",
+                        "assetStatus": "needsCreation"
+                      }
+                    ],
+                    "teachingNotes": {
+                      "diplomaDepth": "Discuss the physiological response to sudden fire (tunnel vision, freezing) and why a rehearsed decision path matters. Explain PASS technique (Pull, Aim, Squeeze, Sweep) and the physical signs that a fire is beyond single-person response: heat on the face, chest-high flames, smoke at ceiling level.",
+                      "learnerTask": "Walk through the flowchart for the given scenario and justify each decision.",
+                      "instructorCheck": "Have the learner explain what would change if the fire were at 5 metres, in a fuel can, or under a bench."
+                    },
+                    "learningObjectives": [
+                      "Apply the fire response decision tree under pressure.",
+                      "Distinguish fightable from un-fightable fires.",
+                      "Demonstrate correct extinguisher technique (PASS).",
+                      "Report and document welding fires correctly."
+                    ],
+                    "practicalEvidence": {
+                      "required": true,
+                      "evidenceTypes": [
+                        "learnerExplanation",
+                        "completedChecklist"
+                      ],
+                      "assessmentCriteria": [
+                        "Correctly assesses fire size",
+                        "Selects fight or evacuate appropriately",
+                        "Demonstrates PASS technique",
+                        "Follows post-incident reporting"
+                      ]
+                    }
                   }
                 ]
               }
             }
+          }
+        ],
+        "diplomaPracticals": [
+          {
+            "id": "p-safety-demonstration",
+            "type": "practical",
+            "title": "Safety: PPE and fire prevention — supervised demonstration",
+            "durationMinutes": 90,
+            "prompt": "Demonstrate correct PPE selection, inspection, and fire prevention preparation for a real welding task. Complete a full pre-weld safety check under instructor observation.",
+            "steps": [
+              {
+                "step": 1,
+                "title": "Prepare",
+                "instruction": "Inspect all PPE. Reject any damaged item. Lay out fire prevention equipment (extinguisher, water, sand).",
+                "visual": "Illustrated PPE and fire equipment layout"
+              },
+              {
+                "step": 2,
+                "title": "Survey",
+                "instruction": "Walk the workspace and identify every ignition hazard within 10 metres. Document with a sketch or photo.",
+                "visual": "Annotated 10-metre hazard map"
+              },
+              {
+                "step": 3,
+                "title": "Control",
+                "instruction": "Clear, cover, or remove every hazard. Explain each action as you do it.",
+                "visual": "Before/after workspace comparison"
+              },
+              {
+                "step": 4,
+                "title": "Verify",
+                "instruction": "Confirm extinguisher pressure, accessibility, and correct class. Confirm water/sand location.",
+                "visual": "Extinguisher readiness checklist"
+              },
+              {
+                "step": 5,
+                "title": "Reflect",
+                "instruction": "Record what you would do differently on the next job. Note any hazards you initially missed.",
+                "visual": "Reflection card"
+              }
+            ],
+            "visuals": [
+              {
+                "visualId": "visual-p-safety",
+                "type": "stepByStepIllustration",
+                "title": "Full practical walkthrough: Safety preparation",
+                "description": "Five-stage visual walkthrough covering PPE inspection, hazard survey, control actions, verification, and reflection.",
+                "learningPurpose": "Let the learner rehearse the full safety workflow visually before performing it.",
+                "altText": "Five illustrated stages of a supervised safety preparation practical.",
+                "caption": "Follow the stages in order and ask the instructor to verify each safety-critical step.",
+                "sourceType": "placeholderToCreate",
+                "assetStatus": "needsCreation"
+              }
+            ],
+            "rubric": [
+              {
+                "criterion": "PPE selection and inspection",
+                "weightPercent": 20
+              },
+              {
+                "criterion": "Hazard survey completeness",
+                "weightPercent": 25
+              },
+              {
+                "criterion": "Control actions taken",
+                "weightPercent": 20
+              },
+              {
+                "criterion": "Fire equipment readiness",
+                "weightPercent": 20
+              },
+              {
+                "criterion": "Communication and reflection",
+                "weightPercent": 15
+              }
+            ],
+            "passingScore": 80,
+            "instructorSignOffRequired": true
           }
         ]
       },
@@ -132,51 +527,196 @@
             "description": "Interpret technical drawings and welding symbols.",
             "levels": {
               "0": {
+                "levelTitle": "Foundation",
+                "competencyGate": {
+                  "passRequired": true,
+                  "knowledgePassPercent": 80,
+                  "safetyCriticalItemsMustAllPass": false,
+                  "instructorSignOffRequiredForLiveModel": false
+                },
                 "modules": [
                   {
                     "id": "l-drawings-intro",
                     "type": "lesson",
                     "title": "Drawings are a language",
-                    "content": "<p>Before you cut a single piece of metal, you must read the drawing. A drawing tells you:</p><ul><li>Dimensions of every piece</li><li>Type of weld required at each joint</li><li>Materials and thickness</li><li>Any special notes</li></ul><p>Misreading a drawing wastes metal and time.</p>"
+                    "content": "<p>Before you cut a single piece of metal, you must read the drawing. A drawing tells you:</p><ul><li>Dimensions of every piece</li><li>Type of weld required at each joint</li><li>Materials and thickness</li><li>Any special notes</li></ul><p>Misreading a drawing wastes metal and time — and can produce a structurally unsound product.</p>",
+                    "visuals": [
+                      {
+                        "visualId": "visual-l-drawings-intro",
+                        "type": "annotatedPhoto",
+                        "title": "Anatomy of a welding drawing",
+                        "description": "A real technical drawing of a steel frame with labelled callouts: dimensions, weld symbols, material notes, title block, and revision history. Each label points to the exact location on the drawing.",
+                        "learningPurpose": "Show the learner what to look at when opening a drawing for the first time.",
+                        "altText": "A technical welding drawing with labelled callouts for dimensions, weld symbols, materials, and title block.",
+                        "caption": "Every drawing has the same information. Learn where to look.",
+                        "sourceType": "placeholderToCreate",
+                        "assetStatus": "needsCreation"
+                      }
+                    ],
+                    "teachingNotes": {
+                      "diplomaDepth": "Explain the drafting conventions: first-angle vs third-angle projection, dimension lines vs extension lines, and how the title block tells you the scale and revision. Discuss what happens when a drawing is misread on a structural job.",
+                      "learnerTask": "Identify each labelled element on the drawing and explain what it tells the fabricator.",
+                      "instructorCheck": "Have the learner explain the difference between a dimension line and an extension line."
+                    },
+                    "learningObjectives": [
+                      "Identify the main components of a technical welding drawing.",
+                      "Explain what each component communicates.",
+                      "Understand scale and revision control.",
+                      "Recognise the difference between first- and third-angle projection."
+                    ],
+                    "practicalEvidence": {
+                      "required": true,
+                      "evidenceTypes": [
+                        "completedChecklist",
+                        "learnerExplanation"
+                      ],
+                      "assessmentCriteria": [
+                        "Correctly labels all major components",
+                        "Explains purpose of each element",
+                        "Identifies scale and revision"
+                      ]
+                    }
                   }
                 ]
               },
               "1": {
+                "levelTitle": "Intermediate",
+                "competencyGate": {
+                  "passRequired": true,
+                  "knowledgePassPercent": 80,
+                  "safetyCriticalItemsMustAllPass": false,
+                  "instructorSignOffRequiredForLiveModel": false
+                },
                 "modules": [
                   {
                     "id": "l-symbols",
                     "type": "lesson",
                     "title": "The five welding symbols you must know",
-                    "content": "<h3>1. Fillet weld (triangle)</h3><p>The most common weld. Joins two pieces at a right angle.</p><h3>2. Butt weld (straight line)</h3><p>Joins two pieces end-to-end.</p><h3>3. Square butt</h3><p>Simple edge-to-edge without bevel.</p><h3>4. V-groove (V shape)</h3><p>Pieces are beveled to allow deeper penetration.</p><h3>5. Weld-all-around (circle at joint)</h3><p>Means weld the entire circumference.</p><p>Numbers next to symbols indicate leg length or weld size in millimetres.</p>"
+                    "content": "<h3>1. Fillet weld (triangle)</h3><p>The most common weld. Joins two pieces at a right angle.</p><h3>2. Butt weld (straight line)</h3><p>Joins two pieces end-to-end.</p><h3>3. Square butt</h3><p>Simple edge-to-edge without bevel.</p><h3>4. V-groove (V shape)</h3><p>Pieces are beveled to allow deeper penetration.</p><h3>5. Weld-all-around (circle at joint)</h3><p>Means weld the entire circumference.</p><p>Numbers next to symbols indicate leg length or weld size in millimetres.</p>",
+                    "visuals": [
+                      {
+                        "visualId": "visual-l-symbols",
+                        "type": "toolIdentificationChart",
+                        "title": "Five core welding symbols chart",
+                        "description": "A reference chart showing each of the five symbols drawn as they appear on a drawing, alongside a real-world photograph of the joint they produce. The weld size and length notation is annotated.",
+                        "learningPurpose": "Give the learner a single reference image they can return to for every symbol.",
+                        "altText": "A chart of five welding symbols with real photographs of the joints they specify.",
+                        "caption": "Symbol on the left, actual weld on the right.",
+                        "sourceType": "placeholderToCreate",
+                        "assetStatus": "needsCreation"
+                      }
+                    ],
+                    "teachingNotes": {
+                      "diplomaDepth": "Explain where the size number goes (left of symbol for fillet leg length, above the line for groove weld size), where the length number goes, and what a tail annotation means (process specification). Discuss the difference between a symbol placed above the reference line vs below.",
+                      "learnerTask": "Read each symbol on a drawing and describe the resulting joint before seeing the photograph.",
+                      "instructorCheck": "Have the learner sketch the joint each symbol produces without looking."
+                    },
+                    "learningObjectives": [
+                      "Identify the five core welding symbols on any drawing.",
+                      "Interpret size and length notation.",
+                      "Explain where the weld is applied (arrow side vs other side).",
+                      "Match a symbol to the actual joint it specifies."
+                    ],
+                    "practicalEvidence": {
+                      "required": true,
+                      "evidenceTypes": [
+                        "completedChecklist",
+                        "learnerExplanation"
+                      ],
+                      "assessmentCriteria": [
+                        "Correctly identifies each symbol",
+                        "Interprets size and length",
+                        "Sketches correct joint for each symbol"
+                      ]
+                    }
                   }
                 ]
               },
               "2": {
+                "levelTitle": "Applied",
+                "competencyGate": {
+                  "passRequired": true,
+                  "knowledgePassPercent": 80,
+                  "safetyCriticalItemsMustAllPass": false,
+                  "instructorSignOffRequiredForLiveModel": false
+                },
                 "modules": [
                   {
                     "id": "d-symbol-reading",
                     "type": "drill",
                     "title": "Read the symbols",
+                    "passingScore": 90,
                     "steps": [
                       {
                         "q": "A drawing shows a triangle with a '6' next to it at a corner joint. What does this mean?",
-                        "o": ["6mm thick metal", "6mm fillet weld at that corner", "6 welds", "6-degree angle"],
+                        "o": [
+                          "6mm thick metal",
+                          "6mm fillet weld at that corner",
+                          "6 welds",
+                          "6-degree angle"
+                        ],
                         "c": 1,
                         "f": "Triangle = fillet weld. The number indicates leg length in mm."
                       },
                       {
                         "q": "A symbol shows a circle at the joint between two pieces. What does this mean?",
-                        "o": ["Circular weld only", "Weld all the way around", "Do not weld", "Use circular motion"],
+                        "o": [
+                          "Circular weld only",
+                          "Weld all the way around",
+                          "Do not weld",
+                          "Use circular motion"
+                        ],
                         "c": 1,
                         "f": "The circle at the joint means weld the full perimeter."
                       },
                       {
                         "q": "A drawing shows a V shape at the joint. Why is the V there?",
-                        "o": ["Decorative", "The pieces are beveled to allow deeper weld penetration", "It's a mistake", "For cooling"],
+                        "o": [
+                          "Decorative",
+                          "The pieces are beveled to allow deeper weld penetration",
+                          "It's a mistake",
+                          "For cooling"
+                        ],
                         "c": 1,
                         "f": "A V-groove is prepared so the weld penetrates the full thickness."
                       }
-                    ]
+                    ],
+                    "visuals": [
+                      {
+                        "visualId": "visual-d-symbol-reading",
+                        "type": "beforeAfterComparison",
+                        "title": "Symbol to joint — before and after",
+                        "description": "Side-by-side comparison: on the left, the drawn symbol as it appears on a technical drawing; on the right, a photograph of the finished weld on the actual joint. Numbered to match each drill question.",
+                        "learningPurpose": "Train the eye to translate from drawing to metal without guessing.",
+                        "altText": "Side-by-side drawings of weld symbols and photographs of the resulting welds.",
+                        "caption": "The symbol predicts the weld. Read it correctly.",
+                        "sourceType": "placeholderToCreate",
+                        "assetStatus": "needsCreation"
+                      }
+                    ],
+                    "teachingNotes": {
+                      "diplomaDepth": "Require the learner to read symbols on real drawings from real jobs — not just answer drill questions. Discuss how a misread symbol on a structural drawing leads to over-welding (wasted cost) or under-welding (dangerous).",
+                      "learnerTask": "Achieve 90%+ on the drill and then read three real drawings with a supervisor.",
+                      "instructorCheck": "Verify the learner's reading of an unlabelled drawing."
+                    },
+                    "learningObjectives": [
+                      "Interpret welding symbols under time pressure.",
+                      "Translate symbol to weld without intermediate steps.",
+                      "Catch ambiguous or incorrect symbols on a drawing."
+                    ],
+                    "practicalEvidence": {
+                      "required": true,
+                      "evidenceTypes": [
+                        "drillScore",
+                        "learnerExplanation",
+                        "photoOrVideoWithConsent"
+                      ],
+                      "assessmentCriteria": [
+                        "Achieves 90% or above on the drill",
+                        "Correctly reads three real drawings with instructor present",
+                        "Identifies any errors or ambiguities on the drawings"
+                      ]
+                    }
                   }
                 ]
               }
@@ -188,16 +728,66 @@
             "description": "Clean metal welds well. Dirty metal welds badly.",
             "levels": {
               "0": {
+                "levelTitle": "Foundation",
+                "competencyGate": {
+                  "passRequired": true,
+                  "knowledgePassPercent": 80,
+                  "safetyCriticalItemsMustAllPass": false,
+                  "instructorSignOffRequiredForLiveModel": false
+                },
                 "modules": [
                   {
                     "id": "l-clean-intro",
                     "type": "lesson",
                     "title": "The invisible enemy: contamination",
-                    "content": "<p>Weld contamination comes from:</p><ul><li>Rust</li><li>Mill scale</li><li>Oil and grease</li><li>Paint</li><li>Moisture</li></ul><p>All of these cause:</p><ul><li>Porosity (holes in the weld)</li><li>Poor penetration</li><li>Cracking</li><li>Weak joints</li></ul><p>Clean metal is the foundation of a strong weld.</p>"
+                    "content": "<p>Weld contamination comes from:</p><ul><li>Rust</li><li>Mill scale (the dark coating on new steel)</li><li>Oil and grease</li><li>Paint</li><li>Moisture</li></ul><p>All of these cause:</p><ul><li>Porosity (holes in the weld)</li><li>Poor penetration</li><li>Cracking</li><li>Weak joints</li></ul><p>Clean metal is the foundation of a strong weld.</p>",
+                    "visuals": [
+                      {
+                        "visualId": "visual-l-clean-intro",
+                        "type": "beforeAfterComparison",
+                        "title": "Contaminated vs clean weld comparison",
+                        "description": "A split image: on the left, a weld on dirty metal showing visible porosity and rough surface; on the right, a weld on clean metal showing smooth, defect-free finish. Both welds done by the same welder, same settings.",
+                        "learningPurpose": "Prove that preparation, not skill, is the difference.",
+                        "altText": "Two welds side by side, one on contaminated metal showing porosity and one on clean metal showing a smooth finish.",
+                        "caption": "Same welder. Same settings. Different preparation.",
+                        "sourceType": "placeholderToCreate",
+                        "assetStatus": "needsCreation"
+                      }
+                    ],
+                    "teachingNotes": {
+                      "diplomaDepth": "Explain metallurgy at a practical level: mill scale is iron oxide; oil and grease vaporise and form gas pockets; moisture produces hydrogen-induced cracking. Each contaminant has a distinct failure mechanism. Teach the learner to identify each visually and by feel.",
+                      "learnerTask": "Inspect three metal samples and identify the contaminant on each.",
+                      "instructorCheck": "Have the learner explain the failure mechanism for each contaminant."
+                    },
+                    "learningObjectives": [
+                      "Identify common weld contaminants visually.",
+                      "Explain the failure mechanism for each contaminant.",
+                      "Describe why contaminated welds fail.",
+                      "Recognise the visual signs of contamination-related defects."
+                    ],
+                    "practicalEvidence": {
+                      "required": true,
+                      "evidenceTypes": [
+                        "completedChecklist",
+                        "learnerExplanation"
+                      ],
+                      "assessmentCriteria": [
+                        "Correctly identifies contaminants",
+                        "Explains failure mechanism for each",
+                        "Distinguishes porosity from other defects"
+                      ]
+                    }
                   }
                 ]
               },
               "1": {
+                "levelTitle": "Intermediate",
+                "competencyGate": {
+                  "passRequired": true,
+                  "knowledgePassPercent": 80,
+                  "safetyCriticalItemsMustAllPass": false,
+                  "instructorSignOffRequiredForLiveModel": false
+                },
                 "modules": [
                   {
                     "id": "d-prep-drill",
@@ -206,27 +796,157 @@
                     "steps": [
                       {
                         "q": "You receive newly cut steel from the supplier. First step?",
-                        "o": ["Weld immediately", "Clean edges of mill scale, rust, and oil", "Paint it", "Bend it"],
+                        "o": [
+                          "Weld immediately",
+                          "Clean edges of mill scale, rust, and oil",
+                          "Paint it",
+                          "Bend it"
+                        ],
                         "c": 1,
                         "f": "New steel has mill scale and cutting oils."
                       },
                       {
                         "q": "There's light surface rust on the joint area. What do you do?",
-                        "o": ["Ignore it", "Grind or wire-brush to bare metal", "Weld over it", "Oil it"],
+                        "o": [
+                          "Ignore it",
+                          "Grind or wire-brush to bare metal",
+                          "Weld over it",
+                          "Oil it"
+                        ],
                         "c": 1,
                         "f": "Rust causes porosity."
                       },
                       {
                         "q": "After cleaning, the two pieces don't fit flush. What do you do?",
-                        "o": ["Force them together", "Grind or cut to fit properly", "Weld as-is with a gap", "Use more weld to fill the gap"],
+                        "o": [
+                          "Force them together",
+                          "Grind or cut to fit properly",
+                          "Weld as-is with a gap",
+                          "Use more weld to fill the gap"
+                        ],
                         "c": 1,
                         "f": "Fit-up before welding."
                       }
-                    ]
+                    ],
+                    "visuals": [
+                      {
+                        "visualId": "visual-d-prep-drill",
+                        "type": "stepByStepIllustration",
+                        "title": "Metal preparation workflow",
+                        "description": "A four-stage illustrated workflow: 1) inspect for contaminants, 2) clean to bare metal, 3) check fit-up, 4) tack and verify. Each stage shows the acceptable and unacceptable result.",
+                        "learningPurpose": "Establish the correct sequence so learners never skip a stage.",
+                        "altText": "Four illustrated stages of metal preparation from inspection to tacking.",
+                        "caption": "Skipping any stage causes a defect you can't fix later.",
+                        "sourceType": "placeholderToCreate",
+                        "assetStatus": "needsCreation"
+                      }
+                    ],
+                    "teachingNotes": {
+                      "diplomaDepth": "Discuss grind direction (cross cuts vs along the joint), correct flap disc and wire brush selection for different metals, and how to check fit-up with a square and feeler gauges. Explain why fit-up matters structurally, not just aesthetically.",
+                      "learnerTask": "Complete the drill at 90%+ and then demonstrate the sequence on real metal.",
+                      "instructorCheck": "Observe preparation on a real joint and grade against the sequence."
+                    },
+                    "learningObjectives": [
+                      "Follow the correct preparation sequence.",
+                      "Select the correct cleaning tools for each contaminant.",
+                      "Check fit-up accurately with the appropriate instruments.",
+                      "Recognise when a joint is ready for welding."
+                    ],
+                    "practicalEvidence": {
+                      "required": true,
+                      "evidenceTypes": [
+                        "drillScore",
+                        "completedChecklist",
+                        "photoOrVideoWithConsent"
+                      ],
+                      "assessmentCriteria": [
+                        "Achieves 90% or above on the drill",
+                        "Demonstrates correct sequence on real metal",
+                        "Joint is clean and correctly fitted"
+                      ]
+                    }
                   }
                 ]
               }
             }
+          }
+        ],
+        "diplomaPracticals": [
+          {
+            "id": "p-preparation-demonstration",
+            "type": "practical",
+            "title": "Preparation: Drawing reading and metal preparation — supervised practice",
+            "durationMinutes": 120,
+            "prompt": "Read a technical drawing, select and prepare metal for the specified joints, and verify fit-up under instructor observation.",
+            "steps": [
+              {
+                "step": 1,
+                "title": "Read",
+                "instruction": "Study the drawing. Identify every joint, symbol, and dimension. Ask if anything is unclear.",
+                "visual": "Annotated drawing with callouts"
+              },
+              {
+                "step": 2,
+                "title": "Select",
+                "instruction": "Select the correct materials and thicknesses. Verify against the drawing.",
+                "visual": "Material selection chart"
+              },
+              {
+                "step": 3,
+                "title": "Clean",
+                "instruction": "Remove all mill scale, rust, oil, and moisture from the joint areas.",
+                "visual": "Contamination identification guide"
+              },
+              {
+                "step": 4,
+                "title": "Fit",
+                "instruction": "Check fit-up, adjust as needed, tack and verify.",
+                "visual": "Fit-up measurement diagram"
+              },
+              {
+                "step": 5,
+                "title": "Verify",
+                "instruction": "Instructor verifies preparation before welding begins.",
+                "visual": "Pre-weld verification checklist"
+              }
+            ],
+            "visuals": [
+              {
+                "visualId": "visual-p-preparation",
+                "type": "stepByStepIllustration",
+                "title": "Full practical walkthrough: Preparation",
+                "description": "Five-stage illustrated workflow from drawing to verified prep.",
+                "learningPurpose": "Give learners the full prep workflow as a single reference.",
+                "altText": "Five illustrated stages of a supervised preparation practical.",
+                "caption": "Preparation is 70% of weld quality.",
+                "sourceType": "placeholderToCreate",
+                "assetStatus": "needsCreation"
+              }
+            ],
+            "rubric": [
+              {
+                "criterion": "Drawing interpretation accuracy",
+                "weightPercent": 20
+              },
+              {
+                "criterion": "Material selection",
+                "weightPercent": 15
+              },
+              {
+                "criterion": "Cleaning completeness",
+                "weightPercent": 25
+              },
+              {
+                "criterion": "Fit-up quality",
+                "weightPercent": 25
+              },
+              {
+                "criterion": "Tacking and verification",
+                "weightPercent": 15
+              }
+            ],
+            "passingScore": 80,
+            "instructorSignOffRequired": true
           }
         ]
       },
@@ -241,26 +961,120 @@
             "description": "Stick welding — the workhorse of West African workshops.",
             "levels": {
               "0": {
+                "levelTitle": "Foundation",
+                "competencyGate": {
+                  "passRequired": true,
+                  "knowledgePassPercent": 80,
+                  "safetyCriticalItemsMustAllPass": true,
+                  "instructorSignOffRequiredForLiveModel": true
+                },
                 "modules": [
                   {
                     "id": "l-arc-intro",
                     "type": "lesson",
                     "title": "What is arc welding?",
-                    "content": "<p>Arc welding (also called stick welding or SMAW) uses an electrical arc between a consumable electrode and the metal to create heat and melt both the electrode and the workpiece together.</p><h3>Why it's everywhere in West Africa</h3><ul><li>Equipment is cheap and durable</li><li>Works outdoors, in wind and rain</li><li>No gas cylinders needed</li><li>One machine handles many metals</li></ul><p>If you can arc weld well, you can find work anywhere.</p>"
+                    "content": "<p>Arc welding (also called stick welding or SMAW — Shielded Metal Arc Welding) uses an electrical arc between a consumable electrode and the metal to create heat and melt both the electrode and the workpiece together.</p><h3>Why it's everywhere in West Africa</h3><ul><li>Equipment is cheap and durable</li><li>Works outdoors, in wind and rain</li><li>No gas cylinders needed</li><li>One machine handles many metals</li></ul><p>If you can arc weld well, you can find work anywhere.</p>",
+                    "visuals": [
+                      {
+                        "visualId": "visual-l-arc-intro",
+                        "type": "techniqueDiagram",
+                        "title": "SMAW circuit and arc anatomy",
+                        "description": "A labelled diagram showing the welding machine, electrode holder, workpiece, ground clamp, and the electrical circuit between them. The arc zone is magnified to show molten pool, slag covering, and base metal fusion.",
+                        "learningPurpose": "Make the invisible circuit and arc visible.",
+                        "altText": "A diagram of a SMAW welding circuit with the arc zone magnified to show the molten pool and slag.",
+                        "caption": "Follow the current. Understand the arc.",
+                        "sourceType": "placeholderToCreate",
+                        "assetStatus": "needsCreation"
+                      }
+                    ],
+                    "teachingNotes": {
+                      "diplomaDepth": "Explain AC vs DC welding current, electrode positive vs negative, and how polarity affects penetration and deposition rate. Discuss the electrode coating's role: shielding gas generation, slag formation, arc stabilisation, and alloying elements.",
+                      "learnerTask": "Trace the electrical circuit and name each component.",
+                      "instructorCheck": "Have the learner explain the difference between AC and DC welding and when each is used."
+                    },
+                    "learningObjectives": [
+                      "Describe the SMAW process and its electrical circuit.",
+                      "Explain the function of electrode coating.",
+                      "Distinguish AC and DC welding and their applications.",
+                      "Identify the major components of a stick welding setup."
+                    ],
+                    "practicalEvidence": {
+                      "required": true,
+                      "evidenceTypes": [
+                        "learnerExplanation",
+                        "completedChecklist"
+                      ],
+                      "assessmentCriteria": [
+                        "Correctly names each circuit component",
+                        "Explains the electrode coating's functions",
+                        "Distinguishes AC from DC welding"
+                      ]
+                    }
                   }
                 ]
               },
               "1": {
+                "levelTitle": "Intermediate",
+                "competencyGate": {
+                  "passRequired": true,
+                  "knowledgePassPercent": 80,
+                  "safetyCriticalItemsMustAllPass": true,
+                  "instructorSignOffRequiredForLiveModel": true
+                },
                 "modules": [
                   {
                     "id": "l-arc-settings",
                     "type": "lesson",
                     "title": "Setting the machine",
-                    "content": "<h3>Amperage by electrode diameter</h3><ul><li>2.5mm electrode → 70–90A</li><li>3.2mm electrode → 100–130A</li><li>4.0mm electrode → 130–180A</li><li>5.0mm electrode → 180–240A</li></ul><h3>By metal thickness</h3><ul><li>Thin sheet (1–2mm) → lower amps, 2.5mm rod</li><li>Medium (3–6mm) → 3.2mm rod</li><li>Thick (6mm+) → 4.0mm+ rod</li></ul><p>Get amperage wrong and: too low = sticking rod. Too high = burn-through, undercut.</p>"
+                    "content": "<h3>Amperage by electrode diameter</h3><ul><li>2.5mm electrode → 70–90A</li><li>3.2mm electrode → 100–130A</li><li>4.0mm electrode → 130–180A</li><li>5.0mm electrode → 180–240A</li></ul><h3>By metal thickness</h3><ul><li>Thin sheet (1–2mm) → lower amps, 2.5mm rod, faster travel</li><li>Medium (3–6mm) → 3.2mm rod, moderate amps</li><li>Thick (6mm+) → 4.0mm+ rod, high amps, may need multiple passes</li></ul><p>Get amperage wrong and: too low = sticking rod, no penetration. Too high = burn-through, spatter, undercut.</p>",
+                    "visuals": [
+                      {
+                        "visualId": "visual-l-arc-settings",
+                        "type": "toolIdentificationChart",
+                        "title": "Amperage selection chart by electrode and thickness",
+                        "description": "A dual-axis chart: electrode diameter on one axis, metal thickness on the other. Each cell shows the recommended amperage range. Colour coding: green = correct zone, yellow = risky, red = wrong. Includes photos of the resulting weld at correct, too-low, and too-high amperage.",
+                        "learningPurpose": "Give the learner a visual reference so settings become intuition.",
+                        "altText": "A chart showing correct amperage for electrode diameter and metal thickness with weld photo examples.",
+                        "caption": "Match the rod, the thickness, and the amps — every time.",
+                        "sourceType": "placeholderToCreate",
+                        "assetStatus": "needsCreation"
+                      }
+                    ],
+                    "teachingNotes": {
+                      "diplomaDepth": "Explain the relationship between amperage, arc length, and heat input. Discuss arc force and how it affects penetration. Teach the learner to read the weld appearance as feedback: is it too cold (roped, high crown), too hot (undercut, burn-through), or correct (smooth, even, slight crown)?",
+                      "learnerTask": "Select correct settings for three different metal thicknesses.",
+                      "instructorCheck": "Have the learner set up the machine and justify every setting before striking an arc."
+                    },
+                    "learningObjectives": [
+                      "Select correct amperage for a given electrode and thickness.",
+                      "Explain the relationship between amperage and heat input.",
+                      "Recognise the visual signs of correct, too-cold, and too-hot welding.",
+                      "Adjust settings based on observed weld quality."
+                    ],
+                    "practicalEvidence": {
+                      "required": true,
+                      "evidenceTypes": [
+                        "completedChecklist",
+                        "learnerExplanation",
+                        "photoOrVideoWithConsent"
+                      ],
+                      "assessmentCriteria": [
+                        "Correctly selects settings for three thicknesses",
+                        "Justifies each setting based on the chart",
+                        "Sets up machine without assistance"
+                      ]
+                    }
                   }
                 ]
               },
               "2": {
+                "levelTitle": "Applied",
+                "competencyGate": {
+                  "passRequired": true,
+                  "knowledgePassPercent": 80,
+                  "safetyCriticalItemsMustAllPass": true,
+                  "instructorSignOffRequiredForLiveModel": true
+                },
                 "modules": [
                   {
                     "id": "d-arc-troubleshooting",
@@ -269,34 +1083,93 @@
                     "steps": [
                       {
                         "q": "The electrode keeps sticking to the workpiece. Most likely cause?",
-                        "o": ["Amperage too low", "Amperage too high", "Wrong electrode", "Wet metal"],
+                        "o": [
+                          "Amperage too low",
+                          "Amperage too high",
+                          "Wrong electrode",
+                          "Wet metal"
+                        ],
                         "c": 0,
-                        "f": "Low amperage doesn't create enough heat."
+                        "f": "Low amperage doesn't create enough heat to keep the arc going."
                       },
                       {
                         "q": "You see 'undercut' — a groove melted into the base metal beside the weld. Cause?",
-                        "o": ["Travel speed too slow", "Amperage too low", "Amperage too high or travel too fast", "Wrong rod angle"],
+                        "o": [
+                          "Travel speed too slow",
+                          "Amperage too low",
+                          "Amperage too high or travel too fast",
+                          "Wrong rod angle"
+                        ],
                         "c": 2,
                         "f": "Undercut comes from too much heat input or moving too fast."
                       },
                       {
                         "q": "The weld has small holes in it (porosity). What's the most likely cause?",
-                        "o": ["Dirty metal or wet electrode", "Wrong angle", "Too much current", "Wrong polarity"],
+                        "o": [
+                          "Dirty metal or wet electrode",
+                          "Wrong angle",
+                          "Too much current",
+                          "Wrong polarity"
+                        ],
                         "c": 0,
                         "f": "Porosity comes from contamination."
                       }
-                    ]
+                    ],
+                    "visuals": [
+                      {
+                        "visualId": "visual-d-arc-troubleshooting",
+                        "type": "beforeAfterComparison",
+                        "title": "Weld defect diagnosis gallery",
+                        "description": "A gallery of weld photographs, each labelled with the defect (porosity, undercut, spatter, cold lap, burn-through) and matched to the cause and corrective action. Allows side-by-side comparison of correct vs defective welds.",
+                        "learningPurpose": "Train the eye to diagnose by appearance.",
+                        "altText": "A gallery of weld photographs showing common defects and their correct counterparts.",
+                        "caption": "Learn the defect. Learn the cause. Learn the fix.",
+                        "sourceType": "placeholderToCreate",
+                        "assetStatus": "needsCreation"
+                      }
+                    ],
+                    "teachingNotes": {
+                      "diplomaDepth": "Move beyond surface-level defect identification. Explain how each defect affects structural integrity: porosity reduces cross-section, undercut creates stress concentration, cold lap means no fusion. Discuss the standards (ISO 5817, AWS D1.1) that specify acceptable limits.",
+                      "learnerTask": "Diagnose defects on real weld samples without looking at the answers.",
+                      "instructorCheck": "Have the learner explain what process correction would fix each defect."
+                    },
+                    "learningObjectives": [
+                      "Diagnose common weld defects by visual inspection.",
+                      "Identify the process parameters that cause each defect.",
+                      "Explain how each defect affects structural integrity.",
+                      "State the corrective action for each defect."
+                    ],
+                    "practicalEvidence": {
+                      "required": true,
+                      "evidenceTypes": [
+                        "drillScore",
+                        "learnerExplanation",
+                        "photoOrVideoWithConsent"
+                      ],
+                      "assessmentCriteria": [
+                        "Achieves 90% or above on the drill",
+                        "Correctly diagnoses defects on real samples",
+                        "Explains cause and correction for each"
+                      ]
+                    }
                   }
                 ]
               },
               "3": {
+                "levelTitle": "Advanced Application",
+                "competencyGate": {
+                  "passRequired": true,
+                  "knowledgePassPercent": 80,
+                  "safetyCriticalItemsMustAllPass": true,
+                  "instructorSignOffRequiredForLiveModel": true
+                },
                 "modules": [
                   {
                     "id": "s-arc-scenario",
                     "type": "scenario",
                     "title": "Weld a critical joint",
                     "prompt": "You need to weld a 6mm steel plate butt joint that will carry significant load. Describe your approach — preparation, settings, technique, and post-weld inspection.",
-                    "context": "Structural welds must be correct.",
+                    "context": "Structural welds must be correct. The consequences of failure are injury or death.",
                     "placeholder": "Preparation: …\nSettings: …\nTechnique: …\nInspection: …",
                     "rubric": [
                       "Cleans and bevels the joint edges",
@@ -305,12 +1178,57 @@
                       "Runs a root pass, then fill passes if needed",
                       "Maintains consistent travel speed and angle",
                       "Inspects for porosity, undercut, cracks",
-                      "May consider a cap pass"
-                    ]
+                      "May consider a cap pass for appearance and strength"
+                    ],
+                    "visuals": [
+                      {
+                        "visualId": "visual-s-arc-scenario",
+                        "type": "techniqueDiagram",
+                        "title": "Structural butt joint — pass sequence",
+                        "description": "A cross-section diagram of a 6mm butt joint showing: root pass with correct penetration, fill pass, and cap pass. Each pass labelled with its function, amperage, and rod size. Defect examples shown alongside for comparison.",
+                        "learningPurpose": "Show how a multi-pass structural weld is built up.",
+                        "altText": "A cross-section diagram of a multi-pass butt weld showing root, fill, and cap passes.",
+                        "caption": "Every pass has a purpose.",
+                        "sourceType": "placeholderToCreate",
+                        "assetStatus": "needsCreation"
+                      }
+                    ],
+                    "teachingNotes": {
+                      "diplomaDepth": "Explain the metallurgy of multi-pass welding: interpass temperature control, heat-affected zone (HAZ), and residual stress. Discuss when a welded joint needs pre-heat or post-heat treatment. This is the moment to introduce the difference between a good-looking weld and a structurally sound one.",
+                      "learnerTask": "Plan the weld sequence for the scenario, then execute it on scrap plate.",
+                      "instructorCheck": "Review the plan against the drawing and inspect the finished weld."
+                    },
+                    "learningObjectives": [
+                      "Plan a multi-pass weld sequence for a structural joint.",
+                      "Execute a butt weld with correct penetration.",
+                      "Perform post-weld visual inspection.",
+                      "Explain the difference between cosmetic and structural quality."
+                    ],
+                    "practicalEvidence": {
+                      "required": true,
+                      "evidenceTypes": [
+                        "completedChecklist",
+                        "learnerExplanation",
+                        "photoOrVideoWithConsent"
+                      ],
+                      "assessmentCriteria": [
+                        "Plan includes preparation, settings, sequence, and inspection",
+                        "Executed weld shows correct penetration and profile",
+                        "Inspection identifies any defects present",
+                        "Explains structural significance"
+                      ]
+                    }
                   }
                 ]
               },
               "4": {
+                "levelTitle": "Professional Mastery",
+                "competencyGate": {
+                  "passRequired": true,
+                  "knowledgePassPercent": 80,
+                  "safetyCriticalItemsMustAllPass": true,
+                  "instructorSignOffRequiredForLiveModel": true
+                },
                 "modules": [
                   {
                     "id": "p-arc-samples",
@@ -323,7 +1241,45 @@
                       "Record settings for each",
                       "Photograph top and side views",
                       "Write a note on what was hard/easy about each"
-                    ]
+                    ],
+                    "visuals": [
+                      {
+                        "visualId": "visual-p-arc-samples",
+                        "type": "assessmentEvidencePhoto",
+                        "title": "Weld sample portfolio template",
+                        "description": "A layout template showing how each weld sample photo should be framed: top view, side view, and profile measurement. Includes space for settings, rod used, amperage, and reflection notes.",
+                        "learningPurpose": "Give the learner a consistent documentation format.",
+                        "altText": "A portfolio layout template for photographing and documenting weld samples.",
+                        "caption": "Documented welds are professional evidence.",
+                        "sourceType": "placeholderToCreate",
+                        "assetStatus": "needsCreation"
+                      }
+                    ],
+                    "teachingNotes": {
+                      "diplomaDepth": "Teach that a portfolio is not a photo album — it is evidence of competence. Each sample must be traceable to a date, settings, rod, and result. Discuss what potential employers look for in a portfolio.",
+                      "learnerTask": "Produce, photograph, and document all five joint types.",
+                      "instructorCheck": "Review the portfolio for completeness, clarity, and evidence of progression."
+                    },
+                    "learningObjectives": [
+                      "Produce five standard joint types to a professional standard.",
+                      "Document each sample with settings and reflection.",
+                      "Present a portfolio suitable for employment applications.",
+                      "Evaluate your own work against industry standards."
+                    ],
+                    "practicalEvidence": {
+                      "required": true,
+                      "evidenceTypes": [
+                        "photoOrVideoWithConsent",
+                        "completedChecklist",
+                        "learnerExplanation"
+                      ],
+                      "assessmentCriteria": [
+                        "All five joint types present",
+                        "Each sample meets the quality standard",
+                        "Documentation complete",
+                        "Portfolio presentation is professional"
+                      ]
+                    }
                   }
                 ]
               }
@@ -335,16 +1291,66 @@
             "description": "The five fundamental joints every welder must master.",
             "levels": {
               "0": {
+                "levelTitle": "Foundation",
+                "competencyGate": {
+                  "passRequired": true,
+                  "knowledgePassPercent": 80,
+                  "safetyCriticalItemsMustAllPass": false,
+                  "instructorSignOffRequiredForLiveModel": false
+                },
                 "modules": [
                   {
                     "id": "l-joints-intro",
                     "type": "lesson",
                     "title": "The five joints",
-                    "content": "<h3>1. Butt joint</h3><p>Two pieces end-to-end. Used for lengthening, repairing.</p><h3>2. Corner joint</h3><p>Two pieces meeting at 90° forming an L. Used for boxes, frames.</p><h3>3. T-joint</h3><p>One piece perpendicular to another. Used for structural frameworks.</p><h3>4. Lap joint</h3><p>Two pieces overlapping. Used for sheet metal, panels.</p><h3>5. Edge joint</h3><p>Two pieces joined along their edges. Used for thin sheet.</p><p>Every welded structure is a combination of these five.</p>"
+                    "content": "<h3>1. Butt joint</h3><p>Two pieces end-to-end. Used for lengthening, repairing.</p><h3>2. Corner joint</h3><p>Two pieces meeting at 90° forming an L. Used for boxes, frames.</p><h3>3. T-joint</h3><p>One piece perpendicular to another. Used for structural frameworks.</p><h3>4. Lap joint</h3><p>Two pieces overlapping. Used for sheet metal, panels.</p><h3>5. Edge joint</h3><p>Two pieces joined along their edges. Used for thin sheet.</p><p>Every welded structure is a combination of these five.</p>",
+                    "visuals": [
+                      {
+                        "visualId": "visual-l-joints-intro",
+                        "type": "techniqueDiagram",
+                        "title": "The five joint types — cross-section and real photos",
+                        "description": "A reference chart: for each of the five joint types, a cross-section diagram showing the weld placement, followed by a real photograph of the completed joint in metal. Labels identify the plates and weld.",
+                        "learningPurpose": "Give the learner one reference image they can return to for every joint.",
+                        "altText": "A chart showing cross-sections and photographs of the five fundamental weld joints.",
+                        "caption": "Every structure is a combination of these five.",
+                        "sourceType": "placeholderToCreate",
+                        "assetStatus": "needsCreation"
+                      }
+                    ],
+                    "teachingNotes": {
+                      "diplomaDepth": "Explain where each joint is used in real structures: butt joints for plates and pipe runs, T-joints for beams to columns, lap joints for sheet metal and tanks, corner joints for frames and boxes. Discuss which joints take tensile vs shear load and why that matters for weld placement.",
+                      "learnerTask": "Name each joint type and one real-world application for each.",
+                      "instructorCheck": "Have the learner identify joints in a real structure photograph."
+                    },
+                    "learningObjectives": [
+                      "Identify the five fundamental joint types.",
+                      "Describe the application of each joint in real structures.",
+                      "Explain the load path in each joint type.",
+                      "Recognise joint types in real welded assemblies."
+                    ],
+                    "practicalEvidence": {
+                      "required": true,
+                      "evidenceTypes": [
+                        "learnerExplanation",
+                        "completedChecklist"
+                      ],
+                      "assessmentCriteria": [
+                        "Correctly identifies each joint",
+                        "Names a real application for each",
+                        "Explains how load is transferred"
+                      ]
+                    }
                   }
                 ]
               },
               "1": {
+                "levelTitle": "Intermediate",
+                "competencyGate": {
+                  "passRequired": true,
+                  "knowledgePassPercent": 80,
+                  "safetyCriticalItemsMustAllPass": false,
+                  "instructorSignOffRequiredForLiveModel": false
+                },
                 "modules": [
                   {
                     "id": "d-joint-id",
@@ -369,11 +1375,124 @@
                         "c": 0,
                         "f": "Filling a crack in a flat surface uses a butt joint."
                       }
-                    ]
+                    ],
+                    "visuals": [
+                      {
+                        "visualId": "visual-d-joint-id",
+                        "type": "annotatedPhoto",
+                        "title": "Joint identification in real structures",
+                        "description": "Six annotated photographs of real welded structures (gate, chassis, water tank, frame, pipe, box) with callouts identifying which joint type appears at each location.",
+                        "learningPurpose": "Train the eye to spot joint types in real assemblies.",
+                        "altText": "Annotated photographs of real welded structures with joint types identified.",
+                        "caption": "Real structures contain every joint type.",
+                        "sourceType": "placeholderToCreate",
+                        "assetStatus": "needsCreation"
+                      }
+                    ],
+                    "teachingNotes": {
+                      "diplomaDepth": "Require learners to identify joints in real photographs of local fabrications. Discuss why the joint type is chosen for each application (load path, access, cost).",
+                      "learnerTask": "Achieve 90%+ on the drill and identify joints in three real photographs.",
+                      "instructorCheck": "Quiz the learner on joints in an actual work piece."
+                    },
+                    "learningObjectives": [
+                      "Identify joint types in real welded structures.",
+                      "Explain why each joint was chosen.",
+                      "Apply joint identification under time pressure."
+                    ],
+                    "practicalEvidence": {
+                      "required": true,
+                      "evidenceTypes": [
+                        "drillScore",
+                        "learnerExplanation"
+                      ],
+                      "assessmentCriteria": [
+                        "Achieves 90% or above on the drill",
+                        "Correctly identifies joints in three real photos",
+                        "Explains the choice for each"
+                      ]
+                    }
                   }
                 ]
               }
             }
+          }
+        ],
+        "diplomaPracticals": [
+          {
+            "id": "p-techniques-demonstration",
+            "type": "practical",
+            "title": "Techniques: Arc welding and joint production — supervised demonstration and practice",
+            "durationMinutes": 180,
+            "prompt": "Demonstrate correct arc welding technique on all five joint types. Produce at least one sample of each joint at professional quality under instructor supervision.",
+            "steps": [
+              {
+                "step": 1,
+                "title": "Prepare",
+                "instruction": "Set up station with correct PPE. Verify machine settings. Prepare all five joint samples.",
+                "visual": "Station and joint prep checklist"
+              },
+              {
+                "step": 2,
+                "title": "Demonstrate",
+                "instruction": "Instructor demonstrates each joint, naming settings, angle, travel speed, and rod manipulation.",
+                "visual": "Numbered demonstration walkthrough"
+              },
+              {
+                "step": 3,
+                "title": "Practise",
+                "instruction": "Learner welds each joint type, one at a time. Instructor inspects between each.",
+                "visual": "Practice sequence with checkpoints"
+              },
+              {
+                "step": 4,
+                "title": "Inspect",
+                "instruction": "Learner performs visual inspection on each sample. Identifies defects and their causes.",
+                "visual": "Weld inspection checklist"
+              },
+              {
+                "step": 5,
+                "title": "Reflect",
+                "instruction": "Learner records what went well, what needs correction, and the next practice goal for each joint type.",
+                "visual": "Reflection card"
+              }
+            ],
+            "visuals": [
+              {
+                "visualId": "visual-p-techniques",
+                "type": "stepByStepIllustration",
+                "title": "Full practical walkthrough: Arc welding and joints",
+                "description": "Five-stage illustrated practical walkthrough covering prep, demonstration, guided practice across five joint types, inspection, and reflection.",
+                "learningPurpose": "Give the learner the complete practical sequence in one reference.",
+                "altText": "Five illustrated stages of a supervised arc welding practical.",
+                "caption": "Follow the stages and verify each safety-critical step with your instructor.",
+                "sourceType": "placeholderToCreate",
+                "assetStatus": "needsCreation"
+              }
+            ],
+            "rubric": [
+              {
+                "criterion": "Preparation and setup",
+                "weightPercent": 15
+              },
+              {
+                "criterion": "Technique across joint types",
+                "weightPercent": 30
+              },
+              {
+                "criterion": "Safety throughout",
+                "weightPercent": 20
+              },
+              {
+                "criterion": "Quality of finished joints",
+                "weightPercent": 20
+              },
+              {
+                "criterion": "Inspection and reflection",
+                "weightPercent": 15
+              }
+            ],
+            "passingScore": 80,
+            "instructorSignOffRequired": true
           }
         ]
       },
@@ -388,33 +1507,85 @@
             "description": "Judge your own work against real standards.",
             "levels": {
               "0": {
+                "levelTitle": "Foundation",
+                "competencyGate": {
+                  "passRequired": true,
+                  "knowledgePassPercent": 80,
+                  "safetyCriticalItemsMustAllPass": true,
+                  "instructorSignOffRequiredForLiveModel": false
+                },
                 "modules": [
                   {
                     "id": "l-inspection-intro",
                     "type": "lesson",
                     "title": "Weld inspection basics",
-                    "content": "<p>Every weld should be visually inspected before the job is considered done. Look for:</p><ul><li><strong>Cracks</strong> — anything remotely looking like a crack is a rejection</li><li><strong>Porosity</strong> — small holes, indicates contamination</li><li><strong>Undercut</strong> — melted groove beside the weld</li><li><strong>Incomplete fusion</strong> — weld doesn't stick to the base metal</li><li><strong>Slag inclusions</strong> — trapped slag inside the weld</li><li><strong>Spatter</strong> — cosmetic but unprofessional if excessive</li></ul><p>Structural and pressure welds require professional NDT.</p>"
+                    "content": "<p>Every weld should be visually inspected before the job is considered done. Look for:</p><ul><li><strong>Cracks</strong> — anything remotely looking like a crack is a rejection</li><li><strong>Porosity</strong> — small holes, indicates contamination</li><li><strong>Undercut</strong> — melted groove beside the weld, weakens the joint</li><li><strong>Incomplete fusion</strong> — weld doesn't stick to the base metal</li><li><strong>Slag inclusions</strong> — trapped slag inside the weld</li><li><strong>Spatter</strong> — cosmetic but unprofessional if excessive</li></ul><p>Structural and pressure welds require professional NDT (non-destructive testing) — X-ray, ultrasonic, or dye penetrant.</p>",
+                    "visuals": [
+                      {
+                        "visualId": "visual-l-inspection-intro",
+                        "type": "toolIdentificationChart",
+                        "title": "Weld defect identification gallery",
+                        "description": "A visual reference chart showing each weld defect: crack, porosity, undercut, incomplete fusion, slag inclusion, and excess spatter. Each defect is paired with a close-up photograph and a short description of why it matters.",
+                        "learningPurpose": "Give the learner the vocabulary and visuals for every common defect.",
+                        "altText": "A chart showing photographs of each common weld defect with descriptions.",
+                        "caption": "Every defect has a name and a cause.",
+                        "sourceType": "placeholderToCreate",
+                        "assetStatus": "needsCreation"
+                      }
+                    ],
+                    "teachingNotes": {
+                      "diplomaDepth": "Explain the difference between visual inspection and NDT. Discuss what each NDT method (dye penetrant, magnetic particle, ultrasonic, X-ray) detects and where each is required by code. Teach the learner that not all defects are visible to the eye — but the ones that are must always be caught.",
+                      "learnerTask": "Identify each defect type in a set of weld photographs.",
+                      "instructorCheck": "Have the learner sort weld samples by defect type without prompts."
+                    },
+                    "learningObjectives": [
+                      "Identify the six most common weld defects visually.",
+                      "Explain how each defect compromises the weld.",
+                      "Distinguish visual inspection from NDT methods.",
+                      "Apply acceptance criteria for structural welds."
+                    ],
+                    "practicalEvidence": {
+                      "required": true,
+                      "evidenceTypes": [
+                        "completedChecklist",
+                        "learnerExplanation",
+                        "photoOrVideoWithConsent"
+                      ],
+                      "assessmentCriteria": [
+                        "Correctly identifies defects in photographs",
+                        "Explains how each defect affects the weld",
+                        "Describes when NDT is required"
+                      ]
+                    }
                   }
                 ]
               },
               "1": {
+                "levelTitle": "Intermediate",
+                "competencyGate": {
+                  "passRequired": true,
+                  "knowledgePassPercent": 80,
+                  "safetyCriticalItemsMustAllPass": true,
+                  "instructorSignOffRequiredForLiveModel": false
+                },
                 "modules": [
                   {
                     "id": "d-inspection",
                     "type": "drill",
                     "title": "Accept or reject",
+                    "passingScore": 90,
                     "steps": [
                       {
                         "q": "You see a small crack running along the edge of a weld. Action?",
                         "o": ["Leave it", "Grind out and re-weld", "Paint over it", "Sand it smooth"],
                         "c": 1,
-                        "f": "Any crack is a serious defect."
+                        "f": "Any crack is a serious defect. Grind it out completely and re-weld."
                       },
                       {
                         "q": "You see light porosity (small holes) in a non-structural fence weld. Action?",
                         "o": ["Accept — non-structural", "Grind and re-weld if time allows; note to client", "Paint over", "Ignore"],
                         "c": 1,
-                        "f": "Non-structural porosity is often acceptable, but professional welders still fix it."
+                        "f": "Non-structural porosity is often acceptable, but professional welders still fix it when possible."
                       },
                       {
                         "q": "You see undercut along a structural weld. Action?",
@@ -422,7 +1593,43 @@
                         "c": 1,
                         "f": "Undercut reduces the cross-section of the base metal."
                       }
-                    ]
+                    ],
+                    "visuals": [
+                      {
+                        "visualId": "visual-d-inspection",
+                        "type": "decisionFlowchart",
+                        "title": "Accept / reject decision chart",
+                        "description": "A decision flowchart for weld inspection: defect identified → structural or non-structural → defect type → accept, rework, or reject. Each terminal state shows the required action.",
+                        "learningPurpose": "Give the learner a decision path they can apply on the job.",
+                        "altText": "A decision flowchart for accepting, reworking, or rejecting a weld based on defect type and application.",
+                        "caption": "Not every defect is equal. Know the difference.",
+                        "sourceType": "placeholderToCreate",
+                        "assetStatus": "needsCreation"
+                      }
+                    ],
+                    "teachingNotes": {
+                      "diplomaDepth": "Explain the acceptance criteria from real codes: ISO 5817 quality levels B, C, D; AWS D1.1 acceptance criteria for different weld types. Discuss the difference between cosmetic defects (spatter) and structural defects (cracks, lack of fusion).",
+                      "learnerTask": "Apply the flowchart to 10 photographed weld samples and defend each decision.",
+                      "instructorCheck": "Have the learner defend each accept/reject decision against the code."
+                    },
+                    "learningObjectives": [
+                      "Apply acceptance criteria consistently.",
+                      "Distinguish structural from cosmetic defects.",
+                      "Recommend correct rework for each defect type.",
+                      "Document inspection findings professionally."
+                    ],
+                    "practicalEvidence": {
+                      "required": true,
+                      "evidenceTypes": [
+                        "drillScore",
+                        "learnerExplanation"
+                      ],
+                      "assessmentCriteria": [
+                        "Achieves 90% or above on the drill",
+                        "Correctly applies the flowchart",
+                        "Defends each decision with code reference"
+                      ]
+                    }
                   }
                 ]
               }
@@ -434,16 +1641,66 @@
             "description": "Quote jobs correctly and never lose money on a weld.",
             "levels": {
               "0": {
+                "levelTitle": "Foundation",
+                "competencyGate": {
+                  "passRequired": true,
+                  "knowledgePassPercent": 80,
+                  "safetyCriticalItemsMustAllPass": false,
+                  "instructorSignOffRequiredForLiveModel": false
+                },
                 "modules": [
                   {
                     "id": "l-estimating-intro",
                     "type": "lesson",
                     "title": "How to price a welding job",
-                    "content": "<h3>Every welding quote covers:</h3><ol><li><strong>Materials</strong> — steel, electrodes, gas, consumables</li><li><strong>Labour</strong> — your time at a real hourly rate</li><li><strong>Overhead</strong> — electricity, transport, tool wear</li><li><strong>Profit</strong> — the margin that keeps you in business</li></ol><p>Most beginner welders only quote materials + a little. Then they wonder why they're broke.</p><blockquote>Price = (Materials + Labour + Overhead) × (1 + Margin)</blockquote><p>A 25–40% margin is standard for small fabrication work.</p>"
+                    "content": "<h3>Every welding quote covers:</h3><ol><li><strong>Materials</strong> — steel, electrodes, gas, consumables</li><li><strong>Labour</strong> — your time at a real hourly rate</li><li><strong>Overhead</strong> — electricity, transport, tool wear</li><li><strong>Profit</strong> — the margin that keeps you in business</li></ol><p>Most beginner welders only quote materials + a little. Then they wonder why they're broke.</p><blockquote>Price = (Materials + Labour + Overhead) × (1 + Margin)</blockquote><p>A 25–40% margin is standard for small fabrication work.</p>",
+                    "visuals": [
+                      {
+                        "visualId": "visual-l-estimating-intro",
+                        "type": "decisionFlowchart",
+                        "title": "Four-part pricing flowchart",
+                        "description": "A visual pricing model: the four components (materials, labour, overhead, margin) flow into a base cost, which flows through a margin multiplier to a final price. Includes worked example with numbers.",
+                        "learningPurpose": "Make pricing a system, not a guess.",
+                        "altText": "A pricing flowchart showing how materials, labour, overhead, and margin combine to produce a final price.",
+                        "caption": "Every component must be counted.",
+                        "sourceType": "placeholderToCreate",
+                        "assetStatus": "needsCreation"
+                      }
+                    ],
+                    "teachingNotes": {
+                      "diplomaDepth": "Discuss the cost structure of a fabrication business: fixed vs variable costs, the true cost of your time, and the danger of competing on price alone. Explain how to justify a fair price to a client who is comparing quotes.",
+                      "learnerTask": "Calculate pricing for three different fabrication jobs using the flowchart.",
+                      "instructorCheck": "Review each pricing calculation and challenge any missing component."
+                    },
+                    "learningObjectives": [
+                      "Explain the four-part pricing model.",
+                      "Identify all costs that must be included in a quote.",
+                      "Calculate base cost and margin correctly.",
+                      "Justify pricing to a client."
+                    ],
+                    "practicalEvidence": {
+                      "required": true,
+                      "evidenceTypes": [
+                        "completedChecklist",
+                        "learnerExplanation"
+                      ],
+                      "assessmentCriteria": [
+                        "Correctly identifies all four components",
+                        "Calculates base cost and margin",
+                        "Justifies pricing structure"
+                      ]
+                    }
                   }
                 ]
               },
               "1": {
+                "levelTitle": "Intermediate",
+                "competencyGate": {
+                  "passRequired": true,
+                  "knowledgePassPercent": 80,
+                  "safetyCriticalItemsMustAllPass": false,
+                  "instructorSignOffRequiredForLiveModel": false
+                },
                 "modules": [
                   {
                     "id": "s-quote-scenario",
@@ -460,14 +1717,208 @@
                       "Price with margin = 133,000 × 1.30 = 172,900 Le",
                       "Quote is presented cleanly with clear breakdown",
                       "Includes payment terms and delivery date"
-                    ]
+                    ],
+                    "visuals": [
+                      {
+                        "visualId": "visual-s-quote-scenario",
+                        "type": "annotatedPhoto",
+                        "title": "Sample welding quote document",
+                        "description": "A real-looking written quote for a fabrication job, with callouts identifying: client details, job description, itemised materials, labour hours, overhead, margin, total price, and terms.",
+                        "learningPurpose": "Show the learner what a professional quote looks like.",
+                        "altText": "A sample written welding quote with labelled sections for materials, labour, and terms.",
+                        "caption": "The quote is your first professional impression.",
+                        "sourceType": "placeholderToCreate",
+                        "assetStatus": "needsCreation"
+                      }
+                    ],
+                    "teachingNotes": {
+                      "diplomaDepth": "Discuss the business reality of welding: how to handle a client who says 'that's too expensive', when to walk away from a job, how to price emergency work, and how to structure payment terms (deposit, progress payments, final on delivery).",
+                      "learnerTask": "Produce a written quote for the scenario with a clear breakdown.",
+                      "instructorCheck": "Review the quote against the four-part model and against the quality of written presentation."
+                    },
+                    "learningObjectives": [
+                      "Produce a professional written quote.",
+                      "Justify pricing to a client.",
+                      "Set payment terms that protect the business.",
+                      "Handle pricing objections professionally."
+                    ],
+                    "practicalEvidence": {
+                      "required": true,
+                      "evidenceTypes": [
+                        "learnerExplanation",
+                        "completedChecklist"
+                      ],
+                      "assessmentCriteria": [
+                        "Correctly calculates all four components",
+                        "Quote is clearly presented and complete",
+                        "Payment terms protect the business",
+                        "Responds to objection scenarios professionally"
+                      ]
+                    }
                   }
                 ]
               }
             }
           }
+        ],
+        "diplomaPracticals": [
+          {
+            "id": "p-quality-business-demonstration",
+            "type": "practical",
+            "title": "Quality & Business: Inspection and quoting — supervised practice",
+            "durationMinutes": 120,
+            "prompt": "Inspect a set of real weld samples against acceptance criteria, then produce a written quote for a small fabrication job. Both must be signed off by the instructor.",
+            "steps": [
+              {
+                "step": 1,
+                "title": "Inspect",
+                "instruction": "Examine each weld sample. Identify every defect present and classify as accept, rework, or reject.",
+                "visual": "Weld inspection checklist with defect gallery"
+              },
+              {
+                "step": 2,
+                "title": "Document",
+                "instruction": "Record each inspection finding with photos, measurements, and classification.",
+                "visual": "Inspection report template"
+              },
+              {
+                "step": 3,
+                "title": "Quote",
+                "instruction": "For a provided fabrication job description, calculate materials, labour, overhead, and final price using the four-part model.",
+                "visual": "Pricing calculation worksheet"
+              },
+              {
+                "step": 4,
+                "title": "Present",
+                "instruction": "Present the written quote to the instructor as if they were the client.",
+                "visual": "Sample professional quote format"
+              },
+              {
+                "step": 5,
+                "title": "Reflect",
+                "instruction": "Record what was hardest, what was missed, and what to practise next.",
+                "visual": "Reflection card"
+              }
+            ],
+            "visuals": [
+              {
+                "visualId": "visual-p-quality-business",
+                "type": "stepByStepIllustration",
+                "title": "Full practical walkthrough: Inspection and quoting",
+                "description": "Five-stage illustrated workflow from weld inspection through quoting, presented as a both technical and commercial process.",
+                "learningPurpose": "Show how technical and business skills connect.",
+                "altText": "Five illustrated stages of an inspection and quoting practical.",
+                "caption": "Inspection is technical. Quoting is professional. Both are welded together.",
+                "sourceType": "placeholderToCreate",
+                "assetStatus": "needsCreation"
+              }
+            ],
+            "rubric": [
+              {
+                "criterion": "Defect identification accuracy",
+                "weightPercent": 25
+              },
+              {
+                "criterion": "Acceptance criteria applied correctly",
+                "weightPercent": 20
+              },
+              {
+                "criterion": "Pricing calculation accuracy",
+                "weightPercent": 25
+              },
+              {
+                "criterion": "Quote presentation",
+                "weightPercent": 15
+              },
+              {
+                "criterion": "Reflection and improvement",
+                "weightPercent": 15
+              }
+            ],
+            "passingScore": 80,
+            "instructorSignOffRequired": true
+          }
         ]
       }
+    ],
+    "capstoneAssessment": {
+      "id": "capstone-full-fabrication-job",
+      "type": "assessment",
+      "title": "Diploma Capstone: Complete fabrication job",
+      "description": "Plan and deliver an end-to-end welding job — from reading the drawing through to the finished, inspected product — under instructor supervision. Uses a real or realistic project brief.",
+      "requiredVisuals": [
+        {
+          "type": "drawingInterpretationRecord",
+          "purpose": "Show the drawing, the interpreted plan, and the material list"
+        },
+        {
+          "type": "beforeAfterComparison",
+          "purpose": "Compare the raw materials with the finished fabrication"
+        },
+        {
+          "type": "annotatedTechniqueSequence",
+          "purpose": "Evidence the joints welded, pass sequences, and settings"
+        },
+        {
+          "type": "weldInspectionReport",
+          "purpose": "Evidence post-weld inspection against acceptance criteria"
+        },
+        {
+          "type": "pricingDocument",
+          "purpose": "Show the quote or job costing prepared for the work"
+        }
+      ],
+      "stages": [
+        "Read and interpret the drawing; identify all joints, symbols, and materials",
+        "Prepare a material list and cutting plan",
+        "Price the job using the four-part model",
+        "Prepare metal: clean, bevel, fit-up, tack",
+        "Weld all joints to the drawing specification",
+        "Inspect all welds against acceptance criteria",
+        "Correct any defects and re-inspect",
+        "Finish the work (grinding, paint, or surface prep as specified)",
+        "Complete a job record and reflective review"
+      ],
+      "rubric": [
+        {
+          "criterion": "Drawing interpretation and planning",
+          "weightPercent": 15
+        },
+        {
+          "criterion": "Preparation and fit-up",
+          "weightPercent": 15
+        },
+        {
+          "criterion": "Welding technique and quality",
+          "weightPercent": 30
+        },
+        {
+          "criterion": "Safety throughout",
+          "weightPercent": 15
+        },
+        {
+          "criterion": "Inspection and rework",
+          "weightPercent": 15
+        },
+        {
+          "criterion": "Documentation and reflection",
+          "weightPercent": 10
+        }
+      ],
+      "passingScore": 80,
+      "criticalSafetyItemsMustAllPass": true,
+      "instructorSignOffRequired": true
+    },
+    "implementationNotes": [
+      "Build a visual asset for every learning item. Do not rely on a single hero image for an entire module.",
+      "Use real, properly consented welding demonstrations where possible; otherwise create original labelled diagrams or licensed assets.",
+      "For video assets, include a short transcript, chapter/step markers, and captions.",
+      "Keep image and video URLs in a separate asset manifest once actual media is available; do not fabricate URLs.",
+      "Render diagrams responsively for mobile screens and low-bandwidth users; offer compressed still images and text alternatives.",
+      "Use Sierra Leone-relevant fabrication examples and local currency (Le) where appropriate, but verify current material costs before publication.",
+      "Use an instructor-approved safety protocol and local workplace-safety guidance for PPE, ventilation, fire prevention, and incident response.",
+      "A visual should teach a specific skill: labels, arrows, stages, comparison, or decision points must be meaningful and readable.",
+      "Instructors must inspect every learner weld before it leaves the workshop, both for quality and for safety-critical defects."
     ]
   }
 }
