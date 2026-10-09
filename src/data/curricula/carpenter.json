@@ -1,0 +1,359 @@
+{
+  "carpenter": {
+    "intro": "Learn carpentry from measurement to finished structure. Build furniture, frames, and fittings with precision — a trade with constant demand across West Africa.",
+    "skillDomains": [
+      {
+        "id": "measurement-marking",
+        "name": "Measurement & Marking",
+        "description": "Precision starts before you cut.",
+        "skills": [
+          {
+            "id": "measuring",
+            "name": "Measuring",
+            "description": "Get every number right the first time.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-measuring-intro",
+                    "type": "lesson",
+                    "title": "Measure twice, cut once",
+                    "content": "<p>This is not a saying. It's a rule that saves material and time.</p><h3>Tools</h3><ul><li><strong>Tape measure</strong> — the standard. 5m minimum. Check the hook for looseness.</li><li><strong>Steel rule</strong> — for precision marking on small work</li><li><strong>Try square</strong> — for 90° angles</li><li><strong>Combination square</strong> — for 45° and 90° plus depth marking</li><li><strong>Marking gauge</strong> — for parallel lines</li><li><strong>Pencil</strong> — sharp. Always sharp.</li></ul><h3>Rules</h3><ol><li>Measure from the same reference point every time</li><li>Write numbers down immediately</li><li>Double-check before cutting</li><li>Mark the waste side of the line — cuts happen on the waste side</li></ol>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-measuring-drill",
+                    "type": "drill",
+                    "title": "Measuring discipline",
+                    "passingScore": 90,
+                    "steps": [
+                      {
+                        "q": "You need a board 47.3cm long. Your tape has mm marks. Where do you mark?",
+                        "o": ["47cm", "473mm", "47.5cm", "Close enough"],
+                        "c": 1,
+                        "f": "47.3cm = 473mm. Mark exactly. 'Close enough' is never close enough."
+                      },
+                      {
+                        "q": "You cut a board and it's 3mm short. What do you do?",
+                        "o": ["Use it anyway", "Cut a new piece and check your measurement technique", "Fill the gap with glue", "Blame the tape"],
+                        "c": 1,
+                        "f": "Recut and figure out where the error came from. Was it measuring or cutting?"
+                      },
+                      {
+                        "q": "You must mark a line parallel to the edge, 5cm in. Which tool?",
+                        "o": ["Tape measure and pencil", "Marking gauge", "Try square", "Chisel"],
+                        "c": 1,
+                        "f": "A marking gauge cuts a consistent parallel line."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cutting-joining",
+        "name": "Cutting & Joining",
+        "description": "The core skills — cutting accurately and joining strongly.",
+        "skills": [
+          {
+            "id": "sawing",
+            "name": "Sawing",
+            "description": "Cut straight, cut square, cut clean.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-sawing-intro",
+                    "type": "lesson",
+                    "title": "The right saw for the job",
+                    "content": "<h3>Hand saws</h3><ul><li><strong>Crosscut saw</strong> — cuts across the grain</li><li><strong>Rip saw</strong> — cuts along the grain</li><li><strong>Tenon saw</strong> — fine teeth for joinery</li><li><strong>Hacksaw</strong> — for metal, not wood</li></ul><h3>Power saws</h3><ul><li><strong>Circular saw</strong> — fast, straight cuts</li><li><strong>Jigsaw</strong> — curves and cutouts</li><li><strong>Mitre saw</strong> — accurate angled cuts</li></ul><h3>Technique</h3><ol><li>Mark the cut line on the waste side</li><li>Start the cut with a few back strokes to establish the line</li><li>Keep the saw at the correct angle to the surface</li><li>Let the saw do the work — don't force it</li><li>Support the offcut so it doesn't splinter</li></ol>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-sawing-drill",
+                    "type": "drill",
+                    "title": "Sawing decisions",
+                    "steps": [
+                      {
+                        "q": "You need a clean cut across a 5cm thick plank. Which saw?",
+                        "o": ["Hacksaw", "Crosscut saw", "Rip saw", "Tenon saw"],
+                        "c": 1,
+                        "f": "Crosscut for cutting across the grain."
+                      },
+                      {
+                        "q": "The offcut splinters at the end of every cut. How do you fix this?",
+                        "o": ["Use a different saw", "Support the offcut or score the line first", "Cut faster", "Cut from the other side"],
+                        "c": 1,
+                        "f": "Splintering happens when the wood is unsupported. Support it or use a sacrificial piece."
+                      },
+                      {
+                        "q": "Your cut wanders off the line. Most common cause?",
+                        "o": ["Bad saw", "Forcing the saw or starting at the wrong angle", "Dull blade", "Wrong wood"],
+                        "c": 1,
+                        "f": "Forcing causes wandering. Let the saw do the work, keep the angle consistent."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "joinery",
+            "name": "Joinery",
+            "description": "The joints that hold a piece of furniture together for decades.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-joinery-intro",
+                    "type": "lesson",
+                    "title": "Common wood joints",
+                    "content": "<h3>Butt joint</h3><p>Two pieces joined end to end. Simplest. Weak without reinforcement (screws, dowels, or biscuits).</p><h3>Dado / housing joint</h3><p>A groove cut across the grain of one piece to receive the end of another. Used for shelves in bookcases.</p><h3>Mortise and tenon</h3><p>A projecting tenon fits into a cut mortise. Very strong. Traditional for chairs and tables.</p><h3>Dovetail</h3><p>Interlocking angled joint. Extremely strong. Used for drawers. Difficult to master.</p><h3>Half-lap</h3><p>Two pieces overlap halfway. Used for frames.</p><h3>Dowelled joint</h3><p>Butt joint reinforced with wooden dowels. Strong and simple. Very common in modern furniture.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-joinery-drill",
+                    "type": "drill",
+                    "title": "Choose the joint",
+                    "steps": [
+                      {
+                        "q": "You're building a bookshelf. Which joint for attaching the shelves to the sides?",
+                        "o": ["Butt joint with screws", "Dado / housing joint", "Dovetail", "Mortise and tenon"],
+                        "c": 1,
+                        "f": "Dado joints support the shelf along its whole edge. Screws alone will sag under load."
+                      },
+                      {
+                        "q": "You're building a chair. Which joint for the legs?",
+                        "o": ["Butt joint", "Dowelled butt", "Mortise and tenon", "Any"],
+                        "c": 2,
+                        "f": "Chairs take heavy stress. Mortise and tenon is the traditional strong joint."
+                      },
+                      {
+                        "q": "You're building a drawer. Which joint for the sides?",
+                        "o": ["Butt", "Dovetail", "Dado", "Any"],
+                        "c": 1,
+                        "f": "Dovetails resist pulling apart and look professional. Traditional for fine drawers."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "p-joint-samples",
+                    "type": "portfolio",
+                    "title": "Build a joint sample board",
+                    "prompt": "Create at least 5 wood joint samples: butt with dowels, dado, half-lap, mortise and tenon, and dovetail. Mount them on a board with labels.",
+                    "steps": [
+                      "Cut and assemble each joint",
+                      "Test strength (apply pressure)",
+                      "Mount on a display board",
+                      "Label with joint name, difficulty, and where it's used",
+                      "Photograph for your portfolio"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "installation",
+        "name": "Installation",
+        "description": "Fit finished work into buildings — doors, windows, cabinets.",
+        "skills": [
+          {
+            "id": "doors-windows",
+            "name": "Doors & Windows",
+            "description": "Frame, hang, and fit.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-doors-intro",
+                    "type": "lesson",
+                    "title": "Hanging a door",
+                    "content": "<h3>The process</h3><ol><li>Measure the opening precisely — height and width</li><li>Cut the door with the correct clearances (3mm sides, 5mm top, 8-10mm bottom for air circulation)</li><li>Mark hinge positions on the frame and the door</li><li>Cut hinge recesses with a chisel</li><li>Fit hinges to frame first, then hang the door</li><li>Mark the lock or latch position</li><li>Fit lock, handle, and closing mechanism</li><li>Test swing, closing, and latch operation</li></ol><h3>Common mistakes</h3><ul><li>Clearance too tight — door sticks in humid weather</li><li>Hinges not aligned — door swings open or closed on its own</li><li>Lock too close to the edge — wood splits</li></ul>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-doors-drill",
+                    "type": "drill",
+                    "title": "Door installation decisions",
+                    "steps": [
+                      {
+                        "q": "How much clearance should a door have at the sides?",
+                        "o": ["0mm (tight fit)", "3mm", "10mm", "20mm"],
+                        "c": 1,
+                        "f": "3mm per side allows the door to swing freely even as humidity changes."
+                      },
+                      {
+                        "q": "The installed door swings open on its own when released. What's wrong?",
+                        "o": ["Hinges misaligned", "Wrong door", "Bad latch", "Poor wood"],
+                        "c": 0,
+                        "f": "Self-swinging doors mean the hinges are not on the same plane. Realign them."
+                      },
+                      {
+                        "q": "The bottom of the door rubs on the floor. What do you do?",
+                        "o": ["Cut 3cm off the top", "Plane the bottom edge", "Lift the floor", "Replace the door"],
+                        "c": 1,
+                        "f": "Plane only the rubbing edge. Never cut from the hinge or lock side."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "furniture-fitting",
+            "name": "Furniture Fitting",
+            "description": "Installing built-in furniture and cabinetry.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-furniture-intro",
+                    "type": "lesson",
+                    "title": "Fitting cabinets and wardrobes",
+                    "content": "<h3>Level and plumb are everything</h3><p>Before installing anything, verify the walls are level (horizontal) and plumb (vertical). Most walls are not perfect. Compensate with shims, filler pieces, or scribing.</p><h3>Order of installation</h3><ol><li>Mark the level line at the top of the cabinet run</li><li>Fix wall brackets or a hanging rail</li><li>Hang the first cabinet — the level one</li><li>Attach subsequent cabinets to the first, not to the wall</li><li>Level the run as a whole before fixing to the wall</li><li>Add the worktop or shelf</li><li>Add doors, drawers, and handles</li></ol><p>One cabinet level makes all the others easy. One cabinet off makes all the others hard.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "s-fitting-scenario",
+                    "type": "scenario",
+                    "title": "Install a kitchen cabinet run",
+                    "prompt": "A client wants a run of 6 base cabinets installed in their kitchen. The wall is not perfectly straight (out by 3cm over the run). Describe how you'd approach the installation.",
+                    "context": "Walls are never perfect. Knowing how to deal with it is what separates a fitter from an installer.",
+                    "placeholder": "Preparation:\nDealing with the wall:\nInstallation order:",
+                    "rubric": [
+                      "Measures the wall and identifies the deviation",
+                      "Plans to compensate with a filler piece or scribe panel",
+                      "Starts with a level line drawn on the wall",
+                      "Hangs the first cabinet level",
+                      "Attaches subsequent cabinets to the first, adjusting as needed",
+                      "Hides gaps with scribe strips or end panels",
+                      "Finishes with doors, drawers, and handles"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "finishing-client",
+        "name": "Finishing & Client Work",
+        "description": "The final touches and the business side.",
+        "skills": [
+          {
+            "id": "sanding-finishing",
+            "name": "Sanding & Finishing",
+            "description": "What makes wood look professional.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-finishing-intro",
+                    "type": "lesson",
+                    "title": "The finishing process",
+                    "content": "<h3>Sanding</h3><p>Start with coarse grit (80-120) to remove marks. Work up to fine (180-220) for a smooth surface. Finish with 320+ for a furniture-grade surface.</p><h3>Types of finish</h3><ul><li><strong>Varnish</strong> — durable, glossy or matte. Protects the wood.</li><li><strong>Oil</strong> — penetrates, natural look. Needs periodic re-application.</li><li><strong>Wax</strong> — traditional, low protection, high sheen.</li><li><strong>Lacquer</strong> — spray-applied, fast drying, factory-grade finish.</li><li><strong>Paint</strong> — opaque. Hides the wood but very durable.</li></ul><h3>Rules</h3><ul><li>Sanding between coats of finish</li><li>Wipe dust with a tack cloth before the next coat</li><li>Thin coats, not thick ones</li><li>Don't rush drying times</li></ul>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-finishing-drill",
+                    "type": "drill",
+                    "title": "Finishing decisions",
+                    "steps": [
+                      {
+                        "q": "A client wants a matte, natural look that they can reapply themselves. Which finish?",
+                        "o": ["Varnish", "Oil", "Lacquer", "Paint"],
+                        "c": 1,
+                        "f": "Oil gives natural look and can be reapplied easily by the owner."
+                      },
+                      {
+                        "q": "You're finishing a piece that will be heavily used (kitchen table). Which finish?",
+                        "o": ["Wax", "Oil", "Varnish (multiple coats)", "Any"],
+                        "c": 2,
+                        "f": "Multiple coats of varnish give the best protection for high-use surfaces."
+                      },
+                      {
+                        "q": "You see brush marks in the finish after drying. What caused this?",
+                        "o": ["Bad brush", "Too thick a coat, or brushing after the finish started setting", "Wrong finish", "Dust"],
+                        "c": 1,
+                        "f": "Brush marks come from thick coats or brushing too long. Thin coats and quick strokes."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "estimating",
+            "name": "Estimating",
+            "description": "Price woodwork correctly.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-carpenter-pricing",
+                    "type": "lesson",
+                    "title": "Pricing carpentry work",
+                    "content": "<h3>Four-part price</h3><ol><li><strong>Materials</strong> — timber, hardware, finish, consumables</li><li><strong>Labour</strong> — hours × your rate</li><li><strong>Overhead</strong> — workshop, tools, transport</li><li><strong>Margin</strong> — 30-50% for custom furniture</li></ol><h3>Per-piece vs hourly</h3><p>For custom furniture, quote per piece: \"A wardrobe of this size and specification is X\". For repairs and small jobs, quote hourly.</p><h3>The rule</h3><p>Never quote a custom piece without seeing the space. Measurements matter more than the client's description.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "s-wardrobe-quote",
+                    "type": "scenario",
+                    "title": "Quote a custom wardrobe",
+                    "prompt": "A client wants a built-in wardrobe: 2.4m wide, 2.2m tall, 0.6m deep. Materials: timber 400,000 Le, hardware 80,000 Le, finish 40,000 Le. Labour: 5 days at 30,000 Le/day. Overhead: 60,000 Le. Margin: 35%. Calculate the quote.",
+                    "context": "Custom furniture is the highest-value carpentry work. Getting the maths right is essential.",
+                    "placeholder": "Materials:\nLabour:\nOverhead:\nBase cost:\nPrice with margin:",
+                    "rubric": [
+                      "Materials: 520,000 Le",
+                      "Labour: 5 × 30,000 = 150,000 Le",
+                      "Overhead: 60,000 Le",
+                      "Base cost: 730,000 Le",
+                      "Price with 35% margin: 985,500 Le",
+                      "Requires a deposit",
+                      "Notes delivery and installation are included or extra"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
