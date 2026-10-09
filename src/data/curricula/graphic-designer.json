@@ -99,13 +99,13 @@
                         "q": "You're designing a law firm's logo. Which type category fits best?",
                         "o": ["Script", "Serif", "Display", "Comic"],
                         "c": 1,
-                        "f": "Serif signals tradition and trust — appropriate for legal."
+                        "f": "Serif signals tradition and trust."
                       },
                       {
                         "q": "You have a headline, subhead, and body text. How many font families should you use?",
                         "o": ["One or two maximum", "Three", "Four", "As many as you want"],
                         "c": 0,
-                        "f": "One or two fonts, used at different sizes and weights, is the professional standard."
+                        "f": "One or two fonts is the professional standard."
                       },
                       {
                         "q": "Body text at 9pt is hard to read on mobile. What do you do?",
@@ -123,7 +123,7 @@
                     "id": "p-poster-design",
                     "type": "portfolio",
                     "title": "Design a poster",
-                    "prompt": "Design a poster for a local event (concert, workshop, market). Use at least two typographic sizes and clear hierarchy. Save a photo of the printed or on-screen result.",
+                    "prompt": "Design a poster for a local event (concert, workshop, market). Use at least two typographic sizes and clear hierarchy.",
                     "steps": [
                       "Choose a real or imagined event",
                       "Sketch the layout with pen and paper first",
@@ -169,19 +169,19 @@
                         "q": "A client needs a logo that scales from business card to billboard. Which tool?",
                         "o": ["Photoshop", "Illustrator (vector)", "Canva", "Word"],
                         "c": 1,
-                        "f": "Logos must be vector — scalable to any size without quality loss."
+                        "f": "Logos must be vector."
                       },
                       {
                         "q": "You need to remove a background from a photo. Which tool?",
                         "o": ["Photoshop", "Illustrator", "Excel", "Word"],
                         "c": 0,
-                        "f": "Photoshop is the raster editing tool. It handles photo manipulation."
+                        "f": "Photoshop is the raster editing tool."
                       },
                       {
                         "q": "You're designing an app interface. Which tool?",
                         "o": ["Illustrator", "Figma", "Photoshop", "Word"],
                         "c": 1,
-                        "f": "Figma is designed for UI/UX — components, prototypes, and handoff to developers."
+                        "f": "Figma is designed for UI/UX."
                       }
                     ]
                   }
@@ -260,7 +260,7 @@
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       }
