@@ -1,0 +1,433 @@
+{
+  "mobile-money-agent": {
+    "intro": "Mobile money is the financial backbone of West Africa. Learn to run a kiosk professionally — transactions, fraud prevention, customer service, and the business skills to build a super-agent operation.",
+    "skillDomains": [
+      {
+        "id": "transactions",
+        "name": "Transaction Fundamentals",
+        "description": "Handle cash and mobile transactions with accuracy and confidence.",
+        "skills": [
+          {
+            "id": "cash-handling",
+            "name": "Cash Handling",
+            "description": "Manage physical cash, count accurately, prevent loss.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-cash-intro",
+                    "type": "lesson",
+                    "title": "Cash is trust",
+                    "content": "<p>Your customers trust you with their money. Every transaction is a small moment of that trust being tested.</p><h3>Golden rules of cash handling</h3><ul><li>Count cash in front of the customer, twice</li><li>State the amount out loud: \"I'm giving you 45,000 Le.\"</li><li>Use a calculator for every transaction, even simple ones</li><li>Never mix personal money with business cash</li><li>Never serve customers while distracted or rushed</li></ul><p>A single moment of careless handling can lose a customer forever — or cost you your float.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-counting",
+                    "type": "lesson",
+                    "title": "Counting techniques",
+                    "content": "<h3>Cash in</h3><ol><li>Receive the money</li><li>State the amount out loud</li><li>Count twice — once fast, once slow</li><li>Confirm with the customer before entering the transaction</li><li>Enter the amount into the system</li><li>Give a printed or SMS receipt</li></ol><h3>Cash out</h3><ol><li>Confirm the transaction on the system first</li><li>Count the cash twice</li><li>State the amount as you hand it over</li><li>Wait for the customer to count</li><li>Only then say goodbye</li></ol>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-cash-drill",
+                    "type": "drill",
+                    "title": "Cash handling checks",
+                    "passingScore": 90,
+                    "steps": [
+                      {
+                        "q": "A customer is in a hurry and says 'just give me the money, I'll count later'. What do you do?",
+                        "o": ["Give the money quickly", "Insist on counting together before they leave", "Give a bit less to be safe", "Refuse service"],
+                        "c": 1,
+                        "f": "Counting together protects both of you."
+                      },
+                      {
+                        "q": "You notice your float is 5,000 Le short at end of day. What do you do?",
+                        "o": ["Top up from personal money and forget", "Review the day's transactions to find the error, log the shortage", "Ignore it — small amount", "Blame the last customer"],
+                        "c": 1,
+                        "f": "Find the error honestly. Log it."
+                      },
+                      {
+                        "q": "A regular customer asks you to 'hold' 30,000 Le for them until tomorrow. What do you do?",
+                        "o": ["Agree, they're regular", "Decline — this is not an authorised service and breaks rules", "Hold it but don't tell anyone", "Charge them a fee"],
+                        "c": 1,
+                        "f": "Holding cash for customers is not part of your mandate."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "float-management",
+            "name": "Float Management",
+            "description": "Keep enough cash and e-money to serve customers all day.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-float-intro",
+                    "type": "lesson",
+                    "title": "The two-sided float",
+                    "content": "<p>You manage two balances:</p><ul><li><strong>Physical cash</strong> — the notes in your drawer</li><li><strong>E-money</strong> — the digital balance in your agent account</li></ul><p>Every transaction moves value between the two:</p><ul><li><strong>Cash-in</strong> (customer deposits): you receive cash, you send e-money → cash goes up, e-money goes down</li><li><strong>Cash-out</strong> (customer withdraws): you give cash, you receive e-money → cash goes down, e-money goes up</li></ul><p>If either runs out, you can't serve customers. Managing both is your daily job.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-float-planning",
+                    "type": "lesson",
+                    "title": "Planning your float",
+                    "content": "<h3>Track your patterns</h3><p>Over a week you'll learn:</p><ul><li>Mondays and Fridays are busiest (market days)</li><li>Month-end is heavy (salary payments)</li><li>Evenings are cash-out heavy (people going home)</li><li>Mornings are cash-in heavy (traders depositing)</li></ul><h3>Rules of thumb</h3><ul><li>Keep 3× your average hourly cash out during peak hours</li><li>Top up e-money before month-end</li><li>Visit the super-agent twice a week minimum</li><li>Never let either balance drop below 20% of your peak-hour needs</li></ul>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "s-float-crisis",
+                    "type": "scenario",
+                    "title": "Handle a float crisis",
+                    "prompt": "It's Friday at 5 PM — market closing time. You've just done your 15th cash-out of the hour. Your physical cash is down to 8,000 Le but customers keep arriving. Your super-agent is 20 minutes away and closes at 6 PM. What do you do?",
+                    "context": "Float management is a real skill tested in moments like this.",
+                    "placeholder": "Immediate action: …\nCustomer communication: …\nPrevention for next week: …",
+                    "rubric": [
+                      "Politely informs waiting customers of the delay",
+                      "Calls super-agent immediately to confirm they'll wait",
+                      "Dispatches someone (or goes) to top up",
+                      "Offers alternatives (nearest other agent)",
+                      "Prioritises regular customers and elderly",
+                      "Documents the incident and adjusts future planning"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "system-operations",
+            "name": "System Operations",
+            "description": "Use the mobile money platform fluently and safely.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-system-intro",
+                    "type": "lesson",
+                    "title": "Know your platform inside out",
+                    "content": "<p>Every mobile money platform has the same core operations:</p><ul><li>Customer registration</li><li>Cash-in (deposit)</li><li>Cash-out (withdrawal)</li><li>Transfer (customer to customer)</li><li>Balance check</li><li>Transaction reversal (rare, controlled)</li></ul><p>Speed comes from repetition. But speed without accuracy is dangerous.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-system-drill",
+                    "type": "drill",
+                    "title": "System operations",
+                    "steps": [
+                      {
+                        "q": "A customer wants to send 50,000 Le to their son in another city. Which operation?",
+                        "o": ["Cash-in", "Cash-out", "Transfer", "Reverse"],
+                        "c": 2,
+                        "f": "Sending to another person is a transfer."
+                      },
+                      {
+                        "q": "The system shows a transaction success but the customer says they didn't receive the SMS. What do you do?",
+                        "o": ["Retry the transaction", "Check the system record and print/screenshot the confirmation", "Refund immediately", "Tell them to wait"],
+                        "c": 1,
+                        "f": "Verify in the system. The SMS may be delayed."
+                      },
+                      {
+                        "q": "A customer says they made a mistake and wants a reversal. What do you do?",
+                        "o": ["Reverse immediately", "Explain that reversals require customer care procedures and direct them to the helpline", "Refuse to help", "Reverse half"],
+                        "c": 1,
+                        "f": "Agents do not reverse transactions unilaterally."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "fraud",
+        "name": "Fraud Awareness",
+        "description": "Recognise scams before they hit your customers — or you.",
+        "skills": [
+          {
+            "id": "common-scams",
+            "name": "Common Scams",
+            "description": "Know the patterns of fraud targeting mobile money agents.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-scams-intro",
+                    "type": "lesson",
+                    "title": "The five scams you'll see",
+                    "content": "<h3>1. Fake SMS confirmation</h3><p>Customer shows a fake SMS saying 'payment received' but no money is in your account. Always verify on your system, never on their phone.</p><h3>2. Reversed transaction trick</h3><p>Customer initiates a transaction then reverses it after you've given cash. Wait for confirmed success, not just pending.</p><h3>3. Distraction theft</h3><p>One person distracts while another takes cash. Watch your float, always.</p><h3>4. Fake agent impersonation</h3><p>Someone claims to be from the network provider asking for your PIN or balance. Real providers NEVER ask for these.</p><h3>5. Overpayment scam</h3><p>Customer 'accidentally' sends too much and asks for a cash refund of the difference. The original payment then reverses.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-scam-drill",
+                    "type": "drill",
+                    "title": "Spot the scam",
+                    "passingScore": 90,
+                    "steps": [
+                      {
+                        "q": "A caller says they're from the network head office and asks you to read your agent PIN to verify your account. What do you do?",
+                        "o": ["Read the PIN", "Refuse and hang up — real providers never ask for PINs", "Give half the PIN", "Ask them to call back"],
+                        "c": 1,
+                        "f": "No legitimate provider will ever ask for your PIN."
+                      },
+                      {
+                        "q": "A customer shows an SMS saying 'You have received 45,000 Le' and wants cash. Your system doesn't show the credit. What do you do?",
+                        "o": ["Give cash anyway — SMS says so", "Refuse — SMS is fake or delayed, verify on the system", "Give half", "Call the provider"],
+                        "c": 1,
+                        "f": "The system is the source of truth."
+                      },
+                      {
+                        "q": "A customer sends 100,000 Le instead of 10,000 Le and asks for 90,000 Le refund in cash. What do you do?",
+                        "o": ["Give the cash", "Refuse — reverse the transaction through proper channels only", "Give half", "Keep it"],
+                        "c": 1,
+                        "f": "The overpayment scam relies on the original transaction being reversed later."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "s-fraud-scenario",
+                    "type": "scenario",
+                    "title": "Handle a suspicious transaction",
+                    "prompt": "A new customer (not a regular) comes in wanting to cash out 200,000 Le — a large amount for your kiosk. They're nervous, in a hurry, and keep checking their phone. Describe what you do.",
+                    "context": "Fraud prevention sometimes means refusing service.",
+                    "placeholder": "Immediate steps: …\nIf I sense danger: …",
+                    "rubric": [
+                      "Verifies the transaction on the system",
+                      "Checks the customer's ID (for large transactions)",
+                      "Trusts instincts about nervous behaviour",
+                      "Has a safety plan (call for help, close kiosk, alert neighbours)",
+                      "Refuses politely if something feels wrong",
+                      "Records details if fraud is suspected",
+                      "Reports to the network provider and possibly police"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "customer-service",
+        "name": "Customer Service",
+        "description": "Great service brings customers back. Bad service loses them forever.",
+        "skills": [
+          {
+            "id": "communication",
+            "name": "Communication",
+            "description": "Explain, listen, and manage every kind of customer.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-communication-intro",
+                    "type": "lesson",
+                    "title": "How to talk to every customer",
+                    "content": "<h3>Three customer types</h3><ul><li><strong>The confused first-timer</strong> — needs patience and simple language</li><li><strong>The regular in a hurry</strong> — needs speed and recognition</li><li><strong>The frustrated one</strong> — needs listening before solving</li></ul><h3>Universal rules</h3><ul><li>Greet by name when you know it</li><li>Make eye contact</li><li>Explain what you're doing as you do it</li><li>Never argue. If you're wrong, apologise. If they're wrong, stay calm.</li><li>Thank them at the end, every time</li></ul>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-communication-drill",
+                    "type": "drill",
+                    "title": "Handle the customer",
+                    "steps": [
+                      {
+                        "q": "An elderly customer doesn't understand what 'e-money' means. What do you do?",
+                        "o": ["Use technical terms", "Use a simple analogy (\"it's like a phone-based bank account\")", "Ignore them", "Refer them elsewhere"],
+                        "c": 1,
+                        "f": "Simple analogies work. Meet the customer at their level."
+                      },
+                      {
+                        "q": "A customer shouts at you because their transaction failed (not your fault). What do you do?",
+                        "o": ["Shout back", "Listen calmly, apologise for the inconvenience, help solve it", "Refuse service", "Call security"],
+                        "c": 1,
+                        "f": "Anger is usually about the situation, not you."
+                      },
+                      {
+                        "q": "A customer asks you to break a 10,000 Le note into smaller ones — no transaction. What do you do?",
+                        "o": ["Always refuse", "Help if you can — it builds loyalty", "Charge a fee", "Ignore"],
+                        "c": 1,
+                        "f": "Small favours build relationships."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "financial-inclusion",
+            "name": "Financial Inclusion",
+            "description": "Serve people the traditional banks ignored. This is your mission.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-inclusion-intro",
+                    "type": "lesson",
+                    "title": "You are the bank for millions",
+                    "content": "<p>Across West Africa, mobile money is the <strong>primary</strong> financial service for most adults. Your kiosk may be someone's only access to savings, transfers, or bill payments.</p><p>This is not just a job — it is a public service.</p><h3>Special responsibilities</h3><ul><li>Treat small transactions with the same respect as large ones</li><li>Help customers understand fees and balances</li><li>Encourage savings habits</li><li>Never shame a customer for a small amount</li></ul>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "p-inclusion-portfolio",
+                    "type": "portfolio",
+                    "title": "Design a financial inclusion initiative",
+                    "prompt": "Design a simple program to help unbanked people in your community use mobile money. It could be a savings club, a bill-payment workshop, or a registration drive for the elderly.",
+                    "steps": [
+                      "Identify a specific group not using mobile money",
+                      "Understand why (trust, confusion, no phone, no ID)",
+                      "Design a program that removes those barriers",
+                      "Describe how you'd measure success",
+                      "Write it as a one-page proposal"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "business-ops",
+        "name": "Business Operations",
+        "description": "Run your kiosk as a business, not a favour.",
+        "skills": [
+          {
+            "id": "record-keeping",
+            "name": "Record Keeping",
+            "description": "Track every transaction and balance for accuracy and trust.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-records-intro",
+                    "type": "lesson",
+                    "title": "Why records matter",
+                    "content": "<p>Your daily records are the difference between an agent and a professional. Track:</p><ul><li>Every transaction (time, type, amount, customer)</li><li>Opening and closing float (cash + e-money)</li><li>Shortages or surpluses</li><li>Disputes and how they were resolved</li></ul><h3>Tools</h3><ul><li>Notebook and pen — works everywhere, always</li><li>Simple spreadsheet on your phone</li><li>The provider's agent app — has its own transaction log</li></ul><p>At day's end, reconcile. Opening balance + transactions = closing balance. If not, find out why.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-records-drill",
+                    "type": "drill",
+                    "title": "Record keeping checks",
+                    "steps": [
+                      {
+                        "q": "Your opening balance is 500,000 Le. During the day you received 300,000 in cash-in and paid out 420,000 in cash-out. What should your closing cash be?",
+                        "o": ["380,000", "500,000", "800,000", "420,000"],
+                        "c": 0,
+                        "f": "500,000 + 300,000 − 420,000 = 380,000 Le."
+                      },
+                      {
+                        "q": "At close, your physical cash is 375,000 Le but records say 380,000 Le. What do you do?",
+                        "o": ["Adjust the record to match", "Note the 5,000 Le shortage and review the day's transactions", "Ignore it", "Top up from personal money"],
+                        "c": 1,
+                        "f": "Honest shortage tracking is essential."
+                      },
+                      {
+                        "q": "A customer disputes a transaction from last week. What's your best defence?",
+                        "o": ["Memory", "Your daily transaction log with time, amount, and receipt number", "The customer's word", "None"],
+                        "c": 1,
+                        "f": "Written records beat memory. Always."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "growth",
+            "name": "Growing Your Business",
+            "description": "Move from one kiosk to a small network.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-growth-intro",
+                    "type": "lesson",
+                    "title": "From agent to super-agent",
+                    "content": "<p>Every large agent network started with one kiosk. Growth path:</p><ol><li><strong>Single kiosk</strong> — you serve customers directly</li><li><strong>Two or three kiosks</strong> — you hire assistants</li><li><strong>Sub-agents</strong> — smaller agents under you for float</li><li><strong>Super-agent</strong> — you serve other agents' float needs</li></ol><h3>What enables growth</h3><ul><li>Consistent reliability (never out of float)</li><li>Excellent service (customers return)</li><li>Clean records (providers trust you)</li><li>Location (foot traffic + safety)</li></ul>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "s-growth-scenario",
+                    "type": "scenario",
+                    "title": "Plan your second kiosk",
+                    "prompt": "Your first kiosk is doing well — 400 transactions a week and steady profit. You want to open a second location. Describe how you'd choose the location and manage both.",
+                    "context": "Growth without systems is chaos. Plan before expanding.",
+                    "placeholder": "Location criteria: …\nManagement plan: …",
+                    "rubric": [
+                      "Chooses location based on foot traffic and safety",
+                      "Considers distance from first kiosk (don't cannibalise)",
+                      "Plans for staff (trusted family member or trained employee)",
+                      "Sets up separate float management for each location",
+                      "Keeps daily records for both",
+                      "Sets a financial review period (3 months) to judge success"
+                    ]
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "p-growth-plan",
+                    "type": "portfolio",
+                    "title": "Write a one-year growth plan",
+                    "prompt": "Write a one-page business plan for growing your mobile money business over the next 12 months. Include: target transactions per week, locations, staffing, and financial projections.",
+                    "steps": [
+                      "Define success for 12 months",
+                      "List quarterly milestones",
+                      "Estimate costs and revenue per month",
+                      "Identify key risks",
+                      "Write a monthly review plan"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
