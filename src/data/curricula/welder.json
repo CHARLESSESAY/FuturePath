@@ -18,13 +18,13 @@
                     "id": "l-ppe-intro",
                     "type": "lesson",
                     "title": "Why welders wear armour",
-                    "content": "<p>Welding produces:</p><ul><li>Ultraviolet light that burns eyes and skin (arc eye is a real injury)</li><li>Molten metal spatter at 1,500°C+</li><li>Toxic fumes from flux and coatings</li><li>Noise from grinding and cutting</li></ul><p>Every piece of PPE exists because someone got hurt without it. Wear all of it, every time. No exceptions — not even for a 30-second tack weld.</p>"
+                    "content": "<p>Welding produces:</p><ul><li>Ultraviolet light that burns eyes and skin (arc eye is a real injury)</li><li>Molten metal spatter at 1,500°C+</li><li>Toxic fumes from flux and coatings</li><li>Noise from grinding and cutting</li></ul><p>Every piece of PPE exists because someone got hurt without it. Wear all of it, every time.</p>"
                   },
                   {
                     "id": "l-ppe-checklist",
                     "type": "lesson",
                     "title": "The full PPE checklist",
-                    "content": "<h3>Head and face</h3><ul><li>Welding helmet with correct shade lens (auto-darkening is best)</li><li>Safety glasses underneath (for chipping slag)</li><li>Cap under helmet if you have long hair</li></ul><h3>Body</h3><ul><li>Leather welding jacket or apron</li><li>Long sleeves, no cuffs (spatter catches in cuffs)</li><li>Leather gauntlet gloves</li></ul><h3>Feet</h3><ul><li>Steel-toe leather boots, high-top</li><li>No open shoes, ever</li></ul><h3>Respiratory</h3><ul><li>Respirator if welding galvanised, painted, or stainless steel</li><li>Good ventilation always</li></ul>"
+                    "content": "<h3>Head and face</h3><ul><li>Welding helmet with correct shade lens</li><li>Safety glasses underneath</li><li>Cap under helmet if you have long hair</li></ul><h3>Body</h3><ul><li>Leather welding jacket or apron</li><li>Long sleeves, no cuffs</li><li>Leather gauntlet gloves</li></ul><h3>Feet</h3><ul><li>Steel-toe leather boots, high-top</li><li>No open shoes, ever</li></ul><h3>Respiratory</h3><ul><li>Respirator if welding galvanised, painted, or stainless steel</li><li>Good ventilation always</li></ul>"
                   }
                 ]
               },
@@ -40,7 +40,7 @@
                         "q": "You're about to tack weld a small joint. Can you skip the helmet?",
                         "o": ["Yes, it's just one weld", "No, never", "Only if the weld is very small", "Only if you close your eyes"],
                         "c": 1,
-                        "f": "Arc eye can happen from a single flash. Never skip the helmet."
+                        "f": "Arc eye can happen from a single flash."
                       },
                       {
                         "q": "You're welding galvanised steel. What extra protection is required?",
@@ -68,18 +68,18 @@
                     "context": "Every new site is a new hazard.",
                     "placeholder": "Assessment steps: …",
                     "rubric": [
-                      "Checks for flammable materials nearby (wood, fuel, cloth)",
+                      "Checks for flammable materials nearby",
                       "Checks ventilation or whether outdoor welding is possible",
                       "Checks electrical supply and grounding",
-                      "Checks for bystanders (especially children)",
+                      "Checks for bystanders",
                       "Prepares a fire extinguisher or water bucket",
                       "Notes emergency exits and phone signal",
-                      "Confirms weather conditions (wind can spread spatter)"
+                      "Confirms weather conditions"
                     ]
                   }
                 ]
               }
-            ]
+            }
           },
           {
             "id": "fire-prevention",
@@ -92,7 +92,7 @@
                     "id": "l-fire-intro",
                     "type": "lesson",
                     "title": "Sparks travel farther than you think",
-                    "content": "<p>Welding spatter can travel up to <strong>10 metres</strong> and stay hot enough to ignite wood, cloth, or fuel for minutes after landing.</p><h3>Before welding anywhere</h3><ol><li>Clear a 10-metre radius of anything flammable</li><li>Cover what can't be moved with fire blankets</li><li>Have a fire extinguisher within arm's reach</li><li>Have a bucket of water or sand nearby</li><li>Never weld near fuel, gas cylinders, or paint</li></ol><p>After welding, stay on site for at least 30 minutes. Smouldering fires take time to show.</p>"
+                    "content": "<p>Welding spatter can travel up to <strong>10 metres</strong> and stay hot enough to ignite wood, cloth, or fuel for minutes after landing.</p><h3>Before welding anywhere</h3><ol><li>Clear a 10-metre radius of anything flammable</li><li>Cover what can't be moved with fire blankets</li><li>Have a fire extinguisher within arm's reach</li><li>Have a bucket of water or sand nearby</li><li>Never weld near fuel, gas cylinders, or paint</li></ol><p>After welding, stay on site for at least 30 minutes.</p>"
                   }
                 ]
               },
@@ -108,9 +108,9 @@
                     "rubric": [
                       "Stops welding immediately and turns off equipment",
                       "Assesses whether it's small enough to fight or needs evacuation",
-                      "Uses correct extinguisher type (dry powder or CO2 for electrical areas)",
-                      "Aims at the base of the fire, not the flames",
-                      "Evacuates if the fire grows or smoke becomes thick",
+                      "Uses correct extinguisher type",
+                      "Aims at the base of the fire",
+                      "Evacuates if the fire grows",
                       "Calls for help and clears other people away",
                       "Reports to client and documents the incident"
                     ]
@@ -147,7 +147,7 @@
                     "id": "l-symbols",
                     "type": "lesson",
                     "title": "The five welding symbols you must know",
-                    "content": "<h3>1. Fillet weld (triangle)</h3><p>The most common weld. Joins two pieces at a right angle.</p><h3>2. Butt weld (straight line)</h3><p>Joins two pieces end-to-end or edge-to-edge.</p><h3>3. Square butt</h3><p>Simple edge-to-edge without bevel.</p><h3>4. V-groove (V shape)</h3><p>Pieces are beveled to allow deeper penetration.</p><h3>5. Weld-all-around (circle at joint)</h3><p>Means weld the entire circumference or perimeter.</p><p>Numbers next to symbols indicate leg length or weld size in millimetres.</p>"
+                    "content": "<h3>1. Fillet weld (triangle)</h3><p>The most common weld. Joins two pieces at a right angle.</p><h3>2. Butt weld (straight line)</h3><p>Joins two pieces end-to-end.</p><h3>3. Square butt</h3><p>Simple edge-to-edge without bevel.</p><h3>4. V-groove (V shape)</h3><p>Pieces are beveled to allow deeper penetration.</p><h3>5. Weld-all-around (circle at joint)</h3><p>Means weld the entire circumference.</p><p>Numbers next to symbols indicate leg length or weld size in millimetres.</p>"
                   }
                 ]
               },
@@ -168,7 +168,7 @@
                         "q": "A symbol shows a circle at the joint between two pieces. What does this mean?",
                         "o": ["Circular weld only", "Weld all the way around", "Do not weld", "Use circular motion"],
                         "c": 1,
-                        "f": "The circle at the joint (weld-all-around) means weld the full perimeter."
+                        "f": "The circle at the joint means weld the full perimeter."
                       },
                       {
                         "q": "A drawing shows a V shape at the joint. Why is the V there?",
@@ -193,7 +193,7 @@
                     "id": "l-clean-intro",
                     "type": "lesson",
                     "title": "The invisible enemy: contamination",
-                    "content": "<p>Weld contamination comes from:</p><ul><li>Rust</li><li>Mill scale (the dark coating on new steel)</li><li>Oil and grease</li><li>Paint</li><li>Moisture</li></ul><p>All of these cause:</p><ul><li>Porosity (holes in the weld)</li><li>Poor penetration</li><li>Cracking</li><li>Weak joints</li></ul><p>Clean metal is the foundation of a strong weld. There are no shortcuts here.</p>"
+                    "content": "<p>Weld contamination comes from:</p><ul><li>Rust</li><li>Mill scale</li><li>Oil and grease</li><li>Paint</li><li>Moisture</li></ul><p>All of these cause:</p><ul><li>Porosity (holes in the weld)</li><li>Poor penetration</li><li>Cracking</li><li>Weak joints</li></ul><p>Clean metal is the foundation of a strong weld.</p>"
                   }
                 ]
               },
@@ -220,7 +220,7 @@
                         "q": "After cleaning, the two pieces don't fit flush. What do you do?",
                         "o": ["Force them together", "Grind or cut to fit properly", "Weld as-is with a gap", "Use more weld to fill the gap"],
                         "c": 1,
-                        "f": "Fit-up before welding. Gaps cause distortion and weak joints."
+                        "f": "Fit-up before welding."
                       }
                     ]
                   }
@@ -246,7 +246,7 @@
                     "id": "l-arc-intro",
                     "type": "lesson",
                     "title": "What is arc welding?",
-                    "content": "<p>Arc welding (also called stick welding or SMAW — Shielded Metal Arc Welding) uses an electrical arc between a consumable electrode and the metal to create heat and melt both the electrode and the workpiece together.</p><h3>Why it's everywhere in West Africa</h3><ul><li>Equipment is cheap and durable</li><li>Works outdoors, in wind and rain</li><li>No gas cylinders needed</li><li>One machine handles many metals</li></ul><p>If you can arc weld well, you can find work anywhere.</p>"
+                    "content": "<p>Arc welding (also called stick welding or SMAW) uses an electrical arc between a consumable electrode and the metal to create heat and melt both the electrode and the workpiece together.</p><h3>Why it's everywhere in West Africa</h3><ul><li>Equipment is cheap and durable</li><li>Works outdoors, in wind and rain</li><li>No gas cylinders needed</li><li>One machine handles many metals</li></ul><p>If you can arc weld well, you can find work anywhere.</p>"
                   }
                 ]
               },
@@ -256,7 +256,7 @@
                     "id": "l-arc-settings",
                     "type": "lesson",
                     "title": "Setting the machine",
-                    "content": "<h3>Amperage by electrode diameter</h3><ul><li>2.5mm electrode → 70–90A</li><li>3.2mm electrode → 100–130A</li><li>4.0mm electrode → 130–180A</li><li>5.0mm electrode → 180–240A</li></ul><h3>By metal thickness</h3><ul><li>Thin sheet (1–2mm) → lower amps, 2.5mm rod, faster travel</li><li>Medium (3–6mm) → 3.2mm rod, moderate amps</li><li>Thick (6mm+) → 4.0mm+ rod, high amps, may need multiple passes</li></ul><p>Get amperage wrong and: too low = sticking rod, no penetration. Too high = burn-through, spatter, undercut.</p>"
+                    "content": "<h3>Amperage by electrode diameter</h3><ul><li>2.5mm electrode → 70–90A</li><li>3.2mm electrode → 100–130A</li><li>4.0mm electrode → 130–180A</li><li>5.0mm electrode → 180–240A</li></ul><h3>By metal thickness</h3><ul><li>Thin sheet (1–2mm) → lower amps, 2.5mm rod</li><li>Medium (3–6mm) → 3.2mm rod</li><li>Thick (6mm+) → 4.0mm+ rod</li></ul><p>Get amperage wrong and: too low = sticking rod. Too high = burn-through, undercut.</p>"
                   }
                 ]
               },
@@ -271,7 +271,7 @@
                         "q": "The electrode keeps sticking to the workpiece. Most likely cause?",
                         "o": ["Amperage too low", "Amperage too high", "Wrong electrode", "Wet metal"],
                         "c": 0,
-                        "f": "Low amperage doesn't create enough heat to keep the arc going."
+                        "f": "Low amperage doesn't create enough heat."
                       },
                       {
                         "q": "You see 'undercut' — a groove melted into the base metal beside the weld. Cause?",
@@ -296,7 +296,7 @@
                     "type": "scenario",
                     "title": "Weld a critical joint",
                     "prompt": "You need to weld a 6mm steel plate butt joint that will carry significant load. Describe your approach — preparation, settings, technique, and post-weld inspection.",
-                    "context": "Structural welds must be correct. The consequences of failure are injury or death.",
+                    "context": "Structural welds must be correct.",
                     "placeholder": "Preparation: …\nSettings: …\nTechnique: …\nInspection: …",
                     "rubric": [
                       "Cleans and bevels the joint edges",
@@ -305,7 +305,7 @@
                       "Runs a root pass, then fill passes if needed",
                       "Maintains consistent travel speed and angle",
                       "Inspects for porosity, undercut, cracks",
-                      "May consider a cap pass for appearance and strength"
+                      "May consider a cap pass"
                     ]
                   }
                 ]
@@ -393,7 +393,7 @@
                     "id": "l-inspection-intro",
                     "type": "lesson",
                     "title": "Weld inspection basics",
-                    "content": "<p>Every weld should be visually inspected before the job is considered done. Look for:</p><ul><li><strong>Cracks</strong> — anything remotely looking like a crack is a rejection</li><li><strong>Porosity</strong> — small holes, indicates contamination</li><li><strong>Undercut</strong> — melted groove beside the weld, weakens the joint</li><li><strong>Incomplete fusion</strong> — weld doesn't stick to the base metal</li><li><strong>Slag inclusions</strong> — trapped slag inside the weld</li><li><strong>Spatter</strong> — cosmetic but unprofessional if excessive</li></ul><p>Structural and pressure welds require professional NDT (non-destructive testing) — X-ray, ultrasonic, or dye penetrant.</p>"
+                    "content": "<p>Every weld should be visually inspected before the job is considered done. Look for:</p><ul><li><strong>Cracks</strong> — anything remotely looking like a crack is a rejection</li><li><strong>Porosity</strong> — small holes, indicates contamination</li><li><strong>Undercut</strong> — melted groove beside the weld</li><li><strong>Incomplete fusion</strong> — weld doesn't stick to the base metal</li><li><strong>Slag inclusions</strong> — trapped slag inside the weld</li><li><strong>Spatter</strong> — cosmetic but unprofessional if excessive</li></ul><p>Structural and pressure welds require professional NDT.</p>"
                   }
                 ]
               },
@@ -408,13 +408,13 @@
                         "q": "You see a small crack running along the edge of a weld. Action?",
                         "o": ["Leave it", "Grind out and re-weld", "Paint over it", "Sand it smooth"],
                         "c": 1,
-                        "f": "Any crack is a serious defect. Grind it out completely and re-weld."
+                        "f": "Any crack is a serious defect."
                       },
                       {
                         "q": "You see light porosity (small holes) in a non-structural fence weld. Action?",
                         "o": ["Accept — non-structural", "Grind and re-weld if time allows; note to client", "Paint over", "Ignore"],
                         "c": 1,
-                        "f": "Non-structural porosity is often acceptable, but professional welders still fix it when possible."
+                        "f": "Non-structural porosity is often acceptable, but professional welders still fix it."
                       },
                       {
                         "q": "You see undercut along a structural weld. Action?",
