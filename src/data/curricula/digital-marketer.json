@@ -68,7 +68,7 @@
                     "type": "scenario",
                     "title": "Write a campaign brief",
                     "prompt": "A small online fashion brand wants to sell 100 units of a new Ankara dress in 30 days. Write a one-paragraph campaign brief that covers: target audience, the specific action, budget, timeline, and how success will be measured.",
-                    "context": "Real campaigns start with a written brief. This forces clarity before spending.",
+                    "context": "Real campaigns start with a written brief.",
                     "placeholder": "Audience:\nAction:\nBudget:\nTimeline:\nSuccess metric:",
                     "rubric": [
                       "Identifies a specific audience (age, location, platform)",
@@ -121,7 +121,7 @@
                     "id": "l-content-calendar",
                     "type": "lesson",
                     "title": "Build a content calendar",
-                    "content": "<p>Posting randomly doesn't build an audience. Posting consistently does.</p><h3>A simple calendar</h3><ul><li><strong>Monday</strong> — motivational or educational</li><li><strong>Wednesday</strong> — product or service showcase</li><li><strong>Friday</strong> — behind-the-scenes or community</li><li><strong>Daily stories</strong> — short, casual, real</li></ul><p>Plan 2 weeks in advance. Batch-produce content in one session. This is how professionals stay consistent.</p>"
+                    "content": "<p>Posting randomly doesn't build an audience. Posting consistently does.</p><h3>A simple calendar</h3><ul><li><strong>Monday</strong> — motivational or educational</li><li><strong>Wednesday</strong> — product or service showcase</li><li><strong>Friday</strong> — behind-the-scenes or community</li><li><strong>Daily stories</strong> — short, casual, real</li></ul><p>Plan 2 weeks in advance. Batch-produce content in one session.</p>"
                   }
                 ]
               },
@@ -136,7 +136,7 @@
                         "q": "You want to reach new people on Instagram. Best format?",
                         "o": ["Feed photos", "Reels", "Stories", "Long captions"],
                         "c": 1,
-                        "f": "Reels reach new people. Feed photos mostly reach existing followers."
+                        "f": "Reels reach new people."
                       },
                       {
                         "q": "You want to build trust with existing customers. Best format?",
@@ -148,7 +148,7 @@
                         "q": "You have 4 hours to work on marketing this week. Best use?",
                         "o": ["Post once per day randomly", "Batch-produce 8 pieces of content", "Reply to every comment", "Change the logo"],
                         "c": 1,
-                        "f": "Batch production beats daily improvisation every time."
+                        "f": "Batch production beats daily improvisation."
                       }
                     ]
                   }
@@ -199,13 +199,13 @@
                         "q": "You have 50,000 Le for a week of ads. Best approach?",
                         "o": ["One ad, one audience", "Test 3 ads with 3 different creatives in one campaign", "Ten ads with tiny budgets", "Wait until you have more money"],
                         "c": 1,
-                        "f": "Test multiple creatives. Let data pick the winner, then put budget behind it."
+                        "f": "Test multiple creatives."
                       },
                       {
                         "q": "Your ad gets lots of views but no clicks. What's wrong?",
                         "o": ["Budget too low", "The creative isn't compelling", "Wrong platform", "Facebook is broken"],
                         "c": 1,
-                        "f": "Views without clicks means the ad doesn't give a reason to act. Rework the creative."
+                        "f": "Views without clicks means the ad doesn't give a reason to act."
                       },
                       {
                         "q": "Your ad gets clicks but no sales. What do you check?",
@@ -235,7 +235,7 @@
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       },
@@ -276,13 +276,13 @@
                         "q": "Your ad got 10,000 views and 100 clicks. What's the CTR?",
                         "o": ["0.1%", "1%", "10%", "100%"],
                         "c": 1,
-                        "f": "100 ÷ 10,000 × 100 = 1%. A 1% CTR is a reasonable benchmark."
+                        "f": "100 ÷ 10,000 × 100 = 1%."
                       },
                       {
                         "q": "You have a ROAS of 1.2. Are you making money?",
                         "o": ["Yes, clearly", "Probably not — after product cost, you may be losing money", "Yes, if you scale", "Yes, if you ignore costs"],
                         "c": 1,
-                        "f": "A ROAS of 1.2 barely covers the ad spend. Add product cost and labour and you're often losing."
+                        "f": "A ROAS of 1.2 barely covers ad spend."
                       }
                     ]
                   }
