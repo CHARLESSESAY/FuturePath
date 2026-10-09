@@ -1,0 +1,473 @@
+{
+  "welder": {
+    "intro": "Learn welding from the ground up — safety, metal preparation, technique, and quality. A career that pays well, travels well, and never goes out of demand in a growing economy.",
+    "skillDomains": [
+      {
+        "id": "safety",
+        "name": "Workshop Safety",
+        "description": "Welding kills careless people. Safety is the first skill, not an afterthought.",
+        "skills": [
+          {
+            "id": "ppe",
+            "name": "Personal Protective Equipment",
+            "description": "The gear that stands between you and serious injury.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-ppe-intro",
+                    "type": "lesson",
+                    "title": "Why welders wear armour",
+                    "content": "<p>Welding produces:</p><ul><li>Ultraviolet light that burns eyes and skin (arc eye is a real injury)</li><li>Molten metal spatter at 1,500°C+</li><li>Toxic fumes from flux and coatings</li><li>Noise from grinding and cutting</li></ul><p>Every piece of PPE exists because someone got hurt without it. Wear all of it, every time. No exceptions — not even for a 30-second tack weld.</p>"
+                  },
+                  {
+                    "id": "l-ppe-checklist",
+                    "type": "lesson",
+                    "title": "The full PPE checklist",
+                    "content": "<h3>Head and face</h3><ul><li>Welding helmet with correct shade lens (auto-darkening is best)</li><li>Safety glasses underneath (for chipping slag)</li><li>Cap under helmet if you have long hair</li></ul><h3>Body</h3><ul><li>Leather welding jacket or apron</li><li>Long sleeves, no cuffs (spatter catches in cuffs)</li><li>Leather gauntlet gloves</li></ul><h3>Feet</h3><ul><li>Steel-toe leather boots, high-top</li><li>No open shoes, ever</li></ul><h3>Respiratory</h3><ul><li>Respirator if welding galvanised, painted, or stainless steel</li><li>Good ventilation always</li></ul>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-ppe-drill",
+                    "type": "drill",
+                    "title": "PPE check",
+                    "passingScore": 90,
+                    "steps": [
+                      {
+                        "q": "You're about to tack weld a small joint. Can you skip the helmet?",
+                        "o": ["Yes, it's just one weld", "No, never", "Only if the weld is very small", "Only if you close your eyes"],
+                        "c": 1,
+                        "f": "Arc eye can happen from a single flash. Never skip the helmet."
+                      },
+                      {
+                        "q": "You're welding galvanised steel. What extra protection is required?",
+                        "o": ["Sunglasses", "Respirator and extra ventilation", "Extra gloves", "Nothing extra"],
+                        "c": 1,
+                        "f": "Galvanised coating releases toxic zinc fumes."
+                      },
+                      {
+                        "q": "You notice your welding jacket sleeve has a hole. What do you do?",
+                        "o": ["Ignore it", "Patch or replace before welding", "Turn it inside out", "Stuff it with cloth"],
+                        "c": 1,
+                        "f": "A hole in leather lets spatter through."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "s-safety-assessment",
+                    "type": "scenario",
+                    "title": "Safety assessment for a new site",
+                    "prompt": "You've been hired to weld a metal gate on a client's property. Describe how you assess the site for safety before starting work.",
+                    "context": "Every new site is a new hazard.",
+                    "placeholder": "Assessment steps: …",
+                    "rubric": [
+                      "Checks for flammable materials nearby (wood, fuel, cloth)",
+                      "Checks ventilation or whether outdoor welding is possible",
+                      "Checks electrical supply and grounding",
+                      "Checks for bystanders (especially children)",
+                      "Prepares a fire extinguisher or water bucket",
+                      "Notes emergency exits and phone signal",
+                      "Confirms weather conditions (wind can spread spatter)"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "fire-prevention",
+            "name": "Fire Prevention",
+            "description": "Welding sparks travel far. Preventing fires is part of the job.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-fire-intro",
+                    "type": "lesson",
+                    "title": "Sparks travel farther than you think",
+                    "content": "<p>Welding spatter can travel up to <strong>10 metres</strong> and stay hot enough to ignite wood, cloth, or fuel for minutes after landing.</p><h3>Before welding anywhere</h3><ol><li>Clear a 10-metre radius of anything flammable</li><li>Cover what can't be moved with fire blankets</li><li>Have a fire extinguisher within arm's reach</li><li>Have a bucket of water or sand nearby</li><li>Never weld near fuel, gas cylinders, or paint</li></ol><p>After welding, stay on site for at least 30 minutes. Smouldering fires take time to show.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "s-fire-response",
+                    "type": "scenario",
+                    "title": "React to a fire",
+                    "prompt": "You're welding in a client's workshop. Sparks have ignited a small fire in a pile of rags 3 metres away. Walk through exactly what you do.",
+                    "context": "Small fires become large fires in under 60 seconds.",
+                    "placeholder": "Step 1: …",
+                    "rubric": [
+                      "Stops welding immediately and turns off equipment",
+                      "Assesses whether it's small enough to fight or needs evacuation",
+                      "Uses correct extinguisher type (dry powder or CO2 for electrical areas)",
+                      "Aims at the base of the fire, not the flames",
+                      "Evacuates if the fire grows or smoke becomes thick",
+                      "Calls for help and clears other people away",
+                      "Reports to client and documents the incident"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "preparation",
+        "name": "Metal Preparation",
+        "description": "A weld is only as good as the preparation.",
+        "skills": [
+          {
+            "id": "reading-drawings",
+            "name": "Reading Drawings",
+            "description": "Interpret technical drawings and welding symbols.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-drawings-intro",
+                    "type": "lesson",
+                    "title": "Drawings are a language",
+                    "content": "<p>Before you cut a single piece of metal, you must read the drawing. A drawing tells you:</p><ul><li>Dimensions of every piece</li><li>Type of weld required at each joint</li><li>Materials and thickness</li><li>Any special notes</li></ul><p>Misreading a drawing wastes metal and time.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-symbols",
+                    "type": "lesson",
+                    "title": "The five welding symbols you must know",
+                    "content": "<h3>1. Fillet weld (triangle)</h3><p>The most common weld. Joins two pieces at a right angle.</p><h3>2. Butt weld (straight line)</h3><p>Joins two pieces end-to-end or edge-to-edge.</p><h3>3. Square butt</h3><p>Simple edge-to-edge without bevel.</p><h3>4. V-groove (V shape)</h3><p>Pieces are beveled to allow deeper penetration.</p><h3>5. Weld-all-around (circle at joint)</h3><p>Means weld the entire circumference or perimeter.</p><p>Numbers next to symbols indicate leg length or weld size in millimetres.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-symbol-reading",
+                    "type": "drill",
+                    "title": "Read the symbols",
+                    "steps": [
+                      {
+                        "q": "A drawing shows a triangle with a '6' next to it at a corner joint. What does this mean?",
+                        "o": ["6mm thick metal", "6mm fillet weld at that corner", "6 welds", "6-degree angle"],
+                        "c": 1,
+                        "f": "Triangle = fillet weld. The number indicates leg length in mm."
+                      },
+                      {
+                        "q": "A symbol shows a circle at the joint between two pieces. What does this mean?",
+                        "o": ["Circular weld only", "Weld all the way around", "Do not weld", "Use circular motion"],
+                        "c": 1,
+                        "f": "The circle at the joint (weld-all-around) means weld the full perimeter."
+                      },
+                      {
+                        "q": "A drawing shows a V shape at the joint. Why is the V there?",
+                        "o": ["Decorative", "The pieces are beveled to allow deeper weld penetration", "It's a mistake", "For cooling"],
+                        "c": 1,
+                        "f": "A V-groove is prepared so the weld penetrates the full thickness."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "cleaning",
+            "name": "Cleaning & Fit-Up",
+            "description": "Clean metal welds well. Dirty metal welds badly.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-clean-intro",
+                    "type": "lesson",
+                    "title": "The invisible enemy: contamination",
+                    "content": "<p>Weld contamination comes from:</p><ul><li>Rust</li><li>Mill scale (the dark coating on new steel)</li><li>Oil and grease</li><li>Paint</li><li>Moisture</li></ul><p>All of these cause:</p><ul><li>Porosity (holes in the weld)</li><li>Poor penetration</li><li>Cracking</li><li>Weak joints</li></ul><p>Clean metal is the foundation of a strong weld. There are no shortcuts here.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-prep-drill",
+                    "type": "drill",
+                    "title": "Preparation sequence",
+                    "steps": [
+                      {
+                        "q": "You receive newly cut steel from the supplier. First step?",
+                        "o": ["Weld immediately", "Clean edges of mill scale, rust, and oil", "Paint it", "Bend it"],
+                        "c": 1,
+                        "f": "New steel has mill scale and cutting oils."
+                      },
+                      {
+                        "q": "There's light surface rust on the joint area. What do you do?",
+                        "o": ["Ignore it", "Grind or wire-brush to bare metal", "Weld over it", "Oil it"],
+                        "c": 1,
+                        "f": "Rust causes porosity."
+                      },
+                      {
+                        "q": "After cleaning, the two pieces don't fit flush. What do you do?",
+                        "o": ["Force them together", "Grind or cut to fit properly", "Weld as-is with a gap", "Use more weld to fill the gap"],
+                        "c": 1,
+                        "f": "Fit-up before welding. Gaps cause distortion and weak joints."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "techniques",
+        "name": "Welding Techniques",
+        "description": "The core skill: joining metal with heat and filler.",
+        "skills": [
+          {
+            "id": "arc-welding",
+            "name": "Arc Welding (SMAW)",
+            "description": "Stick welding — the workhorse of West African workshops.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-arc-intro",
+                    "type": "lesson",
+                    "title": "What is arc welding?",
+                    "content": "<p>Arc welding (also called stick welding or SMAW — Shielded Metal Arc Welding) uses an electrical arc between a consumable electrode and the metal to create heat and melt both the electrode and the workpiece together.</p><h3>Why it's everywhere in West Africa</h3><ul><li>Equipment is cheap and durable</li><li>Works outdoors, in wind and rain</li><li>No gas cylinders needed</li><li>One machine handles many metals</li></ul><p>If you can arc weld well, you can find work anywhere.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-arc-settings",
+                    "type": "lesson",
+                    "title": "Setting the machine",
+                    "content": "<h3>Amperage by electrode diameter</h3><ul><li>2.5mm electrode → 70–90A</li><li>3.2mm electrode → 100–130A</li><li>4.0mm electrode → 130–180A</li><li>5.0mm electrode → 180–240A</li></ul><h3>By metal thickness</h3><ul><li>Thin sheet (1–2mm) → lower amps, 2.5mm rod, faster travel</li><li>Medium (3–6mm) → 3.2mm rod, moderate amps</li><li>Thick (6mm+) → 4.0mm+ rod, high amps, may need multiple passes</li></ul><p>Get amperage wrong and: too low = sticking rod, no penetration. Too high = burn-through, spatter, undercut.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-arc-troubleshooting",
+                    "type": "drill",
+                    "title": "Diagnose arc welding problems",
+                    "steps": [
+                      {
+                        "q": "The electrode keeps sticking to the workpiece. Most likely cause?",
+                        "o": ["Amperage too low", "Amperage too high", "Wrong electrode", "Wet metal"],
+                        "c": 0,
+                        "f": "Low amperage doesn't create enough heat to keep the arc going."
+                      },
+                      {
+                        "q": "You see 'undercut' — a groove melted into the base metal beside the weld. Cause?",
+                        "o": ["Travel speed too slow", "Amperage too low", "Amperage too high or travel too fast", "Wrong rod angle"],
+                        "c": 2,
+                        "f": "Undercut comes from too much heat input or moving too fast."
+                      },
+                      {
+                        "q": "The weld has small holes in it (porosity). What's the most likely cause?",
+                        "o": ["Dirty metal or wet electrode", "Wrong angle", "Too much current", "Wrong polarity"],
+                        "c": 0,
+                        "f": "Porosity comes from contamination."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "s-arc-scenario",
+                    "type": "scenario",
+                    "title": "Weld a critical joint",
+                    "prompt": "You need to weld a 6mm steel plate butt joint that will carry significant load. Describe your approach — preparation, settings, technique, and post-weld inspection.",
+                    "context": "Structural welds must be correct. The consequences of failure are injury or death.",
+                    "placeholder": "Preparation: …\nSettings: …\nTechnique: …\nInspection: …",
+                    "rubric": [
+                      "Cleans and bevels the joint edges",
+                      "Sets machine for 3.2mm or 4.0mm rod at correct amps",
+                      "Tacks the joint first to prevent distortion",
+                      "Runs a root pass, then fill passes if needed",
+                      "Maintains consistent travel speed and angle",
+                      "Inspects for porosity, undercut, cracks",
+                      "May consider a cap pass for appearance and strength"
+                    ]
+                  }
+                ]
+              },
+              "4": {
+                "modules": [
+                  {
+                    "id": "p-arc-samples",
+                    "type": "portfolio",
+                    "title": "Build a weld sample library",
+                    "prompt": "Produce and photograph at least 5 weld samples showing: butt joint, fillet joint, T-joint, lap joint, and corner joint. Label each with technique and settings.",
+                    "steps": [
+                      "Prepare 5 pairs of steel plates",
+                      "Weld each joint type",
+                      "Record settings for each",
+                      "Photograph top and side views",
+                      "Write a note on what was hard/easy about each"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "joints",
+            "name": "Joint Types",
+            "description": "The five fundamental joints every welder must master.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-joints-intro",
+                    "type": "lesson",
+                    "title": "The five joints",
+                    "content": "<h3>1. Butt joint</h3><p>Two pieces end-to-end. Used for lengthening, repairing.</p><h3>2. Corner joint</h3><p>Two pieces meeting at 90° forming an L. Used for boxes, frames.</p><h3>3. T-joint</h3><p>One piece perpendicular to another. Used for structural frameworks.</p><h3>4. Lap joint</h3><p>Two pieces overlapping. Used for sheet metal, panels.</p><h3>5. Edge joint</h3><p>Two pieces joined along their edges. Used for thin sheet.</p><p>Every welded structure is a combination of these five.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-joint-id",
+                    "type": "drill",
+                    "title": "Identify the joint",
+                    "steps": [
+                      {
+                        "q": "You're welding the corner of a steel box. Which joint?",
+                        "o": ["Butt", "Corner", "T", "Lap"],
+                        "c": 1,
+                        "f": "Box corners are corner joints."
+                      },
+                      {
+                        "q": "You're welding a cross-beam onto a truck chassis frame. Which joint?",
+                        "o": ["Butt", "Corner", "T", "Lap"],
+                        "c": 2,
+                        "f": "Perpendicular mounting is a T-joint."
+                      },
+                      {
+                        "q": "You're repairing a crack in a metal fuel tank (empty and purged). Which joint?",
+                        "o": ["Butt", "Corner", "T", "Lap"],
+                        "c": 0,
+                        "f": "Filling a crack in a flat surface uses a butt joint."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "quality-business",
+        "name": "Quality & Business",
+        "description": "Inspect your work and turn skill into income.",
+        "skills": [
+          {
+            "id": "inspection",
+            "name": "Inspection & Quality",
+            "description": "Judge your own work against real standards.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-inspection-intro",
+                    "type": "lesson",
+                    "title": "Weld inspection basics",
+                    "content": "<p>Every weld should be visually inspected before the job is considered done. Look for:</p><ul><li><strong>Cracks</strong> — anything remotely looking like a crack is a rejection</li><li><strong>Porosity</strong> — small holes, indicates contamination</li><li><strong>Undercut</strong> — melted groove beside the weld, weakens the joint</li><li><strong>Incomplete fusion</strong> — weld doesn't stick to the base metal</li><li><strong>Slag inclusions</strong> — trapped slag inside the weld</li><li><strong>Spatter</strong> — cosmetic but unprofessional if excessive</li></ul><p>Structural and pressure welds require professional NDT (non-destructive testing) — X-ray, ultrasonic, or dye penetrant.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-inspection",
+                    "type": "drill",
+                    "title": "Accept or reject",
+                    "steps": [
+                      {
+                        "q": "You see a small crack running along the edge of a weld. Action?",
+                        "o": ["Leave it", "Grind out and re-weld", "Paint over it", "Sand it smooth"],
+                        "c": 1,
+                        "f": "Any crack is a serious defect. Grind it out completely and re-weld."
+                      },
+                      {
+                        "q": "You see light porosity (small holes) in a non-structural fence weld. Action?",
+                        "o": ["Accept — non-structural", "Grind and re-weld if time allows; note to client", "Paint over", "Ignore"],
+                        "c": 1,
+                        "f": "Non-structural porosity is often acceptable, but professional welders still fix it when possible."
+                      },
+                      {
+                        "q": "You see undercut along a structural weld. Action?",
+                        "o": ["Accept", "Grind and re-weld — undercut weakens the joint", "Paint", "Ignore if small"],
+                        "c": 1,
+                        "f": "Undercut reduces the cross-section of the base metal."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "estimating",
+            "name": "Estimating & Pricing",
+            "description": "Quote jobs correctly and never lose money on a weld.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-estimating-intro",
+                    "type": "lesson",
+                    "title": "How to price a welding job",
+                    "content": "<h3>Every welding quote covers:</h3><ol><li><strong>Materials</strong> — steel, electrodes, gas, consumables</li><li><strong>Labour</strong> — your time at a real hourly rate</li><li><strong>Overhead</strong> — electricity, transport, tool wear</li><li><strong>Profit</strong> — the margin that keeps you in business</li></ol><p>Most beginner welders only quote materials + a little. Then they wonder why they're broke.</p><blockquote>Price = (Materials + Labour + Overhead) × (1 + Margin)</blockquote><p>A 25–40% margin is standard for small fabrication work.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "s-quote-scenario",
+                    "type": "scenario",
+                    "title": "Quote a metal gate",
+                    "prompt": "A client wants a 2m × 1.8m steel gate. Materials cost: steel 85,000 Le, electrodes 5,000 Le, paint 8,000 Le. You estimate 2 days of work at 15,000 Le per day. Overhead: 5,000 Le. You want a 30% margin. Calculate the price and write a short quote.",
+                    "context": "Real quotes are written documents.",
+                    "placeholder": "Materials: …\nLabour: …\nOverhead: …\nBase cost: …\nPrice with 30% margin: …",
+                    "rubric": [
+                      "Materials sum = 98,000 Le",
+                      "Labour = 30,000 Le",
+                      "Overhead = 5,000 Le",
+                      "Base cost = 133,000 Le",
+                      "Price with margin = 133,000 × 1.30 = 172,900 Le",
+                      "Quote is presented cleanly with clear breakdown",
+                      "Includes payment terms and delivery date"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
