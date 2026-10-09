@@ -1,0 +1,528 @@
+{
+  "auto-mechanic": {
+    "intro": "Learn automotive repair from diagnostics to engine work. This is one of the most reliable trades in West Africa — the vehicle fleet keeps growing and every one of them breaks down eventually.",
+    "skillDomains": [
+      {
+        "id": "workshop-safety",
+        "name": "Workshop Safety",
+        "description": "The rules that keep you and your customers alive.",
+        "skills": [
+          {
+            "id": "hazards",
+            "name": "Workshop Hazards",
+            "description": "Know the dangers before you turn a wrench.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-hazards-intro",
+                    "type": "lesson",
+                    "title": "What kills mechanics",
+                    "content": "<p>Mechanics get hurt by:</p><ul><li><strong>Falling cars</strong> — improper jacking, no jack stands</li><li><strong>Hot parts</strong> — exhaust manifolds, coolant, oil</li><li><strong>Electrical</strong> — battery short circuits, alternator output</li><li><strong>Fumes</strong> — carbon monoxide from running engines in closed spaces</li><li><strong>Fuel</strong> — petrol ignites easily; diesel less so but still dangerous</li><li><strong>Moving parts</strong> — belts, fans, wheels spinning under power</li></ul><p>Each of these has killed an experienced mechanic who got careless. The rules exist for a reason.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-lifting",
+                    "type": "lesson",
+                    "title": "Lifting a vehicle safely",
+                    "content": "<h3>Never work under a car held only by a jack</h3><p>Hydraulic jacks fail. They fail without warning. Every mechanic has a story about a jack giving out.</p><h3>The rule</h3><ol><li>Jack the car at a manufacturer-approved point</li><li>Place jack stands under the chassis or axle</li><li>Lower the jack slowly onto the stands</li><li>Shake the car gently to confirm stability</li><li>Only then go under</li></ol><p>Wheel chocks on the opposite wheels add another layer of safety.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-safety-drill",
+                    "type": "drill",
+                    "title": "Safety decisions",
+                    "passingScore": 100,
+                    "steps": [
+                      {
+                        "q": "You need to change a tyre. The car is up on a jack only. Can you start?",
+                        "o": ["Yes", "No — place jack stands first", "Only if you're quick", "Only if it's a small car"],
+                        "c": 1,
+                        "f": "Never work under a car supported only by a jack."
+                      },
+                      {
+                        "q": "An engine must run for diagnosis in an enclosed workshop. What do you do?",
+                        "o": ["Open a window", "Open the workshop doors or use an exhaust extraction hose", "Work quickly", "Ignore — it's fine for a minute"],
+                        "c": 1,
+                        "f": "Carbon monoxide kills without warning. Ventilation is not optional."
+                      },
+                      {
+                        "q": "You're removing a battery terminal. Which order?",
+                        "o": ["Positive first", "Negative first", "Either order", "Disconnect both at once"],
+                        "c": 1,
+                        "f": "Negative first when disconnecting. This prevents accidental short circuits through tools to the chassis."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "diagnostics",
+        "name": "Diagnostics",
+        "description": "Find the fault before replacing parts.",
+        "skills": [
+          {
+            "id": "fault-diagnosis",
+            "name": "Fault Diagnosis",
+            "description": "Systematic process to find what's actually broken.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-diagnosis-intro",
+                    "type": "lesson",
+                    "title": "The diagnostic mindset",
+                    "content": "<p>Bad mechanics replace parts until the car works. This wastes the customer's money and often doesn't fix the real problem.</p><h3>The systematic approach</h3><ol><li><strong>Listen</strong> to the customer — when did it start? What does it sound like?</li><li><strong>Reproduce</strong> the fault yourself if possible</li><li><strong>Narrow</strong> — is it engine, transmission, electrical, brakes, or suspension?</li><li><strong>Test</strong> — confirm your hypothesis with a measurement or observation</li><li><strong>Repair</strong> — replace the confirmed faulty part</li><li><strong>Verify</strong> — confirm the fault is gone</li></ol><p>Every step uses evidence, not guessing.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-symptom-drill",
+                    "type": "drill",
+                    "title": "Match symptom to system",
+                    "steps": [
+                      {
+                        "q": "Car pulls to one side when braking. Which system?",
+                        "o": ["Engine", "Brakes or alignment", "Transmission", "Air conditioning"],
+                        "c": 1,
+                        "f": "Pulling under braking points to brake imbalance or alignment."
+                      },
+                      {
+                        "q": "Rough idle with a check engine light. Which system?",
+                        "o": ["Suspension", "Engine management (likely ignition or fuel)", "Brakes", "Steering"],
+                        "c": 1,
+                        "f": "Rough idle almost always traces to fuel delivery or ignition."
+                      },
+                      {
+                        "q": "Whining noise when turning the steering wheel. Which system?",
+                        "o": ["Power steering", "Brakes", "Exhaust", "Radio"],
+                        "c": 0,
+                        "f": "Whining on steering points to low power steering fluid or a failing pump."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "l-obd",
+                    "type": "lesson",
+                    "title": "OBD and diagnostic scanners",
+                    "content": "<p>Modern cars (1996+) have an On-Board Diagnostics (OBD) port. A scanner reads the fault codes the car's computer stores.</p><h3>What codes tell you</h3><ul><li>A P0301 code means cylinder 1 misfire</li><li>A P0420 code means catalyst efficiency below threshold</li></ul><h3>What codes don't tell you</h3><p>The code tells you the symptom, not the cause. P0301 could be a bad spark plug, bad coil, bad injector, or wiring. The scanner narrows the field — it doesn't hand you the answer.</p><p>Every mechanic today should own or have access to an OBD scanner. They cost from 30,000 Le.</p>"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "engine-systems",
+        "name": "Engine Systems",
+        "description": "The core of the vehicle. Understand how combustion, lubrication, and cooling work together.",
+        "skills": [
+          {
+            "id": "four-stroke-cycle",
+            "name": "Four-Stroke Cycle",
+            "description": "The fundamental engine cycle every mechanic must know cold.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-four-stroke",
+                    "type": "lesson",
+                    "title": "Intake, compression, power, exhaust",
+                    "content": "<ol><li><strong>Intake</strong> — piston moves down, intake valve opens, fuel-air mixture enters</li><li><strong>Compression</strong> — piston moves up, both valves closed, mixture compresses</li><li><strong>Power</strong> — spark plug ignites the mixture (petrol), explosion pushes piston down</li><li><strong>Exhaust</strong> — piston moves up, exhaust valve opens, gases leave</li></ol><p>Every four-stroke engine, from a lawnmower to a truck, runs this cycle. Diesel engines ignite by compression heat instead of a spark plug — everything else is the same.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-cycle-drill",
+                    "type": "drill",
+                    "title": "Engine cycle checks",
+                    "steps": [
+                      {
+                        "q": "Which stroke produces power?",
+                        "o": ["Intake", "Compression", "Power", "Exhaust"],
+                        "c": 2,
+                        "f": "The power stroke is where ignition drives the piston down."
+                      },
+                      {
+                        "q": "In a four-cylinder engine, how many cylinders are firing per revolution?",
+                        "o": ["0", "1", "2", "4"],
+                        "c": 1,
+                        "f": "In a four-stroke cycle, one cylinder fires per revolution in a four-cylinder engine — smooths out the power delivery."
+                      },
+                      {
+                        "q": "Diesel engines differ from petrol engines mainly in:",
+                        "o": ["Number of cylinders", "How the fuel is ignited", "Fuel tank size", "Weight"],
+                        "c": 1,
+                        "f": "Diesel ignites by compression heat; petrol needs a spark."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "cooling-system",
+            "name": "Cooling System",
+            "description": "Overheating destroys engines. Understand how to prevent it.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-cooling-intro",
+                    "type": "lesson",
+                    "title": "Why engines need cooling",
+                    "content": "<p>Combustion temperatures exceed 2,000°C. Without cooling, the engine destroys itself in minutes.</p><h3>The cooling loop</h3><ol><li>Coolant (antifreeze + water) flows through passages in the engine block</li><li>Absorbs heat</li><li>Flows to the radiator</li><li>Airflow through the radiator cools the coolant</li><li>Coolant returns to the engine</li><li>A thermostat regulates the flow to keep temperature stable</li></ol><h3>Common failures</h3><ul><li>Low coolant (leak)</li><li>Failed thermostat (stuck open or closed)</li><li>Failed water pump</li><li>Blocked radiator</li><li>Failed cooling fan</li></ul>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-cooling-drill",
+                    "type": "drill",
+                    "title": "Diagnose cooling problems",
+                    "steps": [
+                      {
+                        "q": "Temperature gauge climbs in traffic but drops at highway speed. Most likely cause?",
+                        "o": ["Low coolant", "Failed cooling fan", "Bad thermostat", "Bad water pump"],
+                        "c": 1,
+                        "f": "Highway speed forces air through the radiator; traffic relies on the fan. If it climbs in traffic, the fan is failing."
+                      },
+                      {
+                        "q": "Coolant is disappearing but there's no visible leak. What do you check?",
+                        "o": ["The radio", "Head gasket (coolant entering combustion chamber)", "The tyres", "The wipers"],
+                        "c": 1,
+                        "f": "Hidden coolant loss usually means a head gasket leak. Look for white smoke from the exhaust."
+                      },
+                      {
+                        "q": "Engine overheats immediately after starting cold. Most likely cause?",
+                        "o": ["Failed water pump", "Stuck-closed thermostat", "Low fuel", "Bad battery"],
+                        "c": 1,
+                        "f": "Immediate overheat means coolant isn't circulating. The thermostat is likely stuck closed."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "p-cooling-service",
+                    "type": "portfolio",
+                    "title": "Perform a cooling system service",
+                    "prompt": "Document the steps to drain, flush, and refill a cooling system on any vehicle you have access to.",
+                    "steps": [
+                      "Locate the drain plug and radiator cap",
+                      "Drain old coolant into a proper container",
+                      "Flush with clean water until it runs clear",
+                      "Replace thermostat if needed",
+                      "Refill with correct coolant mix (usually 50/50)",
+                      "Run engine with heater on, top off, check for leaks"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "electrical",
+        "name": "Automotive Electrical",
+        "description": "Modern cars are computers on wheels. Electrical knowledge is a mechanic's edge.",
+        "skills": [
+          {
+            "id": "battery-charging",
+            "name": "Battery & Charging",
+            "description": "The 12V system that starts and runs everything.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-battery-intro",
+                    "type": "lesson",
+                    "title": "The 12V system",
+                    "content": "<p>Almost all cars run a 12V electrical system.</p><h3>The key components</h3><ul><li><strong>Battery</strong> — stores energy for starting</li><li><strong>Alternator</strong> — charges the battery while the engine runs</li><li><strong>Starter motor</strong> — cranks the engine</li><li><strong>Fuses and relays</strong> — protect circuits</li></ul><h3>Voltage checks</h3><ul><li>Engine off, battery should read 12.4-12.7V</li><li>Engine running, alternator should produce 13.8-14.4V</li><li>Below 12V off = battery failing or discharged</li><li>Below 13.5V running = alternator failing</li></ul>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-charging-drill",
+                    "type": "drill",
+                    "title": "Charging system checks",
+                    "steps": [
+                      {
+                        "q": "Battery reads 12.0V with engine off. What does this mean?",
+                        "o": ["Fully charged", "About 50% discharged — needs charging or replacement", "Overcharging", "Normal"],
+                        "c": 1,
+                        "f": "A 12V battery at 12.0V is roughly half discharged. It may not start the car on a cold morning."
+                      },
+                      {
+                        "q": "Engine running, battery reads 12.5V. What's the problem?",
+                        "o": ["Battery is overcharged", "Alternator is not charging — should be 13.8-14.4V", "Nothing", "Normal at idle"],
+                        "c": 1,
+                        "f": "If voltage doesn't rise above 13.8V with engine running, the alternator or belt is failing."
+                      },
+                      {
+                        "q": "Battery keeps going flat overnight. What do you check first?",
+                        "o": ["Fuel level", "Parasitic drain (something staying on)", "Tyres", "Oil"],
+                        "c": 1,
+                        "f": "A parasitic drain pulls power even with the key off. Test with an ammeter on the battery negative cable."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "starting-system",
+            "name": "Starting System",
+            "description": "What happens when you turn the key.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-starting-intro",
+                    "type": "lesson",
+                    "title": "The starting chain",
+                    "content": "<p>Turning the key triggers a chain of events:</p><ol><li>Battery sends current to the starter solenoid</li><li>Solenoid engages the starter gear with the flywheel</li><li>Starter motor spins the engine</li><li>Engine fires and runs</li><li>Solenoid disengages the starter</li></ol><h3>Common failures</h3><ul><li>Click but no crank — solenoid or starter failing</li><li>Slow crank — weak battery or bad connections</li><li>No sound at all — ignition switch, relay, or wiring</li><li>Crank but no start — fuel or ignition problem, not starting system</li></ul>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-starting-drill",
+                    "type": "drill",
+                    "title": "Starting system diagnostics",
+                    "steps": [
+                      {
+                        "q": "Turn key, hear a single loud click, engine doesn't crank. Most likely?",
+                        "o": ["Battery dead", "Starter solenoid or starter motor", "Fuel pump", "Air filter"],
+                        "c": 1,
+                        "f": "A click means the solenoid engages but the starter doesn't spin. Starter replacement is likely."
+                      },
+                      {
+                        "q": "Engine cranks slowly, especially when cold. What do you check first?",
+                        "o": ["Fuel filter", "Battery state of charge and terminal condition", "Spark plugs", "Air filter"],
+                        "c": 1,
+                        "f": "Slow crank in cold = weak battery or corroded terminals."
+                      },
+                      {
+                        "q": "Engine cranks fast but doesn't start. What's the problem?",
+                        "o": ["Starting system", "Fuel or ignition system", "Battery", "Starter"],
+                        "c": 1,
+                        "f": "Cranking is fine — the problem is downstream in fuel or spark."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "brakes-suspension",
+        "name": "Brakes & Suspension",
+        "description": "The systems that keep the car safe on the road.",
+        "skills": [
+          {
+            "id": "brake-systems",
+            "name": "Brake Systems",
+            "description": "The most safety-critical system on any vehicle.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-brakes-intro",
+                    "type": "lesson",
+                    "title": "How brakes work",
+                    "content": "<p>When you press the brake pedal:</p><ol><li>Pedal pushes hydraulic fluid through lines</li><li>Fluid pressure reaches the wheel cylinders or calipers</li><li>Pads or shoes press against the rotating disc or drum</li><li>Friction slows the wheel</li></ol><h3>Two types</h3><ul><li><strong>Disc brakes</strong> — pads squeeze a rotating disc. Most modern cars, all front wheels.</li><li><strong>Drum brakes</strong> — shoes press against an inner drum. Older cars, some rear wheels on newer cars.</li></ul><h3>Brake fluid</h3><p>Brake fluid absorbs water over time, which lowers its boiling point. Flush every 2 years. Ignoring this can cause complete brake failure under hard use.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-brakes-drill",
+                    "type": "drill",
+                    "title": "Brake diagnostics",
+                    "steps": [
+                      {
+                        "q": "Squealing noise when braking. Most likely cause?",
+                        "o": ["Worn brake pads (wear indicator)", "Bad fuel", "Battery", "Air filter"],
+                        "c": 0,
+                        "f": "Squealing under braking usually means pads have worn down to the wear indicator."
+                      },
+                      {
+                        "q": "Brake pedal feels soft or spongy. What do you check?",
+                        "o": ["Brake fluid level and possible air in the lines", "Tyre pressure", "Fuel filter", "Wiper blades"],
+                        "c": 0,
+                        "f": "A soft pedal means fluid loss or air in the system. Bleed the brakes and find the leak."
+                      },
+                      {
+                        "q": "Car pulls to one side under braking. What causes this?",
+                        "o": ["Seized caliper or contaminated pads on one side", "Radio", "Air filter", "Wipers"],
+                        "c": 0,
+                        "f": "Uneven braking means one side works harder. Common causes are seized calipers or oil on pads."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "suspension",
+            "name": "Suspension",
+            "description": "Ride, handling, and safety depend on it.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-suspension-intro",
+                    "type": "lesson",
+                    "title": "What suspension does",
+                    "content": "<p>Suspension keeps the wheels on the road while the body absorbs bumps.</p><h3>Key components</h3><ul><li><strong>Springs</strong> — support the weight, absorb bumps</li><li><strong>Shock absorbers / struts</strong> — control the springs, prevent bouncing</li><li><strong>Control arms</strong> — connect wheels to the frame</li><li><strong>Bushings</strong> — cushion the joints</li><li><strong>Sway bars</strong> — reduce body roll in corners</li></ul><h3>Signs of worn suspension</h3><ul><li>Car bounces after bumps</li><li>Uneven tyre wear</li><li>Nose dives under braking</li><li>Clunking over bumps</li></ul>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-suspension-drill",
+                    "type": "drill",
+                    "title": "Suspension diagnostics",
+                    "steps": [
+                      {
+                        "q": "Car keeps bouncing after a bump. Most likely cause?",
+                        "o": ["Worn shocks/struts", "Bad springs", "Tyres", "Fuel"],
+                        "c": 0,
+                        "f": "Bouncing after the bump means shocks aren't controlling the springs."
+                      },
+                      {
+                        "q": "Clunking noise over bumps. What do you check?",
+                        "o": ["Worn bushings or loose suspension components", "Radio", "Fuel filter", "Wipers"],
+                        "c": 0,
+                        "f": "Clunking points to worn bushings, ball joints, or sway bar links."
+                      },
+                      {
+                        "q": "Front tyres wear unevenly on the inside edge. Most likely cause?",
+                        "o": ["Alignment or camber problem", "Tyre pressure", "Brakes", "Engine"],
+                        "c": 0,
+                        "f": "Inner edge wear usually means negative camber or incorrect toe. Get a wheel alignment."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "business",
+        "name": "Business",
+        "description": "Turn mechanic skill into income.",
+        "skills": [
+          {
+            "id": "estimating",
+            "name": "Estimating & Billing",
+            "description": "Quote jobs correctly so the workshop survives.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-billing-intro",
+                    "type": "lesson",
+                    "title": "How a workshop makes money",
+                    "content": "<h3>Three revenue streams</h3><ol><li><strong>Parts</strong> — the markup on replacement parts</li><li><strong>Labour</strong> — the hourly rate for time</li><li><strong>Services</strong> — oil changes, diagnostics, tune-ups</li></ol><h3>Parts markup</h3><p>Workshops typically mark up parts 20-50%. Higher markup on specialty parts, lower on commodity parts.</p><h3>Labour rate</h3><p>Set a labour rate that covers overhead and profit. In West Africa, rates range from 3,000-15,000 Le per hour depending on the market and the work.</p><h3>The rule</h3><p>Never quote a job without inspecting first. Customers describe symptoms; you find the cause. Quote the cause.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "s-quote-scenario",
+                    "type": "scenario",
+                    "title": "Quote a brake job",
+                    "prompt": "A customer comes in with grinding brakes. You inspect and find front pads at 5% and discs scored. Quote the job: parts cost 120,000 Le, labour is 3 hours at 8,000 Le/hour, workshop consumables 5,000 Le. Add 25% margin on parts. Calculate the total.",
+                    "context": "Brake jobs are the most common repair. Getting the quote right builds trust and profit.",
+                    "placeholder": "Parts with markup:\nLabour:\nConsumables:\nTotal:",
+                    "rubric": [
+                      "Parts with 25% markup: 150,000 Le",
+                      "Labour: 3 × 8,000 = 24,000 Le",
+                      "Consumables: 5,000 Le",
+                      "Total: 179,000 Le",
+                      "Presents the quote with a breakdown",
+                      "Warns about rear brakes if they're also low",
+                      "Requires approval before starting work"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "customer-trust",
+            "name": "Customer Trust",
+            "description": "In this trade, reputation is everything.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-trust-intro",
+                    "type": "lesson",
+                    "title": "Why trust matters more in mechanics",
+                    "content": "<p>Customers can't see what you do. They have to trust you. This makes reputation the single most valuable asset a mechanic owns.</p><h3>How trust is built</h3><ul><li>Show the customer the failed part — don't just tell them</li><li>Explain what you found and why it needs replacing</li><li>Never replace a part that doesn't need replacing</li><li>Give a warranty on your work</li><li>Answer the phone and stand by your repairs</li><li>Charge fairly and transparently</li></ul><h3>How trust is destroyed</h3><ul><li>Charging for work you didn't do</li><li>Replacing parts that were fine</li><li>Blame-shifting on comeback jobs</li><li>Disappearing after a bad job</li></ul><p>One bad job can cost a workshop years of referrals.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "p-service-record",
+                    "type": "portfolio",
+                    "title": "Build a service record system",
+                    "prompt": "Design a system for tracking every customer vehicle and its service history. It should let you see when the last service was, what was done, and what's due next.",
+                    "steps": [
+                      "Choose a method (paper card, notebook, spreadsheet)",
+                      "Include fields: vehicle reg, owner, date, work done, parts used, cost",
+                      "Add a reminder field for next service",
+                      "Test it on 5 real or imagined vehicles",
+                      "Refine based on how easy it is to use"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
