@@ -1,0 +1,269 @@
+{
+  "graphic-designer": {
+    "intro": "Learn graphic design from principles to production. Master the tools, understand client work, and build a portfolio that wins jobs — locally and remotely.",
+    "skillDomains": [
+      {
+        "id": "design-fundamentals",
+        "name": "Design Fundamentals",
+        "description": "The timeless principles that make good design, independent of software.",
+        "skills": [
+          {
+            "id": "composition",
+            "name": "Composition",
+            "description": "Arrange elements so the eye knows where to go.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-composition-intro",
+                    "type": "lesson",
+                    "title": "The four principles",
+                    "content": "<p>Every good composition uses four principles:</p><ol><li><strong>Contrast</strong> — make different things look different</li><li><strong>Alignment</strong> — put things on invisible lines</li><li><strong>Proximity</strong> — group related items together</li><li><strong>Repetition</strong> — repeat visual elements for cohesion</li></ol><p>Before software, designers arranged type and shapes with rulers and T-squares. The principles haven't changed.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-whitespace",
+                    "type": "lesson",
+                    "title": "Whitespace is a design element",
+                    "content": "<p>Beginners fill every space. Professionals use empty space deliberately.</p><h3>Whitespace does three things</h3><ul><li>Gives the eye rest</li><li>Creates hierarchy (empty space around something makes it important)</li><li>Signals quality (cheap design crowds; premium design breathes)</li></ul><h3>Rule of thumb</h3><p>If you're unsure whether to add another element, don't. Nine times out of ten, less is more.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-composition-drill",
+                    "type": "drill",
+                    "title": "Spot the principle",
+                    "steps": [
+                      {
+                        "q": "A poster has a huge headline and tiny body text. Which principle is at work?",
+                        "o": ["Contrast", "Alignment", "Repetition", "Proximity"],
+                        "c": 0,
+                        "f": "Size contrast creates hierarchy."
+                      },
+                      {
+                        "q": "Three menu items are placed close together and away from other elements. Which principle?",
+                        "o": ["Contrast", "Alignment", "Repetition", "Proximity"],
+                        "c": 3,
+                        "f": "Proximity groups related items."
+                      },
+                      {
+                        "q": "A logo appears the same colour on the front, back, and sides of a business card. Which principle?",
+                        "o": ["Contrast", "Alignment", "Repetition", "Proximity"],
+                        "c": 2,
+                        "f": "Repetition builds brand cohesion."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "typography",
+            "name": "Typography",
+            "description": "Type is 90% of design. Master it.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-typography-intro",
+                    "type": "lesson",
+                    "title": "Type categories",
+                    "content": "<h3>Serif</h3><p>Has small strokes at the end of letters. Traditional, trustworthy. Example: Times, Georgia, Playfair.</p><h3>Sans-serif</h3><p>No strokes. Modern, clean. Example: Helvetica, Inter, Roboto.</p><h3>Display</h3><p>Designed for large text. Headlines only. Example: Bebas, Impact.</p><h3>Script</h3><p>Handwritten style. Decorative. Use sparingly.</p><h3>The rule</h3><p>Two fonts maximum per design. One for headlines, one for body. Three becomes chaos.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-hierarchy-type",
+                    "type": "lesson",
+                    "title": "Type hierarchy",
+                    "content": "<h3>Hierarchy through</h3><ul><li><strong>Size</strong> — biggest text is read first</li><li><strong>Weight</strong> — bold text stands out</li><li><strong>Colour</strong> — high contrast draws the eye</li><li><strong>Spacing</strong> — more space around something makes it prominent</li></ul><h3>The test</h3><p>Squint at your design. Can you still tell what's most important? If yes, the hierarchy works. If it all looks the same, it needs contrast.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-typography-drill",
+                    "type": "drill",
+                    "title": "Typography decisions",
+                    "steps": [
+                      {
+                        "q": "You're designing a law firm's logo. Which type category fits best?",
+                        "o": ["Script", "Serif", "Display", "Comic"],
+                        "c": 1,
+                        "f": "Serif signals tradition and trust — appropriate for legal."
+                      },
+                      {
+                        "q": "You have a headline, subhead, and body text. How many font families should you use?",
+                        "o": ["One or two maximum", "Three", "Four", "As many as you want"],
+                        "c": 0,
+                        "f": "One or two fonts, used at different sizes and weights, is the professional standard."
+                      },
+                      {
+                        "q": "Body text at 9pt is hard to read on mobile. What do you do?",
+                        "o": ["Increase to 14-16pt", "Leave it — standard size", "Add letter spacing", "Use a different font"],
+                        "c": 0,
+                        "f": "Body text on mobile should be 14-16pt minimum."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "p-poster-design",
+                    "type": "portfolio",
+                    "title": "Design a poster",
+                    "prompt": "Design a poster for a local event (concert, workshop, market). Use at least two typographic sizes and clear hierarchy. Save a photo of the printed or on-screen result.",
+                    "steps": [
+                      "Choose a real or imagined event",
+                      "Sketch the layout with pen and paper first",
+                      "Design in any tool (Canva, Figma, Illustrator, Photoshop)",
+                      "Test by squinting — is the hierarchy clear?",
+                      "Save final version and a photo of it in context"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "tools",
+        "name": "Tools",
+        "description": "The software you'll use every day. Learn one deeply before chasing others.",
+        "skills": [
+          {
+            "id": "design-software",
+            "name": "Design Software",
+            "description": "From Canva to Illustrator to Figma.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-tools-overview",
+                    "type": "lesson",
+                    "title": "Which tool for which job",
+                    "content": "<h3>Canva</h3><p>Browser-based. Free tier. Great for quick social media, presentations, simple print. Not professional-grade for logos or complex layout.</p><h3>Figma</h3><p>Browser-based. Free tier. Industry standard for UI/UX and increasingly for all design. Real-time collaboration.</p><h3>Adobe Illustrator</h3><p>Vector design. Logos, icons, print. Industry standard for brand work.</p><h3>Adobe Photoshop</h3><p>Raster editing. Photos, complex composites. Not for logos or type.</p><h3>The honest advice</h3><p>Learn Figma first (free, versatile). Add Illustrator when you get brand work. Skip Canva for anything paid — it looks like Canva.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-tools-drill",
+                    "type": "drill",
+                    "title": "Choose the right tool",
+                    "steps": [
+                      {
+                        "q": "A client needs a logo that scales from business card to billboard. Which tool?",
+                        "o": ["Photoshop", "Illustrator (vector)", "Canva", "Word"],
+                        "c": 1,
+                        "f": "Logos must be vector — scalable to any size without quality loss."
+                      },
+                      {
+                        "q": "You need to remove a background from a photo. Which tool?",
+                        "o": ["Photoshop", "Illustrator", "Excel", "Word"],
+                        "c": 0,
+                        "f": "Photoshop is the raster editing tool. It handles photo manipulation."
+                      },
+                      {
+                        "q": "You're designing an app interface. Which tool?",
+                        "o": ["Illustrator", "Figma", "Photoshop", "Word"],
+                        "c": 1,
+                        "f": "Figma is designed for UI/UX — components, prototypes, and handoff to developers."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "client-work",
+        "name": "Client Work",
+        "description": "Turn design skill into income. Managing clients is a discipline of its own.",
+        "skills": [
+          {
+            "id": "briefing",
+            "name": "Briefing",
+            "description": "Understand what the client actually needs before you design.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-brief-intro",
+                    "type": "lesson",
+                    "title": "Why briefs matter",
+                    "content": "<p>A vague brief leads to revisions and lost money. Every design project should start with a written brief covering:</p><ul><li><strong>What</strong> is being designed (logo, poster, app screen)</li><li><strong>Who</strong> is the audience</li><li><strong>Where</strong> will it appear (print, screen, both)</li><li><strong>What tone</strong> — playful, serious, premium, cheap</li><li><strong>What's the budget and timeline</strong></li><li><strong>What does success look like</strong></li></ul><p>Get the brief in writing before starting. It protects both sides.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-revisions",
+                    "type": "lesson",
+                    "title": "Revisions — how to control them",
+                    "content": "<p>Unlimited revisions destroy profit. A design that gets revised 20 times takes 20 times longer and pays the same.</p><h3>The fix</h3><ul><li>Include a set number of revisions in the price (2-3 is standard)</li><li>Charge for additional rounds</li><li>Present two or three options — not ten</li><li>Ask for all feedback in one round, not piecemeal</li></ul><p>This isn't being difficult. It's how professional design businesses survive.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "s-logo-project",
+                    "type": "scenario",
+                    "title": "Scope a logo project",
+                    "prompt": "A new coffee shop owner asks you to design their logo. They have a rough idea but no clear brief. Write out how you would run the project — from the first meeting to final delivery.",
+                    "context": "Logo projects are the most common and most abused in the industry.",
+                    "placeholder": "First meeting:\nDeliverables:\nRevisions:\nPrice:\nFinal delivery:",
+                    "rubric": [
+                      "Asks about the shop's values, audience, and competitors",
+                      "Requests examples of logos they like and dislike",
+                      "Defines deliverables: 2-3 concepts, final logo in multiple formats",
+                      "States revision rounds (2 is standard)",
+                      "Quotes a price that reflects real time",
+                      "Requires a deposit before starting",
+                      "Delivers source files and usage guide at the end"
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "p-brand-identity",
+                    "type": "portfolio",
+                    "title": "Design a complete brand identity",
+                    "prompt": "Choose a real or imagined business. Design a complete brand identity: logo, colour palette, typography, and 3 example applications (business card, social post, signage).",
+                    "steps": [
+                      "Write a one-page brand brief",
+                      "Design or source a logo",
+                      "Define a primary and secondary colour",
+                      "Choose two fonts (headline and body)",
+                      "Apply the identity to 3 real contexts",
+                      "Present as a 5-page PDF case study"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
