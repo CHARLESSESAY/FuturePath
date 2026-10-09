@@ -1,6 +1,6 @@
 {
   "cosmetologist": {
-    "intro": "Learn skincare, nail care, and beauty treatments. Build a client base through consistent quality and a clean, professional studio — a growing sector across West Africa.",
+    "intro": "Learn skincare, nail care, and beauty treatments. Build a client base through consistent quality and a clean, professional studio.",
     "skillDomains": [
       {
         "id": "skin-care",
@@ -18,7 +18,7 @@
                     "id": "l-skin-intro",
                     "type": "lesson",
                     "title": "The four skin types",
-                    "content": "<h3>Normal</h3><p>Balanced oil and moisture. Small pores. Rarely breaks out.</p><h3>Dry</h3><p>Tight feeling, flaky, sometimes rough. Small pores. Prone to fine lines.</p><h3>Oily</h3><p>Shiny, especially in the T-zone. Enlarged pores. Prone to blackheads and acne.</p><h3>Combination</h3><p>Oily in the T-zone (forehead, nose, chin), normal or dry elsewhere. Most common skin type.</p><h3>Plus sensitivities</h3><p>Some skin reacts to certain ingredients or has conditions like rosacea, eczema, or psoriasis. These require gentle treatment and sometimes referral to a dermatologist.</p>"
+                    "content": "<h3>Normal</h3><p>Balanced oil and moisture. Small pores. Rarely breaks out.</p><h3>Dry</h3><p>Tight feeling, flaky, sometimes rough.</p><h3>Oily</h3><p>Shiny, especially in the T-zone. Enlarged pores. Prone to blackheads and acne.</p><h3>Combination</h3><p>Oily in the T-zone, normal or dry elsewhere. Most common skin type.</p><h3>Plus sensitivities</h3><p>Some skin reacts to certain ingredients or has conditions like rosacea, eczema, or psoriasis.</p>"
                   }
                 ]
               },
@@ -28,7 +28,7 @@
                     "id": "l-consultation-skin",
                     "type": "lesson",
                     "title": "Running a skin consultation",
-                    "content": "<h3>Ask before treating</h3><ul><li>What products do you currently use?</li><li>Any allergies or sensitivities?</li><li>Any medications (some cause photosensitivity)?</li><li>Recent waxing, peels, or treatments?</li><li>Pregnant or breastfeeding? (Avoid certain ingredients)</li></ul><h3>Observe</h3><ul><li>Skin type and condition</li><li>Skin tone and undertone</li><li>Areas of concern: acne, pigmentation, dryness, ageing</li><li>Any visible skin conditions (refer if unsure)</li></ul><h3>The honest rule</h3><p>If you see something you don't recognise, refer to a dermatologist. Don't guess on someone's face.</p>"
+                    "content": "<h3>Ask before treating</h3><ul><li>What products do you currently use?</li><li>Any allergies or sensitivities?</li><li>Any medications?</li><li>Recent waxing, peels, or treatments?</li><li>Pregnant or breastfeeding?</li></ul><h3>Observe</h3><ul><li>Skin type and condition</li><li>Skin tone and undertone</li><li>Areas of concern</li><li>Any visible skin conditions</li></ul><h3>The honest rule</h3><p>If you see something you don't recognise, refer to a dermatologist.</p>"
                   }
                 ]
               },
@@ -50,19 +50,19 @@
                         "q": "A pregnant client wants a chemical peel. What do you do?",
                         "o": ["Proceed", "Refuse — many peel ingredients are unsafe in pregnancy", "Do a mild version", "Ask them to sign a waiver"],
                         "c": 1,
-                        "f": "Peel ingredients like salicylic and retinoic acid are unsafe in pregnancy. Refuse and offer a gentle facial instead."
+                        "f": "Peel ingredients like salicylic and retinoic acid are unsafe in pregnancy."
                       },
                       {
                         "q": "You see a client with red, inflamed patches and flaking. What do you do?",
-                        "o": ["Treat it", "Refer to a dermatologist — may be rosacea, eczema, or infection", "Apply makeup over it", "Ignore"],
+                        "o": ["Treat it", "Refer to a dermatologist", "Apply makeup over it", "Ignore"],
                         "c": 1,
-                        "f": "Inflammatory skin conditions need medical assessment. Don't guess on someone's face."
+                        "f": "Inflammatory skin conditions need medical assessment."
                       }
                     ]
                   }
                 ]
               }
-            ]
+            }
           },
           {
             "id": "facials",
@@ -75,7 +75,7 @@
                     "id": "l-facial-intro",
                     "type": "lesson",
                     "title": "The facial sequence",
-                    "content": "<h3>Steps</h3><ol><li><strong>Consultation</strong> — assess skin and goals</li><li><strong>Cleanse</strong> — remove makeup and surface oils</li><li><strong>Exfoliate</strong> — gentle removal of dead skin</li><li><strong>Steam and extract</strong> — soften pores, clear blackheads (if appropriate)</li><li><strong>Massage</strong> — relaxes and increases circulation</li><li><strong>Mask</strong> — tailored to skin type (hydrating, purifying, calming)</li><li><strong>Moisturise and SPF</strong> — always finish with sun protection</li></ol><h3>Duration</h3><p>A basic facial takes 45-60 minutes. Extractions and add-ons extend it.</p><h3>Frequency</h3><p>Every 4-6 weeks matches the skin's natural renewal cycle.</p>"
+                    "content": "<h3>Steps</h3><ol><li><strong>Consultation</strong> — assess skin and goals</li><li><strong>Cleanse</strong> — remove makeup and surface oils</li><li><strong>Exfoliate</strong> — gentle removal of dead skin</li><li><strong>Steam and extract</strong> — soften pores, clear blackheads</li><li><strong>Massage</strong> — relaxes and increases circulation</li><li><strong>Mask</strong> — tailored to skin type</li><li><strong>Moisturise and SPF</strong> — always finish with sun protection</li></ol><h3>Duration</h3><p>A basic facial takes 45-60 minutes.</p><h3>Frequency</h3><p>Every 4-6 weeks matches the skin's renewal cycle.</p>"
                   }
                 ]
               },
@@ -87,22 +87,22 @@
                     "title": "Facial decisions",
                     "steps": [
                       {
-                        "q": "A client with dry skin wants a purifying (oil-absorbing) mask. What do you do?",
+                        "q": "A client with dry skin wants a purifying mask. What do you do?",
                         "o": ["Apply the mask", "Explain that purifying masks worsen dry skin; offer a hydrating mask instead", "Apply half", "Refuse to serve"],
                         "c": 1,
-                        "f": "Match the treatment to the skin type. Purifying for oily, hydrating for dry."
+                        "f": "Match the treatment to the skin type."
                       },
                       {
                         "q": "During extraction, the client winces in pain. What do you do?",
                         "o": ["Continue — it's necessary", "Stop, reduce pressure, and only extract what comes easily", "Apply more steam", "Finish quickly"],
                         "c": 1,
-                        "f": "Extraction should be uncomfortable but not painful. If it hurts, reduce pressure or stop."
+                        "f": "Extraction should be uncomfortable but not painful."
                       },
                       {
                         "q": "You finish a facial. What's the final step?",
                         "o": ["Moisturiser", "SPF", "Both A and B", "Nothing"],
                         "c": 2,
-                        "f": "Always finish with moisturiser AND SPF. Sun damage undoes everything."
+                        "f": "Always finish with moisturiser AND SPF."
                       }
                     ]
                   }
@@ -114,18 +114,18 @@
                     "id": "p-facial-protocol",
                     "type": "portfolio",
                     "title": "Write a facial protocol",
-                    "prompt": "Write out your standard facial protocol from start to finish. Include timings, products, and aftercare instructions for the client.",
+                    "prompt": "Write out your standard facial protocol from start to finish. Include timings, products, and aftercare instructions.",
                     "steps": [
                       "List every step with the time it takes",
                       "Name the products you use and why",
                       "Include consultation questions",
-                      "Add aftercare instructions (what to avoid for 24 hours)",
+                      "Add aftercare instructions",
                       "Test the protocol on a friend or client"
                     ]
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       },
@@ -145,7 +145,7 @@
                     "id": "l-manicure-intro",
                     "type": "lesson",
                     "title": "The manicure sequence",
-                    "content": "<h3>Basic manicure</h3><ol><li>Remove old polish</li><li>File nails to shape</li><li>Soak hands in warm water</li><li>Push back cuticles gently</li><li>Trim cuticles (only if needed)</li><li>Massage hands with lotion</li><li>Apply base coat, colour, top coat</li></ol><h3>Variations</h3><ul><li>Gel polish — longer lasting, cured under UV</li><li>Acrylic extensions — sculpted tips</li><li>Nail art — designs, patterns</li></ul><h3>Hygiene</h3><p>All tools sanitised between clients. Files and buffers are single-use or disinfected after each client. Never share.</p>"
+                    "content": "<h3>Basic manicure</h3><ol><li>Remove old polish</li><li>File nails to shape</li><li>Soak hands in warm water</li><li>Push back cuticles gently</li><li>Trim cuticles (only if needed)</li><li>Massage hands with lotion</li><li>Apply base coat, colour, top coat</li></ol><h3>Variations</h3><ul><li>Gel polish — longer lasting, cured under UV</li><li>Acrylic extensions — sculpted tips</li><li>Nail art — designs, patterns</li></ul><h3>Hygiene</h3><p>All tools sanitised between clients. Files and buffers are single-use or disinfected.</p>"
                   }
                 ]
               },
@@ -161,25 +161,25 @@
                         "q": "You see a client with yellow, thickened, crumbling toenails. What do you do?",
                         "o": ["Paint over them", "Refer to a doctor — likely fungal infection", "Soak them", "Cut them back"],
                         "c": 1,
-                        "f": "Fungal nail infections need medical treatment. Don't risk spreading it to your tools and other clients."
+                        "f": "Fungal nail infections need medical treatment."
                       },
                       {
                         "q": "A client's cuticle bleeds while you're pushing it back. What do you do?",
                         "o": ["Continue", "Stop, apply antiseptic, cover the cut, replace single-use tools", "Wipe and continue", "Repaint"],
                         "c": 1,
-                        "f": "Any break in skin stops the service. Clean, cover, and replace tools."
+                        "f": "Any break in skin stops the service."
                       },
                       {
                         "q": "How should you disinfect metal nail tools between clients?",
                         "o": ["Rinse with water", "Wipe with cloth", "Disinfect with hospital-grade solution", "Sun dry"],
                         "c": 2,
-                        "f": "Hospital-grade disinfectant. Wiping is not enough."
+                        "f": "Hospital-grade disinfectant."
                       }
                     ]
                   }
                 ]
               }
-            ]
+            }
           },
           {
             "id": "pedicure",
@@ -192,7 +192,7 @@
                     "id": "l-pedicure-intro",
                     "type": "lesson",
                     "title": "The pedicure sequence",
-                    "content": "<h3>Basic pedicure</h3><ol><li>Remove old polish</li><li>Soak feet in warm water with salts</li><li>Trim and file nails straight across</li><li>Push back cuticles</li><li>Remove calluses with pumice or file</li><li>Massage feet and lower legs</li><li>Apply polish or leave natural</li></ol><h3>Health considerations</h3><ul><li>Diabetics need extra care — reduced sensation means cuts go unnoticed</li><li>Ingrown nails should be handled by a podiatrist if severe</li><li>Any wound or infection — refer to a doctor</li></ul>"
+                    "content": "<h3>Basic pedicure</h3><ol><li>Remove old polish</li><li>Soak feet in warm water with salts</li><li>Trim and file nails straight across</li><li>Push back cuticles</li><li>Remove calluses with pumice or file</li><li>Massage feet and lower legs</li><li>Apply polish or leave natural</li></ol><h3>Health considerations</h3><ul><li>Diabetics need extra care</li><li>Ingrown nails should be handled by a podiatrist if severe</li><li>Any wound or infection — refer to a doctor</li></ul>"
                   }
                 ]
               },
@@ -207,13 +207,13 @@
                         "q": "A diabetic client wants a pedicure. What extra care do you take?",
                         "o": ["None", "Extra caution — check feet for wounds, don't cut cuticles, use gentle tools", "Refuse service", "Do it quickly"],
                         "c": 1,
-                        "f": "Diabetics have reduced sensation and slower healing. Gentle treatment and wound checks are essential."
+                        "f": "Diabetics have reduced sensation and slower healing."
                       },
                       {
                         "q": "A client has an ingrown toenail that looks infected. What do you do?",
                         "o": ["Cut it out", "Refer to a doctor or podiatrist", "Soak it", "Paint over it"],
                         "c": 1,
-                        "f": "Infected ingrown nails need medical treatment. Do not attempt to fix them yourself."
+                        "f": "Infected ingrown nails need medical treatment."
                       },
                       {
                         "q": "How do you trim toenails correctly?",
@@ -225,7 +225,7 @@
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       },
@@ -245,7 +245,7 @@
                     "id": "l-sanitation-intro",
                     "type": "lesson",
                     "title": "Why sanitation matters",
-                    "content": "<p>Beauty treatments involve close contact and broken skin. Without proper sanitation you can transfer:</p><ul><li>Fungal infections (nail fungus, athlete's foot)</li><li>Bacterial infections (staph, impetigo)</li><li>Blood-borne viruses (hepatitis B and C, HIV in rare cases)</li></ul><h3>What must be sanitised between clients</h3><ul><li>All metal tools — disinfect with hospital-grade solution</li><li>Files and buffers — single-use or disinfect</li><li>Brushes — wash and disinfect</li><li>Towels — wash hot between clients</li><li>Surfaces — wipe with disinfectant</li></ul><h3>PPE</h3><p>Gloves for treatments involving potential blood contact. Mask if using strong chemicals.</p>"
+                    "content": "<p>Beauty treatments involve close contact and broken skin. Without proper sanitation you can transfer:</p><ul><li>Fungal infections (nail fungus, athlete's foot)</li><li>Bacterial infections (staph, impetigo)</li><li>Blood-borne viruses (hepatitis B and C)</li></ul><h3>What must be sanitised between clients</h3><ul><li>All metal tools — hospital-grade solution</li><li>Files and buffers — single-use or disinfect</li><li>Brushes — wash and disinfect</li><li>Towels — wash hot between clients</li><li>Surfaces — wipe with disinfectant</li></ul>"
                   }
                 ]
               },
@@ -261,13 +261,13 @@
                         "q": "You drop a metal tool on the floor. Can you use it on the next client?",
                         "o": ["Yes", "No — disinfect it first", "Rinse it and use", "Wipe it"],
                         "c": 1,
-                        "f": "Anything dropped must be disinfected before use."
+                        "f": "Anything dropped must be disinfected."
                       },
                       {
                         "q": "A nail file has been used on one client. Can you use it on the next?",
                         "o": ["Yes", "No — files are single-use or must be disinfected", "Only if wiped", "Only for the same client"],
                         "c": 1,
-                        "f": "Files have porous surfaces that harbour bacteria. Single-use is safest."
+                        "f": "Files harbour bacteria. Single-use is safest."
                       },
                       {
                         "q": "You notice a client's skin has a red, infected-looking patch. What do you do?",
@@ -279,7 +279,7 @@
                   }
                 ]
               }
-            ]
+            }
           },
           {
             "id": "client-retention",
@@ -292,7 +292,7 @@
                     "id": "l-retention-intro",
                     "type": "lesson",
                     "title": "What brings clients back",
-                    "content": "<h3>The three drivers</h3><ol><li><strong>Result</strong> — they like how they look and feel</li><li><strong>Experience</strong> — the appointment was pleasant, on time, and comfortable</li><li><strong>Relationship</strong> — they trust you</li></ol><h3>How to build all three</h3><ul><li>Consistent quality — every visit, every time</li><li>Remember preferences (products they like, allergies, conversation topics)</li><li>Follow-up: message 3 days after a facial to check skin settled well</li><li>Recommend a routine they can maintain at home</li><li>Be on time</li><li>Never gossip about other clients</li></ul><h3>Pricing for retention</h3><p>A small loyalty offer (every 5th treatment at half price) is cheaper than finding a new client.</p>"
+                    "content": "<h3>The three drivers</h3><ol><li><strong>Result</strong> — they like how they look and feel</li><li><strong>Experience</strong> — the appointment was pleasant, on time, and comfortable</li><li><strong>Relationship</strong> — they trust you</li></ol><h3>How to build all three</h3><ul><li>Consistent quality</li><li>Remember preferences</li><li>Follow-up: message 3 days after a facial</li><li>Recommend a routine they can maintain at home</li><li>Be on time</li><li>Never gossip about other clients</li></ul>"
                   }
                 ]
               },
@@ -302,7 +302,7 @@
                     "id": "p-client-record",
                     "type": "portfolio",
                     "title": "Build a client record system",
-                    "prompt": "Design a client card or app-based system that captures every detail needed to serve each client well on their next visit.",
+                    "prompt": "Design a client card or app-based system that captures every detail needed to serve each client well.",
                     "steps": [
                       "Include: name, contact, skin/hair type, allergies, past treatments",
                       "Add space for notes (preferences, sensitivities)",
@@ -313,7 +313,7 @@
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       }
