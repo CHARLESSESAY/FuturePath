@@ -1,0 +1,592 @@
+{
+  "software-developer": {
+    "intro": "Learn software development from first principles. Write code, debug it, ship it, and work with other developers — the skills that turn an idea into working software.",
+    "skillDomains": [
+      {
+        "id": "programming",
+        "name": "Programming Fundamentals",
+        "description": "The core building blocks of code — the grammar you'll use every day.",
+        "skills": [
+          {
+            "id": "variables-types",
+            "name": "Variables & Data Types",
+            "description": "Store and manipulate values: numbers, text, true/false, and collections.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-what-is-code",
+                    "type": "lesson",
+                    "title": "What code actually is",
+                    "content": "<p>Code is a set of instructions. A computer does exactly what you tell it — nothing more, nothing less. Your job is to be precise.</p><p>Every program, from a mobile wallet to a banking system, is built from a few small pieces:</p><ul><li><strong>Variables</strong> — named boxes that hold values</li><li><strong>Types</strong> — the kind of value in the box (number, text, true/false)</li><li><strong>Operations</strong> — what you can do with those values</li></ul><p>That's it. Everything else is combining these in clever ways.</p>"
+                  },
+                  {
+                    "id": "l-types",
+                    "type": "lesson",
+                    "title": "The three types you'll use forever",
+                    "content": "<h3>Numbers</h3><p>Whole numbers (<code>5</code>), decimals (<code>3.14</code>). Used for counts, prices, calculations.</p><h3>Strings</h3><p>Text, in quotes (<code>\"Hello\"</code>). Used for names, messages, everything written.</p><h3>Booleans</h3><p>Only <code>true</code> or <code>false</code>. Used for decisions.</p><p>Master these three and you can write 80% of any program. The rest is variation.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-variables",
+                    "type": "drill",
+                    "title": "Choose the right type",
+                    "passingScore": 80,
+                    "steps": [
+                      {
+                        "q": "You need to store a user's name. Which type?",
+                        "o": ["Number", "String", "Boolean"],
+                        "c": 1,
+                        "f": "Names are text — strings."
+                      },
+                      {
+                        "q": "You need to store whether a user has paid. Which type?",
+                        "o": ["Number", "String", "Boolean"],
+                        "c": 2,
+                        "f": "Yes/no state is boolean — true or false."
+                      },
+                      {
+                        "q": "You need to store the price of an item. Which type?",
+                        "o": ["Number", "String", "Boolean"],
+                        "c": 0,
+                        "f": "Prices are numbers, and usually decimals."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "s-naming",
+                    "type": "scenario",
+                    "title": "Name your variables well",
+                    "prompt": "You're writing code for a school to track student fees. List at least 6 variables you would need and choose a name for each. Explain why you chose each name.",
+                    "context": "Good variable names make code readable. Bad names cause bugs six months later.",
+                    "placeholder": "Variable 1: …\nWhy: …",
+                    "rubric": [
+                      "Uses descriptive names (not x, y, temp)",
+                      "Follows consistent naming convention (camelCase or snake_case)",
+                      "Distinguishes between similar concepts (feeTotal vs feePaid)",
+                      "Avoids abbreviations that aren't universally understood",
+                      "Every name reads clearly out of context"
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "p-model-data",
+                    "type": "portfolio",
+                    "title": "Model a real-world system",
+                    "prompt": "Pick a real West African business (a market stall, a mobile money kiosk, a tailoring shop). Write a one-page document that identifies at least 10 variables the business would need to track and assigns each a data type.",
+                    "steps": [
+                      "Choose a real business you know",
+                      "List every piece of information the owner tracks",
+                      "Assign a type to each (number, string, boolean)",
+                      "Group related variables together",
+                      "Write a one-paragraph reflection on what you learned"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "control-flow",
+            "name": "Control Flow",
+            "description": "Make the program take different paths based on conditions, and repeat work.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-if-else",
+                    "type": "lesson",
+                    "title": "If this, then that",
+                    "content": "<p>Programs make decisions with <code>if</code> statements:</p><blockquote>IF the user's balance is greater than the price → allow the purchase.<br>ELSE → show \"insufficient funds\".</blockquote><p>Real programs have nested decisions:</p><blockquote>IF balance &gt; price:<br>&nbsp;&nbsp;IF account not frozen:<br>&nbsp;&nbsp;&nbsp;&nbsp;allow purchase<br>&nbsp;&nbsp;ELSE:<br>&nbsp;&nbsp;&nbsp;&nbsp;show \"account frozen\"<br>ELSE:<br>&nbsp;&nbsp;show \"insufficient funds\"</blockquote><p>Every branching business rule becomes an if/else chain.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-loops",
+                    "type": "lesson",
+                    "title": "Loops — do it again",
+                    "content": "<p>Loops repeat work. Two common kinds:</p><h3>For loop</h3><p>Runs a known number of times. \"For each student in the list, print their name.\"</p><h3>While loop</h3><p>Runs until a condition changes. \"While the user hasn't pressed 'exit', keep showing the menu.\"</p><p>Loops are what make computers fast. A human prints 10 names slowly. A loop prints a million in a second.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-flow-trace",
+                    "type": "drill",
+                    "title": "Trace the logic",
+                    "steps": [
+                      {
+                        "q": "if age >= 18 then 'adult' else 'minor' — what does this return for age = 15?",
+                        "o": ["adult", "minor", "error", "nothing"],
+                        "c": 1,
+                        "f": "15 is not >= 18, so the else branch runs: 'minor'."
+                      },
+                      {
+                        "q": "A loop for i = 1 to 3: print(i) — what gets printed?",
+                        "o": ["123", "012", "1 only", "3 only"],
+                        "c": 0,
+                        "f": "Prints 1, 2, 3 in order."
+                      },
+                      {
+                        "q": "while balance > 0: withdraw(10) with balance starting at 25 — how many withdrawals?",
+                        "o": ["2", "3", "0", "infinite"],
+                        "c": 1,
+                        "f": "25 → 15 → 5 → -5 (loop stops after 3)."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "s-business-logic",
+                    "type": "scenario",
+                    "title": "Write a pricing rule",
+                    "prompt": "A mobile money agent charges 1% of any transaction over 100 Le, with a minimum fee of 2 Le. Write the logic in plain English (not code) as a series of IF/ELSE statements.",
+                    "context": "Turning business rules into precise logic is 70% of programming.",
+                    "placeholder": "IF the transaction amount is …",
+                    "rubric": [
+                      "Handles transactions under 100 Le",
+                      "Handles transactions over 100 Le",
+                      "Applies the minimum fee correctly",
+                      "Uses clear, unambiguous conditions",
+                      "Covers every possible input"
+                    ]
+                  }
+                ]
+              },
+              "4": {
+                "modules": [
+                  {
+                    "id": "p-flow-doc",
+                    "type": "portfolio",
+                    "title": "Document a real business process",
+                    "prompt": "Choose a real process (school registration, market stall pricing, mobile money transfer). Draw a flowchart showing the decisions and loops involved.",
+                    "steps": [
+                      "Pick a process you've observed",
+                      "Draw boxes for actions and diamonds for decisions",
+                      "Show at least 2 decision points",
+                      "Show at least 1 loop",
+                      "Write a short explanation"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "functions",
+            "name": "Functions",
+            "description": "Package logic into reusable pieces with clear names.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-functions",
+                    "type": "lesson",
+                    "title": "Functions — named blocks of logic",
+                    "content": "<p>A function is a named box of code you can call by name:</p><blockquote>calculateTax(income) → returns the tax owed</blockquote><p>Functions take <strong>inputs</strong> (parameters) and return <strong>outputs</strong>.</p><p>Benefits:</p><ul><li>Write once, use many times</li><li>Test in isolation</li><li>Give meaningful names to complex logic</li><li>Reuse across the whole project</li></ul><p>Great code is a collection of small, well-named functions.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-fn-design",
+                    "type": "drill",
+                    "title": "Identify good function boundaries",
+                    "steps": [
+                      {
+                        "q": "Which is the best function to extract from a payment system?",
+                        "o": ["doEverything()", "processPayment(amount, fromAccount)", "run()", "x()"],
+                        "c": 1,
+                        "f": "Clear name, clear inputs. Single responsibility."
+                      },
+                      {
+                        "q": "Which of these is a good function name?",
+                        "o": ["fn1", "calculateStudentFee(units, rate)", "thing()", "abc()"],
+                        "c": 1,
+                        "f": "Descriptive names tell the reader what the function does."
+                      },
+                      {
+                        "q": "A function that does five unrelated things is:",
+                        "o": ["Very good", "Bad — should be split", "Fine, no issue", "Impossible"],
+                        "c": 1,
+                        "f": "One function = one job."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "s-design-function",
+                    "type": "scenario",
+                    "title": "Design a function signature",
+                    "prompt": "You're building a school report card system. Design a function called generateReport that takes a student's data and returns a formatted report. Describe what inputs it needs and what it returns.",
+                    "context": "Function design is about inputs, outputs, and clarity.",
+                    "placeholder": "Function name: generateReport\nInputs: …\nOutputs: …\nWhat it does: …",
+                    "rubric": [
+                      "Lists all necessary inputs (name, grades, attendance)",
+                      "Describes the output clearly",
+                      "Avoids side effects (function should only produce the report)",
+                      "Names the function precisely",
+                      "Considers edge cases (missing grades, empty student)"
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "p-function-library",
+                    "type": "portfolio",
+                    "title": "Design a small function library",
+                    "prompt": "Choose a domain (a small business, a school, a market stall). Design 8 functions that would be needed to run it. For each, write: the name, the inputs, the output, and one sentence on what it does.",
+                    "steps": [
+                      "List 8 discrete tasks the domain needs",
+                      "Design one function per task",
+                      "Keep each function focused on one job",
+                      "Ensure inputs and outputs are clear",
+                      "Order them by when they'd be called"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "problem-solving",
+        "name": "Problem Solving",
+        "description": "The intellectual core of programming — reading, debugging, and designing solutions.",
+        "skills": [
+          {
+            "id": "debugging",
+            "name": "Debugging",
+            "description": "Find out why code isn't doing what you expected.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-debugging-intro",
+                    "type": "lesson",
+                    "title": "Debugging is a science",
+                    "content": "<p>Bugs are not mysteries. They are hypotheses waiting to be tested.</p><h3>The debugging loop</h3><ol><li><strong>Reproduce</strong> — can you make the bug happen reliably?</li><li><strong>Read the error</strong> — what line, what message?</li><li><strong>Form a hypothesis</strong> — what do you think is wrong?</li><li><strong>Test</strong> — add logging or change one thing.</li><li><strong>Repeat</strong> until fixed.</li></ol><p>Bad debuggers change many things at once. Good debuggers change one thing at a time and observe.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-debug-hypothesis",
+                    "type": "drill",
+                    "title": "Form better hypotheses",
+                    "steps": [
+                      {
+                        "q": "An app crashes when a user enters their name as \"O'Brien\". Most likely cause?",
+                        "o": ["The app hates Irish names", "The apostrophe breaks a string or query", "The name is too long", "Random bug"],
+                        "c": 1,
+                        "f": "Apostrophes in user input break strings and SQL if not escaped."
+                      },
+                      {
+                        "q": "A payment system shows the wrong balance only when two transactions happen at once. What's likely?",
+                        "o": ["Bad network", "Race condition — two threads updating without locking", "Wrong currency", "User error"],
+                        "c": 1,
+                        "f": "Concurrent updates without locking produce race conditions."
+                      },
+                      {
+                        "q": "A webpage works on your laptop but not on your phone. First thing to check?",
+                        "o": ["Reinstall the app", "Screen size / responsive CSS", "Buy a new phone", "Call the internet provider"],
+                        "c": 1,
+                        "f": "Always suspect the simplest difference first."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "s-debug-scenario",
+                    "type": "scenario",
+                    "title": "Debug a broken process",
+                    "prompt": "A school's online registration system is double-charging parents who click the 'pay' button twice. Write a step-by-step plan to fix this — how would you reproduce it, what would you check, and what would you change?",
+                    "context": "Double-charging is a critical bug — money is involved.",
+                    "placeholder": "Step 1 (reproduce): …\nStep 2 (inspect): …\nFix: …",
+                    "rubric": [
+                      "Reproduces the bug (click pay twice quickly)",
+                      "Identifies the likely cause (no button lock after first click)",
+                      "Proposes disabling the button after first click",
+                      "Also proposes server-side idempotency (belt and braces)",
+                      "Considers refunding users already affected",
+                      "Considers testing the fix before deploying"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "algorithm-design",
+            "name": "Algorithm Design",
+            "description": "Solve problems step by step, at scale.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-algorithm",
+                    "type": "lesson",
+                    "title": "An algorithm is a recipe",
+                    "content": "<p>An algorithm is a precise sequence of steps to solve a problem. It doesn't have to be code yet — plain English is fine.</p><h3>Sorting a list of names</h3><ol><li>Compare first two names. Swap if out of order.</li><li>Move to the next pair. Repeat.</li><li>When you reach the end, start over.</li><li>Stop when a full pass has no swaps.</li></ol><p>That's bubble sort — one of hundreds of sorting algorithms.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "s-algorithm-design",
+                    "type": "scenario",
+                    "title": "Design a search algorithm",
+                    "prompt": "You have a list of 1,000 students sorted by name. You need to find a specific student quickly. Describe an algorithm — in plain English — that finds them without checking all 1,000 names one by one.",
+                    "context": "Binary search is the answer. Explaining it in plain English is the test of understanding.",
+                    "placeholder": "Step 1: …\nStep 2: …",
+                    "rubric": [
+                      "Checks the middle item first",
+                      "Decides whether to search left or right half",
+                      "Repeats on the remaining half",
+                      "Stops when the item is found or the range is empty",
+                      "Notes that the list must be sorted for this to work"
+                    ]
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "p-algorithm-portfolio",
+                    "type": "portfolio",
+                    "title": "Document three algorithms",
+                    "prompt": "Write plain-English algorithms for three real tasks: (1) finding the largest number in a list, (2) checking if a word is a palindrome, (3) counting how many times each name appears in a class list.",
+                    "steps": [
+                      "Write each algorithm in numbered steps",
+                      "Show a worked example with sample data",
+                      "Note edge cases",
+                      "Write a one-line summary of each"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "tools-workflow",
+        "name": "Tools & Workflow",
+        "description": "The professional toolkit — version control, testing, deployment.",
+        "skills": [
+          {
+            "id": "version-control",
+            "name": "Version Control",
+            "description": "Track every change, collaborate safely, roll back mistakes.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-git-intro",
+                    "type": "lesson",
+                    "title": "Why Git exists",
+                    "content": "<p>Before version control, developers saved files as <code>project_v1.js</code>, <code>project_final.js</code>, <code>project_final_FINAL.js</code>. It was chaos.</p><p><strong>Git</strong> solves this. It records every change with:</p><ul><li>What changed</li><li>Who changed it</li><li>When</li><li>Why (in a message)</li></ul><p>You can roll back to any point. Two developers can work on the same file without overwriting each other. Nothing is ever truly lost.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-git-commands",
+                    "type": "drill",
+                    "title": "Git basics",
+                    "steps": [
+                      {
+                        "q": "You've made changes and want to save them locally with a message. What command?",
+                        "o": ["git push", "git commit -m \"message\"", "git status", "git pull"],
+                        "c": 1,
+                        "f": "Commit saves locally with a message. Push sends to remote."
+                      },
+                      {
+                        "q": "You want to download the latest changes from the remote repository. What command?",
+                        "o": ["git commit", "git pull", "git init", "git log"],
+                        "c": 1,
+                        "f": "git pull fetches and merges remote changes."
+                      },
+                      {
+                        "q": "You've accidentally deleted a file and want to restore it. Where do you look?",
+                        "o": ["The trash", "Git history — the file was committed", "Ask a colleague", "Rebuild from scratch"],
+                        "c": 1,
+                        "f": "If the file was committed, git checkout can restore it."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "s-git-workflow",
+                    "type": "scenario",
+                    "title": "Handle a merge conflict",
+                    "prompt": "You and another developer both edited the same file. When you pull, Git shows a merge conflict. Describe what happened and how you would resolve it without losing either person's work.",
+                    "context": "Merge conflicts are normal in team projects.",
+                    "placeholder": "What happened: …\nHow I'd resolve it: …",
+                    "rubric": [
+                      "Explains that both developers edited the same lines",
+                      "Opens the conflicted file to see the markers",
+                      "Decides with the other developer which version is correct (or combines them)",
+                      "Removes the conflict markers",
+                      "Commits the resolved file",
+                      "Talks to the other developer to prevent future conflicts"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "testing",
+            "name": "Testing",
+            "description": "Prove your code works — and keeps working after changes.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-testing-intro",
+                    "type": "lesson",
+                    "title": "Why we test",
+                    "content": "<p>Code that works today can break tomorrow when someone else changes something. <strong>Tests</strong> are code that checks other code.</p><h3>Three kinds of tests</h3><ul><li><strong>Unit tests</strong> — test one function in isolation</li><li><strong>Integration tests</strong> — test how functions work together</li><li><strong>End-to-end tests</strong> — test the whole system as a user would use it</li></ul><p>You don't need all three on day one. But serious code has at least unit tests.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "s-write-tests",
+                    "type": "scenario",
+                    "title": "Write tests for a calculator",
+                    "prompt": "You've written a function add(a, b) that returns the sum of two numbers. Write at least 5 test cases you would run to be confident it works.",
+                    "context": "Good tests cover normal cases, edge cases, and unusual inputs.",
+                    "placeholder": "Test 1: add(2, 3) should return 5\nTest 2: …",
+                    "rubric": [
+                      "Tests the happy path (positive numbers)",
+                      "Tests with zero",
+                      "Tests with negative numbers",
+                      "Tests with decimals",
+                      "Tests with very large numbers (overflow)",
+                      "Tests with non-number inputs (what happens?)"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "professional",
+        "name": "Professional Practice",
+        "description": "How to work on real teams, on real projects, with real clients.",
+        "skills": [
+          {
+            "id": "requirements",
+            "name": "Working with Requirements",
+            "description": "Turn a vague client request into a precise plan.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-requirements-intro",
+                    "type": "lesson",
+                    "title": "Clients speak in wishes. You speak in specifics.",
+                    "content": "<p>A client says: \"I want an app for my restaurant.\"</p><p>That's a wish, not a requirement. Your job is to ask until you have specifics:</p><ul><li>What should the app do? (menu, orders, reservations, all three?)</li><li>Who uses it? (customers, staff, both?)</li><li>What's the deadline?</li><li>What's the budget?</li><li>What does success look like?</li></ul><p>The cost of vague requirements is a project that gets built, then rejected.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "s-requirements-scenario",
+                    "type": "scenario",
+                    "title": "Clarify a vague brief",
+                    "prompt": "A client says: \"I want an app so my market stall can accept mobile money.\" Write 8 specific questions you would ask before starting.",
+                    "context": "Every question you don't ask now becomes a change request later.",
+                    "placeholder": "Q1: …\nQ2: …",
+                    "rubric": [
+                      "Asks about payment providers (MTN, Orange, Airtel)",
+                      "Asks about devices the stall will use",
+                      "Asks about internet reliability",
+                      "Asks about customer receipts",
+                      "Asks about daily reconciliation",
+                      "Asks about fraud protection",
+                      "Asks about budget",
+                      "Asks about deadline"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "code-review",
+            "name": "Code Review",
+            "description": "Give and receive feedback on code without ego.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-review-intro",
+                    "type": "lesson",
+                    "title": "Code review is how teams get better",
+                    "content": "<p>Code review = one developer reads another's code before it's merged. The goal is <strong>better code and shared knowledge</strong>, not to prove who is smarter.</p><h3>Rules for giving review</h3><ul><li>Comment on the code, not the person</li><li>Ask questions instead of making statements</li><li>Praise good solutions</li><li>Distinguish 'must fix' from 'nice to have'</li></ul><h3>Rules for receiving review</h3><ul><li>The code is not you. Critique of code is not critique of you.</li><li>Ask for clarification if a comment is unclear</li><li>Thank reviewers — they spent their time helping you</li></ul>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "p-review-portfolio",
+                    "type": "portfolio",
+                    "title": "Write a code review",
+                    "prompt": "Choose any small piece of code you've written. Write a review of it as if you were another developer. Include 3 things done well and 3 things to improve.",
+                    "steps": [
+                      "Print or display the code",
+                      "List what works well",
+                      "List what could be clearer, faster, or safer",
+                      "Write the review in a professional tone",
+                      "Reflect on what you'd do differently next time"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
