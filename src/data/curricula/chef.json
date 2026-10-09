@@ -1,0 +1,342 @@
+{
+  "chef": {
+    "intro": "Learn professional cooking from technique to kitchen management. Master the methods that turn ingredients into dishes, and the leadership that runs a kitchen under pressure.",
+    "skillDomains": [
+      {
+        "id": "cooking-technique",
+        "name": "Cooking Technique",
+        "description": "The foundational methods every chef must master.",
+        "skills": [
+          {
+            "id": "heat-methods",
+            "name": "Heat Methods",
+            "description": "Dry heat, moist heat, and combination methods.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-heat-intro",
+                    "type": "lesson",
+                    "title": "The three families of cooking",
+                    "content": "<h3>Dry heat</h3><p>Roasting, grilling, frying, sautéing. Produces browning and concentrated flavour.</p><h3>Moist heat</h3><p>Boiling, steaming, poaching, braising. Tenderises and preserves moisture.</p><h3>Combination</h3><p>Braising, stewing. Starts with dry heat (browning) then adds liquid.</p><h3>The rule</h3><p>Match the method to the ingredient. A tender cut of beef is best dry-heated. A tough cut needs moist heat and time.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-browning",
+                    "type": "lesson",
+                    "title": "Browning — the flavour maker",
+                    "content": "<p>The Maillard reaction is the chemical process that browns food and creates complex flavours. It happens above 140°C.</p><h3>How to brown well</h3><ul><li><strong>Dry the surface</strong> — wet food steams instead of browning</li><li><strong>Hot pan, room-temperature food</strong> — cold food cools the pan</li><li><strong>Don't crowd the pan</strong> — crowded food steams</li><li><strong>Wait before flipping</strong> — browning takes time</li><li><strong>Season after</strong> — salt draws moisture to the surface</li></ul><p>Browning is 80% of the flavour in most meat dishes.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-method-drill",
+                    "type": "drill",
+                    "title": "Choose the method",
+                    "passingScore": 80,
+                    "steps": [
+                      {
+                        "q": "You're cooking a tough cut of beef (chuck). Which method?",
+                        "o": ["Quick grill", "Braise (dry heat then moist, long cook)", "Sauté", "Poach"],
+                        "c": 1,
+                        "f": "Tough cuts need long moist heat to break down collagen."
+                      },
+                      {
+                        "q": "You want a steak with a crisp crust and juicy inside. Which method?",
+                        "o": ["Boil", "Steam", "Sear in a hot pan", "Slow braise"],
+                        "c": 2,
+                        "f": "Searing creates the crust and Maillard flavour."
+                      },
+                      {
+                        "q": "The chicken in your pan is steaming, not browning. What's wrong?",
+                        "o": ["Pan too hot", "Too crowded or the chicken is wet", "Wrong oil", "Bad chicken"],
+                        "c": 1,
+                        "f": "Crowded or wet food steams. Dry it and give it space."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "seasoning-flavour",
+            "name": "Seasoning & Flavour",
+            "description": "The balance that turns cooking into cooking well.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-flavour-intro",
+                    "type": "lesson",
+                    "title": "The five tastes and balance",
+                    "content": "<p>Every dish is a balance of five tastes:</p><ul><li><strong>Salty</strong> — salt, soy, fish sauce</li><li><strong>Sour</strong> — lemon, vinegar, tamarind</li><li><strong>Sweet</strong> — sugar, honey, ripe vegetables</li><li><strong>Bitter</strong> — greens, coffee, char</li><li><strong>Umami</strong> — savoury, from glutamate-rich ingredients like tomatoes, mushrooms, fermented sauces</li></ul><h3>The rule</h3><p>Taste as you cook. When something is flat, it usually needs salt or acid. When it's harsh, it usually needs fat or sugar.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-seasoning-practice",
+                    "type": "lesson",
+                    "title": "Seasoning in layers",
+                    "content": "<p>Great chefs season at every stage, not just at the end.</p><h3>Layers of seasoning</h3><ol><li><strong>Marinade</strong> — penetrate the protein before cooking</li><li><strong>During cooking</strong> — salt the water for pasta, season the vegetables as they sauté</li><li><strong>Finishing</strong> — flaky salt, a squeeze of lemon, fresh herbs</li></ol><h3>Why layers matter</h3><p>A dish seasoned only at the end tastes salty on the surface and bland inside. Layers distribute seasoning through the dish.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-seasoning-drill",
+                    "type": "drill",
+                    "title": "Balance the dish",
+                    "steps": [
+                      {
+                        "q": "A soup tastes flat. What do you add?",
+                        "o": ["More water", "Salt and/or acid", "Sugar", "Cream"],
+                        "c": 1,
+                        "f": "Flat usually means under-salted or lacking acid."
+                      },
+                      {
+                        "q": "A stew tastes harsh and acidic. What do you add?",
+                        "o": ["More acid", "Fat (butter, cream, oil) or a bit of sugar", "More salt", "Water"],
+                        "c": 1,
+                        "f": "Fat and sugar round off harsh flavours."
+                      },
+                      {
+                        "q": "A sauce tastes thin. What do you do?",
+                        "o": ["Add water", "Reduce it and finish with butter or starch", "Add flour and serve", "Add oil"],
+                        "c": 1,
+                        "f": "Reduction concentrates flavour. Finishing with butter (monter au beurre) adds body."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "menu-design",
+        "name": "Menu Design",
+        "description": "Building a menu that works for the kitchen and sells.",
+        "skills": [
+          {
+            "id": "menu-planning",
+            "name": "Menu Planning",
+            "description": "Design a menu customers want and the kitchen can deliver.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-menu-intro",
+                    "type": "lesson",
+                    "title": "What makes a good menu",
+                    "content": "<h3>The two audiences</h3><ul><li><strong>Customers</strong> — want dishes that sound appealing, priced fairly, and arrive hot</li><li><strong>The kitchen</strong> — needs a menu that can be executed consistently under pressure</li></ul><h3>Balance</h3><ul><li>Not too many dishes (12-16 mains is plenty)</li><li>Categories: starters, mains, sides, desserts</li><li>Each category has variety: light/heavy, meat/vegetarian</li><li>Seasonal — use what's fresh and cheap</li><li>Price spread — a few high, most middle, a couple low</li></ul><h3>The rule</h3><p>Every dish must earn its place. If it doesn't sell, cut it. If it's too slow to prepare, rethink it.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "s-menu-design",
+                    "type": "scenario",
+                    "title": "Design a restaurant menu",
+                    "prompt": "A new restaurant wants to open in your city, serving contemporary West African food. Design a menu for lunch service. Include 3 starters, 4 mains, 2 sides, and 2 desserts. Justify your choices.",
+                    "context": "Menus are commercial documents. Every dish must work for the kitchen and the customer.",
+                    "placeholder": "Starters:\nMains:\nSides:\nDesserts:\nReasoning:",
+                    "rubric": [
+                      "Total of 11 dishes — not too many for a small kitchen",
+                      "Uses West African ingredients and techniques",
+                      "Balances light and heavy dishes",
+                      "Includes at least one vegetarian main",
+                      "Includes dishes that share prep work with others",
+                      "Prices range from mid-range to premium",
+                      "Justifies dishes based on customer appeal and kitchen practicality"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "kitchen-management",
+        "name": "Kitchen Management",
+        "description": "Running the kitchen during service.",
+        "skills": [
+          {
+            "id": "kitchen-brigade",
+            "name": "Kitchen Brigade",
+            "description": "The roles and the flow during service.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-brigade-intro",
+                    "type": "lesson",
+                    "title": "Classic kitchen roles",
+                    "content": "<h3>The brigade de cuisine</h3><ul><li><strong>Executive chef</strong> — runs the whole kitchen operation</li><li><strong>Head chef / chef de cuisine</strong> — runs the line during service</li><li><strong>Sous chef</strong> — second in command, fills in everywhere</li><li><strong>Chef de partie</strong> — runs a specific station (grill, sauce, veg, fish)</li><li><strong>Commis</strong> — junior chef, learning the stations</li><li><strong>Plongeur</strong> — dish washer and prep assistant</li></ul><h3>Small kitchens</h3><p>Most West African kitchens don't have this many roles. But the principle of station-based work and clear hierarchy applies.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-brigade-drill",
+                    "type": "drill",
+                    "title": "Kitchen organisation",
+                    "steps": [
+                      {
+                        "q": "During a busy dinner service, who calls the orders?",
+                        "o": ["The waiter", "The head chef / expo", "The customer", "Whoever shouts loudest"],
+                        "c": 1,
+                        "f": "The head chef calls orders and coordinates timing. Single point of control."
+                      },
+                      {
+                        "q": "One station is falling behind. What do you do?",
+                        "o": ["Ignore it", "Reassign staff or slow the incoming orders", "Shout at the station", "Serve anyway"],
+                        "c": 1,
+                        "f": "Reassign or slow the pace. Never let one station fail the whole service."
+                      },
+                      {
+                        "q": "The quality check before a dish leaves the pass is the job of:",
+                        "o": ["The waiter", "The head chef or expo", "The customer", "The plongeur"],
+                        "c": 1,
+                        "f": "The pass is the last chance to catch a mistake. The head chef owns it."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "food-cost",
+            "name": "Food Cost",
+            "description": "The number that makes or breaks a restaurant.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-food-cost-intro",
+                    "type": "lesson",
+                    "title": "The food cost percentage",
+                    "content": "<p>Food cost % = (Cost of ingredients ÷ Selling price) × 100</p><h3>Typical targets</h3><ul><li>Full-service restaurant: 28-35%</li><li>Fast casual: 25-30%</li><li>Fine dining: 30-40%</li></ul><h3>Why it matters</h3><p>Food cost above 35% usually means either low prices or waste. Both kill profit.</p><h3>How to control it</h3><ul><li>Accurate costing for every dish</li><li>Regular inventory</li><li>Portion control</li><li>Reduce waste (use trim, make stocks)</li><li>Adjust prices when ingredient costs rise</li></ul>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-cost-drill",
+                    "type": "drill",
+                    "title": "Food cost decisions",
+                    "steps": [
+                      {
+                        "q": "A dish costs 2,000 Le to make and sells for 6,000 Le. Food cost %?",
+                        "o": ["33%", "50%", "25%", "40%"],
+                        "c": 0,
+                        "f": "2,000 ÷ 6,000 × 100 = 33%. In the healthy range."
+                      },
+                      {
+                        "q": "A dish costs 3,000 Le to make and sells for 5,000 Le. Food cost %?",
+                        "o": ["40%", "60%", "50%", "30%"],
+                        "c": 1,
+                        "f": "3,000 ÷ 5,000 × 100 = 60%. Way too high. Either raise the price or reduce the cost."
+                      },
+                      {
+                        "q": "Chicken prices rise 20%. Your main dish uses chicken. What do you do?",
+                        "o": ["Absorb the loss", "Adjust the price or portion to keep food cost in range", "Replace with tofu", "Ignore"],
+                        "c": 1,
+                        "f": "Adjust to protect the food cost %. Silent losses add up."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "p-cost-sheet",
+                    "type": "portfolio",
+                    "title": "Build a dish costing sheet",
+                    "prompt": "Design a costing sheet for every dish on a menu. It should include ingredients, quantities, unit costs, total cost, target price, and food cost %.",
+                    "steps": [
+                      "Choose 5 dishes",
+                      "List every ingredient and its cost",
+                      "Calculate total ingredient cost per portion",
+                      "Set a target food cost % (30%)",
+                      "Calculate the price that meets the target",
+                      "Compare to what you'd actually charge"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "leadership",
+        "name": "Leadership",
+        "description": "The kitchen is a team. Leading it is a skill.",
+        "skills": [
+          {
+            "id": "managing-team",
+            "name": "Managing the Team",
+            "description": "Get the best from people under pressure.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-leadership-intro",
+                    "type": "lesson",
+                    "title": "Kitchen leadership",
+                    "content": "<p>Professional kitchens are high-pressure, hot, and fast. Bad leadership destroys teams. Good leadership builds them.</p><h3>What works</h3><ul><li><strong>Clear expectations</strong> — everyone knows their station and standards</li><li><strong>Consistency</strong> — same standards on quiet and busy nights</li><li><strong>Calm under pressure</strong> — panic spreads; so does calm</li><li><strong>Correction in private, praise in public</strong></li><li><strong>Teach, don't just criticise</strong></li></ul><h3>What doesn't</h3><ul><li>Shouting and insults (the old-school approach — proven to fail)</li><li>Inconsistency</li><li>Blaming others when things go wrong</li><li>Ignoring problems until they explode</li></ul>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-leadership-drill",
+                    "type": "drill",
+                    "title": "Leadership decisions",
+                    "steps": [
+                      {
+                        "q": "A commis chef makes the same mistake three times. What do you do?",
+                        "o": ["Shout at them", "Take them aside, show the correct technique, watch them practice", "Move them off the station", "Ignore"],
+                        "c": 1,
+                        "f": "Correct the technique, not the person. Show, then watch, then correct again if needed."
+                      },
+                      {
+                        "q": "During a busy service, the sous chef is panicking. What do you do?",
+                        "o": ["Panic too", "Stay calm, slow the incoming orders, reassign as needed", "Shout at them", "Leave the kitchen"],
+                        "c": 1,
+                        "f": "Calm is contagious. Slow the pace, reassign stations."
+                      },
+                      {
+                        "q": "A team member is consistently late. What do you do?",
+                        "o": ["Ignore it", "Address it privately — is there a problem? Can you help?", "Fire them", "Cut their pay without discussion"],
+                        "c": 1,
+                        "f": "Address it privately. Latent problems become bigger problems. Ask, then act."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
