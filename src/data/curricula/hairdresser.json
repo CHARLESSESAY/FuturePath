@@ -47,7 +47,7 @@
                         "f": "Tight braids on thinning edges cause permanent hair loss."
                       },
                       {
-                        "q": "A client has just relaxed their hair two weeks ago and wants a colour treatment today. What do you advise?",
+                        "q": "A client relaxed their hair two weeks ago and wants a colour treatment today. What do you advise?",
                         "o": ["Proceed immediately", "Wait at least 4 weeks — double chemical processing causes severe damage", "Do it half strength", "It doesn't matter"],
                         "c": 1,
                         "f": "Relaxer plus colour in short succession can break the hair off."
@@ -327,3 +327,21 @@
                     "id": "p-client-book",
                     "type": "portfolio",
                     "title": "Build a client record book",
+                    "prompt": "Design a system for tracking your clients — their names, contact, hair type, preferred styles, and any allergies or sensitivities.",
+                    "steps": [
+                      "Choose a format (notebook, phone app, spreadsheet)",
+                      "Include fields: name, contact, hair type, past services, notes",
+                      "Add a reminder system for follow-ups",
+                      "Test it with 5 real or imagined clients",
+                      "Refine for ease of use"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
