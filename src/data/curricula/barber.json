@@ -1,6 +1,6 @@
 {
   "barber": {
-    "intro": "Learn barbering from consultation to finished cut. Master clipper work, razor lines, and the hygiene standards that build a reputation. A trade with constant demand and quick income.",
+    "intro": "Learn barbering from consultation to finished cut. Master clipper work, razor lines, and the hygiene standards that build a reputation.",
     "skillDomains": [
       {
         "id": "consultation",
@@ -28,7 +28,7 @@
                     "id": "l-consult-questions",
                     "type": "lesson",
                     "title": "The consultation conversation",
-                    "content": "<h3>Five questions</h3><ol><li>What style do you want? (Ask for photos)</li><li>How do you usually wear your hair day to day?</li><li>When was your last cut?</li><li>Any areas you want to keep longer or shorter?</li><li>Any irritation, sensitivity, or allergy?</li></ol><h3>The mirror test</h3><p>Before cutting, use a mirror to show the client the current shape. Point out areas that will need adjustment. Agree on what the finished cut will look like. This prevents surprises.</p><h3>The refusal rule</h3><p>If a client asks for something that won't work on their hair, say so. Suggest an alternative. Better to manage expectations than deliver a bad result.</p>"
+                    "content": "<h3>Five questions</h3><ol><li>What style do you want? (Ask for photos)</li><li>How do you usually wear your hair day to day?</li><li>When was your last cut?</li><li>Any areas you want to keep longer or shorter?</li><li>Any irritation, sensitivity, or allergy?</li></ol><h3>The mirror test</h3><p>Before cutting, use a mirror to show the client the current shape. Point out areas that will need adjustment. Agree on what the finished cut will look like. This prevents surprises.</p>"
                   }
                 ]
               },
@@ -44,25 +44,25 @@
                         "q": "A client brings a photo of a hairstyle but their hair is much thinner than the model's. What do you do?",
                         "o": ["Cut it exactly like the photo", "Explain the difference and offer an adjusted version", "Refuse service", "Cut it anyway"],
                         "c": 1,
-                        "f": "Match the style to the actual hair. Show an alternative that will work."
+                        "f": "Match the style to the actual hair."
                       },
                       {
                         "q": "A client has a visible scalp condition (flaking, redness). What do you do?",
                         "o": ["Cut anyway", "Refer to a doctor before cutting", "Cut over it", "Ignore"],
                         "c": 1,
-                        "f": "Don't work on irritated or infected scalp. Refer to a doctor."
+                        "f": "Don't work on irritated or infected scalp."
                       },
                       {
                         "q": "A client isn't sure what they want. What's your approach?",
                         "o": ["Pick something", "Show 2-3 options based on their hair and face shape, let them choose", "Ask them to come back", "Copy the last client's cut"],
                         "c": 1,
-                        "f": "Guide with options. Don't guess and don't stall."
+                        "f": "Guide with options."
                       }
                     ]
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       },
@@ -82,7 +82,7 @@
                     "id": "l-clipper-intro",
                     "type": "lesson",
                     "title": "Clipper fundamentals",
-                    "content": "<h3>The clipper</h3><p>A motorised cutting tool with adjustable blades or interchangeable guards. Learn the size markings — #1 is very short (3mm), #4 is medium (13mm).</p><h3>The lever</h3><p>Adjusts blade position for half-grades (e.g., #2 with lever opened = between #2 and #3).</p><h3>The technique</h3><ol><li>Start with a longer guard than you think you need</li><li>Cut with the direction of hair growth for even length</li><li>Cut against the growth to shorten</li><li>Work in sections for consistency</li><li>Overlap passes to avoid lines</li></ol><h3>Speed</h3><p>Speed comes from confidence and clean technique. Rushing produces lines.</p>"
+                    "content": "<h3>The clipper</h3><p>A motorised cutting tool with adjustable blades or interchangeable guards. Learn the size markings — #1 is very short (3mm), #4 is medium (13mm).</p><h3>The lever</h3><p>Adjusts blade position for half-grades (e.g., #2 with lever opened = between #2 and #3).</p><h3>The technique</h3><ol><li>Start with a longer guard than you think you need</li><li>Cut with the direction of hair growth for even length</li><li>Cut against the growth to shorten</li><li>Work in sections for consistency</li><li>Overlap passes to avoid lines</li></ol>"
                   }
                 ]
               },
@@ -113,19 +113,19 @@
                         "q": "Which fade is most difficult to execute?",
                         "o": ["Low fade", "Mid fade", "Bald fade", "High fade"],
                         "c": 2,
-                        "f": "Bald fade requires blending hair to actual skin — no room for error."
+                        "f": "Bald fade requires blending hair to actual skin."
                       },
                       {
                         "q": "A client has a cowlick (whirl) on the crown. How do you handle it?",
                         "o": ["Cut against it", "Work with the growth pattern, cut slightly longer around it", "Ignore it", "Shave it"],
                         "c": 1,
-                        "f": "Cowlicks need longer hair or careful blending. Cutting against them reveals the pattern as a gap."
+                        "f": "Cowlicks need longer hair or careful blending."
                       }
                     ]
                   }
                 ]
               }
-            ]
+            }
           },
           {
             "id": "line-edges",
@@ -159,19 +159,19 @@
                         "q": "The client's skin is irritated after lining. What do you do?",
                         "o": ["Apply aftershave", "Apply a soothing balm and skip further razor work", "Continue", "Wipe with alcohol"],
                         "c": 1,
-                        "f": "Irritated skin needs soothing, not more trauma. Balm and stop."
+                        "f": "Irritated skin needs soothing, not more trauma."
                       },
                       {
                         "q": "Where should the neckline be?",
                         "o": ["At the very base of the neck", "Along the natural hairline at the base of the neck", "Straight across", "Whatever the client wants"],
                         "c": 1,
-                        "f": "Follow the natural hairline. Cutting too low looks unnatural and grows back awkwardly."
+                        "f": "Follow the natural hairline."
                       }
                     ]
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       },
@@ -207,25 +207,25 @@
                         "q": "You just finished a client. The clippers look clean. Do you need to sanitise them?",
                         "o": ["No, they look clean", "Yes — always between clients", "Only if visible dirt", "Only at end of day"],
                         "c": 1,
-                        "f": "Always between clients. 'Looks clean' is not a standard."
+                        "f": "Always between clients."
                       },
                       {
                         "q": "A client nicks their neck while you're lining. What do you do?",
                         "o": ["Continue", "Stop, clean the cut, apply pressure, disinfect tools, replace blade", "Wipe and continue", "Charge extra"],
                         "c": 1,
-                        "f": "Any blood stops the service. Clean, disinfect, and replace single-use items."
+                        "f": "Any blood stops the service."
                       },
                       {
                         "q": "Where do used razor blades go?",
                         "o": ["Regular bin", "Sharps container or sealed rigid box", "Pocket", "Sink"],
                         "c": 1,
-                        "f": "Used blades are a biohazard. Sharps container or sealed rigid container."
+                        "f": "Used blades are a biohazard."
                       }
                     ]
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       },
@@ -269,7 +269,7 @@
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       }
