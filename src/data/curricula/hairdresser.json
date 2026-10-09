@@ -1,6 +1,6 @@
 {
   "hairdresser": {
-    "intro": "Learn hairdressing from consultation to finished style. Master braiding, weaving, treatment, and the business of running a salon — one of the most accessible and reliable trades in West Africa.",
+    "intro": "Learn hairdressing from consultation to finished style. Master braiding, weaving, treatment, and the business of running a salon.",
     "skillDomains": [
       {
         "id": "consultation",
@@ -28,7 +28,7 @@
                     "id": "l-consultation",
                     "type": "lesson",
                     "title": "Running a consultation",
-                    "content": "<h3>Five questions to ask</h3><ol><li>What style do you want? (Ask for photos)</li><li>When do you need it done?</li><li>What have you done to your hair in the last 3 months?</li><li>Any scalp problems or allergies?</li><li>What's your budget?</li></ol><h3>What to look at</h3><ul><li>Scalp condition</li><li>Hair density and length</li><li>Previous damage</li><li>Hairline and edges</li></ul><h3>What to say</h3><p>If a client asks for a style that will damage their hair, say so. Explain the risk. Offer an alternative. This protects both of you.</p>"
+                    "content": "<h3>Five questions to ask</h3><ol><li>What style do you want? (Ask for photos)</li><li>When do you need it done?</li><li>What have you done to your hair in the last 3 months?</li><li>Any scalp problems or allergies?</li><li>What's your budget?</li></ol><h3>What to look at</h3><ul><li>Scalp condition</li><li>Hair density and length</li><li>Previous damage</li><li>Hairline and edges</li></ul><h3>What to say</h3><p>If a client asks for a style that will damage their hair, say so. Explain the risk. Offer an alternative.</p>"
                   }
                 ]
               },
@@ -44,19 +44,19 @@
                         "q": "A client with thinning edges wants tight braids. What do you do?",
                         "o": ["Do it as requested", "Refuse and offer a gentler style that protects the edges", "Do it but warn them", "Charge extra for the risk"],
                         "c": 1,
-                        "f": "Tight braids on thinning edges cause permanent hair loss. Refuse and offer an alternative."
+                        "f": "Tight braids on thinning edges cause permanent hair loss."
                       },
                       {
                         "q": "A client has just relaxed their hair two weeks ago and wants a colour treatment today. What do you advise?",
                         "o": ["Proceed immediately", "Wait at least 4 weeks — double chemical processing causes severe damage", "Do it half strength", "It doesn't matter"],
                         "c": 1,
-                        "f": "Relaxer plus colour in short succession can break the hair off entirely."
+                        "f": "Relaxer plus colour in short succession can break the hair off."
                       },
                       {
                         "q": "A client brings a photo of a style that requires hair twice as long as theirs. What do you do?",
-                        "o": ["Promise the exact look", "Explain the difference and offer alternatives (extensions, half-up styles)", "Try anyway", "Refuse to serve them"],
+                        "o": ["Promise the exact look", "Explain the difference and offer alternatives", "Try anyway", "Refuse to serve them"],
                         "c": 1,
-                        "f": "Manage expectations honestly. Offer what's achievable, not what's impossible."
+                        "f": "Manage expectations honestly."
                       }
                     ]
                   }
@@ -107,19 +107,19 @@
                         "q": "A client wants medium box braids. How many sections for a full head?",
                         "o": ["30-40", "60-80", "150-200", "Whatever feels right"],
                         "c": 1,
-                        "f": "Medium box braids typically use 60-80 sections. Small braids use more, jumbo uses fewer."
+                        "f": "Medium box braids typically use 60-80 sections."
                       },
                       {
                         "q": "You notice a client's scalp is red where you've braided. What do you do?",
                         "o": ["Continue — redness goes away", "Loosen the tension immediately", "Braid tighter to hold", "Ignore it"],
                         "c": 1,
-                        "f": "Redness means the tension is too high. Loosen immediately — traction alopecia is permanent."
+                        "f": "Redness means the tension is too high. Loosen immediately."
                       },
                       {
                         "q": "How long should box braids last before removal?",
                         "o": ["1 week", "4-8 weeks with proper care", "6 months", "Until they fall out"],
                         "c": 1,
-                        "f": "4-8 weeks is the safe window. Beyond that, the new growth pulls and damages the hairline."
+                        "f": "4-8 weeks is the safe window."
                       }
                     ]
                   }
@@ -188,19 +188,19 @@
                         "q": "A client has thick, yellowish flakes and an itchy, greasy scalp. What is it?",
                         "o": ["Dry scalp", "Seborrheic dermatitis", "Traction alopecia", "Dandruff"],
                         "c": 1,
-                        "f": "Yellowish greasy flakes = seborrheic dermatitis. Refer to a dermatologist and use medicated shampoo."
+                        "f": "Yellowish greasy flakes = seborrheic dermatitis."
                       },
                       {
                         "q": "You notice circular bald patches on a client's scalp with broken hairs. What do you do?",
-                        "o": ["Braiding anyway", "Refer to a doctor — could be ringworm or another infection", "Apply oil", "Ignore it"],
+                        "o": ["Braid anyway", "Refer to a doctor — could be ringworm or another infection", "Apply oil", "Ignore it"],
                         "c": 1,
-                        "f": "Circular bald patches with broken hairs suggest fungal infection. Contagious. Refer out."
+                        "f": "Circular bald patches with broken hairs suggest fungal infection."
                       },
                       {
                         "q": "A client complains of a dry, itchy scalp with small white flakes. Best first response?",
                         "o": ["Medicated shampoo immediately", "Moisturising shampoo and scalp oil, with a follow-up in 2 weeks", "Do nothing", "Hot oil treatment at high heat"],
                         "c": 1,
-                        "f": "Dry scalp responds to moisture. Try gentle treatment first, escalate if it doesn't improve."
+                        "f": "Dry scalp responds to moisture. Try gentle treatment first."
                       }
                     ]
                   }
@@ -248,19 +248,19 @@
                         "q": "Which is the most effective way to disinfect scissors?",
                         "o": ["Wipe with a dry cloth", "Wipe with 70% isopropyl alcohol and let air dry", "Wash with soap only", "Wipe with water"],
                         "c": 1,
-                        "f": "70% alcohol kills most pathogens. Let it air dry — don't wipe it off."
+                        "f": "70% alcohol kills most pathogens."
                       },
                       {
                         "q": "A client nicks their ear during a cut and it bleeds slightly. What do you do?",
                         "o": ["Continue cutting", "Stop, clean the cut with antiseptic, apply pressure, replace blade, disinfect everything", "Wipe it and keep going", "Charge extra"],
                         "c": 1,
-                        "f": "Any blood stops the service. Clean the client, disinfect all tools, replace single-use items."
+                        "f": "Any blood stops the service."
                       }
                     ]
                   }
                 ]
               }
-            ]
+            }
           }
         ]
       },
@@ -317,7 +317,7 @@
                     "id": "l-retention-intro",
                     "type": "lesson",
                     "title": "Why clients leave",
-                    "content": "<h3>The five reasons clients don't come back</h3><ol><li><strong>Late or slow service</strong> — you took 8 hours when you said 4</li><li><strong>Poor result</strong> — the style didn't match what they asked for</li><li><strong>Bad attitude</strong> — you were rude, dismissive, or on your phone</li><li><strong>Price surprises</strong> — you charged more than you quoted</li><li><strong>Pain</strong> — the style hurt</li></ol><h3>How to keep clients</h3><ul><li>Start on time</li><li>Match what you promised</li><li>Be present — no phone during service</li><li>Quote before you start</li><li>Prioritise comfort</li></ul><p>A client who returns 6 times a year for 5 years is worth 30 visits. Retention is worth more than new client acquisition.</p>"
+                    "content": "<h3>The five reasons clients don't come back</h3><ol><li><strong>Late or slow service</strong> — you took 8 hours when you said 4</li><li><strong>Poor result</strong> — the style didn't match what they asked for</li><li><strong>Bad attitude</strong> — you were rude, dismissive, or on your phone</li><li><strong>Price surprises</strong> — you charged more than you quoted</li><li><strong>Pain</strong> — the style hurt</li></ol><h3>How to keep clients</h3><ul><li>Start on time</li><li>Match what you promised</li><li>Be present — no phone during service</li><li>Quote before you start</li><li>Prioritise comfort</li></ul><p>A client who returns 6 times a year for 5 years is worth 30 visits.</p>"
                   }
                 ]
               },
@@ -327,21 +327,3 @@
                     "id": "p-client-book",
                     "type": "portfolio",
                     "title": "Build a client record book",
-                    "prompt": "Design a system for tracking your clients — their names, contact, hair type, preferred styles, and any allergies or sensitivities.",
-                    "steps": [
-                      "Choose a format (notebook, phone app, spreadsheet)",
-                      "Include fields: name, contact, hair type, past services, notes",
-                      "Add a reminder system for follow-ups (4-8 weeks after braids)",
-                      "Test it with 5 real or imagined clients",
-                      "Refine for ease of use"
-                    ]
-                  }
-                ]
-              }
-            }
-          }
-        ]
-      }
-    ]
-  }
-}
