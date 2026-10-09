@@ -1,0 +1,359 @@
+{
+  "digital-marketer": {
+    "intro": "Learn digital marketing from campaign planning to analytics. Reach customers where they actually spend time — WhatsApp, Instagram, TikTok, Google — and prove what works with data.",
+    "skillDomains": [
+      {
+        "id": "campaign-planning",
+        "name": "Campaign Planning",
+        "description": "Every campaign starts with a plan, not a post.",
+        "skills": [
+          {
+            "id": "audience-objective",
+            "name": "Audience & Objective",
+            "description": "Define who you're reaching and what success looks like before spending a cent.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-why-plan",
+                    "type": "lesson",
+                    "title": "Why campaigns fail",
+                    "content": "<p>Most marketing campaigns fail for the same reason: no clear audience and no clear goal.</p><p>Compare:</p><ul><li><strong>Bad</strong>: \"We want more customers.\"</li><li><strong>Good</strong>: \"We want 200 women aged 25–40 in Freetown to sign up for the WhatsApp ordering service by end of month.\"</li></ul><p>The second one is specific enough to plan, execute, and measure. The first is a wish.</p><h3>Every campaign needs</h3><ol><li><strong>Who</strong> — a specific group of people</li><li><strong>What</strong> — the exact action you want them to take</li><li><strong>When</strong> — a deadline</li><li><strong>How much</strong> — a budget</li></ol>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-audience",
+                    "type": "lesson",
+                    "title": "Build a target audience",
+                    "content": "<h3>The four dimensions</h3><ul><li><strong>Demographic</strong> — age, gender, income, location</li><li><strong>Psychographic</strong> — values, interests, lifestyle</li><li><strong>Behavioural</strong> — how they shop, what platforms they use</li><li><strong>Pain</strong> — what problem are they trying to solve?</li></ul><h3>Example</h3><p>\"Young mothers in Accra aged 25–35, working professionals, who use Instagram daily and struggle to find time for grocery shopping.\"</p><p>When you can describe your customer this precisely, you know exactly which content to make and where to place it.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-objective-drill",
+                    "type": "drill",
+                    "title": "Write a campaign objective",
+                    "steps": [
+                      {
+                        "q": "Which is a well-formed campaign objective?",
+                        "o": ["Increase brand awareness", "Get 150 sign-ups for the loyalty program by December 31 from customers in Nairobi", "Make more sales", "Grow followers"],
+                        "c": 1,
+                        "f": "Specific number, specific audience, specific deadline."
+                      },
+                      {
+                        "q": "You run a restaurant and want to fill tables on weeknights. Best campaign objective?",
+                        "o": ["Increase Instagram followers", "Get 40 weeknight reservations per week for 4 weeks", "Post more content", "Run a contest"],
+                        "c": 1,
+                        "f": "Tie the objective directly to the business outcome."
+                      },
+                      {
+                        "q": "An objective like 'raise awareness' is weak because:",
+                        "o": ["It's too expensive", "It can't be measured clearly", "Nobody cares about awareness", "It uses the wrong platform"],
+                        "c": 1,
+                        "f": "If you can't measure it, you can't tell whether it worked."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "s-campaign-brief",
+                    "type": "scenario",
+                    "title": "Write a campaign brief",
+                    "prompt": "A small online fashion brand wants to sell 100 units of a new Ankara dress in 30 days. Write a one-paragraph campaign brief that covers: target audience, the specific action, budget, timeline, and how success will be measured.",
+                    "context": "Real campaigns start with a written brief. This forces clarity before spending.",
+                    "placeholder": "Audience:\nAction:\nBudget:\nTimeline:\nSuccess metric:",
+                    "rubric": [
+                      "Identifies a specific audience (age, location, platform)",
+                      "States the exact action (buy the dress, at what price)",
+                      "Gives a real budget or budget range",
+                      "Sets a 30-day timeline with milestones",
+                      "Defines success: 100 units sold",
+                      "Considers which platform the audience uses most"
+                    ]
+                  }
+                ]
+              },
+              "4": {
+                "modules": [
+                  {
+                    "id": "p-brief-template",
+                    "type": "portfolio",
+                    "title": "Build a campaign brief template",
+                    "prompt": "Design a one-page campaign brief template you would use for every client or internal campaign. It must be fillable in 15 minutes and cover every essential decision.",
+                    "steps": [
+                      "Include sections for audience, objective, budget, timeline",
+                      "Add a section for the key message",
+                      "Add a section for which platforms",
+                      "Add a section for how success is measured",
+                      "Test it on a real or imagined campaign"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "content-strategy",
+            "name": "Content Strategy",
+            "description": "Plan what you'll publish, when, and why.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-content-types",
+                    "type": "lesson",
+                    "title": "The content types that work",
+                    "content": "<h3>By purpose</h3><ul><li><strong>Attract</strong> — reels, tips, memes that reach new people</li><li><strong>Engage</strong> — comments, polls, stories that keep current followers</li><li><strong>Convert</strong> — product photos, testimonials, offers that drive sales</li></ul><h3>By format</h3><ul><li>Short video (reels, TikTok)</li><li>Static image (feed posts)</li><li>Story (ephemeral, casual)</li><li>Long-form (YouTube, blog)</li></ul><p>A good content mix has all three purposes across all four formats.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-content-calendar",
+                    "type": "lesson",
+                    "title": "Build a content calendar",
+                    "content": "<p>Posting randomly doesn't build an audience. Posting consistently does.</p><h3>A simple calendar</h3><ul><li><strong>Monday</strong> — motivational or educational</li><li><strong>Wednesday</strong> — product or service showcase</li><li><strong>Friday</strong> — behind-the-scenes or community</li><li><strong>Daily stories</strong> — short, casual, real</li></ul><p>Plan 2 weeks in advance. Batch-produce content in one session. This is how professionals stay consistent.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-content-drill",
+                    "type": "drill",
+                    "title": "Choose the right content",
+                    "steps": [
+                      {
+                        "q": "You want to reach new people on Instagram. Best format?",
+                        "o": ["Feed photos", "Reels", "Stories", "Long captions"],
+                        "c": 1,
+                        "f": "Reels reach new people. Feed photos mostly reach existing followers."
+                      },
+                      {
+                        "q": "You want to build trust with existing customers. Best format?",
+                        "o": ["Story with a customer testimonial", "Random meme", "Product ad", "Sales post"],
+                        "c": 0,
+                        "f": "Testimonials in stories feel personal and real."
+                      },
+                      {
+                        "q": "You have 4 hours to work on marketing this week. Best use?",
+                        "o": ["Post once per day randomly", "Batch-produce 8 pieces of content", "Reply to every comment", "Change the logo"],
+                        "c": 1,
+                        "f": "Batch production beats daily improvisation every time."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "paid-media",
+        "name": "Paid Media",
+        "description": "Spend money wisely. Ads work when targeting and creative are right.",
+        "skills": [
+          {
+            "id": "facebook-instagram-ads",
+            "name": "Meta Ads",
+            "description": "Ads on Facebook and Instagram — the biggest paid channel in West Africa.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-meta-ads-intro",
+                    "type": "lesson",
+                    "title": "How Meta ads work",
+                    "content": "<p>Meta ads (Facebook + Instagram) work on an auction system:</p><ol><li>You set a target audience, budget, and creative</li><li>Facebook shows your ad to people in that audience</li><li>You pay per impression or per click</li><li>The algorithm optimises toward whatever goal you set</li></ol><h3>Campaign goals</h3><ul><li><strong>Awareness</strong> — show the ad to many people cheaply</li><li><strong>Traffic</strong> — send people to your site or WhatsApp</li><li><strong>Engagement</strong> — get likes, comments, shares</li><li><strong>Leads</strong> — get phone numbers or messages</li><li><strong>Sales</strong> — convert directly</li></ul><p>Choose the goal that matches what you actually want.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-meta-audience",
+                    "type": "lesson",
+                    "title": "Targeting on Meta",
+                    "content": "<h3>Three levels of targeting</h3><ul><li><strong>Broad</strong> — age, gender, location. Cheapest, works best with strong creative.</li><li><strong>Interest-based</strong> — people who follow certain pages or show certain behaviours.</li><li><strong>Lookalike</strong> — Facebook finds people similar to your existing customers.</li></ul><h3>Best practice for small budgets</h3><p>Start broad. Facebook's algorithm is smarter than your guesswork. Only narrow the audience if you have specific evidence you need to.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-meta-drill",
+                    "type": "drill",
+                    "title": "Meta ads decisions",
+                    "steps": [
+                      {
+                        "q": "You have 50,000 Le for a week of ads. Best approach?",
+                        "o": ["One ad, one audience", "Test 3 ads with 3 different creatives in one campaign", "Ten ads with tiny budgets", "Wait until you have more money"],
+                        "c": 1,
+                        "f": "Test multiple creatives. Let data pick the winner, then put budget behind it."
+                      },
+                      {
+                        "q": "Your ad gets lots of views but no clicks. What's wrong?",
+                        "o": ["Budget too low", "The creative isn't compelling", "Wrong platform", "Facebook is broken"],
+                        "c": 1,
+                        "f": "Views without clicks means the ad doesn't give a reason to act. Rework the creative."
+                      },
+                      {
+                        "q": "Your ad gets clicks but no sales. What do you check?",
+                        "o": ["The landing page or WhatsApp response", "The ad design", "The colour", "The audience"],
+                        "c": 0,
+                        "f": "Clicks mean the ad works. Sales problems usually live on the destination."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "p-meta-campaign",
+                    "type": "portfolio",
+                    "title": "Build a real Meta campaign",
+                    "prompt": "Design a Facebook/Instagram ad campaign for a real or imagined product. Include: 3 ad variations, the audience, the budget, the goal, and how you'd judge success after one week.",
+                    "steps": [
+                      "Choose a product and price",
+                      "Write 3 different ad copies and visual concepts",
+                      "Define the audience (age, location, interests)",
+                      "Set a 7-day budget",
+                      "Define success: clicks, leads, or sales",
+                      "Write a plan for what to do with the results"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "analytics",
+        "name": "Analytics",
+        "description": "Measure what matters. Guessing is expensive; measuring is free.",
+        "skills": [
+          {
+            "id": "metrics",
+            "name": "Key Metrics",
+            "description": "Know the numbers that actually matter.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-metrics-intro",
+                    "type": "lesson",
+                    "title": "The numbers that matter",
+                    "content": "<h3>Reach vs engagement</h3><ul><li><strong>Reach</strong> — how many people saw your content</li><li><strong>Engagement</strong> — likes, comments, shares, saves</li><li><strong>Engagement rate</strong> — engagement ÷ reach × 100</li></ul><h3>Conversion</h3><ul><li><strong>Click-through rate (CTR)</strong> — clicks ÷ impressions × 100</li><li><strong>Conversion rate</strong> — sales ÷ visits × 100</li><li><strong>Cost per acquisition (CPA)</strong> — ad spend ÷ sales</li></ul><h3>Revenue</h3><ul><li><strong>Return on ad spend (ROAS)</strong> — revenue ÷ ad spend</li></ul><p>A ROAS of 3 means every 1 Le spent returned 3 Le of revenue.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-metrics-drill",
+                    "type": "drill",
+                    "title": "Interpret the metrics",
+                    "steps": [
+                      {
+                        "q": "You spent 20,000 Le on ads and made 80,000 Le in sales. What's the ROAS?",
+                        "o": ["2", "3", "4", "5"],
+                        "c": 2,
+                        "f": "80,000 ÷ 20,000 = 4."
+                      },
+                      {
+                        "q": "Your ad got 10,000 views and 100 clicks. What's the CTR?",
+                        "o": ["0.1%", "1%", "10%", "100%"],
+                        "c": 1,
+                        "f": "100 ÷ 10,000 × 100 = 1%. A 1% CTR is a reasonable benchmark."
+                      },
+                      {
+                        "q": "You have a ROAS of 1.2. Are you making money?",
+                        "o": ["Yes, clearly", "Probably not — after product cost, you may be losing money", "Yes, if you scale", "Yes, if you ignore costs"],
+                        "c": 1,
+                        "f": "A ROAS of 1.2 barely covers the ad spend. Add product cost and labour and you're often losing."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "p-analytics-report",
+                    "type": "portfolio",
+                    "title": "Build a weekly analytics report",
+                    "prompt": "Design a one-page weekly report for a small business. It should show the metrics that matter without overwhelming the reader.",
+                    "steps": [
+                      "Choose 5-7 metrics that connect to business outcomes",
+                      "Design a simple layout: this week vs last week",
+                      "Add a short 'what this means' section",
+                      "Add 2-3 recommended actions for the coming week",
+                      "Test it on real data from any platform"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "client-work",
+        "name": "Client Work",
+        "description": "Turn marketing skill into income. Managing clients is a separate skill from running campaigns.",
+        "skills": [
+          {
+            "id": "client-management",
+            "name": "Client Management",
+            "description": "Manage expectations, deliverables, and payment.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-client-intro",
+                    "type": "lesson",
+                    "title": "What clients actually want",
+                    "content": "<p>Clients don't buy marketing tactics. They buy outcomes. They want more sales, more customers, more awareness.</p><h3>What they need from you</h3><ul><li>Clarity on what you'll do</li><li>A clear timeline</li><li>Regular, brief reports (not long ones)</li><li>Honest feedback when something isn't working</li><li>Predictable billing</li></ul><h3>The most common client complaints</h3><ul><li>\"I don't know what you're doing\"</li><li>\"You didn't hit the deadline\"</li><li>\"The results are unclear\"</li></ul><p>Solve all three with a simple weekly update.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "s-client-retainer",
+                    "type": "scenario",
+                    "title": "Pitch a retainer",
+                    "prompt": "A restaurant wants digital marketing. You'll do 12 posts per month, 2 ad campaigns, and weekly reporting. Describe how you'd structure the offer, what you'd charge, and how you'd set expectations.",
+                    "context": "Retainers are the most stable income for a digital marketer.",
+                    "placeholder": "Offer:\nPrice:\nDeliverables:\nWhat's not included:\nReporting:",
+                    "rubric": [
+                      "Defines exactly what's included (12 posts, 2 campaigns)",
+                      "Sets a monthly price covering time and ad spend management",
+                      "Clarifies ad spend is separate (client pays directly)",
+                      "States what's not included (photography, video production)",
+                      "Defines reporting cadence (weekly)",
+                      "Sets terms for cancellations and scope changes",
+                      "Requires a signed agreement or deposit"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
