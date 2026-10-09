@@ -1,0 +1,332 @@
+{
+  "community-health-worker": {
+    "intro": "Learn to serve communities as a frontline health worker. From home visits to health education to referrals — the role that connects people to the health system and saves lives through prevention.",
+    "skillDomains": [
+      {
+        "id": "home-visits",
+        "name": "Home Visits",
+        "description": "The core of the CHW role — meeting people where they live.",
+        "skills": [
+          {
+            "id": "visit-conduct",
+            "name": "Conducting a Visit",
+            "description": "How to enter a home, build trust, and gather useful information.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-visit-intro",
+                    "type": "lesson",
+                    "title": "The home visit",
+                    "content": "<p>The home visit is the primary tool of a Community Health Worker. Done well, it builds trust, catches problems early, and connects families to care.</p><h3>The structure of a visit</h3><ol><li><strong>Greet respectfully</strong> — ask permission to enter</li><li><strong>Explain your purpose</strong> — why you're there</li><li><strong>Listen first</strong> — what concerns does the family have?</li><li><strong>Observe</strong> — living conditions, sanitation, food, general health</li><li><strong>Check specifically</strong> — children's growth, immunisations, pregnancy, chronic illness</li><li><strong>Advise</strong> — one or two key points, not ten</li><li><strong>Refer</strong> — if needed, and explain what will happen at the clinic</li><li><strong>Record</strong> — after you leave, note what you found</li></ol>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-culture-trust",
+                    "type": "lesson",
+                    "title": "Building trust in the community",
+                    "content": "<h3>You are a guest</h3><p>Even when you're the health worker, you're entering someone's home. Respect their space, their time, and their privacy.</p><h3>Do</h3><ul><li>Greet elders first</li><li>Speak the local language if you can</li><li>Accept water if offered</li><li>Sit when invited</li><li>Be consistent — visit at the same time each week/month</li></ul><h3>Don't</h3><ul><li>Judge their home or choices</li><li>Give lectures</li><li>Discuss private information in front of others</li><li>Make promises you can't keep</li></ul><p>Trust takes months to build and one careless comment to destroy.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-visit-drill",
+                    "type": "drill",
+                    "title": "Home visit decisions",
+                    "steps": [
+                      {
+                        "q": "You arrive at a home and the mother is busy cooking. What do you do?",
+                        "o": ["Interrupt — health is more important", "Ask if it's a good time or if you should come back", "Leave quietly", "Start without permission"],
+                        "c": 1,
+                        "f": "Respect their time. Offer to reschedule if it's inconvenient."
+                      },
+                      {
+                        "q": "You notice the family has no latrine and uses open ground. What do you do?",
+                        "o": ["Lecture them about hygiene", "Listen first — ask about their situation and offer practical options", "Report them", "Ignore it"],
+                        "c": 1,
+                        "f": "Listen first. Open defecation is often about poverty, not ignorance. Offer practical support."
+                      },
+                      {
+                        "q": "A child in the home looks unwell. The mother says it's nothing. What do you do?",
+                        "o": ["Accept her judgement", "Ask more questions about symptoms, and refer if there are danger signs", "Force them to the clinic", "Ignore"],
+                        "c": 1,
+                        "f": "Respect the parent, but screen for danger signs. Refer if any are present."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "screening",
+        "name": "Screening",
+        "description": "Catch problems early — before they become emergencies.",
+        "skills": [
+          {
+            "id": "child-health",
+            "name": "Child Health Screening",
+            "description": "The signs that mean a child needs urgent care.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-child-screening",
+                    "type": "lesson",
+                    "title": "Danger signs in children",
+                    "content": "<p>WHO has identified a short list of \"general danger signs\" that mean a child needs urgent care:</p><ul><li><strong>Unable to drink or breastfeed</strong></li><li><strong>Vomiting everything</strong></li><li><strong>Convulsions</strong> (fits)</li><li><strong>Lethargy or unconsciousness</strong></li></ul><p>Any ONE of these means immediate referral.</p><h3>Other concerning signs</h3><ul><li>Fast breathing</li><li>Chest indrawing</li><li>Sunken eyes</li><li>Skin pinch returning slowly (dehydration)</li><li>Fever lasting more than 2 days</li><li>Blood in stool</li><li>Refusing food for more than a day</li></ul>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-child-drill",
+                    "type": "drill",
+                    "title": "Identify danger signs",
+                    "passingScore": 90,
+                    "steps": [
+                      {
+                        "q": "A 2-year-old is drowsy, difficult to wake, and hasn't eaten since yesterday. What do you do?",
+                        "o": ["Advise more fluids at home", "Immediate referral — this is lethargy, a danger sign", "Wait 24 hours", "Give paracetamol"],
+                        "c": 1,
+                        "f": "Lethargy is a WHO general danger sign. Refer immediately."
+                      },
+                      {
+                        "q": "A child has had diarrhoea for 2 days but is still drinking and playing. What do you do?",
+                        "o": ["Immediate referral", "Advise ORS and continue monitoring at home", "Antibiotics", "Nothing"],
+                        "c": 1,
+                        "f": "No danger signs, so home management with ORS and follow-up."
+                      },
+                      {
+                        "q": "A child is having convulsions. The mother is scared. What do you do?",
+                        "o": ["Wait for it to pass", "Protect the child from injury, then refer immediately", "Put something in their mouth", "Give water"],
+                        "c": 1,
+                        "f": "Protect the child (don't restrain, don't put anything in the mouth), then refer immediately."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "maternal-health",
+            "name": "Maternal Health Screening",
+            "description": "Recognise pregnancy danger signs early.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-maternal-screening",
+                    "type": "lesson",
+                    "title": "Danger signs in pregnancy",
+                    "content": "<p>These signs mean a pregnant woman needs immediate care:</p><ul><li><strong>Bleeding</strong> from the vagina at any point</li><li><strong>Severe headache</strong> with blurred vision (possible pre-eclampsia)</li><li><strong>Swelling</strong> of face and hands, especially sudden</li><li><strong>High fever</strong></li><li><strong>Convulsions</strong></li><li><strong>Severe abdominal pain</strong></li><li><strong>Reduced or stopped fetal movement</strong></li><li><strong>Water breaking before 37 weeks</strong></li></ul><p>Encourage all pregnant women to attend antenatal care at least 4 times during pregnancy.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-maternal-drill",
+                    "type": "drill",
+                    "title": "Maternal health decisions",
+                    "steps": [
+                      {
+                        "q": "A pregnant woman in her third trimester has severe headache and blurred vision. What do you do?",
+                        "o": ["Advise rest", "Immediate referral — possible pre-eclampsia", "Give paracetamol", "Wait a day"],
+                        "c": 1,
+                        "f": "Headache with visual changes is a pre-eclampsia red flag. Immediate referral."
+                      },
+                      {
+                        "q": "A pregnant woman mentions light bleeding. She feels fine. What do you do?",
+                        "o": ["Reassure her", "Refer immediately — any bleeding in pregnancy is urgent", "Advise rest", "Give iron tablets"],
+                        "c": 1,
+                        "f": "Any vaginal bleeding in pregnancy needs immediate assessment."
+                      },
+                      {
+                        "q": "A pregnant woman has not attended any antenatal visits at 7 months. What do you do?",
+                        "o": ["Lecture her", "Understand her barriers and help her access care", "Report her", "Ignore"],
+                        "c": 1,
+                        "f": "Understand barriers — distance, cost, work, fear. Help solve them."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "health-education",
+        "name": "Health Education",
+        "description": "Prevention is your most powerful tool.",
+        "skills": [
+          {
+            "id": "teaching-methods",
+            "name": "Teaching Methods",
+            "description": "How to educate adults in a way that sticks.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-teaching-intro",
+                    "type": "lesson",
+                    "title": "Adults don't learn from lectures",
+                    "content": "<p>Health education that works uses:</p><ul><li><strong>Discussion</strong> — ask what they already know</li><li><strong>Demonstration</strong> — show, don't just tell</li><li><strong>Practice</strong> — let them try</li><li><strong>Repetition</strong> — same message, multiple visits</li><li><strong>Local language</strong> — always</li><li><strong>Real examples</strong> — from their community</li></ul><h3>The rule of one</h3><p>One message per visit. If you try to teach five things, they'll remember none. Teach one thing well.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-topics",
+                    "type": "lesson",
+                    "title": "Core health education topics",
+                    "content": "<h3>Prevention topics you'll teach</h3><ul><li><strong>Handwashing</strong> — with soap, at critical times</li><li><strong>Safe water</strong> — boiling, filtering, treating</li><li><strong>Sanitation</strong> — latrine use, disposal of waste</li><li><strong>Nutrition</strong> — exclusive breastfeeding, complementary feeding, balanced diet</li><li><strong>Immunisation</strong> — full schedule for children</li><li><strong>Malaria prevention</strong> — nets, indoor spraying</li><li><strong>Family planning</strong> — methods and access</li><li><strong>HIV prevention</strong> — condoms, testing, treatment</li></ul><p>Master 2-3 topics at first. Add more as you gain experience.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "s-health-talk",
+                    "type": "scenario",
+                    "title": "Plan a health talk",
+                    "prompt": "You're giving a 15-minute health talk at a community meeting on handwashing. Describe how you would structure the talk to actually change behaviour, not just inform.",
+                    "context": "Information alone rarely changes behaviour. Demonstrations and local relevance do.",
+                    "placeholder": "Opening:\nMain content:\nDemonstration:\nCall to action:",
+                    "rubric": [
+                      "Opens by asking what people already know",
+                      "Uses a local story or example",
+                      "Demonstrates proper handwashing technique",
+                      "Explains WHY — germ theory in simple terms",
+                      "Identifies critical times for handwashing",
+                      "Ends with a specific, small commitment",
+                      "Uses local language throughout"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "referrals",
+        "name": "Referrals",
+        "description": "Knowing when and how to refer saves lives.",
+        "skills": [
+          {
+            "id": "referral-process",
+            "name": "Referral Process",
+            "description": "How to move a person from the community to the health facility smoothly.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-referral-intro",
+                    "type": "lesson",
+                    "title": "The referral chain",
+                    "content": "<p>CHWs are the bridge between community and clinic. Referral means ensuring a person gets to the right care.</p><h3>Steps in a referral</h3><ol><li><strong>Recognise</strong> the need (danger sign, condition beyond your scope)</li><li><strong>Explain</strong> to the person and family why it's needed</li><li><strong>Prepare</strong> a referral slip with your findings</li><li><strong>Arrange</strong> transport if needed</li><li><strong>Confirm</strong> they actually got there</li><li><strong>Follow up</strong> after the visit — did they receive care? What was the outcome?</li></ol><p>Referral doesn't end at the door — it ends when the person receives care and returns home.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-referral-drill",
+                    "type": "drill",
+                    "title": "Referral decisions",
+                    "passingScore": 90,
+                    "steps": [
+                      {
+                        "q": "A family refuses to go to the clinic because of the cost. What do you do?",
+                        "o": ["Insist they go", "Explore options: sliding-scale fees, community fund, referral to free services", "Give up", "Pay for them"],
+                        "c": 1,
+                        "f": "Address the barrier. There's almost always a solution — community fund, waiver, or alternative facility."
+                      },
+                      {
+                        "q": "You referred a child with danger signs to the clinic yesterday. What do you do today?",
+                        "o": ["Nothing", "Follow up — did they go? What was the outcome?", "Wait for them to call you", "Report them"],
+                        "c": 1,
+                        "f": "Follow up the next day. Referral without follow-up often fails."
+                      },
+                      {
+                        "q": "A patient is referred but has no transport. What do you do?",
+                        "o": ["Let them figure it out", "Help arrange transport (community, family, ambulance)", "Advise walking", "Wait"],
+                        "c": 1,
+                        "f": "Transport is a common barrier. Help solve it — community members, motorcycle, ambulance if available."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "data-records",
+        "name": "Data & Records",
+        "description": "What isn't recorded didn't happen.",
+        "skills": [
+          {
+            "id": "record-keeping",
+            "name": "Record Keeping",
+            "description": "Track your work accurately.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-records-intro",
+                    "type": "lesson",
+                    "title": "Why CHW records matter",
+                    "content": "<h3>Records serve three purposes</h3><ol><li><strong>Patient care</strong> — tracking who needs follow-up, immunisations, antenatal care</li><li><strong>Reporting</strong> — showing the health system what's happening at community level</li><li><strong>Accountability</strong> — proving your work to supervisors, funders, and the community</li></ol><h3>What to record</h3><ul><li>Every visit (date, household, findings)</li><li>Every referral (date, reason, outcome)</li><li>Every education session (topic, attendees)</li><li>Every screening (result, action)</li></ul><p>Use a standard register. Consistency matters more than detail.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "d-records-drill",
+                    "type": "drill",
+                    "title": "Record keeping discipline",
+                    "steps": [
+                      {
+                        "q": "You finish a home visit at 4 PM. When do you write the record?",
+                        "o": ["Next morning", "Same day, before you forget details", "At the end of the week", "Whenever there's time"],
+                        "c": 1,
+                        "f": "Same day. Memory degrades within hours."
+                      },
+                      {
+                        "q": "A referral didn't result in a visit. What do you record?",
+                        "o": ["Nothing", "The referral, and the fact that the family didn't attend, with the reason", "Just the referral", "Blame the family"],
+                        "c": 1,
+                        "f": "Failed referrals are important data. Record what happened and why."
+                      },
+                      {
+                        "q": "Your supervisor asks for monthly reports. What should the report contain?",
+                        "o": ["Only success stories", "All activity: visits, referrals, outcomes, challenges", "Only numbers", "Whatever you remember"],
+                        "c": 1,
+                        "f": "Honest reporting helps the whole system. Include challenges — they drive support."
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
