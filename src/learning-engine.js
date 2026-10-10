@@ -1,16 +1,17 @@
 /* ============================================================
-   FuturePath — Learning Engine
-   Renders skill trees, level paths, and all module types.
+   FuturePath — Learning Engine (Diploma Edition)
+   Renders skill trees, level paths, module types, visuals,
+   teaching notes, practical evidence, and capstone.
    ============================================================ */
 
 import { loadCareer, recordModule, getModuleScore, resetCareer } from "./progress-store.js";
 
 export const LEVELS = [
-  { name: "Orientation",  desc: "Understand what this skill is and why it matters." },
-  { name: "Foundations",  desc: "Learn the core concepts and vocabulary." },
-  { name: "Guided",       desc: "Practice with step-by-step support." },
-  { name: "Applied",      desc: "Apply it in realistic scenarios without hints." },
-  { name: "Proficient",   desc: "Handle variations and pressure with confidence." }
+  { name: "Foundation",           desc: "Understand what this skill is and why it matters." },
+  { name: "Intermediate",         desc: "Practice with step-by-step support." },
+  { name: "Applied",              desc: "Apply it in realistic scenarios." },
+  { name: "Advanced Application", desc: "Handle variations and pressure with confidence." },
+  { name: "Professional Mastery", desc: "Perform at a level employers or clients pay for." }
 ];
 
 export const MODULE_TYPES = {
@@ -19,11 +20,12 @@ export const MODULE_TYPES = {
   SCENARIO: "scenario",
   PORTFOLIO: "portfolio",
   ASSESS: "assess",
-  SANDBOX: "sandbox"
+  SANDBOX: "sandbox",
+  PRACTICAL: "practical"
 };
 
 // ============================================================
-// STATE (per-navigation)
+// STATE
 // ============================================================
 
 const ctx = {
@@ -50,42 +52,132 @@ export function resetContext() {
 }
 
 // ============================================================
-// SKILL TREE VIEW
+// SKILL TREE VIEW (course root)
 // ============================================================
 
 export function renderSkillTree(container) {
   container.innerHTML = "";
-  const progress = loadCareer(ctx.career.id);
   const domains = ctx.curriculum.skillDomains || [];
 
-  // Summary
-  const totals = computeTotals(domains, ctx.career.id);
-  const summary = document.createElement("div");
-  summary.className = "career-hero";
-  summary.innerHTML = `
-    <span class="eyebrow">Learning Path</span>
-    <h1>${ctx.career.name}</h1>
-    <div class="hero-meta">
-      <span class="tag">${ctx.career.sector}</span>
-      <span class="tag ${ctx.career.type}">${ctx.career.type}</span>
-      <span class="tag">${ctx.career.countries === "ALL" ? "All ECOWAS" : ctx.career.countries.join(", ")}</span>
-    </div>
-    <p>${ctx.curriculum.intro || ""}</p>
-    <div class="hero-stats">
-      <div class="hero-stat"><strong>${totals.skills}</strong><span>Skills</span></div>
-      <div class="hero-stat"><strong>${totals.modules}</strong><span>Modules</span></div>
-      <div class="hero-stat"><strong>${totals.completedPct}%</strong><span>Complete</span></div>
-    </div>
-  `;
-  container.appendChild(summary);
+  // ---------- Course header (diploma metadata) ----------
+  renderCourseHeader(container);
 
-  // Domains
+  // ---------- Domains ----------
   const domainWrap = document.createElement("div");
   domains.forEach((domain) => {
     domainWrap.appendChild(buildDomainCard(domain));
   });
   container.appendChild(domainWrap);
+
+  // ---------- Capstone ----------
+  if (ctx.curriculum.capstoneAssessment) {
+    container.appendChild(buildCapstoneCard(ctx.curriculum.capstoneAssessment));
+  }
+
+  // ---------- Implementation notes (collapsible) ----------
+  if (ctx.curriculum.implementationNotes?.length) {
+    container.appendChild(buildImplNotes(ctx.curriculum.implementationNotes));
+  }
 }
+
+function renderCourseHeader(container) {
+  const c = ctx.curriculum;
+  const domains = c.skillDomains || [];
+
+  const totals = computeTotals(domains, ctx.career.id);
+
+  const header = document.createElement("div");
+  header.className = "career-hero";
+
+  const badges = [];
+  if (c.courseLevel) badges.push(`<span class="tag accent">${c.courseLevel}</span>`);
+  if (ctx.career.sector) badges.push(`<span class="tag">${ctx.career.sector}</span>`);
+  if (ctx.career.type) badges.push(`<span class="tag ${ctx.career.type}">${ctx.career.type}</span>`);
+  badges.push(`<span class="tag">${ctx.career.countries === "ALL" ? "All ECOWAS" : ctx.career.countries.join(", ")}</span>`);
+
+  let frameworkHtml = "";
+  if (c.diplomaFramework?.learningOutcomes?.length) {
+    frameworkHtml = `
+      <div class="course-framework">
+        <h4>Learning outcomes</h4>
+        <ul>${c.diplomaFramework.learningOutcomes.map((o) => `<li>${escapeHtml(o)}</li>`).join("")}</ul>
+      </div>
+    `;
+  }
+
+  let deliveryHtml = "";
+  if (c.deliveryModel?.recommendedStructure) {
+    const s = c.deliveryModel.recommendedStructure;
+    deliveryHtml = `
+      <div class="course-delivery">
+        <div class="delivery-stat"><strong>${s.guidedLearningHours || "—"}</strong><span>Guided hrs</span></div>
+        <div class="delivery-stat"><strong>${s.supervisedPracticalHours || "—"}</strong><span>Supervised</span></div>
+        <div class="delivery-stat"><strong>${s.independentPracticeHours || "—"}</strong><span>Independent</span></div>
+        <div class="delivery-stat"><strong>${s.totalIndicativeHours || "—"}</strong><span>Total</span></div>
+      </div>
+    `;
+  }
+
+  header.innerHTML = `
+    <span class="eyebrow">Learning Path</span>
+    <h1>${escapeHtml(c.courseTitle || ctx.career.name)}</h1>
+    <div class="hero-meta">${badges.join("")}</div>
+    <p>${escapeHtml(c.courseDescription || c.intro || "")}</p>
+    ${deliveryHtml}
+    ${frameworkHtml}
+    <div class="hero-stats">
+      <div class="hero-stat"><strong>${totals.skills}</strong><span>Skills</span></div>
+      <div class="hero-stat"><strong>${totals.modules}</strong><span>Modules</span></div>
+      <div class="hero-stat"><strong>${totals.completedPct}%</strong><span>Complete</span></div>
+    </div>
+    ${c.qualificationNote ? `<p class="qualification-note">${escapeHtml(c.qualificationNote)}</p>` : ""}
+  `;
+  container.appendChild(header);
+}
+
+function buildCapstoneCard(capstone) {
+  const card = document.createElement("div");
+  card.className = "domain-card capstone-card";
+
+  const badges = capstone.criticalSafetyItemsMustAllPass
+    ? `<span class="tag warn">Safety-critical</span>` : "";
+  const signoff = capstone.instructorSignOffRequired
+    ? `<span class="tag">Instructor sign-off</span>` : "";
+
+  card.innerHTML = `
+    <div class="domain-head">
+      <div>
+        <h3>🎓 ${escapeHtml(capstone.title || "Capstone Assessment")}</h3>
+        <p class="domain-desc">${escapeHtml(capstone.description || "")}</p>
+        <div class="meta" style="margin-top:8px">
+          ${badges}${signoff}
+          <span class="tag">Pass: ${capstone.passingScore || 80}%</span>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-accent" data-capstone="1">View capstone requirements</button>
+  `;
+
+  card.querySelector("[data-capstone]").addEventListener("click", () => {
+    renderCapstone();
+  });
+
+  return card;
+}
+
+function buildImplNotes(notes) {
+  const wrap = document.createElement("details");
+  wrap.className = "impl-notes";
+  wrap.innerHTML = `
+    <summary>Implementation notes (for instructors & authors)</summary>
+    <ul>${notes.map((n) => `<li>${escapeHtml(n)}</li>`).join("")}</ul>
+  `;
+  return wrap;
+}
+
+// ============================================================
+// DOMAIN CARD
+// ============================================================
 
 function buildDomainCard(domain) {
   const card = document.createElement("div");
@@ -97,8 +189,8 @@ function buildDomainCard(domain) {
   head.className = "domain-head";
   head.innerHTML = `
     <div>
-      <h3>${domain.name}</h3>
-      <p class="domain-desc">${domain.description || ""}</p>
+      <h3>${escapeHtml(domain.name)}</h3>
+      <p class="domain-desc">${escapeHtml(domain.description || "")}</p>
     </div>
     <div class="domain-pct">${dPct}%</div>
   `;
@@ -117,7 +209,7 @@ function buildDomainCard(domain) {
     row.disabled = locked;
     row.innerHTML = `
       <div class="skill-left">
-        <span class="skill-name">${skill.name}</span>
+        <span class="skill-name">${escapeHtml(skill.name)}</span>
         <span class="skill-level-tag">${LEVELS[Math.min(currentLevel, LEVELS.length - 1)].name} · ${skillPct}%</span>
       </div>
       <div class="skill-right">
@@ -138,11 +230,34 @@ function buildDomainCard(domain) {
   });
 
   card.appendChild(list);
+
+  // ---------- Diploma practicals per domain ----------
+  if (domain.diplomaPracticals?.length) {
+    const practWrap = document.createElement("div");
+    practWrap.className = "domain-practicals";
+    practWrap.innerHTML = `<h4>Supervised practicals</h4>`;
+    domain.diplomaPracticals.forEach((p) => {
+      const btn = document.createElement("button");
+      btn.className = "practical-row";
+      btn.innerHTML = `
+        <span class="practical-icon">⚙</span>
+        <span class="practical-name">${escapeHtml(p.title)}</span>
+        <span class="practical-meta">${p.durationMinutes || "—"} min</span>
+      `;
+      btn.addEventListener("click", () => {
+        ctx.module = p;
+        renderModuleView();
+      });
+      practWrap.appendChild(btn);
+    });
+    card.appendChild(practWrap);
+  }
+
   return card;
 }
 
 // ============================================================
-// SKILL PATH VIEW (levels within a skill)
+// SKILL PATH VIEW
 // ============================================================
 
 export function renderSkillPath() {
@@ -156,23 +271,21 @@ export function renderSkillPath() {
   const head = document.createElement("div");
   head.className = "skill-path-header";
   head.innerHTML = `
-    <button class="btn btn-link" id="backToTree">← Back to skills</button>
-    <h2>${skill.name}</h2>
-    <p class="lead">${skill.description || ""}</p>
+    <button class="btn btn-link" id="backToTree">← Back to course</button>
+    <h2>${escapeHtml(skill.name)}</h2>
+    <p class="lead">${escapeHtml(skill.description || "")}</p>
     <div class="skill-path-progress">
       <div class="bar"><span style="width:${skillPct}%"></span></div>
       <span>${skillPct}% · ${LEVELS[Math.min(currentLevel, LEVELS.length - 1)].name}</span>
     </div>
   `;
   container.appendChild(head);
-  head.querySelector("#backToTree").addEventListener("click", () => {
-    ctx.onNavigate.toTree();
-  });
+  head.querySelector("#backToTree").addEventListener("click", () => ctx.onNavigate.toTree());
 
   const ladder = document.createElement("div");
   ladder.className = "level-ladder";
 
-  LEVELS.forEach((level, levelIdx) => {
+  LEVELS.forEach((levelMeta, levelIdx) => {
     const levelData = skill.levels?.[levelIdx];
     if (!levelData) return;
 
@@ -180,6 +293,21 @@ export function renderSkillPath() {
     const isLocked = levelIdx > currentLevel;
     const isCurrent = levelIdx === currentLevel;
     const isDone = levelPct >= 100;
+
+    const title = levelData.levelTitle || levelMeta.name;
+    const gate = levelData.competencyGate;
+
+    // Gate badge
+    let gateHtml = "";
+    if (gate) {
+      const parts = [];
+      if (gate.knowledgePassPercent) parts.push(`${gate.knowledgePassPercent}% pass`);
+      if (gate.safetyCriticalItemsMustAllPass) parts.push("safety-critical");
+      if (gate.instructorSignOffRequiredForLiveModel) parts.push("instructor sign-off");
+      if (parts.length) {
+        gateHtml = `<div class="gate-row">${parts.map(p => `<span class="gate-tag">${p}</span>`).join("")}</div>`;
+      }
+    }
 
     const row = document.createElement("div");
     row.className = "level-row" +
@@ -191,11 +319,13 @@ export function renderSkillPath() {
       <div class="level-dot">${isDone ? "✓" : levelIdx + 1}</div>
       <div class="level-body">
         <div class="level-head">
-          <strong>${level.name}</strong>
+          <strong>${escapeHtml(title)}</strong>
           ${isLocked ? '<span class="lock-tag">Locked</span>' : ""}
           ${isCurrent ? '<span class="current-tag">Current</span>' : ""}
+          ${isDone ? '<span class="done-tag">Completed</span>' : ""}
         </div>
-        <p class="level-desc">${level.desc}</p>
+        <p class="level-desc">${escapeHtml(levelMeta.desc)}</p>
+        ${gateHtml}
         <div class="level-modules"></div>
       </div>
     `;
@@ -206,14 +336,15 @@ export function renderSkillPath() {
     modules.forEach((mod, modIdx) => {
       const mKey = moduleKey(skill.id, levelIdx, mod.id);
       const mScore = getModuleScore(ctx.career.id, mKey);
-      const modLocked = isLocked || (modIdx > 0 && getModuleScore(ctx.career.id, moduleKey(skill.id, levelIdx, modules[modIdx - 1].id)) < 100);
+      const prevKey = modIdx > 0 ? moduleKey(skill.id, levelIdx, modules[modIdx - 1].id) : null;
+      const modLocked = isLocked || (prevKey && getModuleScore(ctx.career.id, prevKey) < 100);
 
       const modRow = document.createElement("button");
       modRow.className = "module-row" + (modLocked ? " locked" : "");
       modRow.disabled = modLocked;
       modRow.innerHTML = `
         <span class="module-icon">${moduleIcon(mod.type)}</span>
-        <span class="module-name">${mod.title}</span>
+        <span class="module-name">${escapeHtml(mod.title)}</span>
         <span class="module-meta">${moduleMeta(mod)}</span>
         <span class="module-check">${mScore >= 100 ? "✓" : ""}</span>
       `;
@@ -244,39 +375,290 @@ export function renderModuleView() {
   container.innerHTML = "";
 
   const mod = ctx.module;
+
+  // Practical modules get a different layout
+  if (mod.type === "practical") {
+    renderDiplomaPractical(container, mod);
+    return;
+  }
+
   const skill = ctx.skill;
-  const level = LEVELS[ctx.levelIndex];
+  const level = LEVELS[ctx.levelIndex] || { name: "Level" };
 
   const head = document.createElement("div");
   head.className = "module-header";
   head.innerHTML = `
-    <button class="btn btn-link" id="backToPath">← ${skill.name}</button>
+    <button class="btn btn-link" id="backToPath">← ${escapeHtml(skill.name)}</button>
     <div style="margin-top:8px">
       <span class="module-badge">${moduleLabel(mod.type)}</span>
-      <h2>${mod.title}</h2>
-      <p style="margin:6px 0 0;color:var(--text-muted);font-size:13px">${level.name} · ${skill.name}</p>
+      <h2>${escapeHtml(mod.title)}</h2>
+      <p style="margin:6px 0 0;color:var(--text-muted);font-size:13px">${escapeHtml(level.name)} · ${escapeHtml(skill.name)}</p>
     </div>
   `;
   container.appendChild(head);
-  head.querySelector("#backToPath").addEventListener("click", () => {
-    renderSkillPath();
-  });
+  head.querySelector("#backToPath").addEventListener("click", () => renderSkillPath());
 
+  // ---------- Visuals (rendered first, before content) ----------
+  if (mod.visuals?.length) {
+    const visWrap = document.createElement("div");
+    visWrap.className = "visuals-block";
+    mod.visuals.forEach((v) => visWrap.appendChild(buildVisualCard(v)));
+    container.appendChild(visWrap);
+  }
+
+  // ---------- Body ----------
   const body = document.createElement("div");
   body.className = "module-body";
   container.appendChild(body);
 
   switch (mod.type) {
-    case MODULE_TYPES.LESSON:    return renderLesson(body, mod);
-    case MODULE_TYPES.DRILL:     return renderDrill(body, mod);
-    case MODULE_TYPES.SCENARIO:  return renderScenario(body, mod);
-    case MODULE_TYPES.PORTFOLIO: return renderPortfolio(body, mod);
-    case MODULE_TYPES.ASSESS:    return renderAssessment(body, mod);
-    case MODULE_TYPES.SANDBOX:   return renderSandbox(body, mod);
+    case MODULE_TYPES.LESSON:    renderLesson(body, mod); break;
+    case MODULE_TYPES.DRILL:     renderDrill(body, mod); break;
+    case MODULE_TYPES.SCENARIO:  renderScenario(body, mod); break;
+    case MODULE_TYPES.PORTFOLIO: renderPortfolio(body, mod); break;
+    case MODULE_TYPES.ASSESS:    renderAssessment(body, mod); break;
+    case MODULE_TYPES.SANDBOX:   renderSandbox(body, mod); break;
   }
+
+  // ---------- Teaching panel (objectives + notes + evidence) ----------
+  container.appendChild(buildTeachingPanel(mod));
 }
 
-// ---------- LESSON ----------
+// ---------- VISUAL CARD ----------
+
+function buildVisualCard(v) {
+  const card = document.createElement("div");
+  card.className = "visual-card";
+
+  const isPlaceholder = v.assetStatus && v.assetStatus !== "ready";
+  const typeLabel = (v.type || "visual").replace(/([A-Z])/g, " $1").trim();
+
+  card.innerHTML = `
+    <div class="visual-frame">
+      <div class="visual-placeholder">
+        <span class="visual-icon">◫</span>
+        <span class="visual-type">${escapeHtml(typeLabel)}</span>
+        ${isPlaceholder ? `<span class="visual-status">${escapeHtml(v.assetStatus || "")}</span>` : ""}
+      </div>
+    </div>
+    <div class="visual-meta">
+      <h4>${escapeHtml(v.title || "Visual")}</h4>
+      <p>${escapeHtml(v.description || "")}</p>
+      ${v.learningPurpose ? `<p class="visual-purpose"><strong>Purpose:</strong> ${escapeHtml(v.learningPurpose)}</p>` : ""}
+      ${v.caption ? `<p class="visual-caption">${escapeHtml(v.caption)}</p>` : ""}
+      ${v.altText ? `<p class="visual-alt"><strong>Alt text:</strong> ${escapeHtml(v.altText)}</p>` : ""}
+    </div>
+  `;
+  return card;
+}
+
+// ---------- TEACHING PANEL ----------
+
+function buildTeachingPanel(mod) {
+  const panel = document.createElement("div");
+  panel.className = "teaching-panel";
+
+  const sections = [];
+
+  if (mod.learningObjectives?.length) {
+    sections.push(`
+      <div class="teach-section">
+        <h4>Learning objectives</h4>
+        <ul>${mod.learningObjectives.map((o) => `<li>${escapeHtml(o)}</li>`).join("")}</ul>
+      </div>
+    `);
+  }
+
+  if (mod.teachingNotes) {
+    const tn = mod.teachingNotes;
+    sections.push(`
+      <div class="teach-section">
+        <h4>Teaching notes (instructor)</h4>
+        ${tn.diplomaDepth ? `<p><strong>Depth:</strong> ${escapeHtml(tn.diplomaDepth)}</p>` : ""}
+        ${tn.learnerTask ? `<p><strong>Learner task:</strong> ${escapeHtml(tn.learnerTask)}</p>` : ""}
+        ${tn.instructorCheck ? `<p><strong>Instructor check:</strong> ${escapeHtml(tn.instructorCheck)}</p>` : ""}
+      </div>
+    `);
+  }
+
+  if (mod.practicalEvidence?.required) {
+    const pe = mod.practicalEvidence;
+    sections.push(`
+      <div class="teach-section evidence-section">
+        <h4>Practical evidence required</h4>
+        <div class="evidence-tags">
+          ${(pe.evidenceTypes || []).map((t) => `<span class="evidence-tag">${escapeHtml(t)}</span>`).join("")}
+        </div>
+        ${pe.assessmentCriteria?.length ? `
+          <p style="margin-top:10px"><strong>Assessment criteria:</strong></p>
+          <ul>${pe.assessmentCriteria.map((c) => `<li>${escapeHtml(c)}</li>`).join("")}</ul>
+        ` : ""}
+      </div>
+    `);
+  }
+
+  if (!sections.length) return document.createElement("span");
+
+  panel.innerHTML = `<h3 class="teach-title">For instructors</h3>${sections.join("")}`;
+  return panel;
+}
+
+// ---------- DIPLOMA PRACTICAL ----------
+
+function renderDiplomaPractical(container, mod) {
+  const head = document.createElement("div");
+  head.className = "module-header";
+  head.innerHTML = `
+    <button class="btn btn-link" id="backFromPractical">← Back</button>
+    <div style="margin-top:8px">
+      <span class="module-badge practical">Supervised Practical</span>
+      <h2>${escapeHtml(mod.title)}</h2>
+      <p style="margin:6px 0 0;color:var(--text-muted);font-size:13px">
+        ${mod.durationMinutes || "—"} min · Instructor sign-off required
+      </p>
+    </div>
+  `;
+  container.appendChild(head);
+  head.querySelector("#backFromPractical").addEventListener("click", () => ctx.onNavigate.toTree());
+
+  // Visuals
+  if (mod.visuals?.length) {
+    const visWrap = document.createElement("div");
+    visWrap.className = "visuals-block";
+    mod.visuals.forEach((v) => visWrap.appendChild(buildVisualCard(v)));
+    container.appendChild(visWrap);
+  }
+
+  // Prompt
+  const prompt = document.createElement("div");
+  prompt.className = "scenario-prompt";
+  prompt.innerHTML = `<p class="scenario-q">${escapeHtml(mod.prompt || "")}</p>`;
+  container.appendChild(prompt);
+
+  // Steps
+  if (mod.steps?.length) {
+    const stepWrap = document.createElement("div");
+    stepWrap.className = "practical-steps";
+    mod.steps.forEach((s) => {
+      const el = document.createElement("div");
+      el.className = "practical-step";
+      el.innerHTML = `
+        <div class="step-num">${s.step}</div>
+        <div class="step-body">
+          <h4>${escapeHtml(s.title)}</h4>
+          <p>${escapeHtml(s.instruction)}</p>
+          ${s.visual ? `<p class="step-visual">Visual: ${escapeHtml(s.visual)}</p>` : ""}
+        </div>
+      `;
+      stepWrap.appendChild(el);
+    });
+    container.appendChild(stepWrap);
+  }
+
+  // Rubric
+  if (mod.rubric?.length) {
+    const rub = document.createElement("div");
+    rub.className = "rubric";
+    rub.innerHTML = `
+      <h4>Assessment rubric</h4>
+      <ul>${mod.rubric.map((r) => `<li><strong>${escapeHtml(r.criterion)}</strong> — ${r.weightPercent}%</li>`).join("")}</ul>
+      <p class="rubric-pass">Passing score: ${mod.passingScore || 80}%</p>
+    `;
+    container.appendChild(rub);
+  }
+
+  // Mark-complete button
+  const actions = document.createElement("div");
+  actions.className = "module-actions";
+  actions.innerHTML = `<button class="btn btn-primary" id="practicalDone">Mark practical as supervised</button>`;
+  container.appendChild(actions);
+  actions.querySelector("#practicalDone").addEventListener("click", () => {
+    complete(mod, 100);
+  });
+}
+
+// ---------- CAPSTONE VIEW ----------
+
+export function renderCapstone() {
+  const container = ctx.onNavigate.toView("capstone");
+  container.innerHTML = "";
+  const c = ctx.curriculum.capstoneAssessment;
+  if (!c) return;
+
+  const head = document.createElement("div");
+  head.className = "module-header";
+  head.innerHTML = `
+    <button class="btn btn-link" id="backFromCapstone">← Back to course</button>
+    <div style="margin-top:8px">
+      <span class="module-badge capstone">Capstone Assessment</span>
+      <h2>${escapeHtml(c.title)}</h2>
+      <p style="margin:6px 0 0;color:var(--text-muted);font-size:13px">
+        Pass: ${c.passingScore}%${c.criticalSafetyItemsMustAllPass ? " · safety-critical items must all pass" : ""}
+      </p>
+    </div>
+  `;
+  container.appendChild(head);
+  head.querySelector("#backFromCapstone").addEventListener("click", () => ctx.onNavigate.toTree());
+
+  const desc = document.createElement("div");
+  desc.className = "scenario-prompt";
+  desc.innerHTML = `<p class="scenario-q">${escapeHtml(c.description)}</p>`;
+  container.appendChild(desc);
+
+  // Required visuals
+  if (c.requiredVisuals?.length) {
+    const vis = document.createElement("div");
+    vis.className = "rubric";
+    vis.innerHTML = `
+      <h4>Required evidence</h4>
+      <ul>${c.requiredVisuals.map((v) => `<li><strong>${escapeHtml(v.type)}</strong> — ${escapeHtml(v.purpose)}</li>`).join("")}</ul>
+    `;
+    container.appendChild(vis);
+  }
+
+  // Stages
+  if (c.stages?.length) {
+    const stages = document.createElement("div");
+    stages.className = "practical-steps";
+    c.stages.forEach((s, i) => {
+      const el = document.createElement("div");
+      el.className = "practical-step";
+      el.innerHTML = `
+        <div class="step-num">${i + 1}</div>
+        <div class="step-body"><p>${escapeHtml(s)}</p></div>
+      `;
+      stages.appendChild(el);
+    });
+    container.appendChild(stages);
+  }
+
+  // Rubric
+  if (c.rubric?.length) {
+    const rub = document.createElement("div");
+    rub.className = "rubric";
+    rub.innerHTML = `
+      <h4>Final rubric</h4>
+      <ul>${c.rubric.map((r) => `<li><strong>${escapeHtml(r.criterion)}</strong> — ${r.weightPercent}%</li>`).join("")}</ul>
+      <p class="rubric-pass">Passing score: ${c.passingScore}%</p>
+    `;
+    container.appendChild(rub);
+  }
+
+  const actions = document.createElement("div");
+  actions.className = "module-actions";
+  actions.innerHTML = `<button class="btn btn-primary" id="capstoneDone">Mark capstone as complete</button>`;
+  container.appendChild(actions);
+  actions.querySelector("#capstoneDone").addEventListener("click", () => {
+    const key = "capstone." + ctx.career.id;
+    recordModule(ctx.career.id, key, 100);
+    window.__fpToast?.("Capstone marked complete", "success");
+    setTimeout(() => renderSkillTree(ctx.onNavigate.toView("tree")), 300);
+  });
+}
+
+// ============================================================
+// MODULE RENDERERS (unchanged behavior)
+// ============================================================
 
 function renderLesson(container, mod) {
   const content = document.createElement("div");
@@ -289,12 +671,8 @@ function renderLesson(container, mod) {
   actions.innerHTML = `<button class="btn btn-primary" id="lessonDone">Mark as read</button>`;
   container.appendChild(actions);
 
-  actions.querySelector("#lessonDone").addEventListener("click", () => {
-    complete(mod, 100);
-  });
+  actions.querySelector("#lessonDone").addEventListener("click", () => complete(mod, 100));
 }
-
-// ---------- DRILL ----------
 
 function renderDrill(container, mod) {
   const steps = mod.steps || [];
@@ -314,9 +692,7 @@ function renderDrill(container, mod) {
         <h3>${passed ? "Drill complete" : "Keep practicing"}</h3>
         <p>You answered <strong>${correct} of ${steps.length}</strong> correctly — ${pct}%</p>
         <p style="color:var(--text-muted);font-size:13px">
-          ${passed
-            ? "You're ready to move on."
-            : `You need ${passing}% to pass. Repeat the drill.`}
+          ${passed ? "You're ready to move on." : `You need ${passing}% to pass. Repeat the drill.`}
         </p>
       `;
 
@@ -336,7 +712,6 @@ function renderDrill(container, mod) {
       });
       const doneBtn = actions.querySelector("#done");
       if (doneBtn) doneBtn.addEventListener("click", () => complete(mod, pct));
-
       return;
     }
 
@@ -400,8 +775,6 @@ function renderDrill(container, mod) {
   render();
 }
 
-// ---------- SCENARIO ----------
-
 function renderScenario(container, mod) {
   const prompt = document.createElement("div");
   prompt.className = "scenario-prompt";
@@ -440,8 +813,6 @@ function renderScenario(container, mod) {
     window.__fpToast?.("Response saved", "success");
   });
 }
-
-// ---------- PORTFOLIO ----------
 
 function renderPortfolio(container, mod) {
   const prompt = document.createElement("div");
@@ -489,17 +860,12 @@ function renderPortfolio(container, mod) {
   });
 }
 
-// ---------- ASSESSMENT ----------
-
 function renderAssessment(container, mod) {
-  // Reuses drill renderer but with mandatory pass
   renderDrill(container, {
     ...mod,
     passingScore: mod.passingScore || 80
   });
 }
-
-// ---------- SANDBOX ----------
 
 function renderSandbox(container, mod) {
   const prompt = document.createElement("div");
@@ -550,9 +916,7 @@ function renderSandbox(container, mod) {
   actions.innerHTML = `<button class="btn btn-primary" id="explored">Mark as explored</button>`;
   container.appendChild(actions);
 
-  actions.querySelector("#explored").addEventListener("click", () => {
-    complete(mod, 100);
-  });
+  actions.querySelector("#explored").addEventListener("click", () => complete(mod, 100));
 }
 
 // ============================================================
@@ -631,11 +995,11 @@ function getCurrentLevel(skill, careerId) {
 // ============================================================
 
 function moduleIcon(type) {
-  return { lesson: "📖", drill: "🎯", scenario: "🧩", portfolio: "🗂️", assess: "🎓", sandbox: "🧪" }[type] || "•";
+  return { lesson: "📖", drill: "🎯", scenario: "🧩", portfolio: "🗂️", assess: "🎓", sandbox: "🧪", practical: "⚙" }[type] || "•";
 }
 
 function moduleLabel(type) {
-  return { lesson: "Lesson", drill: "Drill", scenario: "Scenario", portfolio: "Portfolio", assess: "Assessment", sandbox: "Sandbox" }[type] || "Module";
+  return { lesson: "Lesson", drill: "Drill", scenario: "Scenario", portfolio: "Portfolio", assess: "Assessment", sandbox: "Sandbox", practical: "Supervised Practical" }[type] || "Module";
 }
 
 function moduleMeta(mod) {
