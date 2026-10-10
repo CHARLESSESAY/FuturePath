@@ -1232,3 +1232,415 @@ button:disabled { cursor: not-allowed; }
   .sandbox-controls label { grid-template-columns: 1fr; gap: 6px; }
   .sandbox-controls strong { text-align: left; }
 }
+/* ============================================================
+   DIPLOMA-DEPTH ADDITIONS
+   Course header, delivery stats, gates, visuals, teaching panel
+   ============================================================ */
+
+.course-delivery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 18px 0;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+.delivery-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.delivery-stat strong {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+.delivery-stat span {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+.course-framework {
+  margin: 18px 0;
+  padding: 18px;
+  background: rgba(46, 196, 154, 0.05);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.course-framework h4 {
+  margin: 0 0 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  font-weight: 700;
+}
+.course-framework ul {
+  margin: 0;
+  padding-left: 20px;
+}
+.course-framework li {
+  font-size: 13.5px;
+  color: var(--text-dim);
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+
+.qualification-note {
+  margin-top: 20px;
+  padding: 12px 16px;
+  font-size: 12.5px;
+  color: var(--text-muted);
+  font-style: italic;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-sm);
+  border-left: 2px solid var(--warn);
+}
+
+.capstone-card {
+  border-color: rgba(46, 196, 154, 0.4) !important;
+  background: linear-gradient(135deg, rgba(46, 196, 154, 0.06), transparent) !important;
+}
+
+.impl-notes {
+  margin-top: 24px;
+  padding: 16px 20px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+.impl-notes summary {
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-dim);
+  letter-spacing: 0.04em;
+}
+.impl-notes summary:hover { color: var(--text); }
+.impl-notes ul {
+  margin: 14px 0 0;
+  padding-left: 20px;
+}
+.impl-notes li {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+
+/* ---------- Level gates ---------- */
+.gate-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0 12px;
+}
+.gate-tag {
+  display: inline-block;
+  padding: 3px 9px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: rgba(232, 182, 12, 0.12);
+  border: 1px solid rgba(232, 182, 12, 0.35);
+  color: var(--warn);
+  border-radius: 20px;
+}
+.done-tag {
+  padding: 2px 8px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(46, 196, 154, 0.15);
+  border: 1px solid rgba(46, 196, 154, 0.4);
+  color: var(--accent);
+  border-radius: 20px;
+}
+
+/* ---------- Domain practicals ---------- */
+.domain-practicals {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+.domain-practicals h4 {
+  margin: 0 0 10px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+.practical-row {
+  display: grid;
+  grid-template-columns: 24px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 6px;
+  background: rgba(232, 182, 12, 0.06);
+  border: 1px solid rgba(232, 182, 12, 0.25);
+  border-radius: var(--radius-sm);
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s, border-color 0.15s;
+}
+.practical-row:hover {
+  background: rgba(232, 182, 12, 0.1);
+  border-color: rgba(232, 182, 12, 0.5);
+}
+.practical-icon { font-size: 15px; text-align: center; }
+.practical-name { font-size: 13.5px; color: var(--text); font-weight: 500; }
+.practical-meta {
+  font-size: 11px;
+  color: var(--warn);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* ---------- Visuals block ---------- */
+.visuals-block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+.visual-card {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.visual-frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, #0d1424, #0a0e1a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+.visual-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 20px;
+  text-align: center;
+}
+.visual-icon {
+  font-size: 42px;
+  color: var(--border-strong);
+  line-height: 1;
+}
+.visual-type {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+.visual-status {
+  display: inline-block;
+  padding: 3px 10px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(232, 182, 12, 0.15);
+  border: 1px solid rgba(232, 182, 12, 0.4);
+  color: var(--warn);
+  border-radius: 20px;
+}
+.visual-meta {
+  padding: 16px 20px 18px;
+}
+.visual-meta h4 {
+  margin: 0 0 8px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+}
+.visual-meta p {
+  margin: 0 0 8px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-dim);
+}
+.visual-purpose, .visual-caption, .visual-alt {
+  font-size: 12px !important;
+  color: var(--text-muted) !important;
+}
+.visual-purpose strong, .visual-alt strong {
+  color: var(--text-dim);
+}
+
+/* ---------- Teaching panel ---------- */
+.teaching-panel {
+  margin-top: 32px;
+  padding: 22px 24px;
+  background: rgba(0, 0, 0, 0.22);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.teach-title {
+  margin: 0 0 18px !important;
+  font-size: 12px !important;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent) !important;
+  font-weight: 800;
+}
+.teach-section {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.teach-section:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.teach-section h4 {
+  margin: 0 0 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+.teach-section ul {
+  margin: 0;
+  padding-left: 20px;
+}
+.teach-section li {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--text-dim);
+  margin-bottom: 5px;
+}
+.teach-section p {
+  margin: 0 0 8px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--text-dim);
+}
+.teach-section p strong {
+  color: var(--text);
+}
+.evidence-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.evidence-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  background: rgba(59, 123, 255, 0.12);
+  border: 1px solid rgba(59, 123, 255, 0.35);
+  color: #8ea9ff;
+  border-radius: 20px;
+  font-family: ui-monospace, monospace;
+}
+
+/* ---------- Practical steps ---------- */
+.practical-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.practical-step {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 16px;
+  padding: 16px 18px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+.step-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--border-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.step-body h4 {
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+.step-body p {
+  margin: 0 0 6px;
+  font-size: 13.5px;
+  color: var(--text-dim);
+  line-height: 1.55;
+}
+.step-visual {
+  font-size: 12px !important;
+  color: var(--text-muted) !important;
+  font-style: italic;
+}
+
+/* ---------- Rubric pass ---------- */
+.rubric-pass {
+  margin: 12px 0 0 !important;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+  font-size: 13px !important;
+  color: var(--accent) !important;
+  font-weight: 700;
+}
+
+/* ---------- Module badges ---------- */
+.module-badge.practical {
+  background: rgba(232, 182, 12, 0.12);
+  border-color: rgba(232, 182, 12, 0.4);
+  color: var(--warn);
+}
+.module-badge.capstone {
+  background: rgba(46, 196, 154, 0.12);
+  border-color: rgba(46, 196, 154, 0.4);
+  color: var(--accent);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  .course-delivery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .delivery-stat strong { font-size: 18px; }
+  .practical-step {
+    grid-template-columns: 36px 1fr;
+    gap: 12px;
+    padding: 14px;
+  }
+  .step-num {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+}
