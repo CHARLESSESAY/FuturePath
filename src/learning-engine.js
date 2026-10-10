@@ -59,22 +59,18 @@ export function renderSkillTree(container) {
   container.innerHTML = "";
   const domains = ctx.curriculum.skillDomains || [];
 
-  // ---------- Course header (diploma metadata) ----------
   renderCourseHeader(container);
 
-  // ---------- Domains ----------
   const domainWrap = document.createElement("div");
   domains.forEach((domain) => {
     domainWrap.appendChild(buildDomainCard(domain));
   });
   container.appendChild(domainWrap);
 
-  // ---------- Capstone ----------
   if (ctx.curriculum.capstoneAssessment) {
     container.appendChild(buildCapstoneCard(ctx.curriculum.capstoneAssessment));
   }
 
-  // ---------- Implementation notes (collapsible) ----------
   if (ctx.curriculum.implementationNotes?.length) {
     container.appendChild(buildImplNotes(ctx.curriculum.implementationNotes));
   }
@@ -130,7 +126,6 @@ function renderCourseHeader(container) {
       <div class="hero-stat"><strong>${totals.modules}</strong><span>Modules</span></div>
       <div class="hero-stat"><strong>${totals.completedPct}%</strong><span>Complete</span></div>
     </div>
-    ${c.qualificationNote ? `<p class="qualification-note">${escapeHtml(c.qualificationNote)}</p>` : ""}
   `;
   container.appendChild(header);
 }
@@ -231,7 +226,6 @@ function buildDomainCard(domain) {
 
   card.appendChild(list);
 
-  // ---------- Diploma practicals per domain ----------
   if (domain.diplomaPracticals?.length) {
     const practWrap = document.createElement("div");
     practWrap.className = "domain-practicals";
@@ -297,7 +291,6 @@ export function renderSkillPath() {
     const title = levelData.levelTitle || levelMeta.name;
     const gate = levelData.competencyGate;
 
-    // Gate badge
     let gateHtml = "";
     if (gate) {
       const parts = [];
@@ -376,7 +369,6 @@ export function renderModuleView() {
 
   const mod = ctx.module;
 
-  // Practical modules get a different layout
   if (mod.type === "practical") {
     renderDiplomaPractical(container, mod);
     return;
@@ -398,7 +390,6 @@ export function renderModuleView() {
   container.appendChild(head);
   head.querySelector("#backToPath").addEventListener("click", () => renderSkillPath());
 
-  // ---------- Visuals (rendered first, before content) ----------
   if (mod.visuals?.length) {
     const visWrap = document.createElement("div");
     visWrap.className = "visuals-block";
@@ -406,7 +397,6 @@ export function renderModuleView() {
     container.appendChild(visWrap);
   }
 
-  // ---------- Body ----------
   const body = document.createElement("div");
   body.className = "module-body";
   container.appendChild(body);
@@ -420,7 +410,6 @@ export function renderModuleView() {
     case MODULE_TYPES.SANDBOX:   renderSandbox(body, mod); break;
   }
 
-  // ---------- Teaching panel (objectives + notes + evidence) ----------
   container.appendChild(buildTeachingPanel(mod));
 }
 
@@ -430,26 +419,317 @@ function buildVisualCard(v) {
   const card = document.createElement("div");
   card.className = "visual-card";
 
-  const isPlaceholder = v.assetStatus && v.assetStatus !== "ready";
-  const typeLabel = (v.type || "visual").replace(/([A-Z])/g, " $1").trim();
-
   card.innerHTML = `
-    <div class="visual-frame">
-      <div class="visual-placeholder">
-        <span class="visual-icon">◫</span>
-        <span class="visual-type">${escapeHtml(typeLabel)}</span>
-        ${isPlaceholder ? `<span class="visual-status">${escapeHtml(v.assetStatus || "")}</span>` : ""}
-      </div>
+    <div class="visual-frame" data-vtype="${escapeHtml(v.type || "visual")}">
+      ${generateIllustration(v)}
     </div>
     <div class="visual-meta">
       <h4>${escapeHtml(v.title || "Visual")}</h4>
       <p>${escapeHtml(v.description || "")}</p>
       ${v.learningPurpose ? `<p class="visual-purpose"><strong>Purpose:</strong> ${escapeHtml(v.learningPurpose)}</p>` : ""}
       ${v.caption ? `<p class="visual-caption">${escapeHtml(v.caption)}</p>` : ""}
-      ${v.altText ? `<p class="visual-alt"><strong>Alt text:</strong> ${escapeHtml(v.altText)}</p>` : ""}
+      ${v.altText ? `<details class="visual-alt-details"><summary>Accessible description</summary><p>${escapeHtml(v.altText)}</p></details>` : ""}
     </div>
   `;
   return card;
+}
+
+// ============================================================
+// SVG ILLUSTRATION GENERATOR
+// Renders a real diagram in-browser from visual metadata.
+// ============================================================
+
+function generateIllustration(v) {
+  const type = v.type || "annotatedPhoto";
+  const title = (v.title || "").slice(0, 60);
+
+  const svgOpen = `<svg viewBox="0 0 800 450" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" class="visual-svg">`;
+  const svgClose = `</svg>`;
+
+  const styleBlock = `
+    <style>
+      .vg-bg { fill: #0a0e1a; }
+      .vg-panel { fill: #10182b; stroke: #22304e; stroke-width: 1.5; }
+      .vg-panel-accent { fill: #0f2338; stroke: #2ec49a; stroke-width: 2; }
+      .vg-panel-warn { fill: #241a0a; stroke: #e8b60c; stroke-width: 2; }
+      .vg-panel-danger { fill: #2a0f1a; stroke: #e05c7a; stroke-width: 2; }
+      .vg-text { font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; fill: #e8eef8; font-size: 15px; font-weight: 600; }
+      .vg-text-sm { font-family: system-ui, sans-serif; fill: #8a99b8; font-size: 12px; font-weight: 500; }
+      .vg-text-tiny { font-family: system-ui, sans-serif; fill: #5d6b88; font-size: 10px; font-weight: 600; letter-spacing: 0.08em; }
+      .vg-text-accent { fill: #2ec49a; }
+      .vg-text-warn { fill: #e8b60c; }
+      .vg-text-danger { fill: #e05c7a; }
+      .vg-title { font-family: system-ui, sans-serif; fill: #e8eef8; font-size: 18px; font-weight: 800; letter-spacing: -0.01em; }
+      .vg-line { stroke: #2ec49a; stroke-width: 2; fill: none; }
+      .vg-line-dim { stroke: #22304e; stroke-width: 1.5; fill: none; }
+      .vg-arrow { stroke: #2ec49a; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .vg-arrow-dim { stroke: #5d6b88; stroke-width: 2; fill: none; marker-end: url(#arrowhead-dim); }
+    </style>
+  `;
+
+  const defs = `
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+        <polygon points="0 0, 10 3, 0 6" fill="#2ec49a" />
+      </marker>
+      <marker id="arrowhead-dim" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+        <polygon points="0 0, 10 3, 0 6" fill="#5d6b88" />
+      </marker>
+    </defs>
+  `;
+
+  let body = "";
+
+  if (type === "safetyInfographic") {
+    const items = [
+      { icon: "⛑", label: "Helmet" },
+      { icon: "🕶", label: "Eye protection" },
+      { icon: "🧤", label: "Gloves" },
+      { icon: "🥼", label: "Apron" },
+      { icon: "🥾", label: "Boots" },
+      { icon: "😷", label: "Respirator" }
+    ];
+    let grid = "";
+    items.forEach((it, i) => {
+      const col = i % 3;
+      const row = Math.floor(i / 3);
+      const x = 60 + col * 240;
+      const y = 130 + row * 140;
+      grid += `
+        <g transform="translate(${x}, ${y})">
+          <rect class="vg-panel-accent" x="0" y="0" width="200" height="110" rx="12"/>
+          <text x="100" y="55" text-anchor="middle" font-size="42">${it.icon}</text>
+          <text x="100" y="90" text-anchor="middle" class="vg-text">${escapeXml(it.label)}</text>
+        </g>
+      `;
+    });
+    body = `
+      <text x="40" y="50" class="vg-title">${escapeXml(title)}</text>
+      <text x="40" y="72" class="vg-text-sm">Every item protects against a specific injury. Learn all six.</text>
+      ${grid}
+    `;
+  } else if (type === "stepByStepIllustration") {
+    const steps = ["Prepare", "Demonstrate", "Practise", "Inspect", "Reflect"];
+    let flow = "";
+    steps.forEach((s, i) => {
+      const x = 50 + i * 145;
+      flow += `
+        <g transform="translate(${x}, 120)">
+          <circle cx="55" cy="55" r="34" class="vg-panel-accent"/>
+          <text x="55" y="62" text-anchor="middle" font-size="22" class="vg-text-accent" font-weight="800">${i + 1}</text>
+          <text x="55" y="130" text-anchor="middle" class="vg-text">${escapeXml(s)}</text>
+        </g>
+        ${i < steps.length - 1 ? `<line x1="${x + 95}" y1="175" x2="${x + 145}" y2="175" class="vg-arrow"/>` : ""}
+      `;
+    });
+    body = `
+      <text x="40" y="50" class="vg-title">${escapeXml(title)}</text>
+      <text x="40" y="72" class="vg-text-sm">Follow each stage in order. Do not skip.</text>
+      ${flow}
+      <text x="400" y="320" text-anchor="middle" class="vg-text-sm">Each stage builds on the last. Rushing any stage fails the next.</text>
+    `;
+  } else if (type === "techniqueDiagram") {
+    body = `
+      <text x="40" y="50" class="vg-title">${escapeXml(title)}</text>
+      <text x="40" y="72" class="vg-text-sm">Cross-section showing component placement and direction.</text>
+      <g transform="translate(100, 130)">
+        <rect class="vg-panel" x="0" y="0" width="200" height="40" rx="4"/>
+        <text x="100" y="26" text-anchor="middle" class="vg-text">Base metal A</text>
+      </g>
+      <g transform="translate(500, 130)">
+        <rect class="vg-panel" x="0" y="0" width="200" height="40" rx="4"/>
+        <text x="100" y="26" text-anchor="middle" class="vg-text">Base metal B</text>
+      </g>
+      <g transform="translate(300, 130)">
+        <polygon class="vg-panel-accent" points="0,0 100,0 50,80"/>
+        <text x="50" y="50" text-anchor="middle" class="vg-text-accent" font-weight="700" font-size="13">WELD</text>
+      </g>
+      <line x1="220" y1="150" x2="280" y2="150" class="vg-arrow-dim"/>
+      <line x1="420" y1="150" x2="480" y2="150" class="vg-arrow-dim"/>
+      <text x="400" y="260" text-anchor="middle" class="vg-text-sm">Direction of travel →</text>
+      <line x1="200" y1="290" x2="600" y2="290" class="vg-arrow"/>
+      <text x="400" y="320" text-anchor="middle" class="vg-text-tiny">ARC · PENETRATION · FUSION</text>
+    `;
+  } else if (type === "decisionFlowchart") {
+    body = `
+      <text x="40" y="50" class="vg-title">${escapeXml(title)}</text>
+      <text x="40" y="72" class="vg-text-sm">Follow the path. Each decision leads to a specific action.</text>
+      <g transform="translate(320, 100)">
+        <rect class="vg-panel" x="0" y="0" width="160" height="50" rx="25"/>
+        <text x="80" y="30" text-anchor="middle" class="vg-text">Start</text>
+      </g>
+      <line x1="400" y1="150" x2="400" y2="180" class="vg-arrow"/>
+      <g transform="translate(320, 180)">
+        <polygon class="vg-panel-warn" points="80,0 160,45 80,90 0,45"/>
+        <text x="80" y="50" text-anchor="middle" class="vg-text" font-size="13">Assess?</text>
+      </g>
+      <line x1="320" y1="225" x2="200" y2="225" class="vg-arrow"/>
+      <line x1="200" y1="225" x2="200" y2="280" class="vg-arrow"/>
+      <line x1="480" y1="225" x2="600" y2="225" class="vg-arrow"/>
+      <line x1="600" y1="225" x2="600" y2="280" class="vg-arrow"/>
+      <g transform="translate(120, 280)">
+        <rect class="vg-panel-accent" x="0" y="0" width="160" height="60" rx="8"/>
+        <text x="80" y="30" text-anchor="middle" class="vg-text">Action A</text>
+        <text x="80" y="48" text-anchor="middle" class="vg-text-sm">Proceed</text>
+      </g>
+      <g transform="translate(520, 280)">
+        <rect class="vg-panel-danger" x="0" y="0" width="160" height="60" rx="8"/>
+        <text x="80" y="30" text-anchor="middle" class="vg-text">Action B</text>
+        <text x="80" y="48" text-anchor="middle" class="vg-text-sm">Stop and refer</text>
+      </g>
+    `;
+  } else if (type === "beforeAfterComparison") {
+    body = `
+      <text x="40" y="50" class="vg-title">${escapeXml(title)}</text>
+      <text x="40" y="72" class="vg-text-sm">Compare the starting state with the correct finished state.</text>
+      <g transform="translate(50, 110)">
+        <rect class="vg-panel-danger" x="0" y="0" width="330" height="260" rx="10"/>
+        <text x="165" y="30" text-anchor="middle" class="vg-text-danger" font-weight="800" font-size="14">✕ WRONG</text>
+        <rect x="30" y="60" width="270" height="160" rx="6" fill="#1a0f16"/>
+        <text x="165" y="150" text-anchor="middle" class="vg-text-sm">Incorrect · Defect · Unsafe</text>
+      </g>
+      <g transform="translate(420, 110)">
+        <rect class="vg-panel-accent" x="0" y="0" width="330" height="260" rx="10"/>
+        <text x="165" y="30" text-anchor="middle" class="vg-text-accent" font-weight="800" font-size="14">✓ CORRECT</text>
+        <rect x="30" y="60" width="270" height="160" rx="6" fill="#0a1a14"/>
+        <text x="165" y="150" text-anchor="middle" class="vg-text-sm">Clean · Professional · Safe</text>
+      </g>
+      <text x="400" y="410" text-anchor="middle" class="vg-text-sm">Same tools, same materials — different preparation.</text>
+    `;
+  } else if (type === "annotatedPhoto") {
+    body = `
+      <text x="40" y="50" class="vg-title">${escapeXml(title)}</text>
+      <text x="40" y="72" class="vg-text-sm">Refer to each labelled feature before starting the task.</text>
+      <rect class="vg-panel" x="50" y="110" width="700" height="280" rx="10"/>
+      <text x="400" y="260" text-anchor="middle" class="vg-text-tiny">REFERENCE IMAGE — ANNOTATED</text>
+      <g>
+        <line x1="100" y1="150" x2="220" y2="200" class="vg-line"/>
+        <circle cx="100" cy="150" r="4" fill="#2ec49a"/>
+        <text x="105" y="145" class="vg-text" font-size="12">Feature A</text>
+      </g>
+      <g>
+        <line x1="700" y1="150" x2="580" y2="200" class="vg-line"/>
+        <circle cx="700" cy="150" r="4" fill="#2ec49a"/>
+        <text x="620" y="145" class="vg-text" font-size="12" text-anchor="end">Feature B</text>
+      </g>
+      <g>
+        <line x1="100" y1="350" x2="220" y2="300" class="vg-line"/>
+        <circle cx="100" cy="350" r="4" fill="#2ec49a"/>
+        <text x="105" y="365" class="vg-text" font-size="12">Feature C</text>
+      </g>
+      <g>
+        <line x1="700" y1="350" x2="580" y2="300" class="vg-line"/>
+        <circle cx="700" cy="350" r="4" fill="#2ec49a"/>
+        <text x="620" y="365" class="vg-text" font-size="12" text-anchor="end">Feature D</text>
+      </g>
+    `;
+  } else if (type === "practiceChecklist") {
+    const rows = ["Checklist item one", "Checklist item two", "Checklist item three", "Checklist item four", "Checklist item five"];
+    let listHtml = "";
+    rows.forEach((r, i) => {
+      listHtml += `
+        <g transform="translate(80, ${120 + i * 55})">
+          <rect class="vg-panel" x="0" y="0" width="640" height="42" rx="8"/>
+          <rect class="vg-panel-accent" x="15" y="11" width="20" height="20" rx="4"/>
+          <text x="55" y="27" class="vg-text" font-size="14">${escapeXml(r)}</text>
+        </g>
+      `;
+    });
+    body = `
+      <text x="40" y="50" class="vg-title">${escapeXml(title)}</text>
+      <text x="40" y="72" class="vg-text-sm">Work through every item before proceeding.</text>
+      ${listHtml}
+    `;
+  } else if (type === "toolIdentificationChart") {
+    const tools = ["Tool 1", "Tool 2", "Tool 3", "Tool 4", "Tool 5", "Tool 6"];
+    let grid = "";
+    tools.forEach((t, i) => {
+      const col = i % 3;
+      const row = Math.floor(i / 3);
+      const x = 60 + col * 240;
+      const y = 120 + row * 150;
+      grid += `
+        <g transform="translate(${x}, ${y})">
+          <rect class="vg-panel" x="0" y="0" width="200" height="120" rx="10"/>
+          <circle cx="100" cy="45" r="28" class="vg-panel-accent"/>
+          <text x="100" y="53" text-anchor="middle" class="vg-text" font-size="26">⚒</text>
+          <text x="100" y="100" text-anchor="middle" class="vg-text" font-size="13">${escapeXml(t)}</text>
+        </g>
+      `;
+    });
+    body = `
+      <text x="40" y="50" class="vg-title">${escapeXml(title)}</text>
+      <text x="40" y="72" class="vg-text-sm">Identify each tool by shape and function.</text>
+      ${grid}
+    `;
+  } else if (type === "videoDemonstration") {
+    body = `
+      <text x="40" y="50" class="vg-title">${escapeXml(title)}</text>
+      <text x="40" y="72" class="vg-text-sm">Watch the full demonstration before practising.</text>
+      <rect class="vg-panel" x="100" y="110" width="600" height="280" rx="10"/>
+      <g transform="translate(400, 250)">
+        <circle cx="0" cy="0" r="45" class="vg-panel-accent"/>
+        <polygon points="-12,-18 -12,18 20,0" fill="#2ec49a"/>
+      </g>
+      <text x="400" y="340" text-anchor="middle" class="vg-text-tiny">DEMONSTRATION · 0:00 / 12:34</text>
+      <text x="400" y="400" text-anchor="middle" class="vg-text-sm">Transcript and captions available</text>
+    `;
+  } else if (type === "interactiveHotspot") {
+    const hotspots = [1, 2, 3, 4, 5];
+    let dots = "";
+    hotspots.forEach((h, i) => {
+      const x = 200 + (i % 3) * 200;
+      const y = 180 + Math.floor(i / 3) * 130;
+      dots += `
+        <g transform="translate(${x}, ${y})">
+          <circle cx="0" cy="0" r="22" class="vg-panel-accent"/>
+          <text x="0" y="7" text-anchor="middle" class="vg-text-accent" font-weight="800">${h}</text>
+        </g>
+      `;
+    });
+    body = `
+      <text x="40" y="50" class="vg-title">${escapeXml(title)}</text>
+      <text x="40" y="72" class="vg-text-sm">Tap each numbered point to explore.</text>
+      <rect class="vg-panel" x="80" y="110" width="640" height="280" rx="10"/>
+      ${dots}
+    `;
+  } else if (type === "assessmentEvidencePhoto") {
+    body = `
+      <text x="40" y="50" class="vg-title">${escapeXml(title)}</text>
+      <text x="40" y="72" class="vg-text-sm">Document your work in this format.</text>
+      <g transform="translate(60, 120)">
+        <rect class="vg-panel-accent" x="0" y="0" width="320" height="200" rx="8"/>
+        <text x="160" y="105" text-anchor="middle" class="vg-text-sm">TOP VIEW</text>
+      </g>
+      <g transform="translate(420, 120)">
+        <rect class="vg-panel-accent" x="0" y="0" width="320" height="200" rx="8"/>
+        <text x="160" y="105" text-anchor="middle" class="vg-text-sm">SIDE VIEW</text>
+      </g>
+      <g transform="translate(60, 340)">
+        <rect class="vg-panel" x="0" y="0" width="680" height="70" rx="8"/>
+        <text x="20" y="28" class="vg-text" font-size="13">Settings: _______________  Rod: _______________</text>
+        <text x="20" y="52" class="vg-text" font-size="13">Notes: ______________________________________</text>
+      </g>
+    `;
+  } else {
+    body = `
+      <text x="40" y="50" class="vg-title">${escapeXml(title)}</text>
+      <text x="40" y="72" class="vg-text-sm">Reference diagram</text>
+      <rect class="vg-panel" x="60" y="120" width="680" height="260" rx="10"/>
+      <text x="400" y="260" text-anchor="middle" class="vg-text-tiny">ILLUSTRATION</text>
+    `;
+  }
+
+  return svgOpen + defs + styleBlock + `<rect class="vg-bg" width="800" height="450"/>` + body + svgClose;
+}
+
+function escapeXml(s) {
+  return String(s)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
 }
 
 // ---------- TEACHING PANEL ----------
@@ -521,7 +801,6 @@ function renderDiplomaPractical(container, mod) {
   container.appendChild(head);
   head.querySelector("#backFromPractical").addEventListener("click", () => ctx.onNavigate.toTree());
 
-  // Visuals
   if (mod.visuals?.length) {
     const visWrap = document.createElement("div");
     visWrap.className = "visuals-block";
@@ -529,13 +808,11 @@ function renderDiplomaPractical(container, mod) {
     container.appendChild(visWrap);
   }
 
-  // Prompt
   const prompt = document.createElement("div");
   prompt.className = "scenario-prompt";
   prompt.innerHTML = `<p class="scenario-q">${escapeHtml(mod.prompt || "")}</p>`;
   container.appendChild(prompt);
 
-  // Steps
   if (mod.steps?.length) {
     const stepWrap = document.createElement("div");
     stepWrap.className = "practical-steps";
@@ -555,7 +832,6 @@ function renderDiplomaPractical(container, mod) {
     container.appendChild(stepWrap);
   }
 
-  // Rubric
   if (mod.rubric?.length) {
     const rub = document.createElement("div");
     rub.className = "rubric";
@@ -567,7 +843,6 @@ function renderDiplomaPractical(container, mod) {
     container.appendChild(rub);
   }
 
-  // Mark-complete button
   const actions = document.createElement("div");
   actions.className = "module-actions";
   actions.innerHTML = `<button class="btn btn-primary" id="practicalDone">Mark practical as supervised</button>`;
@@ -605,7 +880,6 @@ export function renderCapstone() {
   desc.innerHTML = `<p class="scenario-q">${escapeHtml(c.description)}</p>`;
   container.appendChild(desc);
 
-  // Required visuals
   if (c.requiredVisuals?.length) {
     const vis = document.createElement("div");
     vis.className = "rubric";
@@ -616,7 +890,6 @@ export function renderCapstone() {
     container.appendChild(vis);
   }
 
-  // Stages
   if (c.stages?.length) {
     const stages = document.createElement("div");
     stages.className = "practical-steps";
@@ -632,7 +905,6 @@ export function renderCapstone() {
     container.appendChild(stages);
   }
 
-  // Rubric
   if (c.rubric?.length) {
     const rub = document.createElement("div");
     rub.className = "rubric";
@@ -657,7 +929,7 @@ export function renderCapstone() {
 }
 
 // ============================================================
-// MODULE RENDERERS (unchanged behavior)
+// MODULE RENDERERS
 // ============================================================
 
 function renderLesson(container, mod) {
