@@ -91,6 +91,12 @@
                         "f": "Cold water does not fully remove sizing. Hot water and detergent are required."
                       }
                     ]
+                  },
+                  {
+                    "id": "sim-tie-practice",
+                    "type": "simulation",
+                    "sim": "gara",
+                    "title": "Interactive: Tie and dye a cloth"
                   }
                 ]
               },
