@@ -25,10 +25,6 @@ export const MODULE_TYPES = {
   SIMULATION: "simulation"
 };
 
-// ============================================================
-// STATE
-// ============================================================
-
 const ctx = {
   career: null,
   curriculum: null,
@@ -52,14 +48,9 @@ export function resetContext() {
   ctx.module = null;
 }
 
-// ============================================================
-// SKILL TREE VIEW
-// ============================================================
-
 export function renderSkillTree(container) {
   container.innerHTML = "";
   const domains = ctx.curriculum.skillDomains || [];
-
   renderCourseHeader(container);
 
   const domainWrap = document.createElement("div");
@@ -80,7 +71,6 @@ export function renderSkillTree(container) {
 function renderCourseHeader(container) {
   const c = ctx.curriculum;
   const domains = c.skillDomains || [];
-
   const totals = computeTotals(domains, ctx.career.id);
 
   const header = document.createElement("div");
@@ -154,10 +144,7 @@ function buildCapstoneCard(capstone) {
     <button class="btn btn-accent" data-capstone="1">View capstone requirements</button>
   `;
 
-  card.querySelector("[data-capstone]").addEventListener("click", () => {
-    renderCapstone();
-  });
-
+  card.querySelector("[data-capstone]").addEventListener("click", () => renderCapstone());
   return card;
 }
 
@@ -170,10 +157,6 @@ function buildImplNotes(notes) {
   `;
   return wrap;
 }
-
-// ============================================================
-// DOMAIN CARD
-// ============================================================
 
 function buildDomainCard(domain) {
   const card = document.createElement("div");
@@ -250,10 +233,6 @@ function buildDomainCard(domain) {
 
   return card;
 }
-
-// ============================================================
-// SKILL PATH VIEW
-// ============================================================
 
 export function renderSkillPath() {
   const container = ctx.onNavigate.toView("skillPath");
@@ -360,10 +339,6 @@ export function renderSkillPath() {
   container.appendChild(ladder);
 }
 
-// ============================================================
-// MODULE VIEW
-// ============================================================
-
 export function renderModuleView() {
   const container = ctx.onNavigate.toView("module");
   container.innerHTML = "";
@@ -391,7 +366,6 @@ export function renderModuleView() {
   container.appendChild(head);
   head.querySelector("#backToPath").addEventListener("click", () => renderSkillPath());
 
-  // Simulations render full-width, in their own layout, without teaching panel
   if (mod.type === "simulation") {
     renderSimulation(container, mod);
     return;
@@ -420,10 +394,6 @@ export function renderModuleView() {
   container.appendChild(buildTeachingPanel(mod));
 }
 
-// ============================================================
-// SIMULATION
-// ============================================================
-
 async function renderSimulation(container, mod) {
   const simWrap = document.createElement("div");
   simWrap.className = "simulation-wrap";
@@ -441,12 +411,11 @@ async function renderSimulation(container, mod) {
     launchSimulation({
       careerId: ctx.career.id,
       container: simWrap,
+      simLevel: mod.simLevel ?? 0,
       onComplete: ({ score, passed, evidence }) => {
         complete(mod, score);
         window.__fpToast?.(
-          passed
-            ? "Simulation passed — progress saved"
-            : "Simulation completed — try again to improve",
+          passed ? "Simulation passed — progress saved" : "Simulation completed — try again to improve",
           passed ? "success" : ""
         );
       }
@@ -462,12 +431,9 @@ async function renderSimulation(container, mod) {
   }
 }
 
-// ---------- VISUAL CARD ----------
-
 function buildVisualCard(v) {
   const card = document.createElement("div");
   card.className = "visual-card";
-
   card.innerHTML = `
     <div class="visual-frame" data-vtype="${escapeHtml(v.type || "visual")}">
       ${generateIllustration(v)}
@@ -482,10 +448,6 @@ function buildVisualCard(v) {
   `;
   return card;
 }
-
-// ============================================================
-// SVG ILLUSTRATION GENERATOR
-// ============================================================
 
 function generateIllustration(v) {
   const type = v.type || "annotatedPhoto";
@@ -530,242 +492,63 @@ function generateIllustration(v) {
 
   if (type === "safetyInfographic") {
     const items = [
-      { icon: "⛑", label: "Helmet" },
-      { icon: "🕶", label: "Eye protection" },
-      { icon: "🧤", label: "Gloves" },
-      { icon: "🥼", label: "Apron" },
-      { icon: "🥾", label: "Boots" },
-      { icon: "😷", label: "Respirator" }
+      { icon: "⛑", label: "Helmet" }, { icon: "🕶", label: "Eye protection" },
+      { icon: "🧤", label: "Gloves" }, { icon: "🥼", label: "Apron" },
+      { icon: "🥾", label: "Boots" }, { icon: "😷", label: "Respirator" }
     ];
     let grid = "";
     items.forEach((it, i) => {
-      const col = i % 3;
-      const row = Math.floor(i / 3);
-      const x = 60 + col * 240;
-      const y = 130 + row * 140;
-      grid += `
-        <g transform="translate(${x}, ${y})">
-          <rect class="vg-panel-accent" x="0" y="0" width="200" height="110" rx="12"/>
-          <text x="100" y="55" text-anchor="middle" font-size="42">${it.icon}</text>
-          <text x="100" y="90" text-anchor="middle" class="vg-text">${escapeXml(it.label)}</text>
-        </g>
-      `;
+      const col = i % 3, row = Math.floor(i / 3);
+      const x = 60 + col * 240, y = 130 + row * 140;
+      grid += `<g transform="translate(${x}, ${y})"><rect class="vg-panel-accent" x="0" y="0" width="200" height="110" rx="12"/><text x="100" y="55" text-anchor="middle" font-size="42">${it.icon}</text><text x="100" y="90" text-anchor="middle" class="vg-text">${escapeXml(it.label)}</text></g>`;
     });
-    body = `
-      <text x="40" y="50" class="vg-title">${escapeXml(title)}</text>
-      <text x="40" y="72" class="vg-text-sm">Every item protects against a specific injury. Learn all six.</text>
-      ${grid}
-    `;
+    body = `<text x="40" y="50" class="vg-title">${escapeXml(title)}</text><text x="40" y="72" class="vg-text-sm">Every item protects against a specific injury.</text>${grid}`;
   } else if (type === "stepByStepIllustration") {
     const steps = ["Prepare", "Demonstrate", "Practise", "Inspect", "Reflect"];
     let flow = "";
     steps.forEach((s, i) => {
       const x = 50 + i * 145;
-      flow += `
-        <g transform="translate(${x}, 120)">
-          <circle cx="55" cy="55" r="34" class="vg-panel-accent"/>
-          <text x="55" y="62" text-anchor="middle" font-size="22" class="vg-text-accent" font-weight="800">${i + 1}</text>
-          <text x="55" y="130" text-anchor="middle" class="vg-text">${escapeXml(s)}</text>
-        </g>
-        ${i < steps.length - 1 ? `<line x1="${x + 95}" y1="175" x2="${x + 145}" y2="175" class="vg-arrow"/>` : ""}
-      `;
+      flow += `<g transform="translate(${x}, 120)"><circle cx="55" cy="55" r="34" class="vg-panel-accent"/><text x="55" y="62" text-anchor="middle" font-size="22" class="vg-text-accent" font-weight="800">${i + 1}</text><text x="55" y="130" text-anchor="middle" class="vg-text">${escapeXml(s)}</text></g>${i < steps.length - 1 ? `<line x1="${x + 95}" y1="175" x2="${x + 145}" y2="175" class="vg-arrow"/>` : ""}`;
     });
-    body = `
-      <text x="40" y="50" class="vg-title">${escapeXml(title)}</text>
-      <text x="40" y="72" class="vg-text-sm">Follow each stage in order. Do not skip.</text>
-      ${flow}
-      <text x="400" y="320" text-anchor="middle" class="vg-text-sm">Each stage builds on the last. Rushing any stage fails the next.</text>
-    `;
+    body = `<text x="40" y="50" class="vg-title">${escapeXml(title)}</text><text x="40" y="72" class="vg-text-sm">Follow each stage in order.</text>${flow}<text x="400" y="320" text-anchor="middle" class="vg-text-sm">Each stage builds on the last.</text>`;
   } else if (type === "techniqueDiagram") {
-    body = `
-      <text x="40" y="50" class="vg-title">${escapeXml(title)}</text>
-      <text x="40" y="72" class="vg-text-sm">Cross-section showing component placement and direction.</text>
-      <g transform="translate(100, 130)">
-        <rect class="vg-panel" x="0" y="0" width="200" height="40" rx="4"/>
-        <text x="100" y="26" text-anchor="middle" class="vg-text">Base metal A</text>
-      </g>
-      <g transform="translate(500, 130)">
-        <rect class="vg-panel" x="0" y="0" width="200" height="40" rx="4"/>
-        <text x="100" y="26" text-anchor="middle" class="vg-text">Base metal B</text>
-      </g>
-      <g transform="translate(300, 130)">
-        <polygon class="vg-panel-accent" points="0,0 100,0 50,80"/>
-        <text x="50" y="50" text-anchor="middle" class="vg-text-accent" font-weight="700" font-size="13">WELD</text>
-      </g>
-      <line x1="220" y1="150" x2="280" y2="150" class="vg-arrow-dim"/>
-      <line x1="420" y1="150" x2="480" y2="150" class="vg-arrow-dim"/>
-      <text x="400" y="260" text-anchor="middle" class="vg-text-sm">Direction of travel →</text>
-      <line x1="200" y1="290" x2="600" y2="290" class="vg-arrow"/>
-      <text x="400" y="320" text-anchor="middle" class="vg-text-tiny">ARC · PENETRATION · FUSION</text>
-    `;
+    body = `<text x="40" y="50" class="vg-title">${escapeXml(title)}</text><text x="40" y="72" class="vg-text-sm">Cross-section showing component placement.</text><g transform="translate(100, 130)"><rect class="vg-panel" x="0" y="0" width="200" height="40" rx="4"/><text x="100" y="26" text-anchor="middle" class="vg-text">Base metal A</text></g><g transform="translate(500, 130)"><rect class="vg-panel" x="0" y="0" width="200" height="40" rx="4"/><text x="100" y="26" text-anchor="middle" class="vg-text">Base metal B</text></g><g transform="translate(300, 130)"><polygon class="vg-panel-accent" points="0,0 100,0 50,80"/><text x="50" y="50" text-anchor="middle" class="vg-text-accent" font-weight="700" font-size="13">WELD</text></g><line x1="200" y1="290" x2="600" y2="290" class="vg-arrow"/><text x="400" y="320" text-anchor="middle" class="vg-text-tiny">ARC · PENETRATION · FUSION</text>`;
   } else if (type === "decisionFlowchart") {
-    body = `
-      <text x="40" y="50" class="vg-title">${escapeXml(title)}</text>
-      <text x="40" y="72" class="vg-text-sm">Follow the path. Each decision leads to a specific action.</text>
-      <g transform="translate(320, 100)">
-        <rect class="vg-panel" x="0" y="0" width="160" height="50" rx="25"/>
-        <text x="80" y="30" text-anchor="middle" class="vg-text">Start</text>
-      </g>
-      <line x1="400" y1="150" x2="400" y2="180" class="vg-arrow"/>
-      <g transform="translate(320, 180)">
-        <polygon class="vg-panel-warn" points="80,0 160,45 80,90 0,45"/>
-        <text x="80" y="50" text-anchor="middle" class="vg-text" font-size="13">Assess?</text>
-      </g>
-      <line x1="320" y1="225" x2="200" y2="225" class="vg-arrow"/>
-      <line x1="200" y1="225" x2="200" y2="280" class="vg-arrow"/>
-      <line x1="480" y1="225" x2="600" y2="225" class="vg-arrow"/>
-      <line x1="600" y1="225" x2="600" y2="280" class="vg-arrow"/>
-      <g transform="translate(120, 280)">
-        <rect class="vg-panel-accent" x="0" y="0" width="160" height="60" rx="8"/>
-        <text x="80" y="30" text-anchor="middle" class="vg-text">Action A</text>
-        <text x="80" y="48" text-anchor="middle" class="vg-text-sm">Proceed</text>
-      </g>
-      <g transform="translate(520, 280)">
-        <rect class="vg-panel-danger" x="0" y="0" width="160" height="60" rx="8"/>
-        <text x="80" y="30" text-anchor="middle" class="vg-text">Action B</text>
-        <text x="80" y="48" text-anchor="middle" class="vg-text-sm">Stop and refer</text>
-      </g>
-    `;
+    body = `<text x="40" y="50" class="vg-title">${escapeXml(title)}</text><text x="40" y="72" class="vg-text-sm">Follow the path.</text><g transform="translate(320, 100)"><rect class="vg-panel" x="0" y="0" width="160" height="50" rx="25"/><text x="80" y="30" text-anchor="middle" class="vg-text">Start</text></g><line x1="400" y1="150" x2="400" y2="180" class="vg-arrow"/><g transform="translate(320, 180)"><polygon class="vg-panel-warn" points="80,0 160,45 80,90 0,45"/><text x="80" y="50" text-anchor="middle" class="vg-text" font-size="13">Assess?</text></g><line x1="320" y1="225" x2="200" y2="225" class="vg-arrow"/><line x1="200" y1="225" x2="200" y2="280" class="vg-arrow"/><line x1="480" y1="225" x2="600" y2="225" class="vg-arrow"/><line x1="600" y1="225" x2="600" y2="280" class="vg-arrow"/><g transform="translate(120, 280)"><rect class="vg-panel-accent" x="0" y="0" width="160" height="60" rx="8"/><text x="80" y="30" text-anchor="middle" class="vg-text">Action A</text></g><g transform="translate(520, 280)"><rect class="vg-panel-danger" x="0" y="0" width="160" height="60" rx="8"/><text x="80" y="30" text-anchor="middle" class="vg-text">Action B</text></g>`;
   } else if (type === "beforeAfterComparison") {
-    body = `
-      <text x="40" y="50" class="vg-title">${escapeXml(title)}</text>
-      <text x="40" y="72" class="vg-text-sm">Compare the starting state with the correct finished state.</text>
-      <g transform="translate(50, 110)">
-        <rect class="vg-panel-danger" x="0" y="0" width="330" height="260" rx="10"/>
-        <text x="165" y="30" text-anchor="middle" class="vg-text-danger" font-weight="800" font-size="14">✕ WRONG</text>
-        <rect x="30" y="60" width="270" height="160" rx="6" fill="#1a0f16"/>
-        <text x="165" y="150" text-anchor="middle" class="vg-text-sm">Incorrect · Defect · Unsafe</text>
-      </g>
-      <g transform="translate(420, 110)">
-        <rect class="vg-panel-accent" x="0" y="0" width="330" height="260" rx="10"/>
-        <text x="165" y="30" text-anchor="middle" class="vg-text-accent" font-weight="800" font-size="14">✓ CORRECT</text>
-        <rect x="30" y="60" width="270" height="160" rx="6" fill="#0a1a14"/>
-        <text x="165" y="150" text-anchor="middle" class="vg-text-sm">Clean · Professional · Safe</text>
-      </g>
-      <text x="400" y="410" text-anchor="middle" class="vg-text-sm">Same tools, same materials — different preparation.</text>
-    `;
+    body = `<text x="40" y="50" class="vg-title">${escapeXml(title)}</text><text x="40" y="72" class="vg-text-sm">Compare states.</text><g transform="translate(50, 110)"><rect class="vg-panel-danger" x="0" y="0" width="330" height="260" rx="10"/><text x="165" y="30" text-anchor="middle" class="vg-text-danger" font-weight="800" font-size="14">✕ WRONG</text><rect x="30" y="60" width="270" height="160" rx="6" fill="#1a0f16"/><text x="165" y="150" text-anchor="middle" class="vg-text-sm">Incorrect</text></g><g transform="translate(420, 110)"><rect class="vg-panel-accent" x="0" y="0" width="330" height="260" rx="10"/><text x="165" y="30" text-anchor="middle" class="vg-text-accent" font-weight="800" font-size="14">✓ CORRECT</text><rect x="30" y="60" width="270" height="160" rx="6" fill="#0a1a14"/><text x="165" y="150" text-anchor="middle" class="vg-text-sm">Clean · Professional</text></g>`;
   } else if (type === "annotatedPhoto") {
-    body = `
-      <text x="40" y="50" class="vg-title">${escapeXml(title)}</text>
-      <text x="40" y="72" class="vg-text-sm">Refer to each labelled feature before starting the task.</text>
-      <rect class="vg-panel" x="50" y="110" width="700" height="280" rx="10"/>
-      <text x="400" y="260" text-anchor="middle" class="vg-text-tiny">REFERENCE IMAGE — ANNOTATED</text>
-      <g>
-        <line x1="100" y1="150" x2="220" y2="200" class="vg-line"/>
-        <circle cx="100" cy="150" r="4" fill="#2ec49a"/>
-        <text x="105" y="145" class="vg-text" font-size="12">Feature A</text>
-      </g>
-      <g>
-        <line x1="700" y1="150" x2="580" y2="200" class="vg-line"/>
-        <circle cx="700" cy="150" r="4" fill="#2ec49a"/>
-        <text x="620" y="145" class="vg-text" font-size="12" text-anchor="end">Feature B</text>
-      </g>
-      <g>
-        <line x1="100" y1="350" x2="220" y2="300" class="vg-line"/>
-        <circle cx="100" cy="350" r="4" fill="#2ec49a"/>
-        <text x="105" y="365" class="vg-text" font-size="12">Feature C</text>
-      </g>
-      <g>
-        <line x1="700" y1="350" x2="580" y2="300" class="vg-line"/>
-        <circle cx="700" cy="350" r="4" fill="#2ec49a"/>
-        <text x="620" y="365" class="vg-text" font-size="12" text-anchor="end">Feature D</text>
-      </g>
-    `;
+    body = `<text x="40" y="50" class="vg-title">${escapeXml(title)}</text><text x="40" y="72" class="vg-text-sm">Study each labelled feature.</text><rect class="vg-panel" x="50" y="110" width="700" height="280" rx="10"/><text x="400" y="260" text-anchor="middle" class="vg-text-tiny">REFERENCE IMAGE</text><g><line x1="100" y1="150" x2="220" y2="200" class="vg-line"/><circle cx="100" cy="150" r="4" fill="#2ec49a"/><text x="105" y="145" class="vg-text" font-size="12">Feature A</text></g><g><line x1="700" y1="150" x2="580" y2="200" class="vg-line"/><circle cx="700" cy="150" r="4" fill="#2ec49a"/><text x="620" y="145" class="vg-text" font-size="12" text-anchor="end">Feature B</text></g>`;
   } else if (type === "practiceChecklist") {
-    const rows = ["Checklist item one", "Checklist item two", "Checklist item three", "Checklist item four", "Checklist item five"];
+    const rows = ["Item one", "Item two", "Item three", "Item four", "Item five"];
     let listHtml = "";
     rows.forEach((r, i) => {
-      listHtml += `
-        <g transform="translate(80, ${120 + i * 55})">
-          <rect class="vg-panel" x="0" y="0" width="640" height="42" rx="8"/>
-          <rect class="vg-panel-accent" x="15" y="11" width="20" height="20" rx="4"/>
-          <text x="55" y="27" class="vg-text" font-size="14">${escapeXml(r)}</text>
-        </g>
-      `;
+      listHtml += `<g transform="translate(80, ${120 + i * 55})"><rect class="vg-panel" x="0" y="0" width="640" height="42" rx="8"/><rect class="vg-panel-accent" x="15" y="11" width="20" height="20" rx="4"/><text x="55" y="27" class="vg-text" font-size="14">${escapeXml(r)}</text></g>`;
     });
-    body = `
-      <text x="40" y="50" class="vg-title">${escapeXml(title)}</text>
-      <text x="40" y="72" class="vg-text-sm">Work through every item before proceeding.</text>
-      ${listHtml}
-    `;
+    body = `<text x="40" y="50" class="vg-title">${escapeXml(title)}</text><text x="40" y="72" class="vg-text-sm">Work through every item.</text>${listHtml}`;
   } else if (type === "toolIdentificationChart") {
     const tools = ["Tool 1", "Tool 2", "Tool 3", "Tool 4", "Tool 5", "Tool 6"];
     let grid = "";
     tools.forEach((t, i) => {
-      const col = i % 3;
-      const row = Math.floor(i / 3);
-      const x = 60 + col * 240;
-      const y = 120 + row * 150;
-      grid += `
-        <g transform="translate(${x}, ${y})">
-          <rect class="vg-panel" x="0" y="0" width="200" height="120" rx="10"/>
-          <circle cx="100" cy="45" r="28" class="vg-panel-accent"/>
-          <text x="100" y="53" text-anchor="middle" class="vg-text" font-size="26">⚒</text>
-          <text x="100" y="100" text-anchor="middle" class="vg-text" font-size="13">${escapeXml(t)}</text>
-        </g>
-      `;
+      const col = i % 3, row = Math.floor(i / 3);
+      const x = 60 + col * 240, y = 120 + row * 150;
+      grid += `<g transform="translate(${x}, ${y})"><rect class="vg-panel" x="0" y="0" width="200" height="120" rx="10"/><circle cx="100" cy="45" r="28" class="vg-panel-accent"/><text x="100" y="53" text-anchor="middle" class="vg-text" font-size="26">⚒</text><text x="100" y="100" text-anchor="middle" class="vg-text" font-size="13">${escapeXml(t)}</text></g>`;
     });
-    body = `
-      <text x="40" y="50" class="vg-title">${escapeXml(title)}</text>
-      <text x="40" y="72" class="vg-text-sm">Identify each tool by shape and function.</text>
-      ${grid}
-    `;
+    body = `<text x="40" y="50" class="vg-title">${escapeXml(title)}</text><text x="40" y="72" class="vg-text-sm">Identify each tool.</text>${grid}`;
   } else if (type === "videoDemonstration") {
-    body = `
-      <text x="40" y="50" class="vg-title">${escapeXml(title)}</text>
-      <text x="40" y="72" class="vg-text-sm">Watch the full demonstration before practising.</text>
-      <rect class="vg-panel" x="100" y="110" width="600" height="280" rx="10"/>
-      <g transform="translate(400, 250)">
-        <circle cx="0" cy="0" r="45" class="vg-panel-accent"/>
-        <polygon points="-12,-18 -12,18 20,0" fill="#2ec49a"/>
-      </g>
-      <text x="400" y="340" text-anchor="middle" class="vg-text-tiny">DEMONSTRATION · 0:00 / 12:34</text>
-      <text x="400" y="400" text-anchor="middle" class="vg-text-sm">Transcript and captions available</text>
-    `;
+    body = `<text x="40" y="50" class="vg-title">${escapeXml(title)}</text><text x="40" y="72" class="vg-text-sm">Watch the demonstration.</text><rect class="vg-panel" x="100" y="110" width="600" height="280" rx="10"/><g transform="translate(400, 250)"><circle cx="0" cy="0" r="45" class="vg-panel-accent"/><polygon points="-12,-18 -12,18 20,0" fill="#2ec49a"/></g><text x="400" y="340" text-anchor="middle" class="vg-text-tiny">DEMONSTRATION</text>`;
   } else if (type === "interactiveHotspot") {
-    const hotspots = [1, 2, 3, 4, 5];
+    const spots = [1, 2, 3, 4, 5];
     let dots = "";
-    hotspots.forEach((h, i) => {
-      const x = 200 + (i % 3) * 200;
-      const y = 180 + Math.floor(i / 3) * 130;
-      dots += `
-        <g transform="translate(${x}, ${y})">
-          <circle cx="0" cy="0" r="22" class="vg-panel-accent"/>
-          <text x="0" y="7" text-anchor="middle" class="vg-text-accent" font-weight="800">${h}</text>
-        </g>
-      `;
+    spots.forEach((h, i) => {
+      const x = 200 + (i % 3) * 200, y = 180 + Math.floor(i / 3) * 130;
+      dots += `<g transform="translate(${x}, ${y})"><circle cx="0" cy="0" r="22" class="vg-panel-accent"/><text x="0" y="7" text-anchor="middle" class="vg-text-accent" font-weight="800">${h}</text></g>`;
     });
-    body = `
-      <text x="40" y="50" class="vg-title">${escapeXml(title)}</text>
-      <text x="40" y="72" class="vg-text-sm">Tap each numbered point to explore.</text>
-      <rect class="vg-panel" x="80" y="110" width="640" height="280" rx="10"/>
-      ${dots}
-    `;
+    body = `<text x="40" y="50" class="vg-title">${escapeXml(title)}</text><text x="40" y="72" class="vg-text-sm">Tap each point.</text><rect class="vg-panel" x="80" y="110" width="640" height="280" rx="10"/>${dots}`;
   } else if (type === "assessmentEvidencePhoto") {
-    body = `
-      <text x="40" y="50" class="vg-title">${escapeXml(title)}</text>
-      <text x="40" y="72" class="vg-text-sm">Document your work in this format.</text>
-      <g transform="translate(60, 120)">
-        <rect class="vg-panel-accent" x="0" y="0" width="320" height="200" rx="8"/>
-        <text x="160" y="105" text-anchor="middle" class="vg-text-sm">TOP VIEW</text>
-      </g>
-      <g transform="translate(420, 120)">
-        <rect class="vg-panel-accent" x="0" y="0" width="320" height="200" rx="8"/>
-        <text x="160" y="105" text-anchor="middle" class="vg-text-sm">SIDE VIEW</text>
-      </g>
-      <g transform="translate(60, 340)">
-        <rect class="vg-panel" x="0" y="0" width="680" height="70" rx="8"/>
-        <text x="20" y="28" class="vg-text" font-size="13">Settings: _______________  Rod: _______________</text>
-        <text x="20" y="52" class="vg-text" font-size="13">Notes: ______________________________________</text>
-      </g>
-    `;
+    body = `<text x="40" y="50" class="vg-title">${escapeXml(title)}</text><text x="40" y="72" class="vg-text-sm">Document your work.</text><g transform="translate(60, 120)"><rect class="vg-panel-accent" x="0" y="0" width="320" height="200" rx="8"/><text x="160" y="105" text-anchor="middle" class="vg-text-sm">TOP VIEW</text></g><g transform="translate(420, 120)"><rect class="vg-panel-accent" x="0" y="0" width="320" height="200" rx="8"/><text x="160" y="105" text-anchor="middle" class="vg-text-sm">SIDE VIEW</text></g>`;
   } else {
-    body = `
-      <text x="40" y="50" class="vg-title">${escapeXml(title)}</text>
-      <text x="40" y="72" class="vg-text-sm">Reference diagram</text>
-      <rect class="vg-panel" x="60" y="120" width="680" height="260" rx="10"/>
-      <text x="400" y="260" text-anchor="middle" class="vg-text-tiny">ILLUSTRATION</text>
-    `;
+    body = `<text x="40" y="50" class="vg-title">${escapeXml(title)}</text><text x="40" y="72" class="vg-text-sm">Reference diagram</text><rect class="vg-panel" x="60" y="120" width="680" height="260" rx="10"/><text x="400" y="260" text-anchor="middle" class="vg-text-tiny">ILLUSTRATION</text>`;
   }
 
   return svgOpen + defs + styleBlock + `<rect class="vg-bg" width="800" height="450"/>` + body + svgClose;
@@ -780,8 +563,6 @@ function escapeXml(s) {
     .replace(/'/g, "&#39;");
 }
 
-// ---------- TEACHING PANEL ----------
-
 function buildTeachingPanel(mod) {
   const panel = document.createElement("div");
   panel.className = "teaching-panel";
@@ -789,40 +570,17 @@ function buildTeachingPanel(mod) {
   const sections = [];
 
   if (mod.learningObjectives?.length) {
-    sections.push(`
-      <div class="teach-section">
-        <h4>Learning objectives</h4>
-        <ul>${mod.learningObjectives.map((o) => `<li>${escapeHtml(o)}</li>`).join("")}</ul>
-      </div>
-    `);
+    sections.push(`<div class="teach-section"><h4>Learning objectives</h4><ul>${mod.learningObjectives.map((o) => `<li>${escapeHtml(o)}</li>`).join("")}</ul></div>`);
   }
 
   if (mod.teachingNotes) {
     const tn = mod.teachingNotes;
-    sections.push(`
-      <div class="teach-section">
-        <h4>Teaching notes (instructor)</h4>
-        ${tn.diplomaDepth ? `<p><strong>Depth:</strong> ${escapeHtml(tn.diplomaDepth)}</p>` : ""}
-        ${tn.learnerTask ? `<p><strong>Learner task:</strong> ${escapeHtml(tn.learnerTask)}</p>` : ""}
-        ${tn.instructorCheck ? `<p><strong>Instructor check:</strong> ${escapeHtml(tn.instructorCheck)}</p>` : ""}
-      </div>
-    `);
+    sections.push(`<div class="teach-section"><h4>Teaching notes (instructor)</h4>${tn.diplomaDepth ? `<p><strong>Depth:</strong> ${escapeHtml(tn.diplomaDepth)}</p>` : ""}${tn.learnerTask ? `<p><strong>Learner task:</strong> ${escapeHtml(tn.learnerTask)}</p>` : ""}${tn.instructorCheck ? `<p><strong>Instructor check:</strong> ${escapeHtml(tn.instructorCheck)}</p>` : ""}</div>`);
   }
 
   if (mod.practicalEvidence?.required) {
     const pe = mod.practicalEvidence;
-    sections.push(`
-      <div class="teach-section evidence-section">
-        <h4>Practical evidence required</h4>
-        <div class="evidence-tags">
-          ${(pe.evidenceTypes || []).map((t) => `<span class="evidence-tag">${escapeHtml(t)}</span>`).join("")}
-        </div>
-        ${pe.assessmentCriteria?.length ? `
-          <p style="margin-top:10px"><strong>Assessment criteria:</strong></p>
-          <ul>${pe.assessmentCriteria.map((c) => `<li>${escapeHtml(c)}</li>`).join("")}</ul>
-        ` : ""}
-      </div>
-    `);
+    sections.push(`<div class="teach-section evidence-section"><h4>Practical evidence required</h4><div class="evidence-tags">${(pe.evidenceTypes || []).map((t) => `<span class="evidence-tag">${escapeHtml(t)}</span>`).join("")}</div>${pe.assessmentCriteria?.length ? `<p style="margin-top:10px"><strong>Assessment criteria:</strong></p><ul>${pe.assessmentCriteria.map((c) => `<li>${escapeHtml(c)}</li>`).join("")}</ul>` : ""}</div>`);
   }
 
   if (!sections.length) return document.createElement("span");
@@ -830,8 +588,6 @@ function buildTeachingPanel(mod) {
   panel.innerHTML = `<h3 class="teach-title">For instructors</h3>${sections.join("")}`;
   return panel;
 }
-
-// ---------- DIPLOMA PRACTICAL ----------
 
 function renderDiplomaPractical(container, mod) {
   const head = document.createElement("div");
@@ -841,9 +597,7 @@ function renderDiplomaPractical(container, mod) {
     <div style="margin-top:8px">
       <span class="module-badge practical">Supervised Practical</span>
       <h2>${escapeHtml(mod.title)}</h2>
-      <p style="margin:6px 0 0;color:var(--text-muted);font-size:13px">
-        ${mod.durationMinutes || "—"} min · Instructor sign-off required
-      </p>
+      <p style="margin:6px 0 0;color:var(--text-muted);font-size:13px">${mod.durationMinutes || "—"} min · Instructor sign-off required</p>
     </div>
   `;
   container.appendChild(head);
@@ -867,14 +621,7 @@ function renderDiplomaPractical(container, mod) {
     mod.steps.forEach((s) => {
       const el = document.createElement("div");
       el.className = "practical-step";
-      el.innerHTML = `
-        <div class="step-num">${s.step}</div>
-        <div class="step-body">
-          <h4>${escapeHtml(s.title)}</h4>
-          <p>${escapeHtml(s.instruction)}</p>
-          ${s.visual ? `<p class="step-visual">Visual: ${escapeHtml(s.visual)}</p>` : ""}
-        </div>
-      `;
+      el.innerHTML = `<div class="step-num">${s.step}</div><div class="step-body"><h4>${escapeHtml(s.title)}</h4><p>${escapeHtml(s.instruction)}</p>${s.visual ? `<p class="step-visual">Visual: ${escapeHtml(s.visual)}</p>` : ""}</div>`;
       stepWrap.appendChild(el);
     });
     container.appendChild(stepWrap);
@@ -883,11 +630,7 @@ function renderDiplomaPractical(container, mod) {
   if (mod.rubric?.length) {
     const rub = document.createElement("div");
     rub.className = "rubric";
-    rub.innerHTML = `
-      <h4>Assessment rubric</h4>
-      <ul>${mod.rubric.map((r) => `<li><strong>${escapeHtml(r.criterion)}</strong> — ${r.weightPercent}%</li>`).join("")}</ul>
-      <p class="rubric-pass">Passing score: ${mod.passingScore || 80}%</p>
-    `;
+    rub.innerHTML = `<h4>Assessment rubric</h4><ul>${mod.rubric.map((r) => `<li><strong>${escapeHtml(r.criterion)}</strong> — ${r.weightPercent}%</li>`).join("")}</ul><p class="rubric-pass">Passing score: ${mod.passingScore || 80}%</p>`;
     container.appendChild(rub);
   }
 
@@ -895,12 +638,8 @@ function renderDiplomaPractical(container, mod) {
   actions.className = "module-actions";
   actions.innerHTML = `<button class="btn btn-primary" id="practicalDone">Mark practical as supervised</button>`;
   container.appendChild(actions);
-  actions.querySelector("#practicalDone").addEventListener("click", () => {
-    complete(mod, 100);
-  });
+  actions.querySelector("#practicalDone").addEventListener("click", () => complete(mod, 100));
 }
-
-// ---------- CAPSTONE VIEW ----------
 
 export function renderCapstone() {
   const container = ctx.onNavigate.toView("capstone");
@@ -915,9 +654,7 @@ export function renderCapstone() {
     <div style="margin-top:8px">
       <span class="module-badge capstone">Capstone Assessment</span>
       <h2>${escapeHtml(c.title)}</h2>
-      <p style="margin:6px 0 0;color:var(--text-muted);font-size:13px">
-        Pass: ${c.passingScore}%${c.criticalSafetyItemsMustAllPass ? " · safety-critical items must all pass" : ""}
-      </p>
+      <p style="margin:6px 0 0;color:var(--text-muted);font-size:13px">Pass: ${c.passingScore}%${c.criticalSafetyItemsMustAllPass ? " · safety-critical items must all pass" : ""}</p>
     </div>
   `;
   container.appendChild(head);
@@ -931,10 +668,7 @@ export function renderCapstone() {
   if (c.requiredVisuals?.length) {
     const vis = document.createElement("div");
     vis.className = "rubric";
-    vis.innerHTML = `
-      <h4>Required evidence</h4>
-      <ul>${c.requiredVisuals.map((v) => `<li><strong>${escapeHtml(v.type)}</strong> — ${escapeHtml(v.purpose)}</li>`).join("")}</ul>
-    `;
+    vis.innerHTML = `<h4>Required evidence</h4><ul>${c.requiredVisuals.map((v) => `<li><strong>${escapeHtml(v.type)}</strong> — ${escapeHtml(v.purpose)}</li>`).join("")}</ul>`;
     container.appendChild(vis);
   }
 
@@ -944,10 +678,7 @@ export function renderCapstone() {
     c.stages.forEach((s, i) => {
       const el = document.createElement("div");
       el.className = "practical-step";
-      el.innerHTML = `
-        <div class="step-num">${i + 1}</div>
-        <div class="step-body"><p>${escapeHtml(s)}</p></div>
-      `;
+      el.innerHTML = `<div class="step-num">${i + 1}</div><div class="step-body"><p>${escapeHtml(s)}</p></div>`;
       stages.appendChild(el);
     });
     container.appendChild(stages);
@@ -956,11 +687,7 @@ export function renderCapstone() {
   if (c.rubric?.length) {
     const rub = document.createElement("div");
     rub.className = "rubric";
-    rub.innerHTML = `
-      <h4>Final rubric</h4>
-      <ul>${c.rubric.map((r) => `<li><strong>${escapeHtml(r.criterion)}</strong> — ${r.weightPercent}%</li>`).join("")}</ul>
-      <p class="rubric-pass">Passing score: ${c.passingScore}%</p>
-    `;
+    rub.innerHTML = `<h4>Final rubric</h4><ul>${c.rubric.map((r) => `<li><strong>${escapeHtml(r.criterion)}</strong> — ${r.weightPercent}%</li>`).join("")}</ul><p class="rubric-pass">Passing score: ${c.passingScore}%</p>`;
     container.appendChild(rub);
   }
 
@@ -975,10 +702,6 @@ export function renderCapstone() {
     setTimeout(() => renderSkillTree(ctx.onNavigate.toView("tree")), 300);
   });
 }
-
-// ============================================================
-// MODULE RENDERERS
-// ============================================================
 
 function renderLesson(container, mod) {
   const content = document.createElement("div");
@@ -1008,28 +731,17 @@ function renderDrill(container, mod) {
       const passed = pct >= passing;
       const done = document.createElement("div");
       done.className = "drill-complete";
-      done.innerHTML = `
-        <h3>${passed ? "Drill complete" : "Keep practicing"}</h3>
-        <p>You answered <strong>${correct} of ${steps.length}</strong> correctly — ${pct}%</p>
-        <p style="color:var(--text-muted);font-size:13px">
-          ${passed ? "You're ready to move on." : `You need ${passing}% to pass. Repeat the drill.`}
-        </p>
-      `;
+      done.innerHTML = `<h3>${passed ? "Drill complete" : "Keep practicing"}</h3><p>You answered <strong>${correct} of ${steps.length}</strong> correctly — ${pct}%</p><p style="color:var(--text-muted);font-size:13px">${passed ? "You're ready to move on." : `You need ${passing}% to pass. Repeat the drill.`}</p>`;
 
       const actions = document.createElement("div");
       actions.className = "module-actions";
       actions.style.marginTop = "18px";
       actions.style.justifyContent = "center";
-      actions.innerHTML = `
-        <button class="btn btn-ghost" id="repeat">Repeat drill</button>
-        ${passed ? '<button class="btn btn-primary" id="done">Continue</button>' : ""}
-      `;
+      actions.innerHTML = `<button class="btn btn-ghost" id="repeat">Repeat drill</button>${passed ? '<button class="btn btn-primary" id="done">Continue</button>' : ""}`;
       container.appendChild(done);
       container.appendChild(actions);
 
-      actions.querySelector("#repeat").addEventListener("click", () => {
-        idx = 0; correct = 0; render();
-      });
+      actions.querySelector("#repeat").addEventListener("click", () => { idx = 0; correct = 0; render(); });
       const doneBtn = actions.querySelector("#done");
       if (doneBtn) doneBtn.addEventListener("click", () => complete(mod, pct));
       return;
@@ -1039,10 +751,7 @@ function renderDrill(container, mod) {
 
     const prog = document.createElement("div");
     prog.className = "drill-progress";
-    prog.innerHTML = `
-      <div class="bar"><span style="width:${(idx / steps.length) * 100}%"></span></div>
-      <span>${idx + 1} / ${steps.length}</span>
-    `;
+    prog.innerHTML = `<div class="bar"><span style="width:${(idx / steps.length) * 100}%"></span></div><span>${idx + 1} / ${steps.length}</span>`;
     container.appendChild(prog);
 
     const q = document.createElement("p");
@@ -1071,10 +780,7 @@ function renderDrill(container, mod) {
 
         const fb = document.createElement("div");
         fb.className = "feedback" + (isCorrect ? "" : " wrong");
-        fb.innerHTML = `
-          <div class="feedback-head">${isCorrect ? "✓ Correct" : "✕ Not quite"}</div>
-          <p>${escapeHtml(step.f || "")}</p>
-        `;
+        fb.innerHTML = `<div class="feedback-head">${isCorrect ? "✓ Correct" : "✕ Not quite"}</div><p>${escapeHtml(step.f || "")}</p>`;
         container.appendChild(fb);
 
         const actions = document.createElement("div");
@@ -1082,10 +788,7 @@ function renderDrill(container, mod) {
         actions.innerHTML = `<button class="btn btn-primary" id="nextStep">${idx === steps.length - 1 ? "Finish" : "Next"}</button>`;
         container.appendChild(actions);
 
-        actions.querySelector("#nextStep").addEventListener("click", () => {
-          idx++;
-          render();
-        });
+        actions.querySelector("#nextStep").addEventListener("click", () => { idx++; render(); });
       });
 
       grid.appendChild(btn);
@@ -1098,10 +801,7 @@ function renderDrill(container, mod) {
 function renderScenario(container, mod) {
   const prompt = document.createElement("div");
   prompt.className = "scenario-prompt";
-  prompt.innerHTML = `
-    <p class="scenario-q">${escapeHtml(mod.prompt)}</p>
-    ${mod.context ? `<p class="scenario-context">${escapeHtml(mod.context)}</p>` : ""}
-  `;
+  prompt.innerHTML = `<p class="scenario-q">${escapeHtml(mod.prompt)}</p>${mod.context ? `<p class="scenario-context">${escapeHtml(mod.context)}</p>` : ""}`;
   container.appendChild(prompt);
 
   const ta = document.createElement("textarea");
@@ -1112,10 +812,7 @@ function renderScenario(container, mod) {
   if (mod.rubric?.length) {
     const rubric = document.createElement("div");
     rubric.className = "rubric";
-    rubric.innerHTML = `
-      <h4>What success looks like</h4>
-      <ul>${mod.rubric.map((r) => `<li>${escapeHtml(r)}</li>`).join("")}</ul>
-    `;
+    rubric.innerHTML = `<h4>What success looks like</h4><ul>${mod.rubric.map((r) => `<li>${escapeHtml(r)}</li>`).join("")}</ul>`;
     container.appendChild(rubric);
   }
 
@@ -1137,10 +834,7 @@ function renderScenario(container, mod) {
 function renderPortfolio(container, mod) {
   const prompt = document.createElement("div");
   prompt.className = "scenario-prompt";
-  prompt.innerHTML = `
-    <p class="scenario-q">${escapeHtml(mod.prompt)}</p>
-    ${mod.context ? `<p class="scenario-context">${escapeHtml(mod.context)}</p>` : ""}
-  `;
+  prompt.innerHTML = `<p class="scenario-q">${escapeHtml(mod.prompt)}</p>${mod.context ? `<p class="scenario-context">${escapeHtml(mod.context)}</p>` : ""}`;
   container.appendChild(prompt);
 
   if (mod.steps?.length) {
@@ -1181,30 +875,18 @@ function renderPortfolio(container, mod) {
 }
 
 function renderAssessment(container, mod) {
-  renderDrill(container, {
-    ...mod,
-    passingScore: mod.passingScore || 80
-  });
+  renderDrill(container, { ...mod, passingScore: mod.passingScore || 80 });
 }
 
 function renderSandbox(container, mod) {
   const prompt = document.createElement("div");
   prompt.className = "scenario-prompt";
-  prompt.innerHTML = `
-    <p class="scenario-q">${escapeHtml(mod.prompt)}</p>
-    ${mod.context ? `<p class="scenario-context">${escapeHtml(mod.context)}</p>` : ""}
-  `;
+  prompt.innerHTML = `<p class="scenario-q">${escapeHtml(mod.prompt)}</p>${mod.context ? `<p class="scenario-context">${escapeHtml(mod.context)}</p>` : ""}`;
   container.appendChild(prompt);
 
   const controls = document.createElement("div");
   controls.className = "sandbox-controls";
-  controls.innerHTML = (mod.controls || []).map((c) => `
-    <label>
-      <span>${escapeHtml(c.label)}</span>
-      <input type="range" min="${c.min}" max="${c.max}" step="${c.step || 1}" value="${c.default ?? c.min}" data-param="${c.id}">
-      <strong data-out="${c.id}">${c.default ?? c.min}${c.unit || ""}</strong>
-    </label>
-  `).join("");
+  controls.innerHTML = (mod.controls || []).map((c) => `<label><span>${escapeHtml(c.label)}</span><input type="range" min="${c.min}" max="${c.max}" step="${c.step || 1}" value="${c.default ?? c.min}" data-param="${c.id}"><strong data-out="${c.id}">${c.default ?? c.min}${c.unit || ""}</strong></label>`).join("");
   container.appendChild(controls);
 
   const result = document.createElement("div");
@@ -1218,17 +900,12 @@ function renderSandbox(container, mod) {
       const param = input.dataset.param;
       const ctrl = mod.controls.find((c) => c.id === param);
       params[param] = parseFloat(input.value);
-      controls.querySelector(`[data-out="${param}"]`).textContent =
-        input.value + (ctrl?.unit || "");
+      controls.querySelector(`[data-out="${param}"]`).textContent = input.value + (ctrl?.unit || "");
     });
-    if (typeof mod.compute === "function") {
-      result.textContent = mod.compute(params);
-    }
+    if (typeof mod.compute === "function") result.textContent = mod.compute(params);
   }
 
-  controls.querySelectorAll("input[type=range]").forEach((input) => {
-    input.addEventListener("input", update);
-  });
+  controls.querySelectorAll("input[type=range]").forEach((input) => input.addEventListener("input", update));
   update();
 
   const actions = document.createElement("div");
@@ -1239,20 +916,12 @@ function renderSandbox(container, mod) {
   actions.querySelector("#explored").addEventListener("click", () => complete(mod, 100));
 }
 
-// ============================================================
-// COMPLETION
-// ============================================================
-
 function complete(mod, score) {
   const key = moduleKey(ctx.skill.id, ctx.levelIndex, mod.id);
   recordModule(ctx.career.id, key, score);
   window.__fpToast?.(`Progress saved — ${score}%`, "success");
   setTimeout(() => renderSkillPath(), 300);
 }
-
-// ============================================================
-// PROGRESS MATH
-// ============================================================
 
 function moduleKey(skillId, levelIdx, moduleId) {
   return `${skillId}.${levelIdx}.${moduleId}`;
@@ -1272,11 +941,7 @@ function computeTotals(domains, careerId) {
       });
     });
   });
-  return {
-    skills,
-    modules,
-    completedPct: modules ? Math.round((done / modules) * 100) : 0
-  };
+  return { skills, modules, completedPct: modules ? Math.round((done / modules) * 100) : 0 };
 }
 
 function computeDomainProgress(domain, careerId) {
@@ -1288,10 +953,7 @@ function computeDomainProgress(domain, careerId) {
 function computeSkillProgress(skill, careerId) {
   const total = Object.keys(skill.levels || {}).length;
   if (!total) return 0;
-  const sum = Object.keys(skill.levels).reduce(
-    (a, lvl) => a + computeLevelProgress(skill, parseInt(lvl, 10), careerId),
-    0
-  );
+  const sum = Object.keys(skill.levels).reduce((a, lvl) => a + computeLevelProgress(skill, parseInt(lvl, 10), careerId), 0);
   return Math.round(sum / total);
 }
 
@@ -1310,33 +972,18 @@ function getCurrentLevel(skill, careerId) {
   return Math.max(0, levels - 1);
 }
 
-// ============================================================
-// UTIL
-// ============================================================
-
 function moduleIcon(type) {
   return {
-    lesson: "📖",
-    drill: "🎯",
-    scenario: "🧩",
-    portfolio: "🗂️",
-    assess: "🎓",
-    sandbox: "🧪",
-    practical: "⚙",
-    simulation: "🎮"
+    lesson: "📖", drill: "🎯", scenario: "🧩", portfolio: "🗂️",
+    assess: "🎓", sandbox: "🧪", practical: "⚙", simulation: "🎮"
   }[type] || "•";
 }
 
 function moduleLabel(type) {
   return {
-    lesson: "Lesson",
-    drill: "Drill",
-    scenario: "Scenario",
-    portfolio: "Portfolio",
-    assess: "Assessment",
-    sandbox: "Sandbox",
-    practical: "Supervised Practical",
-    simulation: "Interactive Simulation"
+    lesson: "Lesson", drill: "Drill", scenario: "Scenario",
+    portfolio: "Portfolio", assess: "Assessment", sandbox: "Sandbox",
+    practical: "Supervised Practical", simulation: "Interactive Simulation"
   }[type] || "Module";
 }
 
