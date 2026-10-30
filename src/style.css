@@ -2037,3 +2037,54 @@ button:disabled { cursor: not-allowed; }
   }
   .result-pct { font-size: 34px; }
 }
+/* Simulation loading and fallback */
+.simulation-wrap {
+  margin-top: 20px;
+  width: 100%;
+}
+.sim-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 60px 24px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-dim);
+  font-size: 13px;
+}
+.sim-loading-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  animation: sim-spin 0.9s linear infinite;
+}
+@keyframes sim-spin {
+  to { transform: rotate(360deg); }
+}
+.sim-unavailable {
+  padding: 32px 28px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-align: center;
+}
+.sim-unavailable h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  color: var(--text);
+}
+.sim-unavailable p {
+  margin: 0;
+  font-size: 13.5px;
+  color: var(--text-dim);
+}
+.module-badge.simulation {
+  background: rgba(232, 182, 12, 0.12);
+  border-color: rgba(232, 182, 12, 0.4);
+  color: var(--warn);
+}
