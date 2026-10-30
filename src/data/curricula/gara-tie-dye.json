@@ -1,6 +1,26 @@
 {
   "gara-tie-dye": {
+    "courseLevel": "Level 3 · Craft Diploma",
+    "courseTitle": "Gara Tie-Dye — Fabric Fundamentals to Professional Mastery",
+    "courseDescription": "A complete professional pathway in Sierra Leonean Gara tie-dye: from understanding cotton and indigo, through pattern design and dye chemistry, to scaling production and running an export-ready workshop.",
     "intro": "Learn Gara tie-dyeing from the ground up — from understanding cotton and indigo to running a workshop that exports. Master the craft, then build a business around it.",
+    "deliveryModel": {
+      "recommendedStructure": {
+        "guidedLearningHours": 120,
+        "supervisedPracticalHours": 80,
+        "independentPracticeHours": 60,
+        "totalIndicativeHours": 260
+      }
+    },
+    "diplomaFramework": {
+      "learningOutcomes": [
+        "Identify and select appropriate fabrics, threads, and tools for Gara production",
+        "Design and predict resist-dye patterns using traditional and contemporary motifs",
+        "Prepare and maintain indigo vats, mordants, and colour baths to a repeatable standard",
+        "Scale from single-piece production to batch runs with consistent quality",
+        "Cost, price, market, and export Gara textiles profitably"
+      ]
+    },
     "skillDomains": [
       {
         "id": "materials",
@@ -25,7 +45,8 @@
                     "type": "lesson",
                     "title": "Cotton, rayon, silk — how they differ",
                     "content": "<h3>Cotton</h3><p>The traditional base for Gara. Absorbs dye evenly. Durable. Locally available. <strong>Start here.</strong></p><h3>Rayon</h3><p>Takes dye brighter than cotton but fades faster and can tear under heavy handling. Use for decorative cloth, not for wearables.</p><h3>Silk</h3><p>Luxury-grade. Rare in West African workshops because of cost. Produces stunning colour depth.</p><h3>The rule</h3><p>If you can only buy one fabric for your whole learning journey: <strong>100% cotton.</strong> It forgives mistakes and rewards skill.</p>"
-                  }
+                  },
+                  { "id": "sim-foundation", "type": "simulation", "sim": "gara", "simLevel": 0, "title": "Interactive: First tie-dye attempt" }
                 ]
               },
               "1": {
@@ -36,24 +57,9 @@
                     "title": "Identify the fabric",
                     "passingScore": 80,
                     "steps": [
-                      {
-                        "q": "Which fabric is best for a Gara cloth that must last years and be worn regularly?",
-                        "o": ["Polyester blend", "100% cotton", "Nylon", "Acrylic"],
-                        "c": 1,
-                        "f": "Cotton holds dye and lasts. Synthetics resist dye or fade unevenly."
-                      },
-                      {
-                        "q": "You feel a fabric that is cool, slightly rough, and when burned turns to soft ash with a paper smell. What is it?",
-                        "o": ["Silk", "Polyester", "Cotton", "Rayon"],
-                        "c": 2,
-                        "f": "The burn test — natural fibres turn to ash and smell like burnt paper; synthetics melt into a hard bead."
-                      },
-                      {
-                        "q": "Which fabric takes dye the brightest but fades fastest?",
-                        "o": ["Cotton", "Rayon", "Silk", "Wool"],
-                        "c": 1,
-                        "f": "Rayon absorbs dye fast and bright but loses colour quickly under sun and washing."
-                      }
+                      { "q": "Which fabric is best for a Gara cloth that must last years and be worn regularly?", "o": ["Polyester blend", "100% cotton", "Nylon", "Acrylic"], "c": 1, "f": "Cotton holds dye and lasts. Synthetics resist dye or fade unevenly." },
+                      { "q": "You feel a fabric that is cool, slightly rough, and when burned turns to soft ash with a paper smell. What is it?", "o": ["Silk", "Polyester", "Cotton", "Rayon"], "c": 2, "f": "The burn test — natural fibres turn to ash and smell like burnt paper; synthetics melt into a hard bead." },
+                      { "q": "Which fabric takes dye the brightest but fades fastest?", "o": ["Cotton", "Rayon", "Silk", "Wool"], "c": 1, "f": "Rayon absorbs dye fast and bright but loses colour quickly under sun and washing." }
                     ]
                   },
                   {
@@ -61,7 +67,8 @@
                     "type": "lesson",
                     "title": "Why you must wash before dyeing",
                     "content": "<p>New fabric has <strong>sizing</strong> — a starch coating added during manufacturing to keep it crisp. Sizing blocks dye. If you dye new cloth without washing, you get uneven, pale results.</p><h3>The prep routine</h3><ol><li>Fill a basin with hot water and a spoon of detergent.</li><li>Soak the fabric for 30 minutes.</li><li>Rinse in clean water until no suds remain.</li><li>Hang to dry — do not tumble.</li><li>Iron flat before marking patterns.</li></ol><blockquote>Prep is 30% of the finished quality. Skip it and every later step fights you.</blockquote>"
-                  }
+                  },
+                  { "id": "sim-intermediate", "type": "simulation", "sim": "gara", "simLevel": 1, "title": "Interactive: Match technique to occasion" }
                 ]
               },
               "2": {
@@ -72,32 +79,12 @@
                     "title": "Prep sequence practice",
                     "passingScore": 80,
                     "steps": [
-                      {
-                        "q": "You have just bought new cotton from the market. What is the very first step?",
-                        "o": ["Soak in indigo", "Wash in hot water with detergent", "Cut to size", "Iron flat"],
-                        "c": 1,
-                        "f": "Always wash first. Everything else comes after."
-                      },
-                      {
-                        "q": "After washing, the fabric is dry but wrinkled. What do you do before marking patterns?",
-                        "o": ["Cut it", "Iron it flat", "Dye it", "Soak it again"],
-                        "c": 1,
-                        "f": "Wrinkles distort pattern marks. Iron flat while dry."
-                      },
-                      {
-                        "q": "You wash in cold water only. What is the risk?",
-                        "o": ["None — cold water works", "Sizing remains and blocks dye", "The fabric shrinks", "The colour runs"],
-                        "c": 1,
-                        "f": "Cold water does not fully remove sizing. Hot water and detergent are required."
-                      }
+                      { "q": "You have just bought new cotton from the market. What is the very first step?", "o": ["Soak in indigo", "Wash in hot water with detergent", "Cut to size", "Iron flat"], "c": 1, "f": "Always wash first. Everything else comes after." },
+                      { "q": "After washing, the fabric is dry but wrinkled. What do you do before marking patterns?", "o": ["Cut it", "Iron it flat", "Dye it", "Soak it again"], "c": 1, "f": "Wrinkles distort pattern marks. Iron flat while dry." },
+                      { "q": "You wash in cold water only. What is the risk?", "o": ["None — cold water works", "Sizing remains and blocks dye", "The fabric shrinks", "The colour runs"], "c": 1, "f": "Cold water does not fully remove sizing. Hot water and detergent are required." }
                     ]
                   },
-                  {
-                    "id": "sim-tie-practice",
-                    "type": "simulation",
-                    "sim": "gara",
-                    "title": "Interactive: Tie and dye a cloth"
-                  }
+                  { "id": "sim-applied", "type": "simulation", "sim": "gara", "simLevel": 2, "title": "Interactive: Layered pattern for a client" }
                 ]
               },
               "3": {
@@ -116,7 +103,8 @@
                       "Confirm final measurement check after drying",
                       "Address any additional stabilisation step (e.g., hot wash + cold rinse)"
                     ]
-                  }
+                  },
+                  { "id": "sim-advanced", "type": "simulation", "sim": "gara", "simLevel": 3, "title": "Interactive: Advanced commission with colour mood" }
                 ]
               },
               "4": {
@@ -133,7 +121,8 @@
                       "Include a quality checkpoint after each step",
                       "Add a photo or sketch of the setup"
                     ]
-                  }
+                  },
+                  { "id": "sim-professional", "type": "simulation", "sim": "gara", "simLevel": 4, "title": "Interactive: Full commission — craft + pricing" }
                 ]
               }
             }
@@ -166,24 +155,9 @@
                     "type": "drill",
                     "title": "Match the tool to its job",
                     "steps": [
-                      {
-                        "q": "You need to make fine, precise lines in a small pattern. Which tool?",
-                        "o": ["Thick cotton twine", "Nylon thread", "Rubber bands", "Wooden pegs"],
-                        "c": 1,
-                        "f": "Nylon thread is thin and precise — perfect for fine lines."
-                      },
-                      {
-                        "q": "Which material must your dye pot NOT be made of?",
-                        "o": ["Enamel", "Stainless steel", "Aluminium", "Ceramic-lined"],
-                        "c": 2,
-                        "f": "Aluminium reacts with indigo and metallic salts, ruining the bath."
-                      },
-                      {
-                        "q": "You're dyeing a large cloth and need to keep folds tight for a bold pattern. Best option?",
-                        "o": ["Sewing thread", "Rubber bands or heavy twine", "Fishing line", "Paper clips"],
-                        "c": 1,
-                        "f": "Rubber bands or heavy twine hold thick folds tightly under dye pressure."
-                      }
+                      { "q": "You need to make fine, precise lines in a small pattern. Which tool?", "o": ["Thick cotton twine", "Nylon thread", "Rubber bands", "Wooden pegs"], "c": 1, "f": "Nylon thread is thin and precise — perfect for fine lines." },
+                      { "q": "Which material must your dye pot NOT be made of?", "o": ["Enamel", "Stainless steel", "Aluminium", "Ceramic-lined"], "c": 2, "f": "Aluminium reacts with indigo and metallic salts, ruining the bath." },
+                      { "q": "You're dyeing a large cloth and need to keep folds tight for a bold pattern. Best option?", "o": ["Sewing thread", "Rubber bands or heavy twine", "Fishing line", "Paper clips"], "c": 1, "f": "Rubber bands or heavy twine hold thick folds tightly under dye pressure." }
                     ]
                   }
                 ]
@@ -205,24 +179,9 @@
                     "type": "drill",
                     "title": "Choose the right tie",
                     "steps": [
-                      {
-                        "q": "You want a repeating geometric band pattern across the cloth.",
-                        "o": ["Spiral tie", "Fold-and-tie", "Stitch-and-gather", "Random scrunch"],
-                        "c": 1,
-                        "f": "Fold-and-tie creates clean repeating bands."
-                      },
-                      {
-                        "q": "You want a radiating sunburst from the centre.",
-                        "o": ["Spiral tie", "Fold-and-tie", "Stitch-and-gather", "Edge-only tie"],
-                        "c": 0,
-                        "f": "Spiral tie is the only technique that produces a radiating sunburst."
-                      },
-                      {
-                        "q": "You want long, flowing lines following a curve you've drawn.",
-                        "o": ["Spiral tie", "Fold-and-tie", "Stitch-and-gather", "Rubber band wrap"],
-                        "c": 2,
-                        "f": "Stitch-and-gather follows any line you can stitch, no matter the shape."
-                      }
+                      { "q": "You want a repeating geometric band pattern across the cloth.", "o": ["Spiral tie", "Fold-and-tie", "Stitch-and-gather", "Random scrunch"], "c": 1, "f": "Fold-and-tie creates clean repeating bands." },
+                      { "q": "You want a radiating sunburst from the centre.", "o": ["Spiral tie", "Fold-and-tie", "Stitch-and-gather", "Edge-only tie"], "c": 0, "f": "Spiral tie is the only technique that produces a radiating sunburst." },
+                      { "q": "You want long, flowing lines following a curve you've drawn.", "o": ["Spiral tie", "Fold-and-tie", "Stitch-and-gather", "Rubber band wrap"], "c": 2, "f": "Stitch-and-gather follows any line you can stitch, no matter the shape." }
                     ]
                   }
                 ]
@@ -274,24 +233,9 @@
                     "type": "drill",
                     "title": "Safety habits check",
                     "steps": [
-                      {
-                        "q": "You're about to mix caustic soda into water. Which is correct?",
-                        "o": ["Add water to soda", "Add soda to water slowly while stirring", "Pour both together fast", "Mix with bare hands"],
-                        "c": 1,
-                        "f": "Always add caustic soda to water, never the reverse."
-                      },
-                      {
-                        "q": "You must handle powdered dye. What PPE is essential?",
-                        "o": ["Only gloves", "Dust mask and gloves", "Sunglasses", "Just an apron"],
-                        "c": 1,
-                        "f": "Powdered dye can be inhaled. Mask and gloves are minimum."
-                      },
-                      {
-                        "q": "You finish dyeing and your gloves have dye on them. What do you do?",
-                        "o": ["Rinse them in the dye pot", "Peel them off by the cuff and dispose safely", "Touch your phone with them", "Reuse them without cleaning"],
-                        "c": 1,
-                        "f": "Peel gloves from the cuff inward without touching the outside."
-                      }
+                      { "q": "You're about to mix caustic soda into water. Which is correct?", "o": ["Add water to soda", "Add soda to water slowly while stirring", "Pour both together fast", "Mix with bare hands"], "c": 1, "f": "Always add caustic soda to water, never the reverse." },
+                      { "q": "You must handle powdered dye. What PPE is essential?", "o": ["Only gloves", "Dust mask and gloves", "Sunglasses", "Just an apron"], "c": 1, "f": "Powdered dye can be inhaled. Mask and gloves are minimum." },
+                      { "q": "You finish dyeing and your gloves have dye on them. What do you do?", "o": ["Rinse them in the dye pot", "Peel them off by the cuff and dispose safely", "Touch your phone with them", "Reuse them without cleaning"], "c": 1, "f": "Peel gloves from the cuff inward without touching the outside." }
                     ]
                   }
                 ]
@@ -393,24 +337,9 @@
                     "type": "drill",
                     "title": "Predict the pattern",
                     "steps": [
-                      {
-                        "q": "You tie tightly at 5 evenly spaced points along a folded strip, then dye. What pattern appears?",
-                        "o": ["Random splotches", "Repeating pale bands", "A single spiral", "No visible pattern"],
-                        "c": 1,
-                        "f": "Evenly spaced ties produce evenly spaced pale bands."
-                      },
-                      {
-                        "q": "You tie loosely with thin thread. The dye bleeds slightly into the resisted area. What boundary do you get?",
-                        "o": ["Sharp line", "Feathered edge", "Complete resist", "No line"],
-                        "c": 1,
-                        "f": "Loose ties allow dye to creep in, producing a soft feathered edge."
-                      },
-                      {
-                        "q": "You want a full-coverage pattern with no visible pale areas. What approach?",
-                        "o": ["Tie in one spot only", "Tie many points densely across the whole cloth", "Don't tie at all", "Dye briefly"],
-                        "c": 1,
-                        "f": "Dense multi-point tying is how you build a busy, full-coverage pattern."
-                      }
+                      { "q": "You tie tightly at 5 evenly spaced points along a folded strip, then dye. What pattern appears?", "o": ["Random splotches", "Repeating pale bands", "A single spiral", "No visible pattern"], "c": 1, "f": "Evenly spaced ties produce evenly spaced pale bands." },
+                      { "q": "You tie loosely with thin thread. The dye bleeds slightly into the resisted area. What boundary do you get?", "o": ["Sharp line", "Feathered edge", "Complete resist", "No line"], "c": 1, "f": "Loose ties allow dye to creep in, producing a soft feathered edge." },
+                      { "q": "You want a full-coverage pattern with no visible pale areas. What approach?", "o": ["Tie in one spot only", "Tie many points densely across the whole cloth", "Don't tie at all", "Dye briefly"], "c": 1, "f": "Dense multi-point tying is how you build a busy, full-coverage pattern." }
                     ]
                   }
                 ]
@@ -481,24 +410,9 @@
                     "type": "drill",
                     "title": "Match the motif to the meaning",
                     "steps": [
-                      {
-                        "q": "Which motif is most appropriate for a naming ceremony?",
-                        "o": ["Concentric circles", "Random splotches", "Broken lines", "Sharp angles only"],
-                        "c": 0,
-                        "f": "Concentric circles evoke continuity and family."
-                      },
-                      {
-                        "q": "A client commissions a cloth for a business launch. Best motif?",
-                        "o": ["Concentric circles", "Diamonds", "Zigzag", "Blank"],
-                        "c": 1,
-                        "f": "Diamonds traditionally signal prosperity and good fortune."
-                      },
-                      {
-                        "q": "Which motif represents resilience and overcoming obstacles?",
-                        "o": ["Diamonds", "Circles", "Zigzag lines", "Straight lines only"],
-                        "c": 2,
-                        "f": "Zigzags evoke going around or through obstacles — a resilience symbol."
-                      }
+                      { "q": "Which motif is most appropriate for a naming ceremony?", "o": ["Concentric circles", "Random splotches", "Broken lines", "Sharp angles only"], "c": 0, "f": "Concentric circles evoke continuity and family." },
+                      { "q": "A client commissions a cloth for a business launch. Best motif?", "o": ["Concentric circles", "Diamonds", "Zigzag", "Blank"], "c": 1, "f": "Diamonds traditionally signal prosperity and good fortune." },
+                      { "q": "Which motif represents resilience and overcoming obstacles?", "o": ["Diamonds", "Circles", "Zigzag lines", "Straight lines only"], "c": 2, "f": "Zigzags evoke going around or through obstacles — a resilience symbol." }
                     ]
                   }
                 ]
@@ -511,387 +425,4 @@
                     "title": "Commission for a memorial cloth",
                     "prompt": "A family commissions a Gara cloth to be draped at a memorial service. The deceased was a respected elder known for community service. Describe the pattern, colours, and any motif choices you would make — and why.",
                     "context": "Funeral textiles are one of the most important Gara commissions.",
-                    "placeholder": "My design approach: …",
-                    "rubric": [
-                      "Uses colours appropriate to mourning (traditionally white and indigo, sometimes black)",
-                      "Chooses motifs that reference community service or an elder's role",
-                      "Explains the reasoning behind each choice",
-                      "Considers asking the family about specific preferences",
-                      "Avoids celebratory motifs inappropriate for the occasion"
-                    ]
-                  }
-                ]
-              },
-              "3": {
-                "modules": [
-                  {
-                    "id": "p-symbol-library",
-                    "type": "portfolio",
-                    "title": "Build a personal symbol library",
-                    "prompt": "Compile a reference library of at least 10 traditional motifs with their meanings, drawn from elders, archives, or existing Gara work in your region.",
-                    "steps": [
-                      "Interview at least 3 elder practitioners or visit a museum",
-                      "Sketch each motif",
-                      "Write a short note on its meaning and origin",
-                      "Assemble into a reference document you can consult with clients"
-                    ]
-                  }
-                ]
-              }
-            }
-          }
-        ]
-      },
-      {
-        "id": "dye-chemistry",
-        "name": "Dye Chemistry",
-        "description": "The science behind the craft. Understand indigo, mordants, and pH.",
-        "skills": [
-          {
-            "id": "indigo-basics",
-            "name": "Indigo Fundamentals",
-            "description": "Work with natural indigo: prepare a vat, control pH, and produce consistent colour.",
-            "levels": {
-              "0": {
-                "modules": [
-                  {
-                    "id": "l-indigo-intro",
-                    "type": "lesson",
-                    "title": "What is indigo?",
-                    "content": "<p>Indigo is a natural dye extracted from the leaves of <em>Indigofera</em> plants — grown throughout West Africa for centuries.</p><p>Indigo is unlike other dyes. It is not water-soluble in its natural form. To dye with it, you must chemically reduce it into a soluble yellow-green state, dye the cloth in that state, then expose it to air where it oxidises back to blue.</p><p>This is why freshly dyed indigo cloth looks green when it comes out of the vat and turns blue as it dries in the air.</p>"
-                  }
-                ]
-              },
-              "1": {
-                "modules": [
-                  {
-                    "id": "l-indigo-vat",
-                    "type": "lesson",
-                    "title": "The indigo vat",
-                    "content": "<h3>Ingredients</h3><ul><li>Indigo powder</li><li>Water</li><li>Reducing agent (traditionally wood ash lye or ripe fruit; industrially, thiourea dioxide or sodium hydrosulfite)</li><li>Alkali (caustic soda or wood ash lye)</li></ul><h3>The process</h3><ol><li>Dissolve indigo in warm water with a small amount of alkali.</li><li>Add the reducing agent slowly.</li><li>Wait. The vat will turn yellow-green with a coppery skin on top.</li><li>It is ready when it smells slightly sweet and the skin is fully formed.</li></ol><p>A healthy vat is a living thing. Feed it, warm it, and it produces colour for months.</p>"
-                  }
-                ]
-              },
-              "2": {
-                "modules": [
-                  {
-                    "id": "d-indigo-diagnose",
-                    "type": "drill",
-                    "title": "Diagnose vat problems",
-                    "steps": [
-                      {
-                        "q": "Your vat smells rotten and the cloth comes out grey, not blue. What's wrong?",
-                        "o": ["Too much alkali", "The vat has gone off — too much organic matter, need to rebuild", "Not enough water", "Wrong cloth"],
-                        "c": 1,
-                        "f": "A rotten smell means bacterial contamination."
-                      },
-                      {
-                        "q": "The cloth comes out blue immediately without turning green first. What's happening?",
-                        "o": ["The vat is not properly reduced", "The vat is perfect", "Too much salt", "The cloth is wet"],
-                        "c": 0,
-                        "f": "If it doesn't come out yellow-green, the vat is not reduced."
-                      },
-                      {
-                        "q": "The colour is pale even after multiple dips. What's the most likely cause?",
-                        "o": ["Cloth is too thin", "The vat is weak — low indigo concentration", "The weather", "Not enough stirring"],
-                        "c": 1,
-                        "f": "Pale colour means the vat needs more indigo."
-                      }
-                    ]
-                  }
-                ]
-              },
-              "3": {
-                "modules": [
-                  {
-                    "id": "s-indigo-consistency",
-                    "type": "scenario",
-                    "title": "Achieve consistent colour across a batch",
-                    "prompt": "You must dye 20 identical scarves to the same depth of indigo blue for a client order. Describe how you would ensure consistency across all 20 pieces.",
-                    "context": "Consistency is the difference between artisan and industrial production.",
-                    "placeholder": "My approach: …",
-                    "rubric": [
-                      "Same vat for all pieces (not fresh per piece)",
-                      "Same number of dips per piece",
-                      "Same dip duration per piece",
-                      "Same drying conditions",
-                      "Batch documentation to track any variation"
-                    ]
-                  }
-                ]
-              },
-              "4": {
-                "modules": [
-                  {
-                    "id": "p-indigo-swatch",
-                    "type": "portfolio",
-                    "title": "Build an indigo depth swatch book",
-                    "prompt": "Produce a swatch book of at least 6 shades of indigo, each achieved by a different number of dips in the same vat.",
-                    "steps": [
-                      "Cut 6+ identical small squares of prepared cotton",
-                      "Dye them in the same vat, one square per additional dip",
-                      "Record dip count and duration",
-                      "Dry all squares the same way",
-                      "Mount them in order from lightest to darkest with the data alongside"
-                    ]
-                  }
-                ]
-              }
-            }
-          }
-        ]
-      },
-      {
-        "id": "production",
-        "name": "Production & Finishing",
-        "description": "Move from a single experiment to a repeatable production process.",
-        "skills": [
-          {
-            "id": "batch-production",
-            "name": "Batch Production",
-            "description": "Produce multiple identical or coordinated pieces at professional quality.",
-            "levels": {
-              "0": {
-                "modules": [
-                  {
-                    "id": "l-batch-intro",
-                    "type": "lesson",
-                    "title": "One is a hobby. Ten is a business.",
-                    "content": "<p>Making one beautiful cloth is a craft. Making ten identical beautiful cloths is a business.</p><p>Batch production requires:</p><ul><li>A written process</li><li>Consistent materials</li><li>Timing discipline</li><li>Quality checkpoints</li></ul>"
-                  }
-                ]
-              },
-              "1": {
-                "modules": [
-                  {
-                    "id": "l-qc",
-                    "type": "lesson",
-                    "title": "Quality control checkpoints",
-                    "content": "<h3>Three checkpoints minimum</h3><ol><li><strong>Before dyeing</strong> — verify all fabric is identical, washed, and prepped. Verify the dye bath is at the target strength.</li><li><strong>During dyeing</strong> — verify each piece has been dipped the same number of times for the same duration.</li><li><strong>After drying</strong> — compare finished pieces side-by-side in daylight. Reject any that don't match.</li></ol><p>Rejects are not wasted. They become practice pieces, apprentice learning material, or discounted stock.</p>"
-                  }
-                ]
-              },
-              "2": {
-                "modules": [
-                  {
-                    "id": "d-qc-order",
-                    "type": "drill",
-                    "title": "Quality check sequence",
-                    "steps": [
-                      {
-                        "q": "You're producing 20 pieces. When do you check the dye bath strength?",
-                        "o": ["After all pieces are done", "Before starting and periodically during", "Never — trust the recipe", "Only if a customer complains"],
-                        "c": 1,
-                        "f": "Check bath strength before starting and again after every 5 pieces."
-                      },
-                      {
-                        "q": "Two finished pieces look different shades. What do you do?",
-                        "o": ["Ship both", "Redip the lighter one or reject it", "Refund the client", "Blame the dye"],
-                        "c": 1,
-                        "f": "Redip the lighter piece in the same vat."
-                      },
-                      {
-                        "q": "Final colour comparison between pieces should be done:",
-                        "o": ["Under yellow bulb light", "In daylight, side by side", "In a dark room", "Individually, no reference"],
-                        "c": 1,
-                        "f": "Daylight, side by side is the only reliable comparison."
-                      }
-                    ]
-                  }
-                ]
-              },
-              "3": {
-                "modules": [
-                  {
-                    "id": "p-batch-record",
-                    "type": "portfolio",
-                    "title": "Document a real production batch",
-                    "prompt": "Produce a batch of at least 3 coordinated pieces (same design, same dye) and document the entire process.",
-                    "steps": [
-                      "Choose a simple design you can repeat",
-                      "Produce all 3 pieces in one session",
-                      "Record every step in a notebook as you go",
-                      "Photograph the finished batch together",
-                      "Write a reflection: what varied? What would you change for a bigger batch?"
-                    ]
-                  }
-                ]
-              }
-            }
-          }
-        ]
-      },
-      {
-        "id": "business",
-        "name": "Business & Market",
-        "description": "Turn skill into income. Pricing, clients, and the realities of running a craft business.",
-        "skills": [
-          {
-            "id": "pricing",
-            "name": "Pricing Your Work",
-            "description": "Price for survival, not just for the sale.",
-            "levels": {
-              "0": {
-                "modules": [
-                  {
-                    "id": "l-pricing-intro",
-                    "type": "lesson",
-                    "title": "The four-part price",
-                    "content": "<p>Every price must cover four things:</p><ol><li><strong>Materials</strong> — fabric, dye, thread, tools used up</li><li><strong>Labour</strong> — your time, at a real hourly rate</li><li><strong>Overhead</strong> — rent, water, electricity, transport</li><li><strong>Profit</strong> — the money that grows your business</li></ol><p>Most beginners set price = materials + a little. That is why most beginners burn out.</p><blockquote>Price = (Materials + Labour + Overhead) × (1 + Margin)</blockquote>"
-                  }
-                ]
-              },
-              "1": {
-                "modules": [
-                  {
-                    "id": "d-pricing-math",
-                    "type": "drill",
-                    "title": "Pricing drills",
-                    "steps": [
-                      {
-                        "q": "Materials: 8,000 Le. Your time: 6 hours. Your hourly rate: 2,000 Le. Overhead per cloth: 1,000 Le. What is your base cost?",
-                        "o": ["9,000", "15,000", "21,000", "13,000"],
-                        "c": 2,
-                        "f": "8,000 + (6×2,000) + 1,000 = 21,000."
-                      },
-                      {
-                        "q": "Base cost is 21,000 Le. You want a 30% margin. What's the price?",
-                        "o": ["24,300", "27,300", "30,000", "6,300"],
-                        "c": 1,
-                        "f": "21,000 × 1.30 = 27,300."
-                      },
-                      {
-                        "q": "A client offers to pay you 20,000 for a cloth that costs 21,000 to make. What do you do?",
-                        "o": ["Accept to keep the client", "Decline, or renegotiate", "Accept and cut labour time", "Accept and skip the margin"],
-                        "c": 1,
-                        "f": "Accepting a loss teaches the client that your work is worth less than it costs."
-                      }
-                    ]
-                  }
-                ]
-              },
-              "2": {
-                "modules": [
-                  {
-                    "id": "s-pricing-scenario",
-                    "type": "scenario",
-                    "title": "Price a commission",
-                    "prompt": "A hotel commissions 15 identical Gara table runners. Materials are 12,000 Le each. You estimate 4 hours per piece at a rate of 2,500 Le/hour. Overhead is 800 Le per piece. You want a 35% margin. What is your final per-piece price, and how do you present it to the hotel?",
-                    "context": "B2B clients expect professional pricing.",
-                    "placeholder": "Base cost calculation:\nFinal price:\nHow I'll present it:",
-                    "rubric": [
-                      "Correctly calculates base cost (materials + labour + overhead)",
-                      "Correctly applies margin (multiplication, not addition)",
-                      "Arrives at per-piece price",
-                      "Proposes a professional presentation (itemised quote, not a bare number)",
-                      "Addresses payment terms or deposit"
-                    ]
-                  }
-                ]
-              },
-              "3": {
-                "modules": [
-                  {
-                    "id": "s-pricing-increase",
-                    "type": "scenario",
-                    "title": "Raise your prices",
-                    "prompt": "You've been selling Gara cloths at 30,000 Le. Your material costs have risen 20% this year. Write how you will communicate a price increase to your existing customers without losing them.",
-                    "context": "Price increases are the hardest part of running a craft business.",
-                    "placeholder": "My approach:",
-                    "rubric": [
-                      "Gives advance notice",
-                      "Explains the reason (costs, not greed)",
-                      "Frames the value the client receives",
-                      "Offers a window to buy at old price for loyal customers",
-                      "Holds the new price firmly once announced"
-                    ]
-                  }
-                ]
-              },
-              "4": {
-                "modules": [
-                  {
-                    "id": "p-rate-card",
-                    "type": "portfolio",
-                    "title": "Build your professional rate card",
-                    "prompt": "Create a one-page rate card listing your standard products and prices. Include sizes, materials, lead times, and payment terms.",
-                    "steps": [
-                      "List your 3-5 standard products",
-                      "Calculate the price for each using the four-part formula",
-                      "Add realistic lead times based on your actual production speed",
-                      "State deposit and payment terms",
-                      "Design it cleanly — clients judge professionalism by presentation"
-                    ]
-                  }
-                ]
-              }
-            }
-          },
-          {
-            "id": "finding-clients",
-            "name": "Finding Clients",
-            "description": "Sell without begging. Build a client base that returns and refers.",
-            "levels": {
-              "0": {
-                "modules": [
-                  {
-                    "id": "l-clients-intro",
-                    "type": "lesson",
-                    "title": "Where clients come from",
-                    "content": "<p>Clients come from six places, in order of reliability:</p><ol><li><strong>Repeat customers</strong> — the cheapest client is the one you already have</li><li><strong>Referrals</strong> — happy clients tell others</li><li><strong>Local markets</strong> — direct selling, low barrier</li><li><strong>Boutiques and hotels</strong> — B2B, bigger orders</li><li><strong>Online</strong> — Instagram, WhatsApp Business, marketplaces</li><li><strong>Export</strong> — the highest reward, the highest effort</li></ol><p>Beginners chase #5 and #6. Professionals build #1 and #2 first.</p>"
-                  }
-                ]
-              },
-              "1": {
-                "modules": [
-                  {
-                    "id": "l-whatsapp-business",
-                    "type": "lesson",
-                    "title": "WhatsApp Business as a sales tool",
-                    "content": "<p>In West Africa, WhatsApp Business is the single most valuable free tool for a craft business. Here's how to use it professionally:</p><ul><li>Set a clear business name and profile photo of your work</li><li>Write a short business description (one line, precise)</li><li>Create a catalogue with photos, descriptions, and prices</li><li>Use quick replies for common questions</li><li>Save every customer's name in your contacts with a label</li></ul><p>A well-run WhatsApp Business account is worth more than most websites for a small craft business.</p>"
-                  }
-                ]
-              },
-              "2": {
-                "modules": [
-                  {
-                    "id": "s-client-pitch",
-                    "type": "scenario",
-                    "title": "Pitch a boutique",
-                    "prompt": "You want to sell your Gara cloths to a Freetown boutique. Write the message you'll send them on WhatsApp. It should be under 150 words and include: who you are, what you make, why it fits their shop, and a clear next step.",
-                    "context": "Cold outreach is a skill. Short, specific messages get responses.",
-                    "placeholder": "Message:",
-                    "rubric": [
-                      "Opens with a specific reason for contacting this boutique (not generic)",
-                      "Describes what you make in one clear sentence",
-                      "Explains why your work fits their shop",
-                      "Includes a portfolio link or offer to visit",
-                      "Ends with a specific ask (not 'let me know')"
-                    ]
-                  }
-                ]
-              },
-              "3": {
-                "modules": [
-                  {
-                    "id": "p-client-list",
-                    "type": "portfolio",
-                    "title": "Build your first client list",
-                    "prompt": "Create a client tracking document with at least 10 potential buyers in your area (boutiques, hotels, wedding planners, or individual customers).",
-                    "steps": [
-                      "Identify 10 real, specific potential clients",
-                      "Record their names and contacts",
-                      "For each, note one specific reason they'd want your work",
-                      "Schedule a date to contact each one",
-                      "Track responses in the same document"
-                    ]
-                  }
-                ]
-              }
-            }
-          }
-        ]
-      }
-    ]
-  }
-}
+                   
