@@ -1,7 +1,7 @@
 /* ============================================================
    FuturePath — Learning Engine (Diploma Edition)
    Renders skill trees, level paths, module types, visuals,
-   teaching notes, practical evidence, and capstone.
+   teaching notes, practical evidence, capstone, and simulations.
    ============================================================ */
 
 import { loadCareer, recordModule, getModuleScore, resetCareer } from "./progress-store.js";
@@ -21,7 +21,8 @@ export const MODULE_TYPES = {
   PORTFOLIO: "portfolio",
   ASSESS: "assess",
   SANDBOX: "sandbox",
-  PRACTICAL: "practical"
+  PRACTICAL: "practical",
+  SIMULATION: "simulation"
 };
 
 // ============================================================
@@ -52,7 +53,7 @@ export function resetContext() {
 }
 
 // ============================================================
-// SKILL TREE VIEW (course root)
+// SKILL TREE VIEW
 // ============================================================
 
 export function renderSkillTree(container) {
@@ -382,13 +383,19 @@ export function renderModuleView() {
   head.innerHTML = `
     <button class="btn btn-link" id="backToPath">← ${escapeHtml(skill.name)}</button>
     <div style="margin-top:8px">
-      <span class="module-badge">${moduleLabel(mod.type)}</span>
+      <span class="module-badge ${mod.type === "simulation" ? "simulation" : ""}">${moduleLabel(mod.type)}</span>
       <h2>${escapeHtml(mod.title)}</h2>
       <p style="margin:6px 0 0;color:var(--text-muted);font-size:13px">${escapeHtml(level.name)} · ${escapeHtml(skill.name)}</p>
     </div>
   `;
   container.appendChild(head);
   head.querySelector("#backToPath").addEventListener("click", () => renderSkillPath());
+
+  // Simulations render full-width, in their own layout, without teaching panel
+  if (mod.type === "simulation") {
+    renderSimulation(container, mod);
+    return;
+  }
 
   if (mod.visuals?.length) {
     const visWrap = document.createElement("div");
@@ -411,6 +418,48 @@ export function renderModuleView() {
   }
 
   container.appendChild(buildTeachingPanel(mod));
+}
+
+// ============================================================
+// SIMULATION
+// ============================================================
+
+async function renderSimulation(container, mod) {
+  const simWrap = document.createElement("div");
+  simWrap.className = "simulation-wrap";
+  simWrap.innerHTML = `
+    <div class="sim-loading">
+      <div class="sim-loading-dot"></div>
+      <span>Loading simulation…</span>
+    </div>
+  `;
+  container.appendChild(simWrap);
+
+  try {
+    const { launchSimulation } = await import("./sims/sim-loader.js");
+    simWrap.innerHTML = "";
+    launchSimulation({
+      careerId: ctx.career.id,
+      container: simWrap,
+      onComplete: ({ score, passed, evidence }) => {
+        complete(mod, score);
+        window.__fpToast?.(
+          passed
+            ? "Simulation passed — progress saved"
+            : "Simulation completed — try again to improve",
+          passed ? "success" : ""
+        );
+      }
+    });
+  } catch (err) {
+    console.warn("[FuturePath] Simulation unavailable:", err);
+    simWrap.innerHTML = `
+      <div class="sim-unavailable">
+        <h3>Simulation coming soon</h3>
+        <p>This career's interactive simulation is being built.</p>
+      </div>
+    `;
+  }
 }
 
 // ---------- VISUAL CARD ----------
@@ -436,7 +485,6 @@ function buildVisualCard(v) {
 
 // ============================================================
 // SVG ILLUSTRATION GENERATOR
-// Renders a real diagram in-browser from visual metadata.
 // ============================================================
 
 function generateIllustration(v) {
@@ -1267,11 +1315,29 @@ function getCurrentLevel(skill, careerId) {
 // ============================================================
 
 function moduleIcon(type) {
-  return { lesson: "📖", drill: "🎯", scenario: "🧩", portfolio: "🗂️", assess: "🎓", sandbox: "🧪", practical: "⚙" }[type] || "•";
+  return {
+    lesson: "📖",
+    drill: "🎯",
+    scenario: "🧩",
+    portfolio: "🗂️",
+    assess: "🎓",
+    sandbox: "🧪",
+    practical: "⚙",
+    simulation: "🎮"
+  }[type] || "•";
 }
 
 function moduleLabel(type) {
-  return { lesson: "Lesson", drill: "Drill", scenario: "Scenario", portfolio: "Portfolio", assess: "Assessment", sandbox: "Sandbox", practical: "Supervised Practical" }[type] || "Module";
+  return {
+    lesson: "Lesson",
+    drill: "Drill",
+    scenario: "Scenario",
+    portfolio: "Portfolio",
+    assess: "Assessment",
+    sandbox: "Sandbox",
+    practical: "Supervised Practical",
+    simulation: "Interactive Simulation"
+  }[type] || "Module";
 }
 
 function moduleMeta(mod) {
@@ -1281,6 +1347,7 @@ function moduleMeta(mod) {
   if (mod.type === "portfolio") return "Artifact";
   if (mod.type === "sandbox") return "Free play";
   if (mod.type === "scenario") return "Written response";
+  if (mod.type === "simulation") return "Play";
   return "";
 }
 
