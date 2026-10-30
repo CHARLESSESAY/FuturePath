@@ -424,5 +424,814 @@
                     "type": "scenario",
                     "title": "Commission for a memorial cloth",
                     "prompt": "A family commissions a Gara cloth to be draped at a memorial service. The deceased was a respected elder known for community service. Describe the pattern, colours, and any motif choices you would make — and why.",
-                    "context": "Funeral textiles are one of the most important Gara commissions.",
-                   
+                    "context": "Funeral textiles are one of the most important Gara commissions. The wrong motif can offend the family. The right one becomes a treasured heirloom.",
+                    "placeholder": "My design approach: …",
+                    "rubric": [
+                      "Uses colours appropriate to mourning (white and indigo; sometimes black)",
+                      "Chooses motifs that reference community service or an elder's role",
+                      "Explains the reasoning behind each choice",
+                      "Considers asking the family about specific preferences",
+                      "Avoids celebratory motifs inappropriate for the occasion"
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "s-symbols-archive",
+                    "type": "scenario",
+                    "title": "Research a pattern's origin",
+                    "prompt": "A client requests a specific traditional pattern she inherited on a cloth from her grandmother. She doesn't know its name or meaning. Describe how you would research the pattern — who you'd ask, what you'd examine, and how you'd present findings to the client.",
+                    "context": "Cultural stewardship is part of the professional dyer's role. Getting the history right builds trust.",
+                    "placeholder": "Research approach: …",
+                    "rubric": [
+                      "Identifies elders or practitioners to consult",
+                      "Describes visual documentation of the pattern",
+                      "Cross-references multiple sources (oral history, museum archives, existing textiles)",
+                      "Presents findings respectfully to the client",
+                      "Notes the difference between a tradition and a family-specific variation"
+                    ]
+                  }
+                ]
+              },
+              "4": {
+                "modules": [
+                  {
+                    "id": "p-symbol-library",
+                    "type": "portfolio",
+                    "title": "Build a personal symbol library",
+                    "prompt": "Compile a reference library of at least 10 traditional motifs with their meanings, drawn from elders, archives, or existing Gara work in your region.",
+                    "steps": [
+                      "Interview at least 3 elder practitioners or visit a museum",
+                      "Sketch each motif",
+                      "Write a short note on its meaning and origin",
+                      "Assemble into a reference document you can consult with clients"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "dye-chemistry",
+        "name": "Dye Chemistry",
+        "description": "The science behind the craft. Understand indigo, mordants, and pH.",
+        "skills": [
+          {
+            "id": "indigo-basics",
+            "name": "Indigo Fundamentals",
+            "description": "Work with natural indigo: prepare a vat, control pH, and produce consistent colour.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-indigo-intro",
+                    "type": "lesson",
+                    "title": "What is indigo?",
+                    "content": "<p>Indigo is a natural dye extracted from the leaves of <em>Indigofera</em> plants — grown throughout West Africa for centuries.</p><p>Indigo is unlike other dyes. It is not water-soluble in its natural form. To dye with it, you must chemically reduce it into a soluble yellow-green state, dye the cloth in that state, then expose it to air where it oxidises back to blue.</p><p>This is why freshly dyed indigo cloth looks green when it comes out of the vat and turns blue as it dries in the air.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-indigo-vat",
+                    "type": "lesson",
+                    "title": "The indigo vat",
+                    "content": "<h3>Ingredients</h3><ul><li>Indigo powder</li><li>Water</li><li>Reducing agent (traditionally wood ash lye or ripe fruit; industrially, thiourea dioxide or sodium hydrosulfite)</li><li>Alkali (caustic soda or wood ash lye)</li></ul><h3>The process</h3><ol><li>Dissolve indigo in warm water with a small amount of alkali.</li><li>Add the reducing agent slowly.</li><li>Wait. The vat will turn yellow-green with a coppery skin on top.</li><li>It is ready when it smells slightly sweet and the skin is fully formed.</li></ol><p>A healthy vat is a living thing. Feed it, warm it, and it produces colour for months.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-indigo-diagnose",
+                    "type": "drill",
+                    "title": "Diagnose vat problems",
+                    "steps": [
+                      { "q": "Your indigo vat looks blue instead of yellow-green. What does this mean?", "o": ["It's ready to dye", "The vat has oxidised — add more reducing agent", "It's too cold — warm it", "It's perfect"], "c": 1, "f": "Yellow-green with a coppery skin is the ready state. Blue means oxidised — feed it reducer." },
+                      { "q": "Your cloth comes out of the vat green, but after 10 minutes in air it's still not fully blue. Likely cause?", "o": ["Not enough alkali", "Still oxidising — give it more time and air", "The indigo is fake", "The cloth is too dry"], "c": 1, "f": "Oxidation takes 10–20 minutes. Green-to-blue is a gradual transition, not instant." },
+                      { "q": "Your vat has a foul smell and a grey scum on top. What's wrong?", "o": ["Perfectly healthy", "Over-reduced — too much reducing agent", "Too much indigo powder", "Needs more caustic soda"], "c": 1, "f": "Over-reduced vats smell bad and don't yield good colour. Rebalance with fresh indigo and gentle warming." }
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "s-indigo-troubleshoot",
+                    "type": "scenario",
+                    "title": "Fix a struggling vat",
+                    "prompt": "You've inherited an indigo vat from a departing colleague. It's pale blue, has no coppery skin, and the cloth you test-dipped comes out pale grey. Describe your diagnostic steps and how you'd restore it to working condition.",
+                    "context": "Vat restoration is a core professional skill. Never throw away a struggling vat — fix it.",
+                    "placeholder": "Diagnostic steps: …\nRestoration: …",
+                    "rubric": [
+                      "Check temperature (should be warm, ~30–50°C)",
+                      "Check pH (should be strongly alkaline — test with litmus)",
+                      "Assess reducing agent level (smell test, coppery skin)",
+                      "Restore systematically: warm first, then feed reducer, then indigo",
+                      "Avoid over-correcting — small increments, not large additions"
+                    ]
+                  }
+                ]
+              },
+              "4": {
+                "modules": [
+                  {
+                    "id": "p-indigo-log",
+                    "type": "portfolio",
+                    "title": "Maintain an indigo vat log",
+                    "prompt": "Create a 4-week vat log tracking every addition, every dip, and the resulting colour outcomes. This becomes a reference you can use to reproduce consistent results for years.",
+                    "steps": [
+                      "Set up a table: date, temperature, pH reading, indigo added, reducer added, dip count, colour result",
+                      "Log every vat session for 4 weeks",
+                      "Photograph a fabric swatch at the end of each session",
+                      "Review at the end of the month and note patterns",
+                      "Identify what kept the vat healthiest"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "dye-vats",
+            "name": "Dye Vats & Colour Depth",
+            "description": "Control depth, tone, and repeatability across multiple dye baths.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-dip-count",
+                    "type": "lesson",
+                    "title": "Why dip count controls depth",
+                    "content": "<p>Each dip adds colour but the relationship is not linear. Two dips are darker than one — but not twice as dark. Five dips are darker than three — but only marginally.</p><p>The rule of thumb:</p><ul><li><strong>1 dip</strong> — light, pastel</li><li><strong>2 dips</strong> — medium, wearable</li><li><strong>3 dips</strong> — deep, ceremonial</li><li><strong>4+ dips</strong> — very deep, saturation-limited</li></ul><p>Beyond 4 dips the colour barely changes — you're wasting time and dyestuff.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-aeration",
+                    "type": "lesson",
+                    "title": "Aeration between dips",
+                    "content": "<p>Between each dip, the cloth must be lifted out and exposed to air for 10–20 minutes so the indigo oxidises from green to blue.</p><p>If you re-dip too fast:</p><ul><li>The colour doesn't fully develop</li><li>You get a muddy, uneven tone</li><li>The final colour is weaker than it should be</li></ul><p>Slow down. Aeration is not optional.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-depth-prediction",
+                    "type": "drill",
+                    "title": "Predict depth",
+                    "steps": [
+                      { "q": "You want a light pastel indigo for a baby gift. How many dips?", "o": ["1", "3", "5", "10"], "c": 0, "f": "1 dip gives a light pastel — appropriate for a gentle occasion." },
+                      { "q": "You want deep ceremonial indigo for a chief's installation. How many dips?", "o": ["1", "2", "3", "6+"], "c": 2, "f": "3 dips gives the deep ceremonial weight. Beyond 4 is diminishing returns." },
+                      { "q": "You dipped 6 times but the colour looks only slightly darker than 4 dips. Why?", "o": ["The indigo is weak", "Saturation limit — extra dips waste time and dyestuff", "You need more alkali", "The cloth is fake"], "c": 1, "f": "Indigo reaches saturation around 4 dips. Extra dips give diminishing returns." }
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "s-dip-schedule",
+                    "type": "scenario",
+                    "title": "Plan a dip schedule for 12 cloths",
+                    "prompt": "You need to dye 12 identical table runners to medium indigo. Your vat holds 4 cloths at a time. Describe your dip schedule — how many dips, how long each dip, how long aeration, and how you handle the vat capacity limit.",
+                    "context": "Real workshop scheduling is a constraint-satisfaction problem.",
+                    "placeholder": "Schedule: …",
+                    "rubric": [
+                      "Specifies dip count (2 for medium indigo)",
+                      "Specifies dip duration (consistent per dip)",
+                      "Specifies aeration time (10–20 minutes)",
+                      "Batches cloths to respect vat capacity (4 at a time)",
+                      "Identifies total time per batch and total time overall"
+                    ]
+                  }
+                ]
+              },
+              "4": {
+                "modules": [
+                  {
+                    "id": "p-depth-reference",
+                    "type": "portfolio",
+                    "title": "Build a depth reference chart",
+                    "prompt": "Create a permanent reference: a fabric chart showing 1, 2, 3, 4, and 5-dip indigo samples, photographed together under the same light. This becomes your standard for colour communication with clients.",
+                    "steps": [
+                      "Cut 5 identical cotton squares",
+                      "Dye each for 1, 2, 3, 4, 5 dips respectively",
+                      "Rinse and dry all under identical conditions",
+                      "Photograph them together in natural light",
+                      "Label each with the dip count and a short description"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "mordants",
+            "name": "Mordants & Fixatives",
+            "description": "Understand how mordants fix colour and how to use them safely.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-mordant-intro",
+                    "type": "lesson",
+                    "title": "What is a mordant?",
+                    "content": "<p>A <strong>mordant</strong> is a chemical that binds dye to fibre. Without a mordant, many dyes wash out or fade quickly.</p><p>For indigo, the mordant is not required — indigo is a vat dye that bonds strongly to cotton by itself. But for other natural dyes (madder, turmeric, kola), mordants are essential.</p><h3>Common mordants</h3><ul><li><strong>Alum</strong> — most common, safe, produces clear colours</li><li><strong>Iron</strong> — darkens and shifts colour (\"saddening\")</li><li><strong>Copper</strong> — deepens greens and blues</li><li><strong>Tannin</strong> — pre-mordant for cellulose fibres</li></ul>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-mordant-application",
+                    "type": "lesson",
+                    "title": "Applying a mordant",
+                    "content": "<p>The pre-mordant method:</p><ol><li>Dissolve mordant in hot water (typically 10–20% of fabric weight for alum).</li><li>Soak wet fabric in the mordant bath for 30–60 minutes at 60–80°C.</li><li>Remove fabric and rinse lightly.</li><li>Dye immediately or dry and dye later.</li></ol><p>The post-mordant method (for some dyes) reverses this — dye first, then mordant. Follow the dye manufacturer's instructions.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-mordant-choice",
+                    "type": "drill",
+                    "title": "Choose the right mordant",
+                    "steps": [
+                      { "q": "You want clear, bright colour from madder root. Which mordant?", "o": ["Alum", "Iron", "Copper", "None"], "c": 0, "f": "Alum gives the clearest, brightest results for madder." },
+                      { "q": "You want to darken and shift a colour toward a muddy tone. Which mordant?", "o": ["Alum", "Iron", "Copper", "Tannin"], "c": 1, "f": "Iron saddens colours — darkens and shifts them toward earthy tones." },
+                      { "q": "You're dyeing cotton with a natural dye and getting weak colour. What pre-treatment do you add?", "o": ["More dye", "Tannin as a pre-mordant for cellulose", "Skip mordant", "More water"], "c": 1, "f": "Cellulose fibres benefit from tannin pre-treatment before alum mordant." }
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "s-mordant-safety",
+                    "type": "scenario",
+                    "title": "Handle mordant chemicals safely",
+                    "prompt": "You've been asked to teach an apprentice to mix and apply alum and iron mordants. Write the safety protocol they must follow at every stage.",
+                    "context": "Iron and copper mordants are toxic if ingested or inhaled. Alum is safer but still a chemical to respect.",
+                    "placeholder": "Safety protocol: …",
+                    "rubric": [
+                      "PPE requirements (gloves, apron, mask for powders)",
+                      "Mixing protocol (add powder to water, never water to powder)",
+                      "Ventilation requirements",
+                      "Waste disposal (do not pour down the sink — dilute and dispose per local rules)",
+                      "What to do in case of skin/eye contact",
+                      "Storage requirements (sealed, labelled, out of reach of children)"
+                    ]
+                  }
+                ]
+              },
+              "4": {
+                "modules": [
+                  {
+                    "id": "p-mordant-swatch",
+                    "type": "portfolio",
+                    "title": "Build a mordant swatch comparison",
+                    "prompt": "Dye 4 identical cotton swatches with the same natural dye but different mordants (alum, iron, copper, tannin+alum). Photograph side by side to show the colour shift each mordant produces.",
+                    "steps": [
+                      "Cut 4 identical cotton squares",
+                      "Mordant each with a different mordant",
+                      "Dye all 4 in the same dye bath",
+                      "Rinse and dry under identical conditions",
+                      "Photograph together and label each"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "colour-mixing",
+            "name": "Colour Mixing",
+            "description": "Combine dyes to produce new tones and match client requests.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-colour-basics",
+                    "type": "lesson",
+                    "title": "Three primaries, many colours",
+                    "content": "<p>Every dye artist mixes from a small set of primary dyes. For natural dye work, common primaries are:</p><ul><li><strong>Indigo</strong> — blue</li><li><strong>Madder</strong> — red</li><li><strong>Turmeric or weld</strong> — yellow</li></ul><p>Mix blue + red → purple. Blue + yellow → green. Red + yellow → orange. All three → brown.</p><p>The trick is proportions. A drop of indigo in a madder bath shifts red toward burgundy. A generous splash goes full purple.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-colour-mixing-pro",
+                    "type": "lesson",
+                    "title": "Recording mixes",
+                    "content": "<p>Professional dyers record every mix. Without records you cannot repeat a colour — and clients hate inconsistency.</p><h3>The record</h3><ul><li>Dye weights (in grams, per litre)</li><li>Mordant used and quantity</li><li>Temperature and time</li><li>Result photograph</li></ul><p>A dyer's mix notebook is worth more than their dye stock. It captures years of experimentation.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-colour-match",
+                    "type": "drill",
+                    "title": "Match the mix to the colour",
+                    "steps": [
+                      { "q": "You want a deep purple for a fashion commission. Which two dyes?", "o": ["Madder + turmeric", "Indigo + madder", "Turmeric only", "Indigo only"], "c": 1, "f": "Blue + red = purple. Indigo + madder is the classic purple pairing." },
+                      { "q": "You want a rich green. Which two dyes?", "o": ["Indigo + turmeric", "Madder + iron", "Turmeric + alum", "Indigo + madder"], "c": 0, "f": "Blue + yellow = green. Indigo + turmeric gives a rich, deep green." },
+                      { "q": "You want a warm earthy brown. Which dye approach?", "o": ["Indigo only", "Turmeric only", "Indigo + madder + turmeric", "No dye"], "c": 2, "f": "All three primaries combined give brown — the ratio controls the exact tone." }
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "s-colour-match-brief",
+                    "type": "scenario",
+                    "title": "Match a client's exact colour",
+                    "prompt": "A client brings a fabric swatch of deep burgundy and asks you to dye a Gara cloth to match. Describe your process — from swatch analysis to final dye recipe.",
+                    "context": "Exact colour matching is a premium service and a common requirement for export orders.",
+                    "placeholder": "Process: …",
+                    "rubric": [
+                      "Analyses the swatch — determines primary dye proportions",
+                      "Runs test dyeings with candidate recipes",
+                      "Compares test dyeings to swatch under identical lighting",
+                      "Refines recipe iteratively (small adjustments)",
+                      "Documents the final recipe for reproduction"
+                    ]
+                  }
+                ]
+              },
+              "4": {
+                "modules": [
+                  {
+                    "id": "p-colour-recipe-book",
+                    "type": "portfolio",
+                    "title": "Build a colour recipe book",
+                    "prompt": "Create a personal colour recipe book with 10 named colours, each with its exact mix (grams per litre), mordant, temperature, time, and a photograph of the resulting swatch.",
+                    "steps": [
+                      "Choose 10 distinct target colours",
+                      "Develop a recipe for each",
+                      "Produce and photograph a swatch for each",
+                      "Record the exact recipe alongside the photo",
+                      "Name each colour (e.g., 'Kono Deep Blue', 'Bo Burgundy')"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "production",
+        "name": "Production & Quality",
+        "description": "Move from single pieces to repeatable, professional-scale output.",
+        "skills": [
+          {
+            "id": "scaling",
+            "name": "Scaling Production",
+            "description": "Batch production without losing quality.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-scaling-intro",
+                    "type": "lesson",
+                    "title": "One is a hobby, ten is a business",
+                    "content": "<p>Making one beautiful cloth is craft. Making fifty identical beautiful cloths is production — and it is a different discipline.</p><p>Scaling means:</p><ul><li><strong>Standardising</strong> — every step must be repeatable</li><li><strong>Recording</strong> — so you can reproduce, delegate, and price</li><li><strong>Splitting</strong> — one person measures, one ties, one dyes</li></ul><p>Most Gara craftspeople fail to scale because they treat every cloth as unique. Consistency, not uniqueness, is what pays reliably.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-standard-recipe",
+                    "type": "lesson",
+                    "title": "The standard recipe",
+                    "content": "<p>A standard recipe is the foundation of any scalable Gara workshop. It specifies:</p><ul><li>Exact fabric length/width per item</li><li>Exact tie layout (diagrammed)</li><li>Exact dye mix (grams per litre)</li><li>Exact dip schedule</li><li>Exact finishing (rinse, dry, iron)</li></ul><p>Anyone trained on the recipe should be able to produce an item indistinguishable from any other made to the same recipe.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-batch-math",
+                    "type": "drill",
+                    "title": "Batch production maths",
+                    "steps": [
+                      { "q": "Each table runner needs 100ml of dye at 1g/L concentration. You're making 20 runners. How much indigo powder total?", "o": ["1g", "2g", "20g", "200g"], "c": 1, "f": "100ml × 20 = 2000ml = 2L. At 1g/L that's 2g total." },
+                      { "q": "Each dip takes 15 minutes plus 15 minutes aeration. 3 dips per cloth, 5 cloths in the vat at once. Total time for one full batch of 5?", "o": ["30 minutes", "90 minutes", "3 hours", "8 hours"], "c": 1, "f": "3 dips × (15 dye + 15 air) = 90 minutes per batch of 5." },
+                      { "q": "Fabric costs 5,000 Le per metre. Each runner uses 1.2m. You're making 20. Total fabric cost?", "o": ["60,000 Le", "100,000 Le", "120,000 Le", "1,200,000 Le"], "c": 2, "f": "20 × 1.2m = 24m × 5,000 Le = 120,000 Le." }
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "s-batch-plan",
+                    "type": "scenario",
+                    "title": "Plan a 50-piece batch",
+                    "prompt": "You've won a contract to produce 50 identical medium-indigo table runners in 3 weeks. Describe your production plan — fabric sourcing, staffing, daily output schedule, quality checkpoints, and contingency for the vat failing.",
+                    "context": "Real contracts require planning, not hope.",
+                    "placeholder": "Production plan: …",
+                    "rubric": [
+                      "Calculates total fabric needed and sources it",
+                      "Breaks production into daily targets",
+                      "Assigns roles (if working with others)",
+                      "Includes quality checkpoints at multiple stages",
+                      "Addresses contingency — what happens if the vat fails or fabric is late",
+                      "Identifies a buffer against the 3-week deadline"
+                    ]
+                  }
+                ]
+              },
+              "4": {
+                "modules": [
+                  {
+                    "id": "p-production-sop",
+                    "type": "portfolio",
+                    "title": "Write your production SOP",
+                    "prompt": "Write a complete Standard Operating Procedure for producing 20 identical table runners. Include recipes, tie diagrams, dip schedule, quality checks, and finishing standards.",
+                    "steps": [
+                      "Define the exact product (dimensions, colour, pattern)",
+                      "Document the tie layout with a diagram",
+                      "Document the dye recipe and dip schedule",
+                      "List quality checkpoints",
+                      "List finishing standards (edges, ironing, folding)",
+                      "Include a version number and date"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "quality",
+            "name": "Quality Control",
+            "description": "Catch defects before the client sees them.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-quality-intro",
+                    "type": "lesson",
+                    "title": "Quality is what the client sees",
+                    "content": "<p>Quality is not how hard you worked. Quality is what the client sees when they unfold the cloth.</p><p>Four quality dimensions matter most in Gara:</p><ul><li><strong>Colour</strong> — even, correct depth, no blotches</li><li><strong>Pattern</strong> — crisp edges, clear intent, matches the brief</li><li><strong>Finish</strong> — clean edges, no loose threads, ironed flat</li><li><strong>Consistency</strong> — matches the sample the client approved</li></ul><p>Each dimension must be checked before the cloth leaves your workshop.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-quality-check",
+                    "type": "lesson",
+                    "title": "The three-point quality check",
+                    "content": "<p>Every finished cloth passes through three checkpoints:</p><ol><li><strong>Colour check</strong> — hold cloth beside reference swatch under natural light. Confirm match within tolerance.</li><li><strong>Pattern check</strong> — verify pattern matches the approved sample. Look for bleeding, missing ties, uneven spacing.</li><li><strong>Finish check</strong> — inspect for loose threads, stains, wrinkles, edge fraying.</li></ol><p>Rejected cloths are reworked or sold as seconds — never shipped as firsts.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-quality-diagnose",
+                    "type": "drill",
+                    "title": "Diagnose quality defects",
+                    "steps": [
+                      { "q": "You find blotchy, uneven colour across a cloth. Most likely cause?", "o": ["Too many dips", "Uneven dye absorption due to poor fabric prep or overcrowded vat", "Wrong mordant", "The dye is fake"], "c": 1, "f": "Blotches come from sizing left in fabric or overcrowding the vat so dye can't reach all surfaces." },
+                      { "q": "Your pattern has feathered, fuzzy edges instead of sharp lines. What happened?", "o": ["Ties too loose", "Ties too tight", "Too many dips", "Wrong dye"], "c": 0, "f": "Loose ties allow dye to bleed under them. Tighten for sharp edges." },
+                      { "q": "A finished cloth shows pale streaks near the fold. What's the diagnosis?", "o": ["Fabric defect", "Dye couldn't penetrate the tight fold — tie was too thick or dipped too briefly", "Too many dips", "Wrong mordant"], "c": 1, "f": "Tight folds resist dye. Either tie less tightly or dip longer with more aeration." }
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "s-quality-system",
+                    "type": "scenario",
+                    "title": "Build a quality system for your workshop",
+                    "prompt": "Design a quality control system for a workshop producing 50 items per week. Describe the checkpoints, the acceptance criteria, and how you handle rejected pieces.",
+                    "context": "Export buyers expect documented QC. Without it, you lose orders.",
+                    "placeholder": "Quality system: …",
+                    "rubric": [
+                      "Identifies multiple checkpoints (incoming fabric, in-process, final)",
+                      "Defines acceptance criteria per defect type",
+                      "Assigns responsibility for each checkpoint",
+                      "Describes what happens to rejected pieces (rework, seconds, reject)",
+                      "Includes documentation (QC log per batch)"
+                    ]
+                  }
+                ]
+              },
+              "4": {
+                "modules": [
+                  {
+                    "id": "p-qc-checklist",
+                    "type": "portfolio",
+                    "title": "Write a QC checklist",
+                    "prompt": "Create a one-page QC checklist that any workshop employee can use to inspect finished cloths before they leave the workshop.",
+                    "steps": [
+                      "List every quality dimension (colour, pattern, finish, consistency)",
+                      "Define a pass/fail criterion for each",
+                      "Include a photo of good vs defective examples where possible",
+                      "Add a sign-off line for the inspector's name and date",
+                      "Test the checklist on 10 finished pieces and refine"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "business",
+        "name": "Business & Market",
+        "description": "Turn craft skill into a working business that pays reliably.",
+        "skills": [
+          {
+            "id": "costing",
+            "name": "Costing & Pricing",
+            "description": "Know your costs. Price for profit.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-cost-basics",
+                    "type": "lesson",
+                    "title": "The four costs",
+                    "content": "<p>Every Gara cloth has four costs:</p><ol><li><strong>Materials</strong> — fabric, dye, thread, mordant</li><li><strong>Labour</strong> — your time at a fair hourly rate</li><li><strong>Overhead</strong> — workshop rent, electricity, water, tools</li><li><strong>Margin</strong> — profit to reinvest or live on</li></ol><p>Beginners forget labour and overhead. They sell at cost and call it profit. Then they wonder why the workshop doesn't grow.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-pricing-formula",
+                    "type": "lesson",
+                    "title": "The pricing formula",
+                    "content": "<p>The standard formula:</p><p><strong>Price = (Materials + Labour + Overhead) × (1 + Margin%)</strong></p><h3>Example</h3><ul><li>Materials: 12,000 Le</li><li>Labour: 4 hours × 2,500 Le/h = 10,000 Le</li><li>Overhead: 800 Le</li><li>Base: 22,800 Le</li><li>35% margin: 30,780 Le</li></ul><p>Quote 30,800 Le. Round to a clean number, but never round down below the formula's result.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-cost-math",
+                    "type": "drill",
+                    "title": "Calculate the price",
+                    "steps": [
+                      { "q": "Materials 8,000 Le, Labour 3h × 2,000 Le = 6,000 Le, Overhead 500 Le, Margin 25%. What's the price?", "o": ["14,500 Le", "18,125 Le", "20,000 Le", "22,500 Le"], "c": 1, "f": "Base = 14,500. × 1.25 = 18,125 Le." },
+                      { "q": "You quote 30,000 Le. Materials cost 10,000, Labour 5,000, Overhead 2,000. What margin % is built in?", "o": ["10%", "30%", "76%", "100%"], "c": 2, "f": "Base = 17,000. 30,000/17,000 = 1.76. So ~76% margin on base." },
+                      { "q": "A client offers 20,000 Le for a cloth with 15,000 Le base cost and a 30% target margin (19,500 Le minimum). Accept?", "o": ["Yes", "Only if scope changes or it opens future business", "No — always reject", "Yes, immediately"], "c": 1, "f": "20,000 / 15,000 = 1.33 → 33% margin. Marginal — accept only if there's a strategic reason." }
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "s-cost-squeeze",
+                    "type": "scenario",
+                    "title": "Handle a cost squeeze",
+                    "prompt": "Your fabric supplier raises prices 20%. Your biggest client refuses a price increase. You have 6 months of orders at the old price. What do you do?",
+                    "context": "Margin squeezes are the most common business problem in craft enterprises.",
+                    "placeholder": "Plan: …",
+                    "rubric": [
+                      "Calculates the new base cost per item",
+                      "Identifies options: renegotiate supplier, find alternate supplier, increase efficiency, reduce materials waste",
+                      "Considers client conversation — phased increase, added value, or scope adjustment",
+                      "Plans a clear decision point (e.g., 2 months of data before deciding)",
+                      "Considers diversification to reduce single-client dependency"
+                    ]
+                  }
+                ]
+              },
+              "4": {
+                "modules": [
+                  {
+                    "id": "p-price-list",
+                    "type": "portfolio",
+                    "title": "Build your price list",
+                    "prompt": "Create a full price list for 8 standard Gara products (napkins, table runners, scarves, wall art, etc.), each with materials, labour, overhead, and margin calculations shown.",
+                    "steps": [
+                      "Define 8 standard products",
+                      "Calculate materials cost per product",
+                      "Estimate labour hours and cost per product",
+                      "Allocate overhead (rent, utilities, depreciation) per product",
+                      "Apply a consistent margin target",
+                      "Publish the final price list as a formal document"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "marketing",
+            "name": "Marketing & Sales",
+            "description": "Find buyers, price to the market, and communicate the value.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-marketing-intro",
+                    "type": "lesson",
+                    "title": "Selling is telling the story",
+                    "content": "<p>Gara sells on story as much as craft. A buyer in Freetown or Lagos or London is buying:</p><ul><li>The cloth itself</li><li>The heritage behind the pattern</li><li>The maker (you) — their story, workshop, and skills</li></ul><p>Marketing is not advertising. Marketing is telling the story clearly, repeatedly, to the right people.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-customer-discovery",
+                    "type": "lesson",
+                    "title": "Know your three customers",
+                    "content": "<p>Every Gara business has at least three customer types:</p><ol><li><strong>Local individual buyers</strong> — market, church, family events. Price-sensitive but high volume.</li><li><strong>Local institutional buyers</strong> — hotels, schools, NGOs. Higher budget, larger orders, formal.</li><li><strong>Export buyers</strong> — boutiques, museums, individual collectors. Highest price, lowest volume, most demanding on quality.</li></ol><p>You cannot serve all three well at the same time. Pick your priority and design your business around it.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-customer-match",
+                    "type": "drill",
+                    "title": "Match the marketing to the customer",
+                    "steps": [
+                      { "q": "You want a hotel contract. What's the most effective outreach?", "o": ["Instagram posts", "Direct visit with a physical sample and price list", "Word of mouth only", "Door-to-door in the market"], "c": 1, "f": "Institutional buyers expect professionalism. In-person with a physical portfolio and price list wins contracts." },
+                      { "q": "You want tourists walking by to buy. Best approach?", "o": ["Direct mail", "Visible display at point of sale with clear pricing", "Cold email", "Influencer campaign"], "c": 1, "f": "Tourists buy on impulse — visible display, clear pricing, and story on the tag converts." },
+                      { "q": "You want an export boutique in Paris. What's the first step?", "o": ["Ship a random sample", "Research the boutique, prepare a professional lookbook, and email with samples by arrangement", "Cold-call", "Wait for them to find you"], "c": 1, "f": "Export buyers need to see a professional lookbook and understand your production capacity before committing." }
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "s-marketing-plan",
+                    "type": "scenario",
+                    "title": "Write a 90-day marketing plan",
+                    "prompt": "Your workshop can produce 80 cloths per month. You currently sell 20. Write a 90-day marketing plan to close the gap — what channels, what content, what outreach, and what success metrics.",
+                    "context": "Unused production capacity is a business failure, not a comfort.",
+                    "placeholder": "90-day plan: …",
+                    "rubric": [
+                      "Identifies priority customer segment",
+                      "Lists 3+ specific outreach activities (e.g., 10 hotel visits, 2 trade shows, weekly Instagram posts)",
+                      "Assigns weekly time budget to marketing",
+                      "Defines measurable metrics (leads per week, conversion rate, repeat rate)",
+                      "Includes a review point at 30 days to adjust"
+                    ]
+                  }
+                ]
+              },
+              "4": {
+                "modules": [
+                  {
+                    "id": "p-lookbook",
+                    "type": "portfolio",
+                    "title": "Build a professional lookbook",
+                    "prompt": "Create a digital and physical lookbook showcasing 12 of your best pieces with product descriptions, cultural context for each pattern, pricing bands, and ordering information.",
+                    "steps": [
+                      "Photograph 12 finished pieces professionally",
+                      "Write a short cultural note for each pattern",
+                      "Include dimensions, materials, and lead time",
+                      "Design the layout (digital PDF + printed copy)",
+                      "Print 10 physical copies for institutional buyers"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "export",
+            "name": "Export & International Trade",
+            "description": "Sell across borders — with the paperwork that makes it legal and profitable.",
+            "levels": {
+              "0": {
+                "modules": [
+                  {
+                    "id": "l-export-intro",
+                    "type": "lesson",
+                    "title": "Export is not just shipping",
+                    "content": "<p>Exporting a Gara cloth to Europe or North America involves:</p><ul><li>Shipping logistics (air vs sea vs courier)</li><li>Customs documentation (commercial invoice, packing list, certificate of origin)</li><li>Payment terms (advance, letter of credit, net 30)</li><li>Compliance (labelling, textile content disclosure, sometimes customs codes)</li></ul><p>Each of these can sink a shipment. Getting them right is a professional skill.</p>"
+                  }
+                ]
+              },
+              "1": {
+                "modules": [
+                  {
+                    "id": "l-payment-terms",
+                    "type": "lesson",
+                    "title": "Payment terms",
+                    "content": "<p>Never ship before you're paid. The standard options:</p><ul><li><strong>100% advance</strong> — safest for seller, hardest for buyer to accept</li><li><strong>50% advance, 50% on delivery</strong> — common for first orders</li><li><strong>Letter of credit (L/C)</strong> — bank guarantees payment once documents are correct</li><li><strong>Net 30</strong> — buyer pays 30 days after delivery; only for established relationships</li></ul><p>New buyers get 50/50 or L/C. Never net 30 for a buyer you haven't worked with for a year.</p>"
+                  }
+                ]
+              },
+              "2": {
+                "modules": [
+                  {
+                    "id": "d-export-docs",
+                    "type": "drill",
+                    "title": "Export document checklist",
+                    "steps": [
+                      { "q": "Which document certifies where the goods were made?", "o": ["Commercial invoice", "Certificate of Origin", "Packing list", "Bill of lading"], "c": 1, "f": "Certificate of Origin proves the country of manufacture — critical for duty rates." },
+                      { "q": "Which document lists every item shipped and its weight?", "o": ["Commercial invoice", "Certificate of Origin", "Packing list", "Air waybill"], "c": 2, "f": "Packing list details quantities, weights, and dimensions — needed for customs." },
+                      { "q": "A buyer asks for net 30 terms on a first order. What do you propose?", "o": ["Accept", "Refuse and end the relationship", "Propose 50/50 or L/C instead", "Ship and hope"], "c": 2, "f": "New buyers get 50/50 or L/C. Net 30 is for established, proven relationships." }
+                    ]
+                  }
+                ]
+              },
+              "3": {
+                "modules": [
+                  {
+                    "id": "s-export-cost-model",
+                    "type": "scenario",
+                    "title": "Build an export cost model",
+                    "prompt": "You've received an order for 100 cloths from a UK boutique at 25 GBP each. Build the full cost model from your workshop to their door — including production, packaging, freight, insurance, customs duties, and payment processing — and calculate your net margin.",
+                    "context": "Export prices look large until you subtract every layer of cost.",
+                    "placeholder": "Cost model: …",
+                    "rubric": [
+                      "Separates production cost from export cost",
+                      "Includes packaging suitable for international shipping",
+                      "Includes freight (air or sea) with per-unit allocation",
+                      "Includes insurance (typically 1–2% of value)",
+                      "Accounts for buyer's customs duties (if DDP terms) or excludes clearly (if FOB)",
+                      "Calculates net margin after all costs"
+                    ]
+                  }
+                ]
+              },
+              "4": {
+                "modules": [
+                  {
+                    "id": "p-export-pack",
+                    "type": "portfolio",
+                    "title": "Assemble an export-ready pack",
+                    "prompt": "Prepare the full document and pricing pack you'd send to a new international buyer: commercial invoice template, packing list template, certificate of origin procedure, shipping terms explanation, and pricing sheet in their currency.",
+                    "steps": [
+                      "Create a commercial invoice template",
+                      "Create a packing list template",
+                      "Write the procedure for obtaining a Certificate of Origin",
+                      "Write a one-page explanation of your Incoterms (FOB or DDP)",
+                      "Produce a pricing sheet in the buyer's currency",
+                      "Test the pack by having a mentor review it"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "capstoneAssessment": {
+      "title": "Capstone — Full Commission from Brief to Delivery",
+      "description": "Complete one full professional commission end-to-end: receive a client brief, design a pattern, produce the cloth to standard, price it correctly, and deliver with documentation.",
+      "passingScore": 80,
+      "criticalSafetyItemsMustAllPass": true,
+      "instructorSignOffRequired": true,
+      "requiredVisuals": [
+        { "type": "annotatedPhoto", "purpose": "Show finished cloth with detail views of the pattern" },
+        { "type": "beforeAfterComparison", "purpose": "Show the fabric before dyeing and the finished cloth" },
+        { "type": "processChecklist", "purpose": "Document every step taken from brief to delivery" }
+      ],
+      "stages": [
+        "Stage 1: Client intake — capture the brief, occasion, colours, deadline, and budget in writing",
+        "Stage 2: Design — produce a sketch and one sample swatch; get client approval",
+        "Stage 3: Production — apply the full tie and dye process per your SOP",
+        "Stage 4: Quality — run the 3-point QC; address any defects",
+        "Stage 5: Pricing — calculate the final price using the standard formula; present the invoice",
+        "Stage 6: Delivery — package, document, deliver, and confirm client satisfaction in writing"
+      ],
+      "rubric": [
+        { "criterion": "Client brief captured accurately and in writing", "weightPercent": 10 },
+        { "criterion": "Design matches the brief and cultural appropriateness of motifs", "weightPercent": 20 },
+        { "criterion": "Craft quality — even colour, crisp pattern, clean finish", "weightPercent": 30 },
+        { "criterion": "Pricing correct per the formula", "weightPercent": 20 },
+        { "criterion": "Documentation complete and professional", "weightPercent": 10 },
+        { "criterion": "Delivery on time and to the client's satisfaction", "weightPercent": 10 }
+      ]
+    },
+    "implementationNotes": [
+      "All lessons should be readable at two levels — beginner-friendly prose plus a deeper technical layer for returning learners",
+      "Each simulation level should be passable only when the learner demonstrates the specific skill the level tests",
+      "Drills and scenarios should be shuffled so learners can't memorise answer order",
+      "The capstone must be instructor-signed for the diploma to be awarded",
+      "Practical evidence (photographs of work) should be stored in the learner's portfolio and reviewable by an instructor",
+      "All images should be generated as SVG illustrations in the FuturePath visual style (dark background, accent green, technical diagram aesthetic)",
+      "Every module should reference at least one visual where possible — the certificate requires proof of work"
+    ]
+  }
+}
